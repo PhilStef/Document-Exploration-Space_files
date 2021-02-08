@@ -1,0 +1,243 @@
+
+
+
+body, html {
+  height: 100%;    /*	 for some reason, this is needed for the context menu to work */
+  /*width: 100%;*/
+  /*overflow: hidden;*/
+  overflow-y:scroll;
+  background: rgb(240,250,255);
+}
+/* div.sticky {
+	position: -webkit-sticky;
+	position: sticky;
+	bottom: 0;
+	z-index: 5;
+	background-color: yellow;
+	padding: 50px;
+	font-size: 20px;
+  } */
+.myZoom{
+	zoom = 0.2;
+}
+    /* dialog box class */
+.doc-set {
+  font-size: 11px !important; 
+  padding-left: 1px !important;
+  padding-right: 3px !important;
+  /*<img src = "img1.jpg">*/
+  <div> <img src = "images/11.bmp" > </div>
+}
+
+.scrunch-doc {
+	background: #D9FAE4 !important;
+	padding-right: 8px !important;
+	padding-left: 1px !important;
+}
+
+.ui-dialog-title {
+    font-size: 11px !important;
+    /* background: F1AAFF !important; me */
+    /* font-weight:normal; */
+}
+/*
+#main-div {
+	overflow: hidden;		
+}
+*/
+
+/* careful: jsPlumb overwrites classes of the overlay elements, so CSS element selectors work, but not class */
+/*
+textarea {
+    width: 10em;
+    height: 2m;
+    border-radius: 1em;
+    border: 3px solid #009aff;
+}
+textarea.doc-textarea {
+	width  : 100% !important;
+    height : 100% !important;
+    resize: none;
+	border: none;
+	overflow: hidden;
+}​
+*/
+
+div._jsPlumb_overlay {
+    width: 10em;
+    height: 2m;
+    border-radius: 1em !important;
+    border: 1px solid #F1AAFF; /*#009aff; */
+    background: yellow;
+    font-size: 12px !important;
+    resize: both;
+	overflow: auto;
+	font-size: 11px !important;
+	min-height: 10px;
+	padding: 2px 6px;
+}
+
+textarea._jsPlumb_overlay {
+    width: 10em;
+    height: 2m;
+    border-radius: 1em !important;
+    border: 1px solid #F1AAFF; /*#009aff; */ 
+    background: yellow;
+}
+
+textarea.note-textarea {
+	font-size: 11px !important;
+	background: #F1AAFF; /*#C1F1F5; */
+	width  : 100% !important;
+    height : 100% !important;
+    resize: none;
+	border: none;
+	overflow: hidden;
+}​
+
+
+
+textarea:focus {
+    box-shadow: inset 0 0 3px 2px #F1AAFF; /*#009aff; */ /* provides a more style-able replacement to the outline */
+}​
+
+
+#demo {
+	margin-top:5em;
+}
+
+.w { 	
+	padding:16px;
+	position:fixed;
+	border: 1px solid black;
+	z-index:4;
+	border-radius:1em;
+	border:1px solid #2e6f9a;
+	box-shadow: 2px 2px 19px #e0e0e0;
+	-o-box-shadow: 2px 2px 19px #e0e0e0;
+	-webkit-box-shadow: 2px 2px 19px #e0e0e0;
+	-moz-box-shadow: 2px 2px 19px #e0e0e0;
+	-moz-border-radius:8px;
+	border-radius:8px;
+	opacity:0.8;
+	filter:alpha(opacity=80);
+	cursor:move;
+	background-color:yellow;
+	font-size:11px;
+	-webkit-transition:background-color 0.25s ease-in;
+	-moz-transition:background-color 0.25s ease-in;
+	transition:background-color 0.25s ease-in;	
+}
+
+.w:hover {
+	background-color: #5c96bc;
+	color:white;
+
+}
+
+.aLabel {
+	-webkit-transition:background-color 0.25s ease-in;
+	-moz-transition:background-color 0.25s ease-in;
+	transition:background-color 0.25s ease-in;
+}
+
+.aLabel._jsPlumb_hover, ._jsPlumb_source_hover, ._jsPlumb_target_hover {
+	background-color:#1e8151;
+	color:white;
+}
+
+.aLabel {
+	background-color:white;
+	opacity:0.8;
+	padding:0.3em;				
+	border-radius:0.5em;
+	border:1px solid #346789;
+	cursor:pointer;
+}
+
+.scrunchy-button {
+
+	background-color:#e6e6e6;
+	cursor:pointer;
+	box-shadow: 0px 0px 2px black;
+	-webkit-transition:-webkit-box-shadow 0.25s ease-in;
+	-moz-transition:-moz-box-shadow 0.25s ease-in;
+	transition:box-shadow 0.25s ease-in;
+}
+  /* Scrunchy button color */
+.scrunchy-button-active {
+
+	background-color:#1BC161;
+	cursor:pointer;
+	box-shadow: 0px 0px 2px black;
+	-webkit-transition:-webkit-box-shadow 0.25s ease-in;
+	-moz-transition:-moz-box-shadow 0.25s ease-in;
+	transition:box-shadow 0.25s ease-in;
+}
+
+.scrunchy-button-active:hover {
+	box-shadow: 0px 0px 6px black;
+}
+
+.scrunchy-button:hover {
+	box-shadow: 0px 0px 6px black;
+	background-color:#A2FABE;
+}
+ 
+ /* jsplumb Connestion button  72BDF2 */
+.ep {
+
+	background-color:#72BDF2;  
+	cursor:pointer;
+	box-shadow: 0px 0px 2px black;
+	-webkit-transition:-webkit-box-shadow 0.25s ease-in;
+	-moz-transition:-moz-box-shadow 0.25s ease-in;
+	transition:box-shadow 0.25s ease-in;
+}
+
+.ep:hover {
+	box-shadow: 0px 0px 6px black;
+	background-color:#3F7EF2;
+}
+
+
+/* jsplumb Connestion button */
+.ep_note {
+
+	background-color:#F1AAFF;
+	cursor:pointer;
+	box-shadow: 0px 0px 2px black;
+	-webkit-transition:-webkit-box-shadow 0.25s ease-in;
+	-moz-transition:-moz-box-shadow 0.25s ease-in;
+	transition:box-shadow 0.25s ease-in;
+}
+
+.ep_note:hover {
+	box-shadow: 0px 0px 6px black;
+	background-color:#F111FF;
+}
+.statemachine-demo ._jsPlumb_endpoint {
+	z-index:3;
+}
+
+
+.dragHover { border:2px solid orange; }
+
+path { cursor:pointer; }
+    /* Note background color */
+.note-set {
+	background: #F1DDFF !important;   
+	font-size: 12px !important;
+}​
+   /* All icon images */
+.context-menu-item.icon { min-height: 18px; background-repeat: no-repeat; background-position: 4px 2px; }
+.context-menu-item.icon-search { background-image: url(images/search.png); }
+.context-menu-item.icon-clear-search { background-image: url(images/clear-search.png); }
+
+/* for jquery.highlight-4.js */
+/* High light colors  */
+.highlight-pink { background-color: #FFC700 }
+.highlight-green { background-color: #77F7A4 }
+/*
+.highlight-blue { background-color: #D2B5F5 }
+*/

@@ -1,0 +1,72 @@
+[
+   {
+      "id": "ArmsDealing1",
+      "title": "Oct 2016, It sounds fishy, something is going on",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "1) Open/Close/Drag <br> 2) Connection lines <br> 3) Note Boxes <br> 4) Searching <br> 5) Highlighting <br> 6) Green Shrink Light Bulb"
+   },
+   {
+      "id": "ArmsDealing2",
+      "title": "Sept 2016, What's going on? let us know! Think Aloud!",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "Please try to think out loud during your analysis—provide short verbal explanations of what you are doing and why. Additionally, I may periodically ask you to give a brief verbal explanation of a current goal or hypothesis that you are considering. Here are some examples of verbal updates that you might give: <br> I'm searching for Waldo because I am curious whether he was at the beach. <br> or <br> I thought that something interesting was happening with Mike in France, but I didn't find much. So now I'm looking for things related to apples. <br> or <br> I thought it was strange that Mike and Waldo both like apples, so now I'm trying to find out if they both like oranges."
+   },
+   {
+      "id": "ArmsDealing3",
+      "title": "Aug 2016, Sounds cool? huh?",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "Any questiins?"
+   },
+   {
+      "id": "ArmsDealing4",
+      "title": "Oct 2016, Time out! Can you explain me what's going on?",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "At the end of the time, I will ask you to explain your hypotheses and explanation. "
+   },
+   {
+      "id": "ArmsDealing5",
+      "title": "Sept 2016, Be smart! Figure out what's going on!",
+      "date": "unknown",
+      "type": "set1",
+      "contents": " - Use whatever features you want to help you with the investigation. <br> The investigation period will be up to 90 minutes. Please do the best you can to address the prompt. "
+   },
+   {
+      "id": "ArmsDealing6",
+      "title": "Sept 2016, Too many Notes to read! Use the Search!",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "This synthetic data set is designed to be like a mix of data source coming from different sources, such as phone intercepts, emails, news articles and blog posts related to known or suspected criminals or terrorists. "
+   },
+   {
+      "id": "ArmsDealing7",
+      "title": "Nov 2016, I said be smart! Connect related notes!",
+      "date": "unknown",
+      "type": "set1",
+      "contents": " Consider connections among people, organizations, and places. "
+   },
+   {
+      "id": "ArmsDealing8",
+      "title": "Oct 2016, Write a note for each group of dialogs! ",
+      "date": "unknown",
+      "type": "set1",
+      "contents": " It is recommended that you don’t start by trying to read a large number of the documents. Instead, use the “search” functionality to look for certain keywords that might be related to important information in the prompt. "
+   },
+   {
+      "id": "ArmsDealing9",
+      "title": "Nov 2016, I bet you can't finnish reading all these dialoges in 90 minutes! don't go random!",
+      "date": "unknown",
+      "type": "set1",
+      "contents": " Do more searches to find connections between people, places, objects, or events that look promising or suspicious."
+   },
+   {
+      "id": "ArmsDealing10",
+      "title": "Nov 2016, Group similar dialoges in one side! ",
+      "date": "unknown",
+      "type": "set1",
+      "contents": "Now you're an expert!"
+   }
+]
