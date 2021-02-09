@@ -10,15 +10,13 @@ body, html {
 }
 
 .myZoom{
-	zoom = 0.2;
+	zoom: 0.2;
 }
     /* dialog box class */
 .doc-set {
   font-size: 11px !important; 
   padding-left: 1px !important;
   padding-right: 3px !important;
-  /*<img src = "img1.jpg">*/
-  <div> <img src = "images/11.bmp" > </div>
 }
 
 .scrunch-doc {
