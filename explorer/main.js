@@ -79,7 +79,7 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 						"An analyst first went through the email and message board intercepts section to search for some direct dialogue between the arms dealers. The analyst highlighted a code word used to deal with arm dealings. The analyst traced some aliases and found the suspects names were mentioned in other documents. The analyst started focusing solely on the activity of Mikhail Dombrovski." +
 						"<div><br></div>" +
 						"Tell us your own interpretation of the dataset. ";
-var thisDoc = './explorer/documents_derek.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
+var thisDoc = './explorer/data/documents_derek.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
 var query = window.location.search;
 var promptNoteText = '';
