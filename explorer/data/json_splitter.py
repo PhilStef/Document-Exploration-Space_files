@@ -1,3 +1,4 @@
+#Looks like this file was just used to clean up a folder called "unclean/***.json and print out all the keys used in the file? - not sure, but it doesn't look like this script has already served it's purpose."
 import json
 
 
@@ -14,7 +15,7 @@ whitelist = ["P22","P3","P4","P5","P6","P7"]
 for line in infile:
     parsed = json.loads(line)
     if "participant_tag" in parsed:
-        print parsed
+        print (parsed)
         ptag = parsed["participant_tag"]
         if ptag in counts:
             counts[ptag] += 1
@@ -29,8 +30,8 @@ for line in infile:
 for ptag in outfiles.keys():
     outfiles[ptag].close()
 
-print "done",json.dumps(counts,indent=2)
-print json.dumps(all_types.keys())
+print ("done",json.dumps(counts,indent=2))
+print (json.dumps(all_types.keys()))
 
 
 
