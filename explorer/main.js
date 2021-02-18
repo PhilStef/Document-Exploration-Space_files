@@ -65,21 +65,24 @@ var promptNoteText_2 = "Intelligence analysts are looking for information relate
 									
 var prompt_none = "The following documents all relate to arms dealing between countries across the world." +
 						   "<div><br></div>" +
-							"Tell us your own interpretation of the dataset. ";
+							"Tell us your own interpretation of the dataset. " + 
+							'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
 
 var prompt_conclusion = "The following documents all relate to arms dealing between countries across the world." +
 							"<div><br></div>" +
 							"An analyst found that mention of car parts on message boards were used to discuss weapons and their price. A man named Mikhail Dombrovski was on here with an alias to discuss with a Nigerian man. Mikhail had arranged a meeting in Dubai with him. " +
 							"<div><br></div>" +
-							"Tell us your own interpretation of the dataset. ";
+							"Tell us your own interpretation of the dataset. " + 
+							'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
 
 
 var prompt_workflow = "The following documents all relate to arms dealing between countries across the world." +
 						"<div><br></div>" +
 						"An analyst first went through the email and message board intercepts section to search for some direct dialogue between the arms dealers. The analyst highlighted a code word used to deal with arm dealings. The analyst traced some aliases and found the suspects names were mentioned in other documents. The analyst started focusing solely on the activity of Mikhail Dombrovski." +
 						"<div><br></div>" +
-						"Tell us your own interpretation of the dataset. ";
-var thisDoc = './explorer/data/documents_derek.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
+						"Tell us your own interpretation of the dataset. " + 
+						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
 var query = window.location.search;
 var promptNoteText = '';
@@ -165,10 +168,6 @@ else
 		// output += '<div onClick="saveLocalData()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
 		// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
 		// '</div>';
-		output += '<div id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
-		'<div class="doc-content" document_id="'+000+'">' + 
-		'<button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>' + '</div>' +
-		'</div>';
         output+="</div>";
         document.getElementById("placeholder-div").innerHTML=output;
 
