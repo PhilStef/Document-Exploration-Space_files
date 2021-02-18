@@ -85,9 +85,9 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 
 var prompt_Jeremy = "The following documents relate to arms dealing between countries across the world." +
 						"<div><br></div>" +
-						"A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was iniciated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans the shipment was discovered and delayed. In accomidation of this, Nicolai hired the boat MV Tanya to deliver the wepons by boat to the middle east." +
+						"A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
 						"<div><br></div>" +
-						"Using the resources you have avalible, Tell us your own interpretation of the dataset. " + 
+						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
 
 var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
@@ -105,7 +105,7 @@ else if(query.includes('=2'))
 }
 else if(query.includes('=3'))
 {
-	promptNoteText = prompt_conclusion;
+	promptNoteText = prompt_Jeremy;
 }
 else
 {
