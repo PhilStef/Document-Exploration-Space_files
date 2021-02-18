@@ -441,6 +441,7 @@ else
 
 	  	if (isOpen)
 	  	{
+			  //todo: Convert this to expand width to 400 on open then shrink width back to 100 when done.
 		  	if (currentDocDiv.attr( "data-id") == scrunchOriginal) {
 				// showing original document. need to create scrunch view
 				currentDocDiv.attr( "data-height", currentDocDiv.css("height"));	// save height for later
@@ -644,10 +645,10 @@ else
     			],
 			//Endpoint : ["Dot", {radius:5}],
 			EndpointStyle : { fillStyle: "#567567"  },
-			HoverPaintStyle : {strokeStyle:"#1e8151", lineWidth:2 },
+			HoverPaintStyle : {strokeStyle:"#1e8151", lineWidth:1 },
 			Anchor : [ "TopCenter", "BottomCenter" ], // "AutoDefault",
-			Connector:[ "Bezier", { curviness: 150 } ], //[ "StateMachine", { curviness:20 } ],
-			PaintStyle:{ strokeStyle:"#5c96bc", lineWidth:4, outlineColor:"transparent", outlineWidth:1 },  // strok "#5c96bc"   // color transparent
+			Connector:[ "Bezier", { curviness: 15 } ], //[ "StateMachine", { curviness:20 } ],
+			PaintStyle:{ strokeStyle:"#5c96bc", lineWidth:1, outlineColor:"transparent", outlineWidth:1 },  // strok "#5c96bc"   // color transparent
 			DragOptions : { cursor: "crosshair" },
 			Container:"main-div"
 		});
@@ -659,7 +660,7 @@ else
 			this.count = 0;
 		}
 
-		var groupingWidth = 235;  // was 680
+		var groupingWidth = 100;  // was 235
 		var groupingHeight = 40;
 
 		// use content divs loaded from json to create the dialog boxes
@@ -688,7 +689,7 @@ else
 			var doccc = $(this).dialog(
 				{
 				minHeight: 400,
-				width: 1000,
+				width: 400,
 				dialogClass: "close",  // "dlg-no-close"
 			 	closeOnEscape: false,
 			 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
@@ -740,7 +741,7 @@ else
 				 
 				$(this).dialog(  // Resize and reposition dialogs after loading
 				{
-				width: 500,
+				width: 100,
 				minHeight: 500,
 				position: [typeIndex * groupingWidth, boxPosY]   // Initial position of dialog box 
 				}); 
