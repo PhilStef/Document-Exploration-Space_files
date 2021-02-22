@@ -1269,8 +1269,8 @@ else
 	    });
 
 		// Add prompt note on initialization
-		mouseX = 300; //$(window).width() - 700;
-		mouseY = 100; // $(window).height() - 300;
+		mouseX = 550; //$(window).width() - 700;
+		mouseY = 80; // $(window).height() - 300;
 		
 		//var promptNote = createNote("A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
 		//							"<div><br></div>" +
@@ -1281,7 +1281,7 @@ else
 
 		var promptNote = createNote(promptNoteText);
 
-		promptNote.parent().width(650);
+		promptNote.parent().width(400);
 	
 
 	});    //end jsPlumb.ready end the  big function 
