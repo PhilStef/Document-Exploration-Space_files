@@ -9,9 +9,6 @@ body, html {
   background: rgb(240,250,255);
 }
 
-.myZoom{
-	/* zoom: 0.2; */
-}
     /* dialog box class */
 .doc-set {
   font-size: 11px !important; 
@@ -223,7 +220,7 @@ textarea:focus {
 
 path { cursor:pointer; }
     /* Note background color */
-.note-set {
+.note-set, .prov-set {
 	background: #F1DDFF !important;   
 	font-size: 12px !important;
 }​
