@@ -89,6 +89,9 @@ var prompt_Jeremy = "The following documents relate to arms dealing between coun
 						"<div><br></div>" +
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+var prov_History = "wordswordswords";
+
+var prov_Coverage = "Coveragecoveragecoverage";
 
 var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
@@ -920,7 +923,6 @@ else
 			else{
 					    var noteDialog = $(info.connection.target); 
      					var doc_id = noteDialog.find(".ui-dialog-title").text();
-     					var doc_id = noteDialog.find(".ui-dialog-title").text();
 						console.log(doc_id);
 			            var doubleDocId = docDialog1.find(".doc-content").attr("document_id")+","+doc_id;
 			}
@@ -972,7 +974,7 @@ else
 	        }
 	        else{
 	        
-			output += '<div id="' + noteId + '" class="note-set" title=" Prompt Note  " contenteditable="true">' +
+			output += '<div id="' + noteId + '" class="note-set" title=" Prompt Note  " contenteditable="false">' +
 						noteHtml +
 						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 						
@@ -1030,7 +1032,7 @@ else
 				//console.log("selected: " + noteDialogParent.attr('id') + ", " + noteDialogParent.attr('class') );
 			    myNotes[noteIdCounter] = noteDialogParent;
 			    //console.log(myNotes[noteIdCounter]);	
-				noteDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
+				// noteDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
 			});
 
 			// hide context menu when click on note to edit it
@@ -1040,6 +1042,82 @@ else
             
             
 			return noteDialog;
+
+		};// end create note dialog
+
+
+		// Creating a Provenance Representation 
+		var createProv = function () {
+    
+			var noteId = "";
+			var output="<div>";
+			
+			// different title for initial note and all other
+             if (true){
+             	
+  	 	        output += '<div id="provSummary" class="prov-set" title=" History" contenteditable="false">' +
+						prov_History;
+	        } else{
+	        
+				output += '<div id="provSummary" class="prov-set" title="Coverage" contenteditable="false">' +
+						prov_Coverage;	            	  
+	        	
+	        };
+			output+="</div></div>";             
+             
+			// need a div to base the dialog box off of. creating a new dialog box doesn't
+			// depend on the placeholder after it's created, so it's ok to rewrite whatever was in there
+	        document.getElementById("placeholder-div").innerHTML += output;
+             
+	        // then make new note div a dialog box
+	        var provDialog = $( "#provSummary" )
+				.dialog(	
+					{
+					minHeight: 80,
+					dialogClass: "close",
+				 	closeOnEscape: false,
+					position: [mouseX+400, mouseY],
+				 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
+	             	resize: function(event, ui){ jsPlumbInstance.repaintEverything(); }
+	            	})
+				.resizable({handles: {'s': 'handle'}})
+				.dialogExtend(
+					{
+		        	"maximizable" : false,
+		        	"closable" : false,
+		        	"collapsable" : true,
+					"dblclick" : "collapse",
+	      			});
+
+			undoAction = function(){
+				provDialog.dialog('destroy').remove();
+			};
+
+			var provDialogParent = provDialog.parent();
+
+			// set up jsPlumb stuff for note
+			jsPlumbInstance.doWhileSuspended(function() {
+
+				jsPlumbInstance.makeSource(provDialogParent, {
+					filter:".ep_prov"
+				});
+
+				// initialise all documents as connection targets.
+		        jsPlumbInstance.makeTarget(provDialogParent);
+
+				//console.log("selected: " + provDialogParent.attr('id') + ", " + provDialogParent.attr('class') );
+			    // myNotes[noteIdCounter] = provDialogParent;
+			    //console.log(myNotes[noteIdCounter]);	
+				// provDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
+			});
+
+			// hide context menu when click on note to edit it
+			provDialogParent.find(".prov-set").click(function() {
+			  $(".body-class").contextMenu("hide");
+			});
+            
+            
+			return provDialog;
 
 		};// end create note dialog
 
@@ -1280,6 +1358,10 @@ else
 		//							"<div><br></div>");
 
 		var promptNote = createNote(promptNoteText);
+
+		if(true){
+			var promptProv = createProv();
+		}
 
 		promptNote.parent().width(400);
 	
