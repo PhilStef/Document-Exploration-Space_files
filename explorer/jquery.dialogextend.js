@@ -252,6 +252,7 @@
 
 }).call(this);
 
+//collapseable options
 (function() {
   var $;
 
@@ -321,6 +322,7 @@
 
 }).call(this);
 
+//maximize options
 (function() {
   var $;
 
@@ -405,6 +407,7 @@
 
 }).call(this);
 
+// minimize options
 (function() {
   var $;
 

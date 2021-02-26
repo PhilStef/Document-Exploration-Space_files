@@ -233,6 +233,23 @@ path { cursor:pointer; }
 /* High light colors  */
 .highlight-pink { background-color: #FFC700 }
 .highlight-green { background-color: #77F7A4 }
+
+.highlightText { 
+	margin-left: -25px;
+	margin-bottom: -10px;
+	list-style-image: url('../explorer/images/page_white_edit.png'); 
+	background-color: lightgreen;
+	padding: 5px 8px; 
+	border-radius: 10px;
+}
+.searchText{
+	margin-left: -25px;
+	margin-bottom: -10px;
+	list-style-image: url('../explorer/images/search.png'); 
+	background-color: lightyellow;
+	padding: 5px 8px;
+	border-radius: 10px; 
+}
 /*
 .highlight-blue { background-color: #D2B5F5 }
 */

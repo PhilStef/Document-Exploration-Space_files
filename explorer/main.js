@@ -89,7 +89,8 @@ var prompt_Jeremy = "The following documents relate to arms dealing between coun
 						"<div><br></div>" +
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
-var prov_History = "wordswordswords";
+var load_prov_history = true;
+var prov_history_file = '../log/test-history.json';
 
 var prov_Coverage = "Coveragecoveragecoverage";
 
@@ -728,7 +729,11 @@ else
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
 						logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id"), doc_id, null);
+					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 						//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
+					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
+						//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
+					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 			 		},
 		
              	resize: function(event, ui){
@@ -1045,81 +1050,103 @@ else
 
 		};// end create note dialog
 
+		async function generateHistory(fileName){
+			// let pickles = null;
+			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><ul>';
+			await $.getJSON(fileName, function(data){
+				for (var i in data) {
+					if (data[i].type == "search"){
+						output += "<li class='searchText'>" + data[i].message + "</li><br/>"
+					} else if(data[i].type == "highlightText"){
+						output += "<li class='highlightText'>" + data[i].message + "</li><br/>"
+					}
+				}
+			}).done(()=>{
+				output += "</ul></div>"
+				document.getElementById("placeholder-div").innerHTML=output;
+		
+				var provDialog = $( "#provSummary" )
+						.dialog(	
+							{
+							height: 400,
+							 closeOnEscape: false,
+							 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
+							 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
+							 position: [mouseX+400, mouseY]
 
+							})
+						.resizable({handles: {'s': 'handle'}})
+						.dialogExtend(
+							{
+							"maximizable" : false,
+							"closable" : false,
+							"collapsable" : true,
+							"dblclick" : "collapse",
+							  });
+		
+					// set up jsPlumb stuff for note
+					var provDialogParent = provDialog.parent();
+					jsPlumbInstance.doWhileSuspended(function() {
+						jsPlumbInstance.makeSource(provDialogParent, {
+							filter:".ep_prov"
+						});
+						// initialise all documents as connection targets.
+						jsPlumbInstance.makeTarget(provDialogParent);
+					});
+		
+					// hide context menu when click on note to edit it
+					provDialogParent.find(".prov-set").click(function() {
+					  $(".body-class").contextMenu("hide");
+					});
+					return provDialog;
+			})
+			// $.ajax(
+			// 	{
+			// 		dataType:'json',
+			// 		url: fileName,
+			// 		data: pickles,
+			// 		async: false}
+					
+			// 	).success(function(pickles) {
+		
+			// 			var jsonCounter = 0;
+			// 			for (var i in pickles){
+			// 				console.log(pickles[i].type)
+			// 				jsonCounter++;
+			// 				if (pickles[i].type == "search"){
+			// 					console.log("here")
+			// 					output += "<div class='search'>" + pickles[i].text + "</div>"
+		
+			// 				} else if(pickles[i].type == "highlightText"){
+			// 					output += pickles[i].text + "Hilight!"
+		
+			// 				} else{
+			// 					output += pickles[i]
+			// 				}
+			// 				//  output +=
+			// 				// '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
+			// 				// '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
+			// 				// '</div>';
+			// 				// "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
+			// 			}
+			// 			// output += '<div onClick="saveLocalData()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
+			// 			// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
+			// 			// '</div>';
+			// 			console.log(output)
+			// 			output+="</div>";
+						
+			// 			console.log("JSON loaded, analyst's interaction count: " + jsonCounter);
+			// 		}).error(function(pickles){
+			// 			console.error("I'm worthless", pickles)
+			// 		}).complete(function(){
+			// 			document.getElementById("placeholder-div").innerHTML=output;
+			// 			return output;
+			// 		});
+			//return new Promise(resolve => {output});
+		}
+		
 		// Creating a Provenance Representation 
-		var createProv = function () {
-    
-			var noteId = "";
-			var output="<div>";
-			
-			// different title for initial note and all other
-             if (true){
-             	
-  	 	        output += '<div id="provSummary" class="prov-set" title=" History" contenteditable="false">' +
-						prov_History;
-	        } else{
-	        
-				output += '<div id="provSummary" class="prov-set" title="Coverage" contenteditable="false">' +
-						prov_Coverage;	            	  
-	        	
-	        };
-			output+="</div></div>";             
-             
-			// need a div to base the dialog box off of. creating a new dialog box doesn't
-			// depend on the placeholder after it's created, so it's ok to rewrite whatever was in there
-	        document.getElementById("placeholder-div").innerHTML += output;
-             
-	        // then make new note div a dialog box
-	        var provDialog = $( "#provSummary" )
-				.dialog(	
-					{
-					minHeight: 80,
-					dialogClass: "close",
-				 	closeOnEscape: false,
-					position: [mouseX+400, mouseY],
-				 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-	             	resize: function(event, ui){ jsPlumbInstance.repaintEverything(); }
-	            	})
-				.resizable({handles: {'s': 'handle'}})
-				.dialogExtend(
-					{
-		        	"maximizable" : false,
-		        	"closable" : false,
-		        	"collapsable" : true,
-					"dblclick" : "collapse",
-	      			});
 
-			undoAction = function(){
-				provDialog.dialog('destroy').remove();
-			};
-
-			var provDialogParent = provDialog.parent();
-
-			// set up jsPlumb stuff for note
-			jsPlumbInstance.doWhileSuspended(function() {
-
-				jsPlumbInstance.makeSource(provDialogParent, {
-					filter:".ep_prov"
-				});
-
-				// initialise all documents as connection targets.
-		        jsPlumbInstance.makeTarget(provDialogParent);
-
-				//console.log("selected: " + provDialogParent.attr('id') + ", " + provDialogParent.attr('class') );
-			    // myNotes[noteIdCounter] = provDialogParent;
-			    //console.log(myNotes[noteIdCounter]);	
-				// provDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
-			});
-
-			// hide context menu when click on note to edit it
-			provDialogParent.find(".prov-set").click(function() {
-			  $(".body-class").contextMenu("hide");
-			});
-            
-            
-			return provDialog;
-
-		};// end create note dialog
 
 		// right click menu for dialog boxes
 		$.contextMenu({
@@ -1359,8 +1386,11 @@ else
 
 		var promptNote = createNote(promptNoteText);
 
-		if(true){
-			var promptProv = createProv();
+		if(load_prov_history){
+			generateHistory(prov_history_file)
+		}
+		if (prov_Coverage){
+			//todo generateCoverage()
 		}
 
 		promptNote.parent().width(400);
