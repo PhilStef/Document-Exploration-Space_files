@@ -48,8 +48,9 @@
 
 
 # load data
+import sys
 folder = './explorer/data/'
-filename = folder+'docs1-all-text.txt'
+filename = folder+sys.argv[1]
 file = open(filename, 'rt')
 text = file.read()
 file.close()
@@ -85,7 +86,7 @@ for word in words:
 # todo sort the dictionary by value - Greatest to Least (last time I tried that, it removed words with the same number of occurances.)
 
 # output the dictionary to file
-outFile = open(folder+'vectoriezed.csv', 'w')
+outFile = open(folder+"vec-"+sys.argv[1], 'w')
 for k,v in unique.items():
     outFile.write((k+", "+str(v)+",\n"))
 outFile.close()
