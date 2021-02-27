@@ -250,6 +250,22 @@ path { cursor:pointer; }
 	padding: 5px 8px;
 	border-radius: 10px; 
 }
+
+.cov-line{
+	list-style-type: none;
+	margin: 0px 45px 0px -45px;
+}
+.cov-fg {
+	position:absolute;
+	height: 100%;
+	background-color: #1e8151;
+}
+.cov-bg{
+	height: 6px;
+	width: 160px;
+	position: relative;
+	background-color: pink;
+}
 /*
 .highlight-blue { background-color: #D2B5F5 }
 */

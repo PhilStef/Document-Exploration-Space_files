@@ -90,9 +90,10 @@ var prompt_Jeremy = "The following documents relate to arms dealing between coun
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
 var load_prov_history = true;
-var prov_history_file = '../log/test-history.json';
+var prov_history_file = '../explorer/data/interactionHistories/mouseless-history.json';
 
-var prov_Coverage = "Coveragecoveragecoverage";
+var prov_Coverage = true;
+var prov_Coverage_file = "../explorer/data/coverage.json";
 
 var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
@@ -1146,6 +1147,52 @@ else
 		}
 		
 		// Creating a Provenance Representation 
+		// Generate coverage Representation
+		async function generateCoverage(fileName){
+						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><ul>';
+						await $.getJSON(fileName, function(data){
+							for (var i in data) {
+								output += "<li class='cov-line'><span> "+data[i][0]+"</span><div class='cov-bg'><div class='cov-fg' style='width: "+data[i][1]*160+"px' ></div></div> </li>"
+							}
+						}).done(()=>{
+							output += "</ul></div>"
+							document.getElementById("placeholder-div").innerHTML=output;
+					
+							var provDialog = $( "#provSummary" )
+									.dialog(	
+										{
+										height: 440,
+										width: 225,										 closeOnEscape: false,
+										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
+										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
+										 position: [mouseX+450, mouseY+120]
+			
+										})
+									.resizable({handles: {'s': 'handle'}})
+									.dialogExtend(
+										{
+										"maximizable" : false,
+										"closable" : false,
+										"collapsable" : true,
+										"dblclick" : "collapse",
+										  });
+								// set up jsPlumb stuff for note
+								var provDialogParent = provDialog.parent();
+								jsPlumbInstance.doWhileSuspended(function() {
+									jsPlumbInstance.makeSource(provDialogParent, {
+										filter:".ep_prov"
+									});
+									// initialise all documents as connection targets.
+									jsPlumbInstance.makeTarget(provDialogParent);
+								});
+					
+								// hide context menu when click on note to edit it
+								provDialogParent.find(".prov-set").click(function() {
+								  $(".body-class").contextMenu("hide");
+								});
+								return provDialog;
+						})
+		}
 
 
 		// right click menu for dialog boxes
@@ -1390,7 +1437,7 @@ else
 			generateHistory(prov_history_file)
 		}
 		if (prov_Coverage){
-			//todo generateCoverage()
+			generateCoverage(prov_Coverage_file)
 		}
 
 		promptNote.parent().width(400);
