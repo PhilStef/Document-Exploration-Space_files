@@ -1152,7 +1152,9 @@ else
 						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><ul>';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
-								output += "<li class='cov-line'><span> "+data[i][0]+"</span><div class='cov-bg'><div class='cov-fg' style='width: "+data[i][1]*160+"px' ></div></div> </li>"
+								if(data[i][1] > .4){
+									output += "<li class='cov-line'><span> "+data[i][0]+"</span><div class='cov-bg'><div class='cov-fg' style='width: "+data[i][1]*160+"px' ></div></div> </li>"
+								}
 							}
 						}).done(()=>{
 							output += "</ul></div>"
