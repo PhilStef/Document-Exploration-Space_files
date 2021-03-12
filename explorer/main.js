@@ -5,8 +5,18 @@
 
 var log_url = 'http://planetlab3.rutgers.edu:10005/log';
 log_url = 'http://localhost:8080/log';
+//generates random id;
+let guid = () => {
+    let s4 = () => {
+        return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+    }
+    //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
+    return s4() + s4() + '-' + s4();
+}
 
-var pname = "";
+var pname = guid();
 var DEBUGME = null;
 var SESSION_LOG_DATA = [];
 var noteIdCounter = 0;
@@ -28,24 +38,86 @@ function encode(s)
 
 function saveLocalData()
 {
-		var doc = JSON.stringify(SESSION_LOG_DATA);
-		// var winPrint = window.open("about:blank", "_blank"); 
-		// winPrint.document.write(doc); 
-		// winPrint.document.close();
-		var data = encode(doc);
-    	var blob = new Blob( [ data ], {
+	let d = new Date();
+	let ms_timestamp = (d.getTime()-init_time)/(1000);
+	let sBrowser, sUsrAg = navigator.userAgent;
+
+	// The order matters here, and this may report false positives for unlisted browsers.
+	
+	if (sUsrAg.indexOf("Firefox") > -1) {
+	  sBrowser = "Mozilla Firefox";
+	  // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+	} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
+	  sBrowser = "Samsung Internet";
+	  // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
+	} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+	  sBrowser = "Opera";
+	  // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+	} else if (sUsrAg.indexOf("Trident") > -1) {
+	  sBrowser = "Microsoft Internet Explorer";
+	  // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+	} else if (sUsrAg.indexOf("Edge") > -1) {
+	  sBrowser = "Microsoft Edge";
+	  // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+	} else if (sUsrAg.indexOf("Chrome") > -1) {
+	  sBrowser = "Google Chrome or Chromium";
+	  // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+	} else if (sUsrAg.indexOf("Safari") > -1) {
+	  sBrowser = "Apple Safari";
+	  // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+	} else {
+	  sBrowser = "unknown";
+	}
+
+	//Create the-end object
+	let jsonEnd = {
+		tags: ["end-study",null],
+		message: pname,
+		timestamp: ms_timestamp,
+		type: "endStudy",
+		element_id: {
+			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
+			monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
+			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
+			pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
+			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
+			browser: sBrowser, //Browser name given the above if statment
+			userAgent: sUsrAg //Default user agent String
+		}
+	}
+	SESSION_LOG_DATA.push(jsonEnd);
+			
+	// Now write a log for all the notes with their written content	
+	for (tempCounter = 1; tempCounter <= noteIdCounter ;tempCounter ++){
+		var noteDialog = $(myNotes[tempCounter]); 
+		var text = noteDialog.find(".note-set").text();
+		console.log(text);
+		var doc_id = noteDialog.find(".ui-dialog-title").text();
+		let noteInfo = {
+			tags: ["Notes", doc_id],
+			message: text,
+			timestamp: ms_timestamp,
+			type: "note-finish",
+			participant_tag: pname,
+			element_id: "Note"+(tempCounter-1)
+		}
+		SESSION_LOG_DATA.push(noteInfo)
+	}
+
+	var doc = JSON.stringify(SESSION_LOG_DATA);
+	var data = encode(doc);
+	var blob = new Blob( [ data ], {
         type: 'application/octet-stream'
-    	});
+	});
     
     url = URL.createObjectURL( blob );
     var link = document.createElement( 'a' );
     link.setAttribute( 'href', url );
-    link.setAttribute('download', 'output.json' );
+    link.setAttribute('download', pname+'-interactions.json' );
     
     var event = document.createEvent( 'MouseEvents' );
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
     link.dispatchEvent(event);
-//});
 }
         
 var promptNoteText_1 = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
@@ -148,7 +220,7 @@ else
  						
  						while (tempCounter>0){
                         var noteDialog = $(myNotes[tempCounter]); 
-                        var text = noteDialogToText(noteDialog);
+                        var text = noteDialog.find(".note-set").text();
                         console.log(text);
 						var doc_id = noteDialog.find(".ui-dialog-title").text();
 						logData("Notes", "Note" + tempCounter ,"Note" + tempCounter, doc_id,null);
@@ -200,7 +272,7 @@ else
 
 		//number of milliseconds since midnight, January 1, 1970
 		var d = new Date();
-		var ms_timestamp = (d.getTime()-init_time)/(1000*60); //ms to mins
+		var ms_timestamp = (d.getTime()-init_time)/(1000); //ms to mins
 		var participant_tag = "NONE";
 		if(pname.length > 0)
 			participant_tag = pname;
@@ -282,17 +354,6 @@ else
 		ret += " " + element.find(".doc-content").text();
 		return ret;
 	}
-// give me the Note, take the title&content
-	function noteDialogToText(element)
-	{
-		var ret = "";
-		//ret += element.find(".ui-dialog-title").text();
-		ret += element.find(".note-set").text();
-		//ret += element.find(".note-content").text();
-		//ret += " " + element.find(".ui-dialog-content").text();
-		//ret += " " + element.innertText;
-		return ret;
-	} 
 	
 
 
