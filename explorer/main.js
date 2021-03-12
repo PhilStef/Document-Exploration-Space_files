@@ -1,8 +1,3 @@
-// dont know how to make button be somewhere else
-// how do you like new timestamp?
-// couldnt figure out how to neatly lay out data
-
-
 var log_url = 'http://planetlab3.rutgers.edu:10005/log';
 log_url = 'http://localhost:8080/log';
 //generates random id;
@@ -17,7 +12,7 @@ let guid = (cond) => {
 }
 
 var pname = "NONE"
-var DEBUGME = null;
+// var DEBUGME = null;
 var SESSION_LOG_DATA = [];
 var noteIdCounter = 0;
 var myNotes = [];
@@ -25,7 +20,7 @@ var myNotes = [];
 var d = new Date();
 var init_time = d.getTime();
 
-
+/*
 var promptNoteText_1 = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
 									"<div><br></div>" +
 									"Determine how the disease spread to different countries." +
@@ -60,7 +55,7 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 						"<div><br></div>" +
 						"Tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
-
+*/
 var prompt_Jeremy = "The following documents relate to arms dealing between countries across the world." +
 						"<div><br></div>" +
 						"A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
@@ -76,39 +71,30 @@ var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -o
 var query = window.location.search;
 var promptNoteText = '';
 
-if(query.includes('=1'))
-{
+if(query.includes('=1')){
 	pname=guid(1);
 	var load_prov_history = false;
 	var prov_Coverage = false;
-
 	promptNoteText = prompt_Jeremy;
 }
-else if(query.includes('=2'))
-{
+else if(query.includes('=2')){
 	pname=guid(2);
 	var load_prov_history = false;
 	var prov_Coverage = true;
-
 	promptNoteText = prompt_Jeremy;
 }
-else if(query.includes('=3'))
-{
+else if(query.includes('=3')){
 	pname=guid(3);
 	var load_prov_history = true;
 	var prov_Coverage = false;
-
 	promptNoteText = prompt_Jeremy;
 }
-else if(query.includes('=4'))
-{
+else if(query.includes('=4')){
 	pname=guid("debug");
 	var load_prov_history = true;
 	var prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
-}
-else
-{
+}else{
 	pname=guid("err");
 	var load_prov_history = false;
 	var prov_Coverage = false;
