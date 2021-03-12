@@ -13,7 +13,7 @@ let guid = () => {
             .substring(1);
     }
     //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
-    return s4() + s4() + '-' + s4();
+    return s4() + s4() + '_' + s4();
 }
 
 var pname = guid();
@@ -119,7 +119,7 @@ function saveInteractionsToFile()
     url = URL.createObjectURL( blob );
     var link = document.createElement( 'a' );
     link.setAttribute( 'href', url );
-    link.setAttribute('download', pname+'-interactions.json' );
+    link.setAttribute('download', pname+'_interactions.json' );
     
     var event = document.createEvent( 'MouseEvents' );
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
