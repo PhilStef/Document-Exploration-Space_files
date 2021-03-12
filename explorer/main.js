@@ -25,49 +25,55 @@ var myNotes = [];
 var d = new Date();
 var init_time = d.getTime();
 
-function encode(s) 
+
+
+
+function saveInteractionsToFile()
+{
+	function encode(s) 
 {
     var out = [];
     for ( var i = 0; i < s.length; i++ ) {
         out[i] = s.charCodeAt(i);
     }
     return new Uint8Array( out );
-}
+	}
+	function determineBrowser(usrAgnt){
+		let sBrowser =""
 
+		// The order matters here, and this may report false positives for unlisted browsers.
+		
+		if (sUsrAg.indexOf("Firefox") > -1) {
+		sBrowser = "Mozilla Firefox";
+		// "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+		} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
+		sBrowser = "Samsung Internet";
+		// "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
+		} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+		sBrowser = "Opera";
+		// "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+		} else if (sUsrAg.indexOf("Trident") > -1) {
+		sBrowser = "Microsoft Internet Explorer";
+		// "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+		} else if (sUsrAg.indexOf("Edge") > -1) {
+		sBrowser = "Microsoft Edge";
+		// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+		} else if (sUsrAg.indexOf("Chrome") > -1) {
+		sBrowser = "Google Chrome or Chromium";
+		// "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+		} else if (sUsrAg.indexOf("Safari") > -1) {
+		sBrowser = "Apple Safari";
+		// "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+		} else {
+		sBrowser = "unknown";
+		}
+		return sBrowser;
+	}
 
-
-function saveLocalData()
-{
 	let d = new Date();
 	let ms_timestamp = (d.getTime()-init_time)/(1000);
-	let sBrowser, sUsrAg = navigator.userAgent;
-
-	// The order matters here, and this may report false positives for unlisted browsers.
+	let sUsrAg = navigator.userAgent;
 	
-	if (sUsrAg.indexOf("Firefox") > -1) {
-	  sBrowser = "Mozilla Firefox";
-	  // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-	} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
-	  sBrowser = "Samsung Internet";
-	  // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
-	} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-	  sBrowser = "Opera";
-	  // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-	} else if (sUsrAg.indexOf("Trident") > -1) {
-	  sBrowser = "Microsoft Internet Explorer";
-	  // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-	} else if (sUsrAg.indexOf("Edge") > -1) {
-	  sBrowser = "Microsoft Edge";
-	  // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-	} else if (sUsrAg.indexOf("Chrome") > -1) {
-	  sBrowser = "Google Chrome or Chromium";
-	  // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-	} else if (sUsrAg.indexOf("Safari") > -1) {
-	  sBrowser = "Apple Safari";
-	  // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-	} else {
-	  sBrowser = "unknown";
-	}
 
 	//Create the-end object
 	let jsonEnd = {
@@ -81,7 +87,7 @@ function saveLocalData()
 			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
 			pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
 			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
-			browser: sBrowser, //Browser name given the above if statment
+			browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
 			userAgent: sUsrAg //Default user agent String
 		}
 	}
@@ -138,14 +144,14 @@ var promptNoteText_2 = "Intelligence analysts are looking for information relate
 var prompt_none = "The following documents all relate to arms dealing between countries across the world." +
 						   "<div><br></div>" +
 							"Tell us your own interpretation of the dataset. " + 
-							'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+							'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 
 var prompt_conclusion = "The following documents all relate to arms dealing between countries across the world." +
 							"<div><br></div>" +
 							"An analyst found that mention of car parts on message boards were used to discuss weapons and their price. A man named Mikhail Dombrovski was on here with an alias to discuss with a Nigerian man. Mikhail had arranged a meeting in Dubai with him. " +
 							"<div><br></div>" +
 							"Tell us your own interpretation of the dataset. " + 
-							'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+							'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 
 
 var prompt_workflow = "The following documents all relate to arms dealing between countries across the world." +
@@ -153,14 +159,14 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 						"An analyst first went through the email and message board intercepts section to search for some direct dialogue between the arms dealers. The analyst highlighted a code word used to deal with arm dealings. The analyst traced some aliases and found the suspects names were mentioned in other documents. The analyst started focusing solely on the activity of Mikhail Dombrovski." +
 						"<div><br></div>" +
 						"Tell us your own interpretation of the dataset. " + 
-						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 
 var prompt_Jeremy = "The following documents relate to arms dealing between countries across the world." +
 						"<div><br></div>" +
 						"A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
 						"<div><br></div>" +
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
-						'<br/><br/><button id="button" onClick="saveLocalData()"> Click HERE to end and print results. </button>';
+						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 var load_prov_history = true;
 var prov_history_file = '../explorer/data/interactionHistories/mouseless-history.json';
 
@@ -250,7 +256,7 @@ else
             '</div>';
             "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
         }
-		// output += '<div onClick="saveLocalData()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
+		// output += '<div onClick="saveInteractionsToFile()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
 		// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
 		// '</div>';
         output+="</div>";
@@ -1191,7 +1197,7 @@ else
 			// 				// '</div>';
 			// 				// "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
 			// 			}
-			// 			// output += '<div onClick="saveLocalData()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
+			// 			// output += '<div onClick="saveInteractionsToFile()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
 			// 			// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
 			// 			// '</div>';
 			// 			console.log(output)
