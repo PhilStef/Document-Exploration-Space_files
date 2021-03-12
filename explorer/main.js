@@ -6,17 +6,17 @@
 var log_url = 'http://planetlab3.rutgers.edu:10005/log';
 log_url = 'http://localhost:8080/log';
 //generates random id;
-let guid = () => {
+let guid = (cond) => {
     let s4 = () => {
         return Math.floor((1 + Math.random()) * 0x10000)
             .toString(16)
             .substring(1);
     }
-    //return id of format 'aaaaaaaa'-'aaaa'-'aaaa'-'aaaa'-'aaaaaaaaaaaa'
-    return s4() + s4() + '_' + s4();
+    //return id of format #_'aaaaaaaa'
+    return cond+"_"+s4() + s4();
 }
 
-var pname = guid();
+var pname = "NONE"
 var DEBUGME = null;
 var SESSION_LOG_DATA = [];
 var noteIdCounter = 0;
@@ -26,106 +26,6 @@ var d = new Date();
 var init_time = d.getTime();
 
 
-
-
-function saveInteractionsToFile()
-{
-	function encode(s) 
-{
-    var out = [];
-    for ( var i = 0; i < s.length; i++ ) {
-        out[i] = s.charCodeAt(i);
-    }
-    return new Uint8Array( out );
-	}
-	function determineBrowser(usrAgnt){
-		let sBrowser =""
-
-		// The order matters here, and this may report false positives for unlisted browsers.
-		
-		if (sUsrAg.indexOf("Firefox") > -1) {
-		sBrowser = "Mozilla Firefox";
-		// "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-		} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
-		sBrowser = "Samsung Internet";
-		// "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
-		} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-		sBrowser = "Opera";
-		// "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-		} else if (sUsrAg.indexOf("Trident") > -1) {
-		sBrowser = "Microsoft Internet Explorer";
-		// "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-		} else if (sUsrAg.indexOf("Edge") > -1) {
-		sBrowser = "Microsoft Edge";
-		// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-		} else if (sUsrAg.indexOf("Chrome") > -1) {
-		sBrowser = "Google Chrome or Chromium";
-		// "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-		} else if (sUsrAg.indexOf("Safari") > -1) {
-		sBrowser = "Apple Safari";
-		// "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-		} else {
-		sBrowser = "unknown";
-		}
-		return sBrowser;
-	}
-
-	let d = new Date();
-	let ms_timestamp = (d.getTime()-init_time)/(1000);
-	let sUsrAg = navigator.userAgent;
-	
-
-	//Create the-end object
-	let jsonEnd = {
-		tags: ["end-study",null],
-		message: pname,
-		timestamp: ms_timestamp,
-		type: "endStudy",
-		element_id: {
-			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
-			monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
-			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
-			pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
-			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
-			browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
-			userAgent: sUsrAg //Default user agent String
-		}
-	}
-	SESSION_LOG_DATA.push(jsonEnd);
-			
-	// Now write a log for all the notes with their written content	
-	for (tempCounter = 1; tempCounter <= noteIdCounter ;tempCounter ++){
-		var noteDialog = $(myNotes[tempCounter]); 
-		var text = noteDialog.find(".note-set").text();
-		console.log(text);
-		var doc_id = noteDialog.find(".ui-dialog-title").text();
-		let noteInfo = {
-			tags: ["Notes", doc_id],
-			message: text,
-			timestamp: ms_timestamp,
-			type: "note-finish",
-			participant_tag: pname,
-			element_id: "Note"+(tempCounter-1)
-		}
-		SESSION_LOG_DATA.push(noteInfo)
-	}
-
-	var doc = JSON.stringify(SESSION_LOG_DATA);
-	var data = encode(doc);
-	var blob = new Blob( [ data ], {
-        type: 'application/octet-stream'
-	});
-    
-    url = URL.createObjectURL( blob );
-    var link = document.createElement( 'a' );
-    link.setAttribute( 'href', url );
-    link.setAttribute('download', pname+'_interactions.json' );
-    
-    var event = document.createEvent( 'MouseEvents' );
-    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
-    link.dispatchEvent(event);
-}
-        
 var promptNoteText_1 = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
 									"<div><br></div>" +
 									"Determine how the disease spread to different countries." +
@@ -167,10 +67,8 @@ var prompt_Jeremy = "The following documents relate to arms dealing between coun
 						"<div><br></div>" +
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
-var load_prov_history = true;
 var prov_history_file = '../explorer/data/interactionHistories/mouseless-history.json';
 
-var prov_Coverage = true;
 var prov_Coverage_file = "../explorer/data/coverage.json";
 
 var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
@@ -180,18 +78,41 @@ var promptNoteText = '';
 
 if(query.includes('=1'))
 {
-	promptNoteText = prompt_none;
+	pname=guid(1);
+	var load_prov_history = false;
+	var prov_Coverage = false;
+
+	promptNoteText = prompt_Jeremy;
 }
 else if(query.includes('=2'))
 {
-	promptNoteText = prompt_workflow;
+	pname=guid(2);
+	var load_prov_history = false;
+	var prov_Coverage = true;
+
+	promptNoteText = prompt_Jeremy;
 }
 else if(query.includes('=3'))
 {
+	pname=guid(3);
+	var load_prov_history = true;
+	var prov_Coverage = false;
+
+	promptNoteText = prompt_Jeremy;
+}
+else if(query.includes('=4'))
+{
+	pname=guid("debug");
+	var load_prov_history = true;
+	var prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
 }
 else
 {
+	pname=guid("err");
+	var load_prov_history = false;
+	var prov_Coverage = false;
+	promptNoteText = "ERROR - no condition specified"
 	console.log('ERROR!');
 }
 
@@ -287,7 +208,6 @@ else
 		  , message: message
 		  ,	timestamp: ms_timestamp
 		  , type: typeTag
-		  , participant_tag: participant_tag
 		 };
 		 if(element_id && element_id.length > 0)
 		 	jsonMessage["element_id"] = element_id; // = element_id;
@@ -295,8 +215,6 @@ else
 		 	jsonMessage["document_id"] = document_id;
 		 if(text && text.length > 0)
 		 	jsonMessage["text"] = text;
-		 if(participant_tag && participant_tag.length > 0 && participant_tag != "NONE")
-		 	jsonMessage["username"] = participant_tag;
 
       SESSION_LOG_DATA.push(jsonMessage);
       
@@ -1059,7 +977,7 @@ else
   
             //logData("createNote", noteId + "," + mouseX + "," + mouseY, noteId);
              
-						logData("createNote", noteId + "," + mouseX + "," + mouseY,"Note" + (noteIdCounter -1), null);
+						logData("createNote", noteId,"Note" + (noteIdCounter -1), [ mouseX, mouseY ]);
              
              
 			// need a div to base the dialog box off of. creating a new dialog box doesn't
@@ -1557,3 +1475,100 @@ else
 	//console.log("window height: " + $(window).height());
 
 })();
+
+function saveInteractionsToFile()
+{
+	function encode(s) 
+{
+    var out = [];
+    for ( var i = 0; i < s.length; i++ ) {
+        out[i] = s.charCodeAt(i);
+    }
+    return new Uint8Array( out );
+	}
+	function determineBrowser(usrAgnt){
+		let sBrowser =""
+
+		// The order matters here, and this may report false positives for unlisted browsers.
+		
+		if (sUsrAg.indexOf("Firefox") > -1) {
+		sBrowser = "Mozilla Firefox";
+		// "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+		} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
+		sBrowser = "Samsung Internet";
+		// "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
+		} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+		sBrowser = "Opera";
+		// "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+		} else if (sUsrAg.indexOf("Trident") > -1) {
+		sBrowser = "Microsoft Internet Explorer";
+		// "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+		} else if (sUsrAg.indexOf("Edge") > -1) {
+		sBrowser = "Microsoft Edge";
+		// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+		} else if (sUsrAg.indexOf("Chrome") > -1) {
+		sBrowser = "Google Chrome or Chromium";
+		// "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+		} else if (sUsrAg.indexOf("Safari") > -1) {
+		sBrowser = "Apple Safari";
+		// "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+		} else {
+		sBrowser = "unknown";
+		}
+		return sBrowser;
+	}
+
+	let d = new Date();
+	let ms_timestamp = (d.getTime()-init_time)/(1000);
+	let sUsrAg = navigator.userAgent;
+	
+
+	//Create the-end object
+	let jsonEnd = {
+		tags: ["end-study",null],
+		message: pname,
+		timestamp: ms_timestamp,
+		type: "endStudy",
+		element_id: {
+			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
+			monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
+			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
+			pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
+			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
+			browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
+			userAgent: sUsrAg //Default user agent String
+		}
+	}
+	SESSION_LOG_DATA.push(jsonEnd);
+			
+	// Now write a log for all the notes with their written content	
+	for (tempCounter = 2; tempCounter <= noteIdCounter ;tempCounter ++){
+		var noteDialog = $(myNotes[tempCounter]); 
+		var noteContent = noteDialog.find(".note-set").text();
+		var doc_id = noteDialog.find(".ui-dialog-title").text();
+		let noteInfo = {
+			tags: ["Notes", doc_id],
+			message: noteContent,
+			timestamp: ms_timestamp,
+			type: "note-finish",
+			participant_tag: pname,
+			element_id: "Note"+(tempCounter-1)
+		}
+		SESSION_LOG_DATA.push(noteInfo)
+	}
+
+	var doc = JSON.stringify(SESSION_LOG_DATA);
+	var data = encode(doc);
+	var blob = new Blob( [ data ], {
+        type: 'application/octet-stream'
+	});
+    
+    url = URL.createObjectURL( blob );
+    var link = document.createElement( 'a' );
+    link.setAttribute( 'href', url );
+    link.setAttribute('download', pname+'_interactions.json' );
+    
+    var event = document.createEvent( 'MouseEvents' );
+    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
+    link.dispatchEvent(event);
+}
