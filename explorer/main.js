@@ -199,7 +199,9 @@ else if(query.includes('=4')){
 		 	jsonMessage["element_id"] = element_id; // = element_id;
 		 if(document_id && document_id.length > 0)
 		 	jsonMessage["document_id"] = document_id;
-		 if(text && text.length > 0)
+		 if (typeTag.includes('drag')){
+			jsonMessage["position"] = text;
+		 } else if(text && text.length > 0) //todo - does any logging use 'text' parameter? cause I'd just refactor it to 'position' if it makese sense. 
 		 	jsonMessage["text"] = text;
 
       SESSION_LOG_DATA.push(jsonMessage);
@@ -688,7 +690,7 @@ else if(query.includes('=4')){
 						
 						var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("startdrag-document", docDialog.attr("id"), docDialog.attr("id") , doc_id,null);
+						logData("startdrag-document", docDialog.attr("id"), docDialog.attr("id") , doc_id,[mouseX,mouseY]);
 			 		},
 			 		
 			 		dragStop: function() { 
@@ -700,7 +702,7 @@ else if(query.includes('=4')){
 			 			var docDialog = $(this); // $(event.target).parents(".ui-dialog");
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id"), doc_id, null);
+						logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id"), doc_id, [mouseX,mouseY]);
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 						//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
