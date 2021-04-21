@@ -58,13 +58,14 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 */
 var prompt_Jeremy = "The following documents relate to arms dealing between countries across the world." +
 						"<div><br></div>" +
-						"A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
+						"Russian Mobsters are sending weapons around the world. The earliest arms shipment information we have in this dataset occurred in February 2008. it was to send weapons to Iran via a Ukrainian Air freight company (flight IL-76). Due to some unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans must be made. Nicoli Kuryakin is looking to be promoted by the Russian Mob, so he arranges a series of illegal arms deals in 11 countries to impress them. He works with other Russian Arms dealers too: both Mikhail Dombrovski and Leonid Minsky. In August, Mikhail (Joetomsk@au.ru) starts corresponding with the Nigerians via email. Next, Mikhail connects with some contacts in Venezuela through an online forum (VWPARTS4SALECHEAP). By September 2008, contact has been made with Lebanese supporters (Abdullah Khouri and Muhammad Kasem) of the Martyrs Front of Judea. And the various countries are invited to meet in person and discuss their needs on April 09, 2009 at the Burj A-Arab hotel in Dubai. " +
+						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
 						"<div><br></div>" +
 						"Using the resources you have available, tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
-var prov_history_file = '../explorer/data/interactionHistories/mouseless-history.json';
+var prov_history_file = '../explorer/data/interactionHistories/manually-generated-history.json';
 
-var prov_Coverage_file = "../explorer/data/coverage.json";
+var prov_Coverage_file = "../explorer/data/manual-coverage.json";
 
 var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
@@ -1024,13 +1025,19 @@ else if(query.includes('=4')){
 
 		async function generateHistory(fileName){
 			// let pickles = null;
-			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><ul>';
+			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
 				for (var i in data) {
+					if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
+						output += "<div class='dotted'>"
+					}
 					if (data[i].type == "search"){
-						output += "<li class='searchText'>" + data[i].message + "</li><br/>"
+						output += "<li class='searchText'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
 					} else if(data[i].type == "highlightText"){
-						output += "<li class='highlightText'>" + data[i].message + "</li><br/>"
+						output += "<li class='highlightText'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+					}
+					if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
+						output += "</div>"
 					}
 				}
 			}).done(()=>{
@@ -1120,12 +1127,10 @@ else if(query.includes('=4')){
 		// Creating a Provenance Representation 
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><ul>';
+						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul>';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
-								if(data[i][1] > .4){
 									output += "<li class='cov-line'><span> "+data[i][0]+"</span><div class='cov-bg'><div class='cov-fg' style='width: "+data[i][1]*160+"px' ></div></div> </li>"
-								}
 							}
 						}).done(()=>{
 							output += "</ul></div>"
@@ -1134,7 +1139,7 @@ else if(query.includes('=4')){
 							var provDialog = $( "#provSummary" )
 									.dialog(	
 										{
-										height: 440,
+										height: 416,
 										width: 225,										 closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },

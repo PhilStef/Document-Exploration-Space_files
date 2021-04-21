@@ -1,0 +1,55 @@
+[{
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "The analyst started reading documents from early 2008, Highlighting words like <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">Maulana Haq Bukhari</span>, <span class=\"highlight-pink\">Kiev</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
+    "timestamp": "beginning -- 2:14-5:16"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "search",
+    "message": "The user was mainly searching for terms like 'Igor' 'Bank' and 'Turkey' and moved different search results near eachother.",
+    "timestamp": "beginning -- 7:13-9:18"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
+    "timestamp": "beginning -- 11:13-15:47"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "The user Highlighted the following terms <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">elephants</span>, <span class=\"highlight-pink\">monkeys</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
+    "timestamp": "middle -- 20:32"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "search",
+    "message": "the user made 5 searches, including 'Thailand', 'North Korea' and 'IL-76' ",
+    "timestamp": "middle -- 31:12"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
+    "timestamp": "middle -- 35:22"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "The user Highlighted the following terms <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">elephants</span>, <span class=\"highlight-pink\">monkeys</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
+    "timestamp": "end -- 41:17"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "search",
+    "message": "the user began searching for 'arms'",
+    "timestamp": "end -- 43:48"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "highlightText",
+    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
+    "timestamp": "end -- 55:32"
+  }
+]

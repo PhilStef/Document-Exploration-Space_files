@@ -235,7 +235,6 @@ path { cursor:pointer; }
 .highlight-green { background-color: #77F7A4 }
 
 .highlightText { 
-	margin-left: -25px;
 	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_edit.png'); 
 	background-color: lightgreen;
@@ -243,12 +242,37 @@ path { cursor:pointer; }
 	border-radius: 10px;
 }
 .searchText{
-	margin-left: -25px;
 	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/search.png'); 
 	background-color: lightyellow;
 	padding: 5px 8px;
 	border-radius: 10px; 
+}
+
+.dotted {
+	border: #999 dotted 2px;
+    border-radius: 15px;
+    padding: 2px 4px 0px 4px;
+    margin-left: -25px;
+	margin-bottom: 3px;
+    background-color: rgb(195, 91, 195);
+}
+.time {
+	font-size: smaller;
+	padding: 0px 15px;
+	border-bottom: solid #888 01px;
+    margin: -5px -8px 5px -8px;
+}
+
+.historyList:nth-child(3){
+	font-size: 400%;
+}
+
+.coverage-brief{
+    font-size: smaller;
+    margin: 0px 0px;
+    padding-bottom: 5px;
+    border-bottom: #aaa solid 1px;
 }
 
 .cov-line{
