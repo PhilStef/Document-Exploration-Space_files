@@ -143,7 +143,7 @@ else if(query.includes('=4')){
 		
 		});
 
-	var scrunchOriginal = "original";	// code for original ID in data-id
+	var scrunchOriginal = "original";	// code for original ID in data-id - Doesn't look like Data-ID is ever set to anything else. I don't think this variable is used
 	var scrunchedCode = "scrunched";
 	var globalSearchTerm = "";
      
@@ -367,6 +367,8 @@ else if(query.includes('=4')){
 			docCloneDiv.attr( "id", realID);	// set the highlight clone with the original's id
 			docDialog.append(docCloneDiv);
 
+			//todo are we just not definning data-height and data-width when hiding things?
+
 			// strip information from real div and hide
 			currentDocDiv.removeClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
 			currentDocDiv.hide();
@@ -378,18 +380,18 @@ else if(query.includes('=4')){
 	  	return 0;
 	}//end scrunchHighlightView
     
-    // re-creating scrunch view to avoid resizing problems
-	function handleResizeScrunch(docDialog) {
+    // // re-creating scrunch view to avoid resizing problems
+	// function handleResizeScrunch(docDialog) {
 
-		var scrunchDiv = docDialog.find(".scrunch-doc");
+	// 	var scrunchDiv = docDialog.find(".scrunch-doc");
 
-		// if in scrunched view, need to keep re-creating scrunch view to avoid resizing problems
-	  	if(scrunchDiv != 0 && scrunchDiv.length != 0) {
-		  	restoreDocFromScrunched(docDialog);
-			scrunchHighlightView(docDialog);
-		}
+	// 	// if in scrunched view, need to keep re-creating scrunch view to avoid resizing problems
+	//   	if(scrunchDiv != 0 && scrunchDiv.length != 0) {
+	// 	  	restoreDocFromScrunched(docDialog);
+	// 		scrunchHighlightView(docDialog);
+	// 	}
 
-	}//end handleResizeScrunch
+	// }//end handleResizeScrunch
     
     // Write a log for Scrunching interaction 
 	function logScrunchStuff(scrunchDiv, docDialog) {
@@ -674,8 +676,6 @@ else if(query.includes('=4')){
 			// create all dialog boxes
 			var doccc = $(this).dialog(
 				{
-				minHeight: 400,
-				width: 400,
 				dialogClass: "close",  // "dlg-no-close"
 			 	closeOnEscape: false,
 			 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
@@ -711,7 +711,7 @@ else if(query.includes('=4')){
 			 		},
 		
              	resize: function(event, ui){
-             		handleResizeScrunch($(event.target).parents(".ui-dialog"));
+             		// handleResizeScrunch($(event.target).parents(".ui-dialog"));
              		jsPlumbInstance.repaintEverything();
              	},
              	//width: 1000,
@@ -732,7 +732,6 @@ else if(query.includes('=4')){
 				$(this).dialog(  // Resize and reposition dialogs after loading
 				{
 				width: 100,
-				minHeight: 500,
 				position: [typeIndex * groupingWidth, boxPosY]   // Initial position of dialog box 
 				}); 
 				
@@ -931,7 +930,7 @@ else if(query.includes('=4')){
 
         // Creating a note 
 		
-		var createNote = function (noteHtml) {
+		var createNote = function (noteHtml, setWidth = 200) {
 
 			noteIdCounter++;
             
@@ -980,6 +979,7 @@ else if(query.includes('=4')){
 				.dialog(	
 					{
 					minHeight: 80,
+					width: setWidth,
 					dialogClass: "dlg-no-close",
 				 	closeOnEscape: false,
 					position: [mouseX, mouseY],
@@ -1413,7 +1413,7 @@ else if(query.includes('=4')){
 		//							"Describe the associations and interactions among the players in the weapons dealings." +
 		//							"<div><br></div>");
 
-		var promptNote = createNote(promptNoteText);
+		var promptNote = createNote(promptNoteText, 400);
 
 		if(load_prov_history){
 			generateHistory(prov_history_file)
@@ -1424,11 +1424,11 @@ else if(query.includes('=4')){
 		// Add prompt note on initialization
 		mouseX = 735;
 		mouseY = 42;
-		var participantSummary = createNote('response');
+		var participantSummary = createNote('response', 300);
 
 		//adjust sizing of note windows
-		promptNote.parent().width(400);
-		participantSummary.parent().width(300);
+		// participantSummary.parent().width(300);
+		// promptNote.parent().width(400);
 	
 
 	});    //end jsPlumb.ready end the  big function 
