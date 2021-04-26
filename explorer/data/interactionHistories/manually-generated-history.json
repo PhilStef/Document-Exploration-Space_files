@@ -2,54 +2,54 @@
     "element_id": "dialog101",
     "type": "highlightText",
     "message": "The analyst started reading documents from early 2008, Highlighting words like <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">Maulana Haq Bukhari</span>, <span class=\"highlight-pink\">Kiev</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
-    "timestamp": "beginning -- 2:14-5:16"
+    "timestamp": "beginning -- 2:14 - 5:16"
   },
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "The user was mainly searching for terms like 'Igor' 'Bank' and 'Turkey' and moved different search results near eachother.",
-    "timestamp": "beginning -- 7:13-9:18"
+    "message": "The user was mainly searching for terms like <span class=\"highlight-pink\">Igor</span>, <span class=\"highlight-pink\">Bank</span>, and <span class=\"highlight-pink\">Turkey</span> and moved different search results near eachother.",
+    "timestamp": "beginning -- 7:13 - 9:18"
+  },
+  {
+    "element_id": "dialog101",
+    "type": "noteText",
+    "message": "The analyst spent the majority of this segment reading. One note Created: <em>Burj Hotel, Dubai meeting in April 2009.</em>",
+    "timestamp": "beginning -- 11:13 - 17:47"
   },
   {
     "element_id": "dialog101",
     "type": "highlightText",
-    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
-    "timestamp": "beginning -- 11:13-15:47"
+    "message": "Many words Highlighted including: <span class=\"highlight-pink\">Dombrovski</span>, <span class=\"highlight-pink\">Joetomsk@au.ru</span>, <span class=\"highlight-pink\">Nigeria</span>, and <span class=\"highlight-pink\">Russia</span>",
+    "timestamp": "middle -- 18:58 - 22:32"
   },
   {
     "element_id": "dialog101",
-    "type": "highlightText",
-    "message": "The user Highlighted the following terms <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">elephants</span>, <span class=\"highlight-pink\">monkeys</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
-    "timestamp": "middle -- 20:32"
+    "type": "noteText",
+    "message": "2 Notes created: <em>Dombrovski = jtomski on vwparts4salecheep</em> and <em>Countries so far: Columbia, Thailand, Turkey, Russia, North Korea</em>",
+    "timestamp": "middle -- 25:14 - 27:17"
   },
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "the user made 5 searches, including 'Thailand', 'North Korea' and 'IL-76' ",
-    "timestamp": "middle -- 31:12"
+    "message": "5 searches are made including 'Minsky', 'North Korea' and 'vwparts4salecheep'. The remainder of this time was spent reading the results.",
+    "timestamp": "middle -- 27:34 - 34:12"
   },
   {
     "element_id": "dialog101",
-    "type": "highlightText",
-    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
-    "timestamp": "middle -- 35:22"
-  },
-  {
-    "element_id": "dialog101",
-    "type": "highlightText",
-    "message": "The user Highlighted the following terms <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">elephants</span>, <span class=\"highlight-pink\">monkeys</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
-    "timestamp": "end -- 41:17"
+    "type": "noteText",
+    "message": "1 long Note created: <em>Russian Mobsters are sending weapons around the world. Nicoli Kuryakin, Mikhail Dombrovski, and Leonid Minsky are looking to be promoted by the Russian Mob, so they arrange a series of arms deals. </em>",
+    "timestamp": "middle -- 38:42 - 41:17"
   },
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "the user began searching for 'arms'",
-    "timestamp": "end -- 43:48"
+    "message": "8 searches are made including terms like: 'Saudi Arabian Monetary Agency', 'Martyrs Front of Judea', and 'MFJ'",
+    "timestamp": "end -- 42:48 - 51:36"
   },
   {
     "element_id": "dialog101",
     "type": "highlightText",
-    "message": "Additional Highlighting followed where the user looked at articles about <span class=\"highlight-pink\">Lost and Found</span>",
-    "timestamp": "end -- 55:32"
+    "message": "Several terms were Highlighted: <span class=\"highlight-pink\">Kasem</span>, <span class=\"highlight-pink\">Khouri</span>, and <span class=\"highlight-pink\">Russian</span>. Editing and typing in previous notes concluded the session.",
+    "timestamp": "end -- 52:04 - 58:32"
   }
 ]

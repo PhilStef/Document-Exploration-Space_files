@@ -248,6 +248,13 @@ path { cursor:pointer; }
 	padding: 5px 8px;
 	border-radius: 10px; 
 }
+.noteText{
+	margin-bottom: -10px;
+	list-style-image: url('../explorer/images/page_white_add.png'); 
+	background-color: #F1DDFF;
+	padding: 5px 8px;
+	border-radius: 10px; 
+}
 
 .dotted {
 	border: #999 dotted 2px;
@@ -262,10 +269,6 @@ path { cursor:pointer; }
 	padding: 0px 15px;
 	border-bottom: solid #888 01px;
     margin: -5px -8px 5px -8px;
-}
-
-.historyList:nth-child(3){
-	font-size: 400%;
 }
 
 .coverage-brief{
