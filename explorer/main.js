@@ -56,12 +56,8 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 						"Tell us your own interpretation of the dataset. " + 
 						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 */
-var prompt_Jeremy = "The following documents relate to arms dealing between countries across the world." +
-						"<div><br></div>" +
-						"Russian Mobsters are sending weapons around the world. The earliest arms shipment information we have in this dataset occurred in February 2008. it was to send weapons to Iran via a Ukrainian Air freight company (flight IL-76). Due to some unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans must be made. Nicoli Kuryakin is looking to be promoted by the Russian Mob, so he arranges a series of illegal arms deals in 11 countries to impress them. He works with other Russian Arms dealers too: both Mikhail Dombrovski and Leonid Minsky. In August, Mikhail (Joetomsk@au.ru) starts corresponding with the Nigerians via email. Next, Mikhail connects with some contacts in Venezuela through an online forum (VWPARTS4SALECHEAP). By September 2008, contact has been made with Lebanese supporters (Abdullah Khouri and Muhammad Kasem) of the Martyrs Front of Judea. And the various countries are invited to meet in person and discuss their needs on April 09, 2009 at the Burj A-Arab hotel in Dubai. " +
+var prompt_Jeremy =     "Russian Mobsters are sending weapons around the world. The earliest arms shipment information we have in this dataset occurred in February 2008. it was to send weapons to Iran via a Ukrainian Air freight company (flight IL-76). Due to some unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans must be made. Nicoli Kuryakin is looking to be promoted by the Russian Mob, so he arranges a series of illegal arms deals in 11 countries to impress them. He works with other Russian Arms dealers too: both Mikhail Dombrovski and Leonid Minsky. In August, Mikhail (Joetomsk@au.ru) starts corresponding with the Nigerians via email. Next, Mikhail connects with some contacts in Venezuela through an online forum (VWPARTS4SALECHEAP). By September 2008, contact has been made with Lebanese supporters (Abdullah Khouri and Muhammad Kasem) of the Martyrs Front of Judea. And the various countries are invited to meet in person and discuss their needs on April 09, 2009 at the Burj A-Arab hotel in Dubai. ";
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
-						"<div><br></div>" +
-						"Using the resources you have available, tell us your own interpretation of the dataset. "
 var prov_history_file = '../explorer/data/interactionHistories/manually-generated-history.json';
 
 var prov_Coverage_file = "../explorer/data/manual-coverage.json";
@@ -940,25 +936,35 @@ else if(query.includes('=4')){
 
 			var output="<div>";
 			// set up a space for output summary to be written
-			if (noteHtml === 'response'){
-				output += '<div id="' + noteId + '" class="note-set" title="My Summary" contenteditable="true"></div> </div>'
+			if (noteHtml === 'instructions'){
+				output += '<div id="' + noteId + '" class="note-set" title="Instructions" contenteditable="flase">' + 
+				"The following documents relate to arms dealing between countries across the world.<br><br>" +
+				"Using the resources you have available, tell us your own interpretation of the dataset. <br><br>"+
+				"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
+				'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>' +
+				'</div>';
+
+		 
+			} else if (noteHtml === 'response'){
+				output += '<div id="' + noteId + '" class="note-set" title="Type Your Summary Here" contenteditable="true"></div> </div>'
 		 
 			}
 			// different title for initial note and all other
              else if (noteHtml !== promptNoteText){
              	
-  	 	            	output += '<div id="' + noteId + '" class="note-set" title=" MyNotes '+ (noteIdCounter - 2)+'" contenteditable="true">' +
-						noteHtml +
-						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
-	            	  '</div>';
-	            	  
-	        output+="</div>";
+				output += '<div id="' + noteId + '" class="note-set" title=" MyNotes '+ (noteIdCounter - 3)+'" contenteditable="true">' +
+				noteHtml +
+				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
+				'</div>';
+				output+="</div>";
+				
+				logData("createNote", noteId,"Note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
+
 	        }
 	        else{
 	        
-			output += '<div id="' + noteId + '" class="note-set" title="Provided Summary" contenteditable="false">' +
+			output += '<div id="' + noteId + '" class="note-set" title="Summary of Findings" contenteditable="false">' +
 						noteHtml +
-						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>' +
 						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 						
 	            	  '</div>';
@@ -967,7 +973,6 @@ else if(query.includes('=4')){
 	        	
 	        };
   
-			logData("createNote", noteId,"Note" + (noteIdCounter -2), [ mouseX, mouseY ]);
              
              
 			// need a div to base the dialog box off of. creating a new dialog box doesn't
@@ -1424,6 +1429,9 @@ else if(query.includes('=4')){
 		// Add prompt note on initialization
 		mouseX = 735;
 		mouseY = 42;
+		var instructionsWindow = createNote('instructions', 250);
+		mouseX = 735;
+		mouseY = 442;
 		var participantSummary = createNote('response', 300);
 
 		//adjust sizing of note windows
@@ -1543,7 +1551,7 @@ function saveInteractionsToFile()
 	SESSION_LOG_DATA.push(jsonEnd);
 			
 	// Now write a log for all the notes with their written content	
-	for (tempCounter = 2; tempCounter <= noteIdCounter ;tempCounter ++){
+	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
 		var noteDialog = $(myNotes[tempCounter]); 
 		var noteContent = noteDialog.find(".note-set").text();
 		var doc_id = noteDialog.find(".ui-dialog-title").text();
@@ -1551,9 +1559,9 @@ function saveInteractionsToFile()
 			tags: ["Notes", doc_id],
 			message: noteContent,
 			timestamp: ms_timestamp,
-			type: "note-finish",
+			type: "noteFinish",
 			participant_tag: pname,
-			element_id: "Note"+(tempCounter-2)
+			element_id: "Note"+(tempCounter-3)
 		}
 		SESSION_LOG_DATA.push(noteInfo)
 	}
