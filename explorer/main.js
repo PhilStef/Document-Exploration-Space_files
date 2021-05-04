@@ -1142,7 +1142,7 @@ else if(query.includes('=4')){
 						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul>';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
-									output += "<li class='cov-line'><span> "+data[i][0]+"</span><div class='cov-bg'><div class='cov-fg' style='width: "+data[i][1]*160+"px' ></div></div> </li>"
+									output += "<li class='cov-line'><span> "+data[i][0]+"<span class='cov-bg'><span class='cov-fg' style='width: "+data[i][1]*130+"px' ></span></span></span></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
@@ -1151,7 +1151,6 @@ else if(query.includes('=4')){
 							var provDialog = $( "#provSummary" )
 									.dialog(	
 										{
-										height: 416,
 										width: 225,										 closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },

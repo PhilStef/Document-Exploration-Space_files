@@ -280,7 +280,7 @@ path { cursor:pointer; }
 
 .cov-line{
 	list-style-type: none;
-	margin: 0px 45px 0px -45px;
+	margin: 0px 0px 0px -38px;
 }
 .cov-fg {
 	position:absolute;
@@ -289,8 +289,11 @@ path { cursor:pointer; }
 }
 .cov-bg{
 	height: 6px;
-	width: 160px;
+	width: 130px;
 	position: relative;
+	margin-top: 4.5px;
+	float: right;
+	display: block;
 	background-color: #9dd9d2;
 }
 /*
