@@ -237,7 +237,7 @@ path { cursor:pointer; }
 .highlightText { 
 	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_edit.png'); 
-	background-color: lightgreen;
+	background-color: #aafec6;
 	padding: 5px 8px; 
 	border-radius: 10px;
 }
@@ -251,7 +251,7 @@ path { cursor:pointer; }
 .noteText{
 	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_add.png'); 
-	background-color: #f6eb85;
+	background-color: #fff6a5;
 	padding: 5px 8px;
 	border-radius: 10px; 
 }
