@@ -1,13 +1,13 @@
 [{
     "element_id": "dialog101",
     "type": "highlightText",
-    "message": "The analyst started reading documents from early 2008, Highlighting words like <span class=\"highlight-pink\">Airports</span>, <span class=\"highlight-pink\">Maulana Haq Bukhari</span>, <span class=\"highlight-pink\">Kiev</span>, and <span class=\"highlight-pink\">M/V Tanya</span>",
+    "message": "The analyst started reading documents from early 2008, Highlighting words like <span class=\"highlight-white\">Airports</span>, <span class=\"highlight-white\">Maulana Haq Bukhari</span>, <span class=\"highlight-white\">Kiev</span>, and <span class=\"highlight-white\">M/V Tanya</span>",
     "timestamp": "beginning -- 2:14 - 5:16"
   },
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "The user was mainly searching for terms like <span class=\"highlight-pink\">Igor</span>, <span class=\"highlight-pink\">Bank</span>, and <span class=\"highlight-pink\">Turkey</span> and moved different search results near eachother.",
+    "message": "The user was mainly searching for terms like <span class=\"highlight-green\">Igor</span>, <span class=\"highlight-green\">Bank</span>, and <span class=\"highlight-green\">Turkey</span> and moved different search results near eachother.",
     "timestamp": "beginning -- 7:13 - 9:18"
   },
   {
@@ -19,7 +19,7 @@
   {
     "element_id": "dialog101",
     "type": "highlightText",
-    "message": "Many words Highlighted including: <span class=\"highlight-pink\">Dombrovski</span>, <span class=\"highlight-pink\">Joetomsk@au.ru</span>, <span class=\"highlight-pink\">Nigeria</span>, and <span class=\"highlight-pink\">Russia</span>",
+    "message": "Many words Highlighted including: <span class=\"highlight-white\">Dombrovski</span>, <span class=\"highlight-white\">Joetomsk@au.ru</span>, <span class=\"highlight-white\">Nigeria</span>, and <span class=\"highlight-white\">Russia</span>",
     "timestamp": "middle -- 18:58 - 22:32"
   },
   {
@@ -31,7 +31,7 @@
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "5 searches are made including 'Minsky', 'North Korea' and 'vwparts4salecheep'. The remainder of this time was spent reading the results.",
+    "message": "5 searches are made including <span class=\"highlight-green\">Minsky</span>, <span class=\"highlight-green\">North Korea</span> and <span class=\"highlight-green\">vwparts4salecheep</span>. The remainder of this time was spent reading the results.",
     "timestamp": "middle -- 27:34 - 34:12"
   },
   {
@@ -43,13 +43,13 @@
   {
     "element_id": "dialog101",
     "type": "search",
-    "message": "8 searches are made including terms like: 'Saudi Arabian Monetary Agency', 'Martyrs Front of Judea', and 'MFJ'",
+    "message": "8 searches are made including terms like: <span class=\"highlight-green\">Saudi Arabian Monetary Agency</span>, <span class=\"highlight-green\">Martyrs Front of Judea</span>, and <span class=\"highlight-green\">MFJ</span>",
     "timestamp": "end -- 42:48 - 51:36"
   },
   {
     "element_id": "dialog101",
     "type": "highlightText",
-    "message": "Several terms were Highlighted: <span class=\"highlight-pink\">Kasem</span>, <span class=\"highlight-pink\">Khouri</span>, and <span class=\"highlight-pink\">Russian</span>. Editing and typing in previous notes concluded the session.",
+    "message": "Several terms were Highlighted: <span class=\"highlight-white\">Kasem</span>, <span class=\"highlight-white\">Khouri</span>, and <span class=\"highlight-white\">Russian</span>. Editing and typing in previous notes concluded the session.",
     "timestamp": "end -- 52:04 - 58:32"
   }
 ]

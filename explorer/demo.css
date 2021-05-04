@@ -233,6 +233,7 @@ path { cursor:pointer; }
 /* High light colors  */
 .highlight-pink { background-color: #FFC700 }
 .highlight-green { background-color: #77F7A4 }
+.highlight-white { background-color: #feffdc }
 
 .highlightText { 
 	margin-bottom: -10px;
