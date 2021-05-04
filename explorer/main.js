@@ -1022,12 +1022,6 @@ else if(query.includes('=4')){
 			    //console.log(myNotes[noteIdCounter]);	
 				// noteDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
 			});
-
-			// hide context menu when click on note to edit it
-			noteDialogParent.find(".note-set").click(function() {
-			  $(".body-class").contextMenu("hide");
-			});
-            
             
 			return noteDialog;
 
@@ -1084,62 +1078,14 @@ else if(query.includes('=4')){
 						// initialise all documents as connection targets.
 						jsPlumbInstance.makeTarget(provDialogParent);
 					});
-		
-					// hide context menu when click on note to edit it
-					provDialogParent.find(".prov-set").click(function() {
-					  $(".body-class").contextMenu("hide");
-					});
 					return provDialog;
 			})
-			// $.ajax(
-			// 	{
-			// 		dataType:'json',
-			// 		url: fileName,
-			// 		data: pickles,
-			// 		async: false}
-					
-			// 	).success(function(pickles) {
-		
-			// 			var jsonCounter = 0;
-			// 			for (var i in pickles){
-			// 				console.log(pickles[i].type)
-			// 				jsonCounter++;
-			// 				if (pickles[i].type == "search"){
-			// 					console.log("here")
-			// 					output += "<div class='search'>" + pickles[i].text + "</div>"
-		
-			// 				} else if(pickles[i].type == "highlightText"){
-			// 					output += pickles[i].text + "Hilight!"
-		
-			// 				} else{
-			// 					output += pickles[i]
-			// 				}
-			// 				//  output +=
-			// 				// '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
-			// 				// '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
-			// 				// '</div>';
-			// 				// "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
-			// 			}
-			// 			// output += '<div onClick="saveInteractionsToFile()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
-			// 			// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
-			// 			// '</div>';
-			// 			console.log(output)
-			// 			output+="</div>";
-						
-			// 			console.log("JSON loaded, analyst's interaction count: " + jsonCounter);
-			// 		}).error(function(pickles){
-			// 			console.error("I'm worthless", pickles)
-			// 		}).complete(function(){
-			// 			document.getElementById("placeholder-div").innerHTML=output;
-			// 			return output;
-			// 		});
-			//return new Promise(resolve => {output});
 		}
 		
 		// Creating a Provenance Representation 
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set body-class" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul>';
+						let output='<div id="provSummary" class="prov-set" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
 									output += "<li class='cov-line'><span> "+data[i][0]+"<span class='cov-bg'><span class='cov-fg' style='width: "+data[i][1]*130+"px' ></span></span></span></li>"
@@ -1151,7 +1097,8 @@ else if(query.includes('=4')){
 							var provDialog = $( "#provSummary" )
 									.dialog(	
 										{
-										width: 225,										 closeOnEscape: false,
+										width: 225,
+										closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 position: [mouseX+450, mouseY+120]
@@ -1173,11 +1120,6 @@ else if(query.includes('=4')){
 									});
 									// initialise all documents as connection targets.
 									jsPlumbInstance.makeTarget(provDialogParent);
-								});
-					
-								// hide context menu when click on note to edit it
-								provDialogParent.find(".prov-set").click(function() {
-								  $(".body-class").contextMenu("hide");
 								});
 								return provDialog;
 						})
