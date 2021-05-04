@@ -6,7 +6,7 @@ body, html {
   /*width: 100%;*/
   /*overflow: hidden;*/
   overflow-y:scroll;
-  background: rgb(240,250,255);
+  background: #fdb286;
 }
 
     /* dialog box class */
@@ -182,7 +182,7 @@ textarea:focus {
  /* jsplumb Connestion button  72BDF2 */
 .ep {
 
-	background-color:#72BDF2;  
+	background-color:#fff8f0;  
 	cursor:pointer;
 	box-shadow: 0px 0px 2px black;
 	-webkit-transition:-webkit-box-shadow 0.25s ease-in;
@@ -221,7 +221,7 @@ textarea:focus {
 path { cursor:pointer; }
     /* Note background color */
 .note-set, .prov-set {
-	background: #F1DDFF !important;   
+	background: #f6eb85 !important;   
 	font-size: 12px !important;
 }​
    /* All icon images */
@@ -251,7 +251,7 @@ path { cursor:pointer; }
 .noteText{
 	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_add.png'); 
-	background-color: #F1DDFF;
+	background-color: #f6eb85;
 	padding: 5px 8px;
 	border-radius: 10px; 
 }
@@ -262,7 +262,7 @@ path { cursor:pointer; }
     padding: 2px 4px 0px 4px;
     margin-left: -25px;
 	margin-bottom: 3px;
-    background-color: rgb(195, 91, 195);
+    background-color: #e79e9c;
 }
 .time {
 	font-size: smaller;
@@ -285,13 +285,13 @@ path { cursor:pointer; }
 .cov-fg {
 	position:absolute;
 	height: 100%;
-	background-color: #1e8151;
+	background-color: #99f7ff;
 }
 .cov-bg{
 	height: 6px;
 	width: 160px;
 	position: relative;
-	background-color: pink;
+	background-color: #9dd9d2;
 }
 /*
 .highlight-blue { background-color: #D2B5F5 }

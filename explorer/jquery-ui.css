@@ -401,7 +401,7 @@ button.ui-button::-moz-focus-inner {
 .ui-dialog .ui-dialog-titlebar {
 	padding: .5em 1em;
 	position: relative;
-    background:#72BAF2;
+    background:#9dd9d2;
 
 }   
 .ui-dialog .ui-dialog-title {
@@ -425,7 +425,7 @@ button.ui-button::-moz-focus-inner {
 	position: relative;
 	border: 0;
 	padding: .5em 1em;
-	background: rgb(220,250,255);
+	background: #fff8f0;
 	overflow: auto;
 }
 .ui-dialog .ui-dialog-buttonpane {
