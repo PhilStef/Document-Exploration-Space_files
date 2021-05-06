@@ -286,7 +286,7 @@ path { cursor:pointer; }
 .cov-fg {
 	position:absolute;
 	height: 100%;
-	background-color: #99f7ff;
+	background-color: #9dd9d2;
 }
 .cov-bg{
 	height: 6px;
@@ -295,7 +295,7 @@ path { cursor:pointer; }
 	margin-top: 4.5px;
 	float: right;
 	display: block;
-	background-color: #9dd9d2;
+	background-color: #e79e9c;
 }
 /*
 .highlight-blue { background-color: #D2B5F5 }
