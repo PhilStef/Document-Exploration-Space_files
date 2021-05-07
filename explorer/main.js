@@ -155,7 +155,7 @@ else if(query.includes('=4')){
 			//  '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
             // '<div class="doc-content" document_id="'+data[i].id+'">' + '</div>' +
             // '</div>';
-            '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
+            '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
             '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
             '</div>';
             "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
@@ -801,7 +801,7 @@ else if(query.includes('=4')){
 			});
 		
 		// give dialog boxes unique id attributes. this is necessary for jsplumb connections
-		var counter = 0;
+		var counter = 1;
 		$( ".ui-dialog" ).each(function( index ) {
 		  $(this).attr('id','dialog' + counter++);
 		});
