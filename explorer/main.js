@@ -178,34 +178,30 @@ else if(query.includes('=4')){
     
     // Writes log for interactions
     //logData("mouseenter-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,text);
-  	function logData(typeTag, message, element_id, document_id, text) {
+  	function logData(typeTag, message, element_id, document_id, position) {
 
 		//number of milliseconds since midnight, January 1, 1970
 		var d = new Date();
-		var ms_timestamp = (d.getTime()-init_time)/(1000); //ms to mins
-		var participant_tag = "NONE";
-		if(pname.length > 0)
-			participant_tag = pname;
+		var ms_timestamp = (d.getTime()-init_time)/(1000); //current date (in ms) to seconds since start. 
 		var jsonMessage = {
-		  tags: [typeTag, document_id]   //tags: [typeTag, element_id]
-		  , message: message
-		  ,	timestamp: ms_timestamp
-		  , type: typeTag
-		 };
-		 if(element_id && element_id.length > 0)
-		 	jsonMessage["element_id"] = element_id; // = element_id;
-		 if(document_id && document_id.length > 0)
-		 	jsonMessage["document_id"] = document_id;
-		 if (typeTag.includes('drag')){
-			jsonMessage["position"] = text;
-		 } else if(text && text.length > 0) //todo - does any logging use 'text' parameter? cause I'd just refactor it to 'position' if it makese sense. 
-		 	jsonMessage["text"] = text;
+			timestamp: ms_timestamp,
+			type: typeTag
+		}
+		if(message && message.length >0) //an associated message if applicable
+			jsonMessage["msg"] = message
+		if(element_id && element_id.length > 0)
+		 	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
+		if(document_id && document_id.length > 0)
+		 	jsonMessage["doc_id"] = document_id; //The index of the document when it was generated. Often elem_id -1
+		if(position && position.length > 0) //The position of the event if appliable
+		 	jsonMessage["pos"] = position;
 
-      SESSION_LOG_DATA.push(jsonMessage);
+		console.log(jsonMessage);
+        SESSION_LOG_DATA.push(jsonMessage);
       
       // Send the log to its destiny
-	   if (log_url != 'http://localhost:8080/log') 
-		  sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
+	    if (log_url != 'http://localhost:8080/log') 
+		   sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
 		
 	}//end logData
 
@@ -271,7 +267,7 @@ else if(query.includes('=4')){
 		var docDialog = $(evt.target).parents(".ui-dialog");
 		var text = docDialogToText(docDialog);
 		var doc_id = docDialog.find(".doc-content").attr("document_id");
-		logData("open-document", docDialog.attr("id"), docDialog.attr("id"), doc_id,null); // error 
+		logData("open-doc", null, docDialog.attr("id"), doc_id,null); // error 
 
 	/*
 		var docDialog = $(evt.target).parents(".ui-dialog");
@@ -293,7 +289,7 @@ else if(query.includes('=4')){
 		var currentDocDiv = docDialog.find(".doc-set");
 		var text = docDialogToText(docDialog);
 		var doc_id = docDialog.find(".doc-content").attr("document_id");
-		logData("collapse-document", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
+		logData("collapse-doc", null, docDialog.attr("id"), doc_id,null);
 		
 		// console.log('dataid ' + currentDocDiv.attr( "data-id"));
 
@@ -398,9 +394,9 @@ else if(query.includes('=4')){
 			var scrunchStuff = scrunchDiv.find('.highlight-green');	// grab scrunch highlighted stuff
 
 			if (scrunchStuff.length != 0) {
-				var scrunchLog = "";
+				var highlightedWords = [];
 				for ( var i = 0; i < scrunchStuff.length; i++ ) {
-					scrunchLog += $(scrunchStuff[i]).text() + ";;";
+					highlightedWords.push($(scrunchStuff[i]).text());
 				}
 
 				// console.log("LOG: " + scrunchLog); 
@@ -409,7 +405,7 @@ else if(query.includes('=4')){
 				// logData("scrunch-highlight-view", scrunchLog, docDialog.attr("id"));
 				var text = docDialogToText(docDialog);
 				var doc_id = docDialog.find(".doc-content").attr("document_id");
-				logData("scrunch-highlight-view", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
+				logData("scrunch-highlight-view", highlightedWords, docDialog.attr("id"), doc_id,null);
 			}
 		}
 	}
@@ -453,15 +449,9 @@ else if(query.includes('=4')){
 			  	currentDocDiv.dialog( "option", "height", "auto" );	//works, but resizes to fit intead of restored size
 			  	//currentDocDiv.dialog( "option", "height", currentDocDiv.attr( "data-height" ));
 			  	// var docDialog = $(evt.target).parents(".ui-dialog");
-				var docDialog = $(this);
 				var text = docDialogToText(docDialog);
 				var doc_id = docDialog.find(".doc-content").attr("document_id");
-				logData("restore-from-scrunch", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
-				// console.log("GBGB WE CARE SCRUNCH CRUNCH ");
-				
-				
-			
-			  	// logData("restore-from-scrunch", docDialog.attr("id"), docDialog.attr("id"));
+				logData("restore-from-scrunch", null, docDialog.attr("id"), doc_id,null);				
 			}
 		}
 		else
@@ -574,19 +564,22 @@ else if(query.includes('=4')){
 			}
 			globalSearchTerm = searchTerm;
 
-			logData("search", searchTerm, "unknown");
 
 			// remove existing search highlight
 			$('.ui-dialog').removeHighlightAll("highlight-pink");
 			$('._jsPlumb_overlay').removeHighlightAll("highlight-pink");
 
+			let foundElems = [];
+			let foundDocs = [];
 			// highlight in documents
 			$( ".ui-dialog" ).each(function( index ) {
 				 // $(this).attr('id','base' + counter++);
 
 				 // if document content or title has search term, highlight whole title
 				 if($(this).is(':Contains(' + searchTerm + ')')){
-
+					// finds.push($(this).find(".ui-dialog-title").text()) // gived the titles of the documents
+					foundElems.push($(this).attr("id"));
+					foundDocs.push($(this).find(".doc-content").attr("document_id"));
 					// highlight the right things in the dialog box
 					searchHighlighting(searchTerm, $(this));
 
@@ -598,6 +591,9 @@ else if(query.includes('=4')){
 				 }
 
 			});
+
+			logData("search", searchTerm, foundElems,foundDocs);
+
 
 			// highlight search term in plumb connections
 			$('._jsPlumb_overlay').highlight(searchTerm, "highlight-pink");
@@ -648,6 +644,18 @@ else if(query.includes('=4')){
 		var groupingWidth = 100;  // was 235
 		var groupingHeight = 40;
 
+		function getDocState(document){
+			if (document.hasClass("ui-resizable")){
+				if(document.children().hasClass("scrunch-doc")){
+					return "scrunch";
+				}else{
+					return "open";
+				}
+			} else{
+				return "closed";
+			}
+		}
+
 		// use content divs loaded from json to create the dialog boxes
 		$( ".docSet" ).each(function( index ){
 			var typeValue = $(this).attr("data-source"); // doc type saved under data-source
@@ -687,19 +695,19 @@ else if(query.includes('=4')){
 						
 						var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("startdrag-document", docDialog.attr("id"), docDialog.attr("id") , doc_id,[mouseX,mouseY]);
+						logData("startdrag-doc", getDocState(docDialog), docDialog.attr("id") , doc_id,[mouseX,mouseY]);
 			 		},
 			 		
-			 		dragStop: function() { 
+			 		dragStop: function(event) { 
 			 			//console.log(event.clientX);
 			 			//console.log(event.clientY);
 			 			//console.log(event);
 			 			//console.log(ui);
 			 			////logData("newConnection", info.connection.sourceId + "," + info.connection.targetId, info.connection.sourceId);
-			 			var docDialog = $(this); // $(event.target).parents(".ui-dialog");
+			 			var docDialog = $(event.target).parents(".ui-dialog");
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id"), doc_id, [mouseX,mouseY]);
+						logData("enddrag-doc", getDocState(docDialog), docDialog.attr("id"), doc_id, [mouseX,mouseY]);
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 						//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
@@ -754,22 +762,9 @@ else if(query.includes('=4')){
 			 				return;
 			 			}
 			 		    //Write this log only if the window was open  // taking advantage of fact that the dialog header is not resizable when collapsed/minimized
-	  				if (docDialog.hasClass("ui-resizable")){
-			 			// logData("mouseenter-document", docDialog.attr("id"), docDialog.attr("id")); 
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("mouseenter-document", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
-					//	console.log("mouseenter-document");
-			 		}else{
-			 		//Write this log only if the window was minimized  // taking advantage of fact that the dialog header is not resizable when collapsed/minimized
-	  				//if (docDialog.hasClass("ui-resizable") == false){
-			 			var text = docDialogToText(docDialog);
-						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("mouseenter-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
-					//	console.log("mouseenter-document-minimized");  // var doc_id = docDialog.find(".doc-content").attr("document_id");
-			 		}
-			
-			
+						logData("mouseenter-doc", getDocState(docDialog), docDialog.attr("id"), doc_id,null);
 			});
 			
 		$("div[role='dialog']").bind("mouseleave",function(){  // $("div[role='dialog']").bind("mouseexit",function(event,ui){
@@ -783,19 +778,9 @@ else if(query.includes('=4')){
 			 				// console.log("THOU SHALT NOT LOG!!!");
 			 				return;
 			 			}
-			 			//Write log only if the window was open 
-	  				if (docDialog.hasClass("ui-resizable")){			 			 
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("mouseexit-document", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
-					//		console.log("mouseenter-leave");
-			 		}else{
-			 			
-			 			var text = docDialogToText(docDialog);
-						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("mouseexit-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,null);
-					//	console.log("mouseenter-leave-mini");
-			 		}
+						logData("mouseleave-doc", getDocState(docDialog), docDialog.attr("id"), doc_id,null);
 			
 			
 			});
@@ -890,19 +875,19 @@ else if(query.includes('=4')){
 			var text = docDialogToText(docDialog1) + ' \n ' + docDialogToText(docDialog2);
 			// console.log(docDialog);
 			// console.log("that's all folks");
-			var doubleid = info.connection.sourceId + "," + info.connection.targetId;
+			// var doubleid = info.connection.sourceId + "," + info.connection.targetId;
 						
 			if (docDialog2.find(".doc-content").attr("document_id") != null){
-			   var doubleDocId = docDialog1.find(".doc-content").attr("document_id")+","+docDialog2.find(".doc-content").attr("document_id");
+			   var doubleDocId = [docDialog1.find(".doc-content").attr("document_id"), docDialog2.find(".doc-content").attr("document_id")];
 			}
 			else{
 					    var noteDialog = $(info.connection.target); 
      					var doc_id = noteDialog.find(".ui-dialog-title").text();
 						console.log(doc_id);
-			            var doubleDocId = docDialog1.find(".doc-content").attr("document_id")+","+doc_id;
+			            var doubleDocId = [docDialog1.find(".doc-content").attr("document_id"), doc_id];
 			}
 			
-			logData("newConnection", doubleid, doubleid, doubleDocId  , null);
+			logData("newConnection", null, [info.connection.sourceId, info.connection.targetId], doubleDocId, null);
 
         });
 
@@ -1180,7 +1165,7 @@ else if(query.includes('=4')){
 						}
 					}
 
-					logData("highlightText", cursorSelectedText, docDialog.attr("id"));
+					logData("highlightText", cursorSelectedText, docDialog.attr("id"), docDialog.find(".doc-content").attr("document_id"));
 
 					// then restore the pink search highlighting
 					if (pinkContent.length != 0) {
@@ -1189,7 +1174,7 @@ else if(query.includes('=4')){
 
 
 				} else if (key == "unhighlight") {
-					logData("unhighlight", cursorSelectedText, docDialog.attr("id"));
+					logData("unhighlight", cursorSelectedText, docDialog.attr("id"),docDialog.find(".doc-content").attr("document_id"));
 
 					// first, clear any pink content, if necessary
 					// first, need to unhighlight the pink search highlight in the selection
