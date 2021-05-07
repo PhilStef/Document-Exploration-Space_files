@@ -1416,13 +1416,12 @@ else if(query.includes('=4')){
 
 function saveInteractionsToFile()
 {
-	function encode(s) 
-{
-    var out = [];
-    for ( var i = 0; i < s.length; i++ ) {
-        out[i] = s.charCodeAt(i);
-    }
-    return new Uint8Array( out );
+	function encode(s) {
+    	var out = [];
+    	for ( var i = 0; i < s.length; i++ ) {
+        	out[i] = s.charCodeAt(i);
+    	}
+    	return new Uint8Array( out );
 	}
 	function determineBrowser(usrAgnt){
 		let sBrowser =""
@@ -1459,15 +1458,13 @@ function saveInteractionsToFile()
 	let d = new Date();
 	let ms_timestamp = (d.getTime()-init_time)/(1000);
 	let sUsrAg = navigator.userAgent;
-	
 
 	//Create the-end object
-	let jsonEnd = {
-		tags: ["end-study",null],
-		message: pname,
+	let browserAtEnd = {
 		timestamp: ms_timestamp,
 		type: "endStudy",
-		element_id: {
+		msg: pname,
+		elem_id: {
 			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
 			monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
 			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
@@ -1475,26 +1472,38 @@ function saveInteractionsToFile()
 			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
 			browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
 			userAgent: sUsrAg //Default user agent String
-		}
+		},
+		doc_id: null,
+		pos: null
 	}
-	SESSION_LOG_DATA.push(jsonEnd);
+	SESSION_LOG_DATA.push(browserAtEnd);
 			
 	// Now write a log for all the notes with their written content	
+	var noteContents = [];
+	var noteTitles = [];
+	let noteElems = [];
+	let noteDocs = [];
 	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
 		var noteDialog = $(myNotes[tempCounter]); 
-		var noteContent = noteDialog.find(".note-set").text();
-		var doc_id = noteDialog.find(".ui-dialog-title").text();
-		let noteInfo = {
-			tags: ["Notes", doc_id],
-			message: noteContent,
-			timestamp: ms_timestamp,
-			type: "noteFinish",
-			participant_tag: pname,
-			element_id: "Note"+(tempCounter-3)
-		}
-		SESSION_LOG_DATA.push(noteInfo)
+		noteContents.push(noteDialog.find(".note-set").text());
+		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
+		noteElems.push(noteDialog.attr("id"));
+		noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
+		// todo notePositions
 	}
+	//make note object
+	let notesAtEnd = {
+			timestamp: ms_timestamp,
+			type: "Notes",
+			msg: noteContents, //Array of note text in the order the notes were created.
+			elem_id: noteElems, //(tempCounter-3), //number of notes ie length
+			doc_id: noteDocs //noteTitles //The titles for the notes in the same order the notes were created
+			// pos: notePositions
+	}
+	//write out
+	SESSION_LOG_DATA.push(notesAtEnd)
 
+	//Prepare interactions to be written to file
 	var doc = JSON.stringify(SESSION_LOG_DATA);
 	var data = encode(doc);
 	var blob = new Blob( [ data ], {
