@@ -938,7 +938,7 @@ else if(query.includes('=4')){
 			var output="<div>";
 			// set up a space for output summary to be written
 			if (noteHtml === 'instructions'){
-				output += '<div id="' + noteId + '" class="note-set" title="Instructions" contenteditable="flase">' + 
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedInstructions" title="Instructions" contenteditable="flase">' + 
 				"The following documents relate to arms dealing between countries across the world.<br><br>" +
 				"Using the resources you have available, tell us your own interpretation of the dataset. <br><br>"+
 				"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
@@ -947,24 +947,24 @@ else if(query.includes('=4')){
 
 		 
 			} else if (noteHtml === 'response'){
-				output += '<div id="' + noteId + '" class="note-set" title="Type Your Summary Here" contenteditable="true"></div> </div>'
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Type Your Summary Here" contenteditable="true"></div> </div>'
 		 
 			}
 			// different title for initial note and all other
              else if (noteHtml !== promptNoteText){
              	
-				output += '<div id="' + noteId + '" class="note-set" title=" MyNotes '+ (noteIdCounter - 3)+'" contenteditable="true">' +
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - 3) + '" title=" MyNotes ' + (noteIdCounter - 3) + '" contenteditable="true">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 				'</div>';
 				output+="</div>";
 				
-				logData("createNote", noteId,"Note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
+				logData("createNote", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
 
 	        }
 	        else{
 	        
-			output += '<div id="' + noteId + '" class="note-set" title="Summary of Findings" contenteditable="false">' +
+			output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Summary of Findings" contenteditable="false">' +
 						noteHtml +
 						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 						
@@ -1027,9 +1027,10 @@ else if(query.includes('=4')){
 
 		};// end create note dialog
 
+		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
 			// let pickles = null;
-			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><ul class="historyList">';
+			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
 				for (var i in data) {
 					if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
@@ -1082,10 +1083,9 @@ else if(query.includes('=4')){
 			})
 		}
 		
-		// Creating a Provenance Representation 
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul class="covList">';
+						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
 									output += "<li class='cov-line'><span> "+data[i][0]+"<span class='cov-bg'><span class='cov-fg' style='width: "+data[i][1]*130+"px' ></span></span></span></li>"
