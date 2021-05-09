@@ -63,7 +63,7 @@ var prov_history_file = 'explorer/data/interactionHistories/manually-generated-h
 
 var prov_Coverage_file = "explorer/data/manual-coverage.json";
 
-var thisDoc = './explorer/data/documents_1.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
+var thisDoc = './explorer/data/ArmsDealing-documents.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
 var query = window.location.search;
 var promptNoteText = '';
@@ -155,8 +155,10 @@ else if(query.includes('=4')){
 			//  '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
             // '<div class="doc-content" document_id="'+data[i].id+'">' + '</div>' +
             // '</div>';
-            '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
-            '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
+            // '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
+            '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].date + ", " + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].column + '">' +
+            // '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
+            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_all + "<br>") + data[i].contents + '</div>' +
             '</div>';
             "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
         }
@@ -637,7 +639,7 @@ else if(query.includes('=4')){
 		// determine position for dialog boxes based on doc type categories
 		var docTypeList = [];
 		function docTypeRecord(typeName){
-			this.type = typeName;
+			this.column = typeName;
 			this.count = 0;
 		}
 
@@ -664,7 +666,7 @@ else if(query.includes('=4')){
 
 			// get index of type in typeList, maintain count of how many of each type. use type count for positioning
 			for (var i = 0; i < docTypeList.length; i++){
-				if (docTypeList[i].type == typeValue){
+				if (docTypeList[i].column == typeValue){
 					docTypeList[i].count++;
 					boxPosY = groupingHeight * docTypeList[i].count;
 					typeIndex = i;
