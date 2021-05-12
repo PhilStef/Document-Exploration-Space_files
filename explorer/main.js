@@ -92,12 +92,12 @@ else if(query.includes('=4')){
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
 }else{
-	pname=guid("err");
+	pname=guid("tut");
 	thisDoc = './explorer/data/tutorial-documents.json';
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface."
-	console.log('ERROR!');
+	console.log('ERROR! - defaulting to tutorial interface');
 }
 
 ;(function() {
