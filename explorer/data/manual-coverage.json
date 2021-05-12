@@ -1,15 +1,15 @@
 [
-    ["Russia",0.864],
+    ["Russia",0.7],
     ["Columbia",0.64],
-    ["Saudi",0.5],
-    ["Iran",0.5],
-    ["Venezuela",0.5],
     ["Yemen",0.42],
-    ["Pakistan",0.345],
-    ["Lebanon",0.34],
+    ["Venezuela",0.35],
+    ["Lebanon",0.33],
     ["Kenya",0.3],
     ["Syria",0.3],
-    ["Thailand",0.15],
-    ["Turkey",0.132],
-    ["Nigeria",0.11]
+    ["Pakistan",0.27],
+    ["Saudi",0.24],
+    ["Iran",0.18],
+    ["Nigeria",0.13],
+    ["Turkey",0.12],
+    ["Thailand",0.02]
 ]
