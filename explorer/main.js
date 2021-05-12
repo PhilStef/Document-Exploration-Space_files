@@ -930,13 +930,14 @@ else if(query.includes('=4')){
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedInstructions" title="Instructions" contenteditable="flase">' + 
 				"The following documents relate to arms dealing between countries across the world.<br><br>" +
 				"Using the resources you have available, tell us your own interpretation of the dataset. <br><br>"+
+				"<strong>Your summary should be complete. Prepare it so that you could hand it off to another analyst on your team.</strong><br>"+
 				"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
 				'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>' +
 				'</div>';
 
 		 
 			} else if (noteHtml === 'response'){
-				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Type Your Summary Here" contenteditable="true"></div> </div>'
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Leave a Summary for the Next Analyst " contenteditable="true"></div> </div>'
 		 
 			}
 			// different title for initial note and all other
@@ -1365,7 +1366,7 @@ else if(query.includes('=4')){
 		var instructionsWindow = createNote('instructions', 250);
 		mouseX = 735;
 		mouseY = 442;
-		var participantSummary = createNote('response', 300);
+		var participantSummary = createNote('response', 305);
 
 		//adjust sizing of note windows
 		// participantSummary.parent().width(300);
