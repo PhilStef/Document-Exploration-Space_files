@@ -954,7 +954,7 @@ else if(query.includes('=4')){
 	        }
 	        else{
 	        
-			output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Summary of Findings" contenteditable="false">' +
+			output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
 						noteHtml +
 						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 						
@@ -1048,7 +1048,7 @@ else if(query.includes('=4')){
 							 closeOnEscape: false,
 							 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 							 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-							 position: [mouseX+400, mouseY]
+							 position: [1363, 12]
 
 							})
 						.resizable({handles: {'s': 'handle'}})
@@ -1091,7 +1091,7 @@ else if(query.includes('=4')){
 										closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-										 position: [mouseX+450, mouseY+120]
+										 position: [1366, 14]
 										})
 									.resizable({handles: {'s': 'handle'}})
 									.dialogExtend(
@@ -1341,8 +1341,8 @@ else if(query.includes('=4')){
 	    });
 
 		// Add prompt note on initialization
-		mouseX = 550; //$(window).width() - 700;
-		mouseY = 80; // $(window).height() - 300;
+		mouseX = 950; //$(window).width() - 700;
+		mouseY = 34; // $(window).height() - 300;
 		
 		//var promptNote = createNote("A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
 		//							"<div><br></div>" +
@@ -1360,11 +1360,11 @@ else if(query.includes('=4')){
 			generateCoverage(prov_Coverage_file)
 		}
 		// Add prompt note on initialization
-		mouseX = 735;
-		mouseY = 42;
+		mouseX = 565;
+		mouseY = 22;
 		var instructionsWindow = createNote('instructions', 250);
-		mouseX = 735;
-		mouseY = 442;
+		mouseX = 535;
+		mouseY = 360;
 		var participantSummary = createNote('response', 305);
 
 		//adjust sizing of note windows
