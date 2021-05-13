@@ -27,3 +27,17 @@ jq '[ .[] |
 ## > "search"
 ## > "startdrag-document"
 ## > "unhighlight"
+
+
+#Some notes for extracting document ids from the full dataset
+## Export the ids that have to do with a specific country
+# jq '[ .[] | select( .country_origin == "Kenya") | .id ]' ArmsDealing-documents.json
+
+## lists all the countries and the documents associated with them (as well as the number of documents.)
+# jq ' map({country: .country_origin, id: .id}) | group_by(.country) | map({country: map(.country)|unique, unaffiliated: map(.id), total: length})' ArmsDealing-documents.json
+## take the .json output and paste it into the http://convertcsv.com/json-to-csv.htm (select "still not happy" in the output options) then you need to add 2 columns: "affiliated", "proportion"
+## you can remove the extra rows you don't care about (Switzerland, USA etc.) then you'll want to apply the following formula to the proportion column: =if(D2="",0,len(D2)-len(SUBSTITUTE(D2,",",""))+1)/C2
+## Sort by Proportion, then take the new coverage spreadsheet and convert to json using: http://convertcsv.com/csv-to-json.htm
+
+#todo Find a way to make JQ make the csv or at least the json because you had to convert all the lists into json arrays instead of just text.
+#todo orrrrr I could just make the function split the text by commas and not worry about this...I'll try that first

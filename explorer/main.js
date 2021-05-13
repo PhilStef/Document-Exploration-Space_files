@@ -62,7 +62,7 @@ var prompt_Jeremy =     "I'm unsure if my conclusion is accurate, but after revi
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
-var prov_Coverage_file = "explorer/data/manual-coverage.json";
+var prov_Coverage_file = "explorer/data/interactionHistories/manually-generated-coverage-sorted.json";
 
 var thisDoc = './explorer/data/ArmsDealing-documents.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
@@ -1019,19 +1019,19 @@ else if(query.includes('=4')){
 
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
-			// let pickles = null;
+			let segments = ["Beginning",,,"Middle",,,"End",,,];
 			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
 				for (var i in data) {
 					if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
-						output += "<div class='dotted'>"
+						output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
 					}
 					if (data[i].type == "search"){
-						output += "<li class='searchText'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
 					} else if(data[i].type == "highlightText"){
-						output += "<li class='highlightText'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
 					} else if(data[i].type == "noteText"){
-						output += "<li class='noteText'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
 					}
 					if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
 						output += "</div>"
@@ -1078,7 +1078,7 @@ else if(query.includes('=4')){
 						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
-									output += "<li class='cov-line'><span> "+data[i][0]+"<span class='cov-bg'><span class='cov-fg' style='width: "+data[i][1]*130+"px' ></span></span></span></li>"
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg'><span class='cov-fg' style='width: "+(data[i].proportion)*130+"px' ></span></span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
@@ -1087,12 +1087,11 @@ else if(query.includes('=4')){
 							var provDialog = $( "#provSummary" )
 									.dialog(	
 										{
-										width: 225,
+										width: 230,
 										closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 position: [mouseX+450, mouseY+120]
-			
 										})
 									.resizable({handles: {'s': 'handle'}})
 									.dialogExtend(
@@ -1419,6 +1418,99 @@ else if(query.includes('=4')){
 
 })();
 
+
+
+function affiliate(callerID, inDocs, otherDocs = ""){
+	// jiggle dialog box ( rewrite because the other jiggle is out of scope)
+	function jiggle($object, speedMilliseconds, distance) {
+
+		var jiggleSpeed = speedMilliseconds;	//duration in milliseconds
+
+		$object
+			.animate({ "left": "-=" + distance + "px" }, jiggleSpeed )
+			.animate({ "left": "+=" + distance + "px" }, jiggleSpeed )
+			.animate({ "left": "+=" + distance + "px" }, jiggleSpeed )
+			.animate({ "left": "-=" + distance + "px" }, jiggleSpeed );
+	}
+	// we need a way to see that the data is comming in as an array or string (generally it's a string)
+	function typeCheck(value) {
+		const return_value = Object.prototype.toString.call(value);
+		// we can also use regex to do this...
+		const type = return_value.substring(
+				 return_value.indexOf(" ") + 1, 
+				 return_value.indexOf("]"));
+	  
+		return type.toLowerCase();
+	}
+    // Duplicate Log writer since the original is out of scope.
+	function logData(typeTag, message, affiliated_document_ids, unaffiliated_document_ids) {
+
+		//number of milliseconds since midnight, January 1, 1970
+		var d = new Date();
+		var ms_timestamp = (d.getTime()-init_time)/(1000); //current date (in ms) to seconds since start. 
+		var jsonMessage = {
+			timestamp: ms_timestamp,
+			type: typeTag
+		}
+		if(message && message.length >0) //an associated message if applicable
+			jsonMessage["msg"] = message
+		if(affiliated_document_ids && affiliated_document_ids.length > 0)
+			jsonMessage["doc_id"] = affiliated_document_ids; //The index of the document when it was generated.
+		if(unaffiliated_document_ids && unaffiliated_document_ids.length > 0)
+		 	jsonMessage["undoc_id"] = unaffiliated_document_ids; //The index of the documents that were not affiliated with a coverage
+
+		console.log(jsonMessage);
+        SESSION_LOG_DATA.push(jsonMessage);		
+	}//end logData
+
+	//select all the documents already affiliated and remove the class
+	$('.affiliate').removeClass('affiliate');
+	$('.unaffiliate').removeClass('unaffiliate');
+
+	let affiliateMe, unaffiliateMe = "";
+
+	//if the list of affiliated documents is just a string, split on the ','
+	if("array" === typeCheck(inDocs)){
+		affiliateMe = inDocs;
+		unaffiliateMe = otherDocs;
+	}else{
+		let re = /,\s?/ //Split on commas or comma+spaces
+		affiliateMe = inDocs.split(re);
+		unaffiliateMe = otherDocs.split(re);
+	}
+
+	console.log(affiliateMe,unaffiliateMe)
+
+	let foundElems = [];
+	let foundDocs = [];
+	let foundOtherDocs = []
+	$(".ui-dialog").each(function( index ){
+		// var currentDocDiv = $(this).find(".doc-set");
+		var doc_id = $(this).find(".doc-content").attr("document_id");
+		if(affiliateMe.includes(doc_id)){
+			foundElems.push($(this).attr("id")); // The id of the document in the html
+			foundDocs.push($(this).find(".doc-content").attr("document_id")); //the id of the document in the original json
+			
+			// grab title and highlight its text
+			var $titleSpan = $(this).find('.ui-dialog-title');
+			if (typeof $titleSpan !== "undefined") {
+				$titleSpan.highlight($titleSpan.text(), "affiliate");
+			}
+			jiggle($(this), 100, 15);
+		} else if (unaffiliateMe.includes(doc_id)){
+			foundOtherDocs.push($(this).find(".doc-content").attr("document_id"));
+			
+			// grab title and highlight its text
+			var $titleSpan = $(this).find('.ui-dialog-title');
+			if (typeof $titleSpan !== "undefined") {
+				$titleSpan.highlight($titleSpan.text(), "unaffiliate");
+			}
+		}
+	})
+
+	//Log the interaction and the documetns identified.
+	logData("affiliate", callerID, foundDocs,foundOtherDocs)
+}
 function saveInteractionsToFile()
 {
 	function encode(s) {

@@ -236,25 +236,31 @@ path { cursor:pointer; }
 .highlight-white { background-color: #feffdc }
 
 .highlightText { 
-	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_edit.png'); 
 	background-color: #aafec6;
-	padding: 5px 8px; 
-	border-radius: 10px;
 }
 .searchText{
-	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/search.png'); 
 	background-color: lightyellow;
-	padding: 5px 8px;
-	border-radius: 10px; 
 }
 .noteText{
-	margin-bottom: -10px;
 	list-style-image: url('../explorer/images/page_white_add.png'); 
 	background-color: #fff6a5;
+}
+.highlightText:hover  { 
+	background-color: #7bfea7;
+}
+.searchText:hover {
+	background-color: rgb(247, 247, 178);
+}
+.noteText:hover {
+	background-color: #fff178;
+}
+.history{
+	margin-bottom: -10px;
 	padding: 5px 8px;
-	border-radius: 10px; 
+	border-radius: 10px;
+	cursor: pointer;
 }
 
 .dotted {
@@ -264,6 +270,11 @@ path { cursor:pointer; }
     margin-left: -25px;
 	margin-bottom: 3px;
     background-color: #e79e9c;
+}
+.history-seg-title{
+	padding: .3em 0em .1em 1em;
+    font-size: 10pt;
+    color: #755;
 }
 .time {
 	font-size: smaller;
@@ -282,6 +293,10 @@ path { cursor:pointer; }
 .cov-line{
 	list-style-type: none;
 	margin: 0px 0px 0px -38px;
+	cursor: pointer;
+}
+.cov-line:hover{
+	background-color: rgb(252, 211, 87);
 }
 .cov-fg {
 	position:absolute;
@@ -297,6 +312,10 @@ path { cursor:pointer; }
 	display: block;
 	background-color: #e79e9c;
 }
+
+.affiliate { background-color: #31c1ff }
+.unaffiliate { background-color: #e79e9c }
+
 /*
 .highlight-blue { background-color: #D2B5F5 }
 */

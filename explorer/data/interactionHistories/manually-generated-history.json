@@ -1,55 +1,55 @@
 [{
-    "element_id": "dialog101",
     "type": "highlightText",
+    "affiliated": "ArmsDealing2,ArmsDealing12, ArmsDealing44, ArmsDealing54",
     "message": "The analyst started reading documents from early 2008, Highlighting words like <strong class=\"highlight-green\">Airports</strong>, <strong class=\"highlight-green\">Maulana Haq Bukhari</strong>, <strong class=\"highlight-green\">Kiev</strong>, and <strong class=\"highlight-green\">M/V Tanya</strong>",
-    "timestamp": "beginning -- 2:14 - 5:16"
+    "timestamp": "Highlighting -- 2:14 - 5:16"
   },
   {
-    "element_id": "dialog101",
     "type": "search",
+    "affiliated": ["ArmsDealing1","ArmsDealing2","ArmsDealing3"], 
     "message": "The user was mainly searching for terms like <strong class=\"highlight-white\">Igor</strong>, <strong class=\"highlight-white\">Bank</strong>, and <strong class=\"highlight-white\">Turkey</strong> and moved different search results near eachother.",
-    "timestamp": "beginning -- 7:13 - 9:18"
+    "timestamp": "Searching -- 7:13 - 9:18"
   },
   {
-    "element_id": "dialog101",
     "type": "noteText",
+    "affiliated": "ArmsDealing1,ArmsDealing2",
     "message": "The analyst spent the majority of this segment reading. One note Created: <em>Burj Hotel, Dubai meeting in April 2009.</em>",
-    "timestamp": "beginning -- 11:13 - 17:47"
+    "timestamp": "Make Note -- 11:13 - 17:47"
   },
   {
-    "element_id": "dialog101",
     "type": "highlightText",
+    "affiliated": "ArmsDealing1,ArmsDealing2", 
     "message": "Many words Highlighted including: <strong class=\"highlight-green\">Dombrovski</strong>, <strong class=\"highlight-green\">Joetomsk@au.ru</strong>, <strong class=\"highlight-green\">Nigeria</strong>, and <strong class=\"highlight-green\">Russia</strong>",
-    "timestamp": "middle -- 18:58 - 22:32"
+    "timestamp": "Highlighting-- 18:58 - 22:32"
   },
   {
-    "element_id": "dialog101",
     "type": "noteText",
+    "affiliated": "ArmsDealing1,ArmsDealing2", 
     "message": "2 Notes created: <em>Dombrovski = jtomski on vwparts4salecheep</em> and <em>Countries so far: Columbia, Thailand, Turkey, Russia, North Korea</em>",
-    "timestamp": "middle -- 25:14 - 27:17"
+    "timestamp": "Make Notes -- 25:14 - 27:17"
   },
   {
-    "element_id": "dialog101",
     "type": "search",
+    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
     "message": "5 searches are made including <strong class=\"highlight-white\">Minsky</strong>, <strong class=\"highlight-white\">North Korea</strong> and <strong class=\"highlight-white\">vwparts4salecheep</strong>. The remainder of this time was spent reading the results.",
-    "timestamp": "middle -- 27:34 - 34:12"
+    "timestamp": "Searching -- 27:34 - 34:12"
   },
   {
-    "element_id": "dialog101",
     "type": "noteText",
+    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
     "message": "1 long Note created: <em>A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world. He arranges a flight (IL-76) but the plane is comfiscated by thailand authorities. </em>",
-    "timestamp": "middle -- 38:42 - 41:17"
+    "timestamp": "Make Note -- 38:42 - 41:17"
   },
   {
-    "element_id": "dialog101",
     "type": "search",
+    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
     "message": "8 searches are made including terms like: <strong class=\"highlight-white\">Saudi Arabian Monetary Agency</strong>, <strong class=\"highlight-white\">Martyrs Front of Judea</strong>, and <strong class=\"highlight-white\">MFJ</strong>",
-    "timestamp": "end -- 42:48 - 51:36"
+    "timestamp": "Searching -- 42:48 - 51:36"
   },
   {
-    "element_id": "dialog101",
     "type": "highlightText",
+    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
     "message": "Several terms were Highlighted: <strong class=\"highlight-green\">Kasem</strong>, <strong class=\"highlight-green\">Khouri</strong>, and <strong class=\"highlight-green\">Russian</strong>. Editing and typing in previous notes concluded the session.",
-    "timestamp": "end -- 52:04 - 58:32"
+    "timestamp": "Highlighting -- 52:04 - 58:32"
   }
 ]

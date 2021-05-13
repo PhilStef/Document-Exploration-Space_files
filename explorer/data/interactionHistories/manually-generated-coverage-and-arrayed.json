@@ -1,0 +1,251 @@
+[
+ {
+   "country": "Columbia",
+   "unaffiliated": [
+    "ArmsDealing87",
+    "ArmsDealing88",
+    "ArmsDealing95"
+  ],
+   "total": 3,
+   "affiliated": ["ArmsDealing87"],
+   "proportion": 0.33333
+ },
+ {
+   "country": "Italy",
+   "unaffiliated": [
+    "ArmsDealing67",
+    "ArmsDealing71"
+  ],
+   "total": 2,
+   "affiliated": ["ArmsDealing71"],
+   "proportion": 0.5
+ },
+ {
+   "country": "Kenya",
+   "unaffiliated": [  
+    "ArmsDealing43",
+    "ArmsDealing68",
+    "ArmsDealing69",
+    "ArmsDealing70",
+    "ArmsDealing72",
+    "ArmsDealing75",
+    "ArmsDealing76",
+    "ArmsDealing98",
+    "ArmsDealing99",
+    "ArmsDealing100",
+    "ArmsDealing101",
+    "ArmsDealing102",
+    "ArmsDealing103"
+  ],
+   "total": 13,
+   "affiliated": ["ArmsDealing68","ArmsDealing69","ArmsDealing70"],
+   "proportion": 0.2307692308
+ },
+ {
+   "country": "Lebanon",
+   "unaffiliated":   [
+    "ArmsDealing4",
+    "ArmsDealing8",
+    "ArmsDealing29",
+    "ArmsDealing42",
+    "ArmsDealing46",
+    "ArmsDealing59"
+  ],
+   "total": 6,
+   "affiliated": ["ArmsDealing42","ArmsDealing46","ArmsDealing59"],
+   "proportion": 0.5
+ },
+ {
+   "country": "Nigeria",
+   "unaffiliated":   [
+    "ArmsDealing80",
+    "ArmsDealing82",
+    "ArmsDealing85",
+    "ArmsDealing86"
+   ],
+   "total": 4,
+   "affiliated": ["ArmsDealing82"],
+   "proportion": 0.25
+ },
+ {
+   "country": "Pakistan",
+   "unaffiliated":   [
+    "ArmsDealing2",
+    "ArmsDealing12",
+    "ArmsDealing32",
+    "ArmsDealing37",
+    "ArmsDealing39",
+    "ArmsDealing40",
+    "ArmsDealing44",
+    "ArmsDealing51",
+    "ArmsDealing54",
+    "ArmsDealing55",
+    "ArmsDealing56",
+    "ArmsDealing57",
+    "ArmsDealing60"
+  ],
+   "total": 13,
+   "affiliated": ["ArmsDealing32"],
+   "proportion": 0.07692307692
+ },
+ {
+   "country": "Russia",
+   "unaffiliated":   [
+    "ArmsDealing3",
+    "ArmsDealing25",
+    "ArmsDealing27",
+    "ArmsDealing28",
+    "ArmsDealing30",
+    "ArmsDealing31",
+    "ArmsDealing36",
+    "ArmsDealing41",
+    "ArmsDealing45",
+    "ArmsDealing47",
+    "ArmsDealing48",
+    "ArmsDealing50",
+    "ArmsDealing78",
+    "ArmsDealing81",
+    "ArmsDealing84",
+    "ArmsDealing90",
+    "ArmsDealing91",
+    "ArmsDealing93",
+    "ArmsDealing96"
+  ],
+   "total": 19,
+   "affiliated":  [
+    "ArmsDealing3",
+    "ArmsDealing25",
+    "ArmsDealing27",
+    "ArmsDealing28",
+    "ArmsDealing30",
+    "ArmsDealing31",
+    "ArmsDealing36",
+    "ArmsDealing41",
+    "ArmsDealing45",
+    "ArmsDealing47",
+    "ArmsDealing48",
+    "ArmsDealing50",
+    "ArmsDealing78",
+    "ArmsDealing81",
+    "ArmsDealing84",
+    "ArmsDealing90",
+    "ArmsDealing91",
+    "ArmsDealing93",
+    "ArmsDealing96"
+  ],
+   "proportion": 1
+ },
+ {
+   "country": "Saudi",
+   "unaffiliated":   [
+    "ArmsDealing13",
+    "ArmsDealing21",
+    "ArmsDealing97"
+  ],
+   "total": 3,
+   "affiliated": ["ArmsDealing21"],
+   "proportion": 0.3333
+ },
+ {
+   "country": "Somalia",
+   "unaffiliated": ["ArmsDealing49"],
+   "total": 1,
+   "affiliated": "",
+   "proportion": 0
+ },
+ {
+   "country": "Switzerland",
+   "unaffiliated": ["ArmsDealing14","ArmsDealing22"],
+   "total": 2,
+   "affiliated": ["ArmsDealing14","ArmsDealing22"],
+   "proportion": 2
+ },
+ {
+   "country": "Syria",
+   "unaffiliated": ["ArmsDealing10","ArmsDealing23"],
+   "total": 2,
+   "affiliated": ["ArmsDealing10"],
+   "proportion": 0.5
+ },
+ {
+   "country": "Thailand",
+   "unaffiliated":  [
+    "ArmsDealing18",
+    "ArmsDealing33",
+    "ArmsDealing34",
+    "ArmsDealing35",
+    "ArmsDealing38",
+    "ArmsDealing61",
+    "ArmsDealing62",
+    "ArmsDealing63",
+    "ArmsDealing66",
+    "ArmsDealing73",
+    "ArmsDealing79"
+  ],
+   "total": 11,
+   "affiliated": ["ArmsDealing34","ArmsDealing35","ArmsDealing38","ArmsDealing61"],
+   "proportion": 0.3636363636
+ },
+ {
+   "country": "Turkey",
+   "unaffiliated":   [
+    "ArmsDealing15",
+    "ArmsDealing16",
+    "ArmsDealing17",
+    "ArmsDealing19",
+    "ArmsDealing24",
+    "ArmsDealing26"
+  ],
+   "total": 6,
+   "affiliated": ["ArmsDealing16","ArmsDealing17"],
+   "proportion": 0.3333
+ },
+ {
+   "country": "USA",
+   "unaffiliated": ["ArmsDealing64"],
+   "total": 1,
+   "affiliated": "",
+   "proportion": 0
+ },
+ {
+   "country": "Ukraine",
+   "unaffiliated":   [
+    "ArmsDealing1",
+    "ArmsDealing11",
+    "ArmsDealing52"
+  ],
+   "total": 3,
+   "affiliated": ["ArmsDealing11"],
+   "proportion": 0.333333
+ },
+ {
+   "country": "Venezuela",
+   "unaffiliated":   [
+    "ArmsDealing5",
+    "ArmsDealing6",
+    "ArmsDealing7",
+    "ArmsDealing9",
+    "ArmsDealing20",
+    "ArmsDealing83",
+    "ArmsDealing89",
+    "ArmsDealing92",
+    "ArmsDealing94"
+  ],
+   "total": 9,
+   "affiliated": ["ArmsDealing6","ArmsDealing7","ArmsDealing9"],
+   "proportion": 0.33333
+ },
+ {
+   "country": "Yemen",
+   "unaffiliated":  [
+    "ArmsDealing53",
+    "ArmsDealing58",
+    "ArmsDealing65",
+    "ArmsDealing74",
+    "ArmsDealing77"
+  ],
+   "total": 5,
+   "affiliated": ["ArmsDealing58"],
+   "proportion": 0.2
+ }
+]
