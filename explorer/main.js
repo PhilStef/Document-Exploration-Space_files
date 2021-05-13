@@ -1479,11 +1479,12 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 		unaffiliateMe = otherDocs.split(re);
 	}
 
-	console.log(affiliateMe,unaffiliateMe)
-
 	let foundElems = [];
 	let foundDocs = [];
 	let foundOtherDocs = []
+
+	let sel = "#"+callerID
+	$(sel).addClass("affiliate")
 	$(".ui-dialog").each(function( index ){
 		// var currentDocDiv = $(this).find(".doc-set");
 		var doc_id = $(this).find(".doc-content").attr("document_id");

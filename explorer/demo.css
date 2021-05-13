@@ -241,7 +241,7 @@ path { cursor:pointer; }
 }
 .searchText{
 	list-style-image: url('../explorer/images/search.png'); 
-	background-color: lightyellow;
+	background-color: #ffffe0;
 }
 .noteText{
 	list-style-image: url('../explorer/images/page_white_add.png'); 
@@ -251,7 +251,7 @@ path { cursor:pointer; }
 	background-color: #7bfea7;
 }
 .searchText:hover {
-	background-color: rgb(247, 247, 178);
+	background-color: #f7f7b2;
 }
 .noteText:hover {
 	background-color: #fff178;
@@ -296,7 +296,7 @@ path { cursor:pointer; }
 	cursor: pointer;
 }
 .cov-line:hover{
-	background-color: rgb(252, 211, 87);
+	background-color: #fcd357;
 }
 .cov-fg {
 	position:absolute;
@@ -315,6 +315,10 @@ path { cursor:pointer; }
 
 .affiliate { background-color: #31c1ff }
 .unaffiliate { background-color: #e79e9c }
+.affiliate.highlightText { background-color: #7bfeef;}
+.affiliate.searchText { background-color: #d4fbfa}
+.affiliate.noteText { background-color: #acf2fc;}
+.affiliate.cov-line {background-color: #f2c55d}
 
 /*
 .highlight-blue { background-color: #D2B5F5 }
