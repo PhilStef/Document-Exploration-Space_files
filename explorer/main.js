@@ -193,10 +193,10 @@ else if(query.includes('=4')){
 		}
 		if(message && message.length >0) //an associated message if applicable
 			jsonMessage["msg"] = message
-		if(element_id && element_id.length > 0)
-		 	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
+		// if(element_id && element_id.length > 0)
+		//  	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
 		if(document_id && document_id.length > 0)
-		 	jsonMessage["doc_id"] = document_id; //The index of the document when it was generated. Often elem_id -1
+		 	jsonMessage["doc_id"] = document_id; //The index of the document when it was generated.
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 
@@ -1486,13 +1486,13 @@ function saveInteractionsToFile()
 	// Now write a log for all the notes with their written content	
 	var noteContents = [];
 	var noteTitles = [];
-	let noteElems = [];
+	// let noteElems = [];
 	let noteDocs = [];
 	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
 		var noteDialog = $(myNotes[tempCounter]); 
 		noteContents.push(noteDialog.find(".note-set").text());
 		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
-		noteElems.push(noteDialog.attr("id"));
+		// noteElems.push(noteDialog.attr("id"));
 		noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
 		// todo notePositions
 	}
@@ -1501,7 +1501,7 @@ function saveInteractionsToFile()
 			timestamp: ms_timestamp,
 			type: "Notes",
 			msg: noteContents, //Array of note text in the order the notes were created.
-			elem_id: noteElems, //(tempCounter-3), //number of notes ie length
+			// elem_id: noteElems, //(tempCounter-3), //number of notes ie length
 			doc_id: noteDocs //noteTitles //The titles for the notes in the same order the notes were created
 			// pos: notePositions
 	}
