@@ -57,8 +57,9 @@ var prompt_workflow = "The following documents all relate to arms dealing betwee
 						'<br/><br/><button id="button" onClick="saveInteractionsToFile()"> Click HERE to end and print results. </button>';
 */
 var prompt_Jeremy =     "I'm unsure if my conclusion is accurate, but after reviewing the documents for almost an hour here is what I think is going on: <br/> <br/> "+
-						"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
-						"<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
+						"It appears that there is limited involvement from Nigerans. I only see a series of emails and phone calls about a nigerian scam, but the parties involved (Dombrovski, KAPOLALUM, NGOKI) feel like dead ends.<br> I can't be sure about this, but there is an article from the New York Times from March 10 2009, where they describe the death of Leonid Minsky. In the article there is evidence that he was involved in many different activities including a Nigerian Civil Engineering project. Minsky had dimonds from Yemen, as well as documents in medditeranian and baltic languages. I wonder if Minsky is Patient 0? <br><br>- we need to identify if Minsky is involved with the disease."
+						//"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
+						// "<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
@@ -928,8 +929,8 @@ else if(query.includes('=4')){
 			// set up a space for output summary to be written
 			if (noteHtml === 'instructions'){
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedInstructions" title="Instructions" contenteditable="flase">' + 
-				"The following documents relate to arms dealing between countries across the world.<br><br>" +
-				"Using the resources you have available, tell us your own interpretation of the dataset. <br><br>"+
+				"A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>.<br>" +
+				"The following documents relate to arms dealing between countries across the world prior to the outbreak. Describe the associations and interactions among the players in the weapons dealings.<br><br>"+
 				"<strong>Your summary should be complete. Prepare it so that you could hand it off to another analyst on your team.</strong><br>"+
 				"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
 				'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>' +
@@ -1344,13 +1345,6 @@ else if(query.includes('=4')){
 		mouseX = 950; //$(window).width() - 700;
 		mouseY = 34; // $(window).height() - 300;
 		
-		//var promptNote = createNote("A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
-		//							"<div><br></div>" +
-		//							"Determine how the disease spread to different countries." +
-		//							"<div><br></div>" +
-		//							"Describe the associations and interactions among the players in the weapons dealings." +
-		//							"<div><br></div>");
-
 		var promptNote = createNote(promptNoteText, 400);
 
 		if(load_prov_history){
@@ -1362,16 +1356,10 @@ else if(query.includes('=4')){
 		// Add prompt note on initialization
 		mouseX = 565;
 		mouseY = 22;
-		var instructionsWindow = createNote('instructions', 250);
-		mouseX = 535;
-		mouseY = 360;
+		var instructionsWindow = createNote('instructions', 290);
+		mouseX = 510;
+		mouseY = 464;
 		var participantSummary = createNote('response', 305);
-
-		//adjust sizing of note windows
-		// participantSummary.parent().width(300);
-		// promptNote.parent().width(400);
-	
-
 	});    //end jsPlumb.ready end the  big function 
 
   
