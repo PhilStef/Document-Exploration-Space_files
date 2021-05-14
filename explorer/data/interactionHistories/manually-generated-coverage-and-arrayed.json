@@ -13,12 +13,11 @@
  {
    "country": "Italy",
    "unaffiliated": [
-    "ArmsDealing67",
     "ArmsDealing71"
   ],
-   "total": 2,
+   "total": 1,
    "affiliated": ["ArmsDealing71"],
-   "proportion": 0.5
+   "proportion": 1
  },
  {
    "country": "Kenya",
@@ -202,8 +201,11 @@
  },
  {
    "country": "USA",
-   "unaffiliated": ["ArmsDealing64"],
-   "total": 1,
+   "unaffiliated": [
+     "ArmsDealing64",
+     "ArmsDealing67"
+  ],
+   "total": 2,
    "affiliated": "",
    "proportion": 0
  },
