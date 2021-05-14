@@ -289,6 +289,10 @@ path { cursor:pointer; }
     padding-bottom: 5px;
     border-bottom: #aaa solid 1px;
 }
+.cov-ratio {
+	font-size: smaller;
+	color: #0d6e73;
+}
 
 .cov-line{
 	list-style-type: none;
@@ -301,11 +305,11 @@ path { cursor:pointer; }
 .cov-fg {
 	position:absolute;
 	height: 100%;
-	background-color: #9dd9d2;
+	background-color: #83c1ed;
 }
 .cov-bg{
 	height: 6px;
-	width: 130px;
+	width: 100px;
 	position: relative;
 	margin-top: 4.5px;
 	float: right;

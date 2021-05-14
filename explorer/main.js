@@ -61,6 +61,11 @@ var prompt_Jeremy =     "I'm unsure if my conclusion is accurate, but after revi
 						//"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
 						// "<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
+var instructions_Jeremy = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>.<br>" +
+						"The following documents relate to arms dealing between countries across the world prior to the outbreak. Describe the associations and interactions among the players in the weapons dealings.<br><br>"+
+						"<strong>Your summary should be complete. Prepare it so that you could hand it off to another analyst on your team.</strong><br>"+
+						"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
+						'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>';
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
 var prov_Coverage_file = "explorer/data/interactionHistories/manually-generated-coverage-sorted.json";
@@ -69,37 +74,43 @@ var thisDoc = './explorer/data/ArmsDealing-documents.json';  //  -or- documents_
  
 var query = window.location.search;
 var promptNoteText = '';
+var instructionsPrompt = '';
 
 if(query.includes('=1')){
 	pname=guid(1);
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
+	instructionsPrompt = instructions_Jeremy
 }
 else if(query.includes('=2')){
 	pname=guid(2);
 	var load_prov_history = false;
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
+	instructionsPrompt = instructions_Jeremy
 }
 else if(query.includes('=3')){
 	pname=guid(3);
 	var load_prov_history = true;
 	var load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
+	instructionsPrompt = instructions_Jeremy
 }
 else if(query.includes('=4')){
 	pname=guid("debug");
 	var load_prov_history = true;
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
+	instructionsPrompt = instructions_Jeremy
 }else{
 	pname=guid("tut");
 	thisDoc = './explorer/data/tutorial-documents.json';
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
-	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface."
-	console.log('ERROR! - defaulting to tutorial interface');
+	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface. <br> Analyst A Notes will be displayed when condition provided."
+	instructionsPrompt = "This window will describe the goal of the analysis session as well as provide a way for you to end the study."
+	console.error('ERROR! - defaulting to tutorial interface');
 }
 
 ;(function() {
@@ -136,7 +147,7 @@ else if(query.includes('=4')){
                         var text = noteDialog.find(".note-set").text();
                         console.log(text);
 						var doc_id = noteDialog.find(".ui-dialog-title").text();
-						logData("Notes", "Note" + tempCounter ,"Note" + tempCounter, doc_id,null);
+						logData("end-notes", "Note" + tempCounter ,"Note" + tempCounter, doc_id,null);
 						tempCounter--;
 						}
 		}
@@ -700,7 +711,7 @@ else if(query.includes('=4')){
 						
 						var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("startdrag-doc", getDocState(docDialog), docDialog.attr("id") , doc_id,[mouseX,mouseY]);
+						logData("drag-start", getDocState(docDialog), docDialog.attr("id") , doc_id,[mouseX,mouseY]);
 			 		},
 			 		
 			 		dragStop: function(event) { 
@@ -712,7 +723,7 @@ else if(query.includes('=4')){
 			 			var docDialog = $(event.target).parents(".ui-dialog");
 			 			var text = docDialogToText(docDialog);
 						var doc_id = docDialog.find(".doc-content").attr("document_id");
-						logData("enddrag-doc", getDocState(docDialog), docDialog.attr("id"), doc_id, [mouseX,mouseY]);
+						logData("drag-end", getDocState(docDialog), docDialog.attr("id"), doc_id, [mouseX,mouseY]);
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 						//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
@@ -892,7 +903,7 @@ else if(query.includes('=4')){
 			            var doubleDocId = [docDialog1.find(".doc-content").attr("document_id"), doc_id];
 			}
 			
-			logData("newConnection", null, [info.connection.sourceId, info.connection.targetId], doubleDocId, null);
+			logData("create-connection", null, [info.connection.sourceId, info.connection.targetId], doubleDocId, null);
 
         });
 
@@ -929,11 +940,7 @@ else if(query.includes('=4')){
 			// set up a space for output summary to be written
 			if (noteHtml === 'instructions'){
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedInstructions" title="Instructions" contenteditable="flase">' + 
-				"A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>.<br>" +
-				"The following documents relate to arms dealing between countries across the world prior to the outbreak. Describe the associations and interactions among the players in the weapons dealings.<br><br>"+
-				"<strong>Your summary should be complete. Prepare it so that you could hand it off to another analyst on your team.</strong><br>"+
-				"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
-				'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>' +
+				instructionsPrompt + 
 				'</div>';
 
 		 
@@ -950,19 +957,16 @@ else if(query.includes('=4')){
 				'</div>';
 				output+="</div>";
 				
-				logData("createNote", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
+				logData("create-note", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
 
 	        }
 	        else{
-	        
-			output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
-						noteHtml +
-						// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
-						
-	            	  '</div>';
+	        	output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
+				noteHtml +
+				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
+				'</div>';
 	            	  
-	        output+="</div>";
-	        	
+	        	output+="</div>";
 	        };
   
              
@@ -1076,10 +1080,10 @@ else if(query.includes('=4')){
 		
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the relative amounts of time the previous participant spent researching documents associated with the following contries:</p><ul class="covList">';
+						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i in data) {
-									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg'><span class='cov-fg' style='width: "+(data[i].proportion)*130+"px' ></span></span></coverage></li>"
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg'><span class='cov-fg' style='width: "+(data[i].proportion)*100+"px' ></span></span> <span class='cov-ratio'>"+Math.round(data[i].proportion * data[i].total)+"/"+data[i].total+"</span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
@@ -1170,7 +1174,7 @@ else if(query.includes('=4')){
 						}
 					}
 
-					logData("highlightText", cursorSelectedText, docDialog.attr("id"), docDialog.find(".doc-content").attr("document_id"));
+					logData("highlight", cursorSelectedText, docDialog.attr("id"), docDialog.find(".doc-content").attr("document_id"));
 
 					// then restore the pink search highlighting
 					if (pinkContent.length != 0) {
@@ -1371,7 +1375,7 @@ else if(query.includes('=4')){
     //  Another shortcut  
 	Mousetrap.bind('alt+shift+k', function(e) {
 	   	var htmlDump = "<html>" + document.getElementById("the-html").innerHTML + "</html>";
-	   	logData("htmlDump", htmlDump, "global");
+	   	logData("html-dump", htmlDump, "global");
 		//$('.ui-dialog').removeHighlightAll("highlight-pink");
 	    $('.doc-set').css({ "color": "transparent"});			// hide the body text
 	    $('.ui-dialog').find('span').css({ "color": "black"});	// show the highlighted text
@@ -1382,7 +1386,7 @@ else if(query.includes('=4')){
 	Mousetrap.bind('alt+shift+l', function(e) {
 
 		var htmlDump = "<html>" + document.getElementById("the-html").innerHTML + "</html>";
-	   	logData("htmlDump", htmlDump, "global");
+	   	logData("html-dump", htmlDump, "global");
 
 	   	//$('.ui-dialog').removeHighlightAll("highlight-pink");
 
@@ -1548,7 +1552,7 @@ function saveInteractionsToFile()
 	//Create the-end object
 	let browserAtEnd = {
 		timestamp: ms_timestamp,
-		type: "endStudy",
+		type: "end-study",
 		msg: pname,
 		elem_id: {
 			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
@@ -1580,7 +1584,7 @@ function saveInteractionsToFile()
 	//make note object
 	let notesAtEnd = {
 			timestamp: ms_timestamp,
-			type: "Notes",
+			type: "end-notes",
 			msg: noteContents, //Array of note text in the order the notes were created.
 			// elem_id: noteElems, //(tempCounter-3), //number of notes ie length
 			doc_id: noteDocs //noteTitles //The titles for the notes in the same order the notes were created
