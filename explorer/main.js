@@ -1487,7 +1487,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			// grab title and highlight its text
 			var $titleSpan = $(this).find('.ui-dialog-title');
 			if (typeof $titleSpan !== "undefined") {
-				$titleSpan.highlight($titleSpan.text(), "affiliate");
+				$titleSpan.addClass("affiliate");
 			}
 			jiggle($(this), 100, 15);
 		} else if (unaffiliateMe.includes(doc_id)){
@@ -1496,7 +1496,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			// grab title and highlight its text
 			var $titleSpan = $(this).find('.ui-dialog-title');
 			if (typeof $titleSpan !== "undefined") {
-				$titleSpan.highlight($titleSpan.text(), "unaffiliate");
+				$titleSpan.addClass("unaffiliate");
 			}
 		}
 	})
