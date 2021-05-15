@@ -231,30 +231,30 @@ path { cursor:pointer; }
 
 /* for jquery.highlight-4.js */
 /* High light colors  */
-.highlight-pink { background-color: #FFC700 }
+.highlight-pink { background-color: #e8d904 }
 .highlight-green { background-color: #77F7A4 }
 .highlight-white { background-color: #feffdc }
 
 .highlightText { 
 	list-style-image: url('../explorer/images/page_white_edit.png'); 
-	background-color: #aafec6;
+	background-color: #77F7A4;
 }
 .searchText{
 	list-style-image: url('../explorer/images/search.png'); 
-	background-color: #ffffe0;
+	background-color: #feffdc;
 }
 .noteText{
 	list-style-image: url('../explorer/images/page_white_add.png'); 
 	background-color: #fff6a5;
 }
 .highlightText:hover  { 
-	background-color: #7bfea7;
+	background-color: #50dc81;
 }
 .searchText:hover {
-	background-color: #f7f7b2;
+	background-color: #84c2aa;
 }
 .noteText:hover {
-	background-color: #fff178;
+	background-color: #a7ce98;
 }
 .history{
 	margin-bottom: -10px;
@@ -269,7 +269,7 @@ path { cursor:pointer; }
     padding: 2px 4px 0px 4px;
     margin-left: -25px;
 	margin-bottom: 3px;
-    background-color: #e79e9c;
+    background-color: #fe9e8f;
 }
 .history-seg-title{
 	padding: .3em 0em .1em 1em;
@@ -300,7 +300,7 @@ path { cursor:pointer; }
 	cursor: pointer;
 }
 .cov-line:hover{
-	background-color: #fcd357;
+	background-color: #92c690;
 }
 .cov-fg {
 	position:absolute;
@@ -317,12 +317,29 @@ path { cursor:pointer; }
 	background-color: #e79e9c;
 }
 
-.affiliate { background-color: #31c1ff }
-.unaffiliate { background-color: #e79e9c }
-.affiliate.highlightText { background-color: #7bfeef;}
-.affiliate.searchText { background-color: #d4fbfa}
-.affiliate.noteText { background-color: #acf2fc;}
-.affiliate.cov-line {background-color: #f2c55d}
+.affiliate { background-color: #2d9687; color: #fff;}
+
+.unaffiliate { 
+	background-color: #a4140f; 
+	color: #e79e9c;
+}
+
+.affiliate.highlightText,
+.affiliate.searchText,
+.affiliate.noteText { 
+	background-color: #2d9687;
+	color: #efd;
+}
+
+.affiliate.highlightText > strong,
+.affiliate.searchText  > strong, 
+.affiliate.noteText >strong { background-color: #037d05;}
+
+.affiliate.cov-line {background-color: #07929f}
+
+.affiliate > coverage > .cov-ratio {
+	color: #bdf1f4;
+}
 
 /*
 .highlight-blue { background-color: #D2B5F5 }
