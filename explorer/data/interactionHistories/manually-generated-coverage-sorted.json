@@ -1,104 +1,114 @@
-[{
-  "country": "USA",
-  "unaffiliated": "ArmsDealing64,ArmsDealing67",
-  "total": 2,
-  "affiliated": "ArmsDealing64,ArmsDealing67",
-  "proportion": 1
-},{
-  "country": "Nigeria",
-  "unaffiliated": "ArmsDealing80,ArmsDealing82,ArmsDealing85,ArmsDealing86",
-  "total": 4,
-  "affiliated": "ArmsDealing80,ArmsDealing85,ArmsDealing86",
-  "proportion": 0.75
-},{
-  "country": "Russia",
-  "unaffiliated": "ArmsDealing3,ArmsDealing25,ArmsDealing27,ArmsDealing28,ArmsDealing30,ArmsDealing31,ArmsDealing36,ArmsDealing41,ArmsDealing45,ArmsDealing47,ArmsDealing48,ArmsDealing50,ArmsDealing78,ArmsDealing81,ArmsDealing84,ArmsDealing90,ArmsDealing91,ArmsDealing93,ArmsDealing96",
-  "total": 19,
-  "affiliated": "ArmsDealing25,ArmsDealing28,ArmsDealing30,ArmsDealing81,ArmsDealing96",
-  "proportion": 0.2631578947
-},{
-  "country": "Yemen",
-  "unaffiliated": "ArmsDealing53,ArmsDealing58,ArmsDealing65,ArmsDealing74,ArmsDealing77",
-  "total": 5,
-  "affiliated": "ArmsDealing65",
-  "proportion": 0.2
-},{
-  "country": "Turkey",
-  "unaffiliated": "ArmsDealing15,ArmsDealing16,ArmsDealing17,ArmsDealing19,ArmsDealing24,ArmsDealing26",
-  "total": 6,
-  "affiliated": "ArmsDealing24",
-  "proportion": 0.1666666667
-},{
-  "country": "Pakistan",
-  "unaffiliated": "ArmsDealing2,ArmsDealing12,ArmsDealing32,ArmsDealing37,ArmsDealing39,ArmsDealing40,ArmsDealing44,ArmsDealing51,ArmsDealing54,ArmsDealing55,ArmsDealing56,ArmsDealing57,ArmsDealing60",
-  "total": 13,
-  "affiliated": "ArmsDealing56",
-  "proportion": 0.07692307692
-},{
-  "country": "Switzerland",
-  "unaffiliated": "ArmsDealing14,ArmsDealing22",
-  "total": 2,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Italy",
-  "unaffiliated": "ArmsDealing71",
-  "total": 1,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Syria",
-  "unaffiliated": "ArmsDealing10,ArmsDealing23",
-  "total": 2,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Lebanon",
-  "unaffiliated": "ArmsDealing4,ArmsDealing8,ArmsDealing29,ArmsDealing42,ArmsDealing46,ArmsDealing59",
-  "total": 6,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Thailand",
-  "unaffiliated": "ArmsDealing18,ArmsDealing33,ArmsDealing34,ArmsDealing35,ArmsDealing38,ArmsDealing61,ArmsDealing62,ArmsDealing63,ArmsDealing66,ArmsDealing73,ArmsDealing79",
-  "total": 11,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Columbia",
-  "unaffiliated": "ArmsDealing87,ArmsDealing88,ArmsDealing95",
-  "total": 3,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Saudi",
-  "unaffiliated": "ArmsDealing13,ArmsDealing21,ArmsDealing97",
-  "total": 3,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Ukraine",
-  "unaffiliated": "ArmsDealing1,ArmsDealing11,ArmsDealing52",
-  "total": 3,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Venezuela",
-  "unaffiliated": "ArmsDealing5,ArmsDealing6,ArmsDealing7,ArmsDealing9,ArmsDealing20,ArmsDealing83,ArmsDealing89,ArmsDealing92,ArmsDealing94",
-  "total": 9,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Kenya",
-  "unaffiliated": "ArmsDealing43,ArmsDealing68,ArmsDealing69,ArmsDealing70,ArmsDealing72,ArmsDealing75,ArmsDealing76,ArmsDealing98,ArmsDealing99,ArmsDealing100,ArmsDealing101,ArmsDealing102,ArmsDealing103",
-  "total": 13,
-  "affiliated": "",
-  "proportion": 0
-},{
-  "country": "Somalia",
-  "unaffiliated": "ArmsDealing49",
-  "total": 1,
-  "affiliated": "",
-  "proportion": 0
-}
-]
+[
+  {
+    "country": "Syria",
+    "unaffiliated": "ArmsDealing10,ArmsDealing23",
+    "total": 2,
+    "affiliated": "ArmsDealing10,ArmsDealing23",
+    "proportion": 1
+  },
+  {
+    "country": "USA",
+    "unaffiliated": "ArmsDealing64,ArmsDealing67",
+    "total": 2,
+    "affiliated": "ArmsDealing67",
+    "proportion": 0.5
+  },
+  {
+    "country": "Kenya",
+    "unaffiliated": "ArmsDealing43,ArmsDealing68,ArmsDealing69,ArmsDealing70,ArmsDealing72,ArmsDealing75,ArmsDealing76,ArmsDealing98,ArmsDealing99,ArmsDealing100,ArmsDealing101,ArmsDealing102,ArmsDealing103",
+    "total": 13,
+    "affiliated": "ArmsDealing10,ArmsDealing103,ArmsDealing68,ArmsDealing69,ArmsDealing72",
+    "proportion": 0.3846153846
+  },
+  {
+    "country": "Turkey",
+    "unaffiliated": "ArmsDealing15,ArmsDealing16,ArmsDealing17,ArmsDealing19,ArmsDealing24,ArmsDealing26",
+    "total": 6,
+    "affiliated": "ArmsDealing17,ArmsDealing26",
+    "proportion": 0.3333333333
+  },
+  {
+    "country": "Russia",
+    "unaffiliated": "ArmsDealing3,ArmsDealing25,ArmsDealing27,ArmsDealing28,ArmsDealing30,ArmsDealing31,ArmsDealing36,ArmsDealing41,ArmsDealing45,ArmsDealing47,ArmsDealing48,ArmsDealing50,ArmsDealing78,ArmsDealing81,ArmsDealing84,ArmsDealing90,ArmsDealing91,ArmsDealing93,ArmsDealing96",
+    "total": 19,
+    "affiliated": "ArmsDealing25,ArmsDealing31,ArmsDealing81,ArmsDealing96",
+    "proportion": 0.2105263158
+  },
+  {
+    "country": "Nigeria",
+    "unaffiliated": "ArmsDealing49,ArmsDealing80,ArmsDealing82,ArmsDealing85,ArmsDealing86",
+    "total": 5,
+    "affiliated": "ArmsDealing80",
+    "proportion": 0.2
+  },
+  {
+    "country": "Thailand",
+    "unaffiliated": "ArmsDealing18,ArmsDealing33,ArmsDealing34,ArmsDealing35,ArmsDealing38,ArmsDealing61,ArmsDealing62,ArmsDealing63,ArmsDealing66,ArmsDealing73,ArmsDealing79",
+    "total": 11,
+    "affiliated": "ArmsDealing73",
+    "proportion": 0.09090909091
+  },
+  {
+    "country": "Yemen",
+    "unaffiliated": "ArmsDealing53,ArmsDealing58,ArmsDealing65,ArmsDealing74,ArmsDealing77",
+    "total": 5,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Pakistan",
+    "unaffiliated": "ArmsDealing2,ArmsDealing12,ArmsDealing32,ArmsDealing37,ArmsDealing39,ArmsDealing40,ArmsDealing44,ArmsDealing51,ArmsDealing54,ArmsDealing55,ArmsDealing56,ArmsDealing57,ArmsDealing60",
+    "total": 13,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Switzerland",
+    "unaffiliated": "ArmsDealing14,ArmsDealing22",
+    "total": 2,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Italy",
+    "unaffiliated": "ArmsDealing71",
+    "total": 1,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Lebanon",
+    "unaffiliated": "ArmsDealing4,ArmsDealing8,ArmsDealing29,ArmsDealing42,ArmsDealing46,ArmsDealing59",
+    "total": 6,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Columbia",
+    "unaffiliated": "ArmsDealing87,ArmsDealing88,ArmsDealing95",
+    "total": 3,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Saudi",
+    "unaffiliated": "ArmsDealing13,ArmsDealing21,ArmsDealing97",
+    "total": 3,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Ukraine",
+    "unaffiliated": "ArmsDealing1,ArmsDealing11,ArmsDealing52",
+    "total": 3,
+    "affiliated": "",
+    "proportion": 0
+  },
+  {
+    "country": "Venezuela",
+    "unaffiliated": "ArmsDealing5,ArmsDealing6,ArmsDealing7,ArmsDealing9,ArmsDealing20,ArmsDealing83,ArmsDealing89,ArmsDealing92,ArmsDealing94",
+    "total": 9,
+    "affiliated": "",
+    "proportion": 0
+  }
+ ]

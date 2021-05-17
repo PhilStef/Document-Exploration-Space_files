@@ -10,7 +10,7 @@
 const fs = require('fs');
 
 // todo create interactedDocs using the node-jq package so I don't have to do this manually https://www.npmjs.com/package/node-jq
-let interactedDocs = ["ArmsDealing24","ArmsDealing25","ArmsDealing28","ArmsDealing30","ArmsDealing56","ArmsDealing64","ArmsDealing65","ArmsDealing67","ArmsDealing80","ArmsDealing81","ArmsDealing85","ArmsDealing86","ArmsDealing96"]
+let interactedDocs = ["ArmsDealing10","ArmsDealing103","ArmsDealing17","ArmsDealing23","ArmsDealing25","ArmsDealing26","ArmsDealing31","ArmsDealing67","ArmsDealing68","ArmsDealing69","ArmsDealing72","ArmsDealing73","ArmsDealing80","ArmsDealing81","ArmsDealing96"] // ["ArmsDealing10","ArmsDealing103","ArmsDealing17","ArmsDealing25","ArmsDealing26","ArmsDealing31","ArmsDealing67","ArmsDealing72","ArmsDealing73","ArmsDealing80","ArmsDealing81","ArmsDealing96"]
 let fullDataset = './manually-generated-coverage-sorted.json'
 
 let rawdata = fs.readFileSync(fullDataset);
@@ -19,6 +19,7 @@ let d = JSON.parse(rawdata);
 
 function clearAffiliated(object){
     object.affiliated = "";
+    object.proportion = 0;
 }
 //clear out any of the affiliated ones
 for (let country in d){
