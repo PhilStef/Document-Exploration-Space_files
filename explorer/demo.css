@@ -291,6 +291,7 @@ path { cursor:pointer; }
 }
 .cov-ratio {
 	font-size: smaller;
+	float: right;
 	color: #0d6e73;
 }
 

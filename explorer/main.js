@@ -71,7 +71,7 @@ var instructions_Jeremy = "A infectious disease started a pandemic in 2009. Anal
 						'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>';
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
-var prov_Coverage_file = "explorer/data/interactionHistories/manually-generated-coverage-sorted.json";
+var prov_Coverage_file = "explorer/data/interactionHistories/generatedCoverage.json";
 
 var thisDoc = './explorer/data/ArmsDealing-documents.json';  //  -or- documents_1.json  -or- documents_2.json  -or- documents_2.json -or- documents_test.json	 		
  
@@ -1085,8 +1085,8 @@ else if(query.includes('=4')){
 		async function generateCoverage(fileName){
 						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
-							for (var i in data) {
-									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg'><span class='cov-fg' style='width: "+(data[i].proportion)*100+"px' ></span></span> <span class='cov-ratio'>"+Math.round(data[i].proportion * data[i].total)+"/"+data[i].total+"</span></coverage></li>"
+							for (var i = 1; i < data.length; i++) {
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((100 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((100 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
