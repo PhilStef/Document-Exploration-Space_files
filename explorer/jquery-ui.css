@@ -399,7 +399,7 @@ button.ui-button::-moz-focus-inner {
 } 
   /* Title bar  */
 .ui-dialog .ui-dialog-titlebar {
-	padding: .5em 1em;
+	padding: .3em .5em;
 	position: relative;
     background:#9dd9d2;
 

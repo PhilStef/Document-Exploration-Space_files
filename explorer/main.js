@@ -661,7 +661,7 @@ else if(query.includes('=4')){
 		}
 
 		var groupingWidth = 100;  // was 235
-		var groupingHeight = 40;
+		var groupingHeight = 36;
 
 		function getDocState(document){
 			if (document.hasClass("ui-resizable")){
@@ -824,11 +824,11 @@ else if(query.includes('=4')){
 		  
 		});
 
-		var plumbHandleHtml = "<a href='#' class='ep title-handle ui-corner-all ui-icon ui-icon-bullet' role='button' style='position: relative;  margin: 3px;'></a>";
-		$(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
+		// var plumbHandleHtml = "<a href='#' class='ep title-handle ui-corner-all ui-icon ui-icon-bullet' role='button' style='position: relative;  margin: 3px;'></a>";
+		// $(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
 
-		var scrunchButHtml = "<a href='#' class='scrunchy-button ui-corner-all ui-icon ui-icon-lightbulb' role='button' style='position: relative;  margin: 3px;'></a>";
-		$(".ui-dialog-titlebar-buttonpane").append( scrunchButHtml );
+		// var scrunchButHtml = "<a href='#' class='scrunchy-button ui-corner-all ui-icon ui-icon-lightbulb' role='button' style='position: relative;  margin: 3px;'></a>";
+		// $(".ui-dialog-titlebar-buttonpane").append( scrunchButHtml );
 
 		$(".scrunchy-button").click( function() {
 
@@ -1064,7 +1064,7 @@ else if(query.includes('=4')){
 							{
 							"maximizable" : false,
 							"closable" : false,
-							"collapsable" : true,
+							"collapsable" : false, //removes the colapse button
 							"dblclick" : "collapse",
 							  });
 		
@@ -1106,7 +1106,7 @@ else if(query.includes('=4')){
 										{
 										"maximizable" : false,
 										"closable" : false,
-										"collapsable" : true,
+										"collapsable" : false,
 										"dblclick" : "collapse",
 										  });
 								// set up jsPlumb stuff for note
