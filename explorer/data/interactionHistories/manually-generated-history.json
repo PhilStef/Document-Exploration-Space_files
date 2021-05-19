@@ -1,55 +1,61 @@
 [{
     "type": "highlightText",
-    "affiliated": "ArmsDealing2,ArmsDealing12, ArmsDealing44, ArmsDealing54",
-    "message": "The analyst started reading documents from early 2008, Highlighting words like <strong class=\"highlight-green\">Airports</strong>, <strong class=\"highlight-green\">Maulana Haq Bukhari</strong>, <strong class=\"highlight-green\">Kiev</strong>, and <strong class=\"highlight-green\">M/V Tanya</strong>",
+    "affiliated": ["ArmsDealing67","ArmsDealing96"],
+    "message": "Leonid Minsky, Italian Prostitutes, variety of business operations, Nigerian civil engineering",
     "timestamp": "Highlighting -- 2:14 - 5:16"
   },
   {
     "type": "search",
-    "affiliated": ["ArmsDealing1","ArmsDealing2","ArmsDealing3"], 
-    "message": "The user was mainly searching for terms like <strong class=\"highlight-white\">Igor</strong>, <strong class=\"highlight-white\">Bank</strong>, and <strong class=\"highlight-white\">Turkey</strong> and moved different search results near eachother.",
+    "affiliated": ["ArmsDealing96","ArmsDealing25, ArmsDealing81"], 
+    "message": "disease, illness, sickness, health, 6169, 9546",
     "timestamp": "Searching -- 7:13 - 9:18"
   },
   {
-    "type": "noteText",
-    "affiliated": "ArmsDealing1,ArmsDealing2",
-    "message": "The analyst spent the majority of this segment reading. One note Created: <em>Burj Hotel, Dubai meeting in April 2009.</em>",
-    "timestamp": "Make Note -- 11:13 - 17:47"
+    "type": "search",
+    "affiliated": "ArmsDealing31,ArmsDealing80",
+    "message": "issue, kenya, nigeria, Nairobi",
+    "timestamp": "Searching-- 11:13 - 17:47"
   },
   {
     "type": "highlightText",
-    "affiliated": "ArmsDealing1,ArmsDealing2", 
-    "message": "Many words Highlighted including: <strong class=\"highlight-green\">Dombrovski</strong>, <strong class=\"highlight-green\">Joetomsk@au.ru</strong>, <strong class=\"highlight-green\">Nigeria</strong>, and <strong class=\"highlight-green\">Russia</strong>",
+    "affiliated": "ArmsDealing80,ArmsDealing68, ArmsDealing69, ArmsDealing72", 
+    "message": "KAPOLALUM, Joetomsk, boyo23826",
     "timestamp": "Highlighting-- 18:58 - 22:32"
   },
   {
-    "type": "noteText",
-    "affiliated": "ArmsDealing1,ArmsDealing2", 
-    "message": "2 Notes created: <em>Dombrovski = jtomski on vwparts4salecheep</em> and <em>Countries so far: Columbia, Thailand, Turkey, Russia, North Korea</em>",
-    "timestamp": "Make Notes -- 25:14 - 27:17"
-  },
-  {
     "type": "search",
-    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
-    "message": "5 searches are made including <strong class=\"highlight-white\">Minsky</strong>, <strong class=\"highlight-white\">North Korea</strong> and <strong class=\"highlight-white\">vwparts4salecheep</strong>. The remainder of this time was spent reading the results.",
-    "timestamp": "Searching -- 27:34 - 34:12"
-  },
-  {
-    "type": "noteText",
-    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
-    "message": "1 long Note created: <em>A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world. He arranges a flight (IL-76) but the plane is comfiscated by thailand authorities. </em>",
-    "timestamp": "Make Note -- 38:42 - 41:17"
-  },
-  {
-    "type": "search",
-    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
-    "message": "8 searches are made including terms like: <strong class=\"highlight-white\">Saudi Arabian Monetary Agency</strong>, <strong class=\"highlight-white\">Martyrs Front of Judea</strong>, and <strong class=\"highlight-white\">MFJ</strong>",
-    "timestamp": "Searching -- 42:48 - 51:36"
+    "affiliated": "ArmsDealing72", 
+    "message": "Nahid, kenya",
+    "timestamp": "Searching -- 25:14 - 27:17"
   },
   {
     "type": "highlightText",
-    "affiliated": ["ArmsDealing1","ArmsDealing2"], 
-    "message": "Several terms were Highlighted: <strong class=\"highlight-green\">Kasem</strong>, <strong class=\"highlight-green\">Khouri</strong>, and <strong class=\"highlight-green\">Russian</strong>. Editing and typing in previous notes concluded the session.",
-    "timestamp": "Highlighting -- 52:04 - 58:32"
+    "affiliated": "ArmsDealing72, ArmsDealing31", 
+    "message": "deaths of Thabiti Otieno and Nahid Owiti, 8 children, May 3, 2009, 1 APRIL 2009",
+    "timestamp": "Highlighting -- 27:34 - 34:12"
+  },
+  {
+    "type": "highlightText",
+    "affiliated": ["ArmsDealing103"], 
+    "message": "middleman for many shipments, Ukraine, TOS-1s, Kenyan Ministry of Defence, Nairobi-based shipping agency",
+    "timestamp": "Highlighting-- 38:42 - 41:17"
+  },
+  {
+    "type": "search",
+    "affiliated": ["ArmsDealing72"], 
+    "message": "Ndungu, Nyambura, Muiruri, Njeri, Kariuki, Ng'endo, Wanjiku, Kaniaru, England, Shropshire, Thabiti",
+    "timestamp": "Searching-- 42:42 - 43:17"
+  },
+  {
+    "type" : "highlightText",
+    "affiliated": "ArmsDealing73, ArmsDealing10, ArmsDealing17, ArmsDealing23", 
+    "message": "Thailand, Bangkok, Turkey, Syria, Iran, Syria and Myanmar",
+    "timestamp": "Highlighting -- 45:25 - 51:48"
+  },
+  {
+    "type" : "highlightText",
+    "affiliated": "ArmsDealing10, ArmsDealing26", 
+    "message": "Turkey, Saturday, school 15, 2008, tents, food and water, but we need textbooks, professor from Moscow, Baltasar, 120,000 lira, Dubai",
+    "timestamp": "Highlighting -- 54:25 - 59:48"
   }
 ]

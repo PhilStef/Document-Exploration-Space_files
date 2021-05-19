@@ -1029,18 +1029,44 @@ else if(query.includes('=4')){
 			// let segments = ["Beginning",,,"Middle",,,"End",,,];
 			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
+				function extractWords(words, type){
+					let wordList = words.split(/,\s?/);
+					let output = "";
+					// console.log(wordlist, type)
+					switch (type) {
+						case 0: //search
+							for(word in wordList){
+								output += "<strong class=\"highlight-white\">" + wordList[word] + "</strong> "
+							}
+							break;
+						case 1: //highlight
+							for(word in wordList){
+								output += "<strong class=\"highlight-green\">" + wordList[word] + "</strong> "
+							}
+							break;
+						case 2: //open
+							for(word in wordList){
+								output += "<em>" + wordList[word] + "</em> "
+							}
+							break;
+						default:
+							console.log("no type")
+							break;
+					}
+					return output;
+				}
 				for (var i in data) {
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
 					// 	output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
 					// }
 					if (data[i].type == "search"){
-						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div> "+ (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div> "+ (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Searching for terms " + extractWords(JSON.stringify(data[i].message), 0) + "</li><br/>"
 					} else if(data[i].type == "highlightText"){
-						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Many words highlighted including " + extractWords(JSON.stringify(data[i].message), 1) + "</li><br/>"
 					} else if(data[i].type == "reading"){
-						output += "<li id='historyNode-note-"+i+"' class='reading history' onClick='affiliate( \"historyNode-read-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-read-"+i+"' class='reading history' onClick='affiliate( \"historyNode-read-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Opening documents with the following key words: " + extractWords(JSON.stringify(data[i].message), 2) + "</li><br/>"
 					} else if(data[i].type == "noteText"){
-						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> A note was created with the following text: <br>" + data[i].message + "</li><br/>"
 					}
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
 						// output += "</div>"

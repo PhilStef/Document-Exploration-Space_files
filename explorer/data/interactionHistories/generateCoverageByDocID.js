@@ -10,9 +10,10 @@
 const fs = require('fs');
 
 // todo create interactedDocs using the node-jq package so I don't have to create a list of interacted docs manually (https://www.npmjs.com/package/node-jq)
-
+// $ cat AnalystA-log.json | jq -c 'map(select(.type == "open-doc")|.doc_id) | unique'
 let interactedDocs = ["ArmsDealing10", "ArmsDealing103", "ArmsDealing17", "ArmsDealing23", "ArmsDealing25", "ArmsDealing26", "ArmsDealing31", "ArmsDealing67", "ArmsDealing68", "ArmsDealing69", "ArmsDealing72", "ArmsDealing73", "ArmsDealing80", "ArmsDealing81", "ArmsDealing96"] // ["ArmsDealing10","ArmsDealing103","ArmsDealing17","ArmsDealing25","ArmsDealing26","ArmsDealing31","ArmsDealing67","ArmsDealing72","ArmsDealing73","ArmsDealing80","ArmsDealing81","ArmsDealing96"]
 // *** Exchange this array ^ with the list of documents a anaylst interacted with to generate a fresh coverage file. 
+// the list should not contain repeats.
 
 let fullDataset = './../ArmsDealing-documents-test.json' //Original Documents as json.
 let colOfInterest = 'country_list'
