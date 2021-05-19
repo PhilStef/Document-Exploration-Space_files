@@ -399,16 +399,16 @@ button.ui-button::-moz-focus-inner {
 } 
   /* Title bar  */
 .ui-dialog .ui-dialog-titlebar {
-	padding: .3em .5em;
+	padding: .3em;
 	position: relative;
     background:#9dd9d2;
 
 }   
 .ui-dialog .ui-dialog-title {
 	float: left;
-	margin: .1em 0;
+	margin: 0em;
 	white-space: nowrap;
-	width: 90%;
+	width: 100%;
 	overflow: hidden;
 	text-overflow: ellipsis;
 }

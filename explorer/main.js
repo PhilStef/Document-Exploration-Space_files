@@ -660,8 +660,8 @@ else if(query.includes('=4')){
 			this.count = 0;
 		}
 
-		var groupingWidth = 100;  // was 235
-		var groupingHeight = 36;
+		var groupingWidth = 90;  // was 235
+		var groupingHeight = 33;
 
 		function getDocState(document){
 			if (document.hasClass("ui-resizable")){
@@ -700,7 +700,7 @@ else if(query.includes('=4')){
 			// create all dialog boxes
 			var doccc = $(this).dialog(
 				{
-				dialogClass: "close",  // "dlg-no-close"
+				dialogClass: "dlg-no-close",
 			 	closeOnEscape: false,
 			 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 			 	mouseenter: function(event,ui){console.log("mouse entered");},
@@ -1027,23 +1027,25 @@ else if(query.includes('=4')){
 
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
-			let segments = ["Beginning",,,"Middle",,,"End",,,];
+			// let segments = ["Beginning",,,"Middle",,,"End",,,];
 			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
 				for (var i in data) {
-					if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
-						output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
-					}
+					// if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
+					// 	output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
+					// }
 					if (data[i].type == "search"){
-						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div> "+ (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
 					} else if(data[i].type == "highlightText"){
-						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
+					} else if(data[i].type == "reading"){
+						output += "<li id='historyNode-note-"+i+"' class='reading history' onClick='affiliate( \"historyNode-read-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
 					} else if(data[i].type == "noteText"){
-						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + data[i].message + "</li><br/>"
+						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> " + data[i].message + "</li><br/>"
 					}
-					if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
-						output += "</div>"
-					}
+					// if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
+						// output += "</div>"
+					// }
 				}
 			}).done(()=>{
 				output += "</ul></div>"

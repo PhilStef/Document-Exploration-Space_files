@@ -86,11 +86,12 @@
       titlebar = $(this.element[0]).dialog("widget").find(".ui-dialog-titlebar");
       buttonPane = $('<div class="ui-dialog-titlebar-buttonpane"></div>').appendTo(titlebar);
       buttonPane.css({
-        "position": "absolute",
-        "top": "50%",
-        "right": "0.3em",
-        "margin-top": "-10px",
-        "height": "18px"
+        // "position": "absolute",
+        // "top": "50%",
+        // "right": "0.3em",
+        // "margin-top": "-10px",
+        // "height": "18px",
+        "display" : "none"
       });
       titlebar.find(".ui-dialog-titlebar-close").css({
         "position": "relative",
