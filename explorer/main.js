@@ -210,7 +210,9 @@ else if(query.includes('=4')){
 		// if(element_id && element_id.length > 0)
 		//  	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
 		if(document_id && document_id.length > 0)
-		 	jsonMessage["doc_id"] = document_id; //The index of the document when it was generated.
+		 	jsonMessage["doc_id"] = document_id 
+		else
+			jsonMessage["doc_id"] = null //The index of the document when it was generated.
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 
