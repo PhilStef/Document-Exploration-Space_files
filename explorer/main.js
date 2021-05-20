@@ -1604,8 +1604,14 @@ function saveInteractionsToFile()
 	// let noteElems = [];
 	let noteDocs = [];
 	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
-		var noteDialog = $(myNotes[tempCounter]); 
-		noteContents.push(noteDialog.find(".note-set").text());
+		var noteDialog = $(myNotes[tempCounter]); //Get diolog element
+		//Had to complicate the capture of notes because .text() would leave out line breaks 
+		let htmlContent = noteDialog.find(".note-set").html(); //pull the html written in the element
+		//remove the extra html stuff and format it into an array, filter removes any empty indexes in the array
+		let contentArray = htmlContent.split(/<div>|<\/div><div>|<\/div>|\r/gm).filter(Boolean)
+		let content = contentArray.join("<br>") //put the array back together with \n characters where <div> and such were
+		console.log(htmlContent, contentArray, content)
+		noteContents.push(content);
 		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
 		// noteElems.push(noteDialog.attr("id"));
 		noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
