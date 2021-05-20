@@ -186,19 +186,28 @@ var // currently active contextMenu trigger
         pageY: null
     },
     // determine zIndex
-    zindex = function($t) {
-        var zin = 0,
-            $tt = $t;
+    zindex = 
+    // function($t) {
+    //     var zin = 0,
+    //         $tt = $t;
 
-        while (true) {
-            zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 0);
-            $tt = $tt.parent();
-            if (!$tt || !$tt.length || "html body".indexOf($tt.prop('nodeName').toLowerCase()) > -1 ) {
-                break;
-            }
-        }
+    //     while (true) {
+    //         zin = Math.max(zin, parseInt($tt.css('z-index'), 10) || 0);
+    //         $tt = $tt.parent();
+    //         if (!$tt || !$tt.length || "html body".indexOf($tt.prop('nodeName').toLowerCase()) > -1 ) {
+    //             break;
+    //         }
+    //     }
         
-        return zin;
+    //     return zin;
+    // },
+    function getMaxZIndex(){
+        var maxZ = Math.max.apply(null,$.map($('body > div'), function(e,n){
+            if($(e).css('position')=='absolute')
+                return parseInt($(e).css('z-index'))||1 ;
+            })
+        );
+        return maxZ+1;
     },
     // event handlers
     handle = {

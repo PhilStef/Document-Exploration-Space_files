@@ -589,12 +589,13 @@ else if(query.includes('=4')){
 
 			let foundElems = [];
 			let foundDocs = [];
+			maxZ = getMaxZIndex();
 			// highlight in documents
 			$( ".ui-dialog" ).each(function( index ) {
 				 // $(this).attr('id','base' + counter++);
-
 				 // if document content or title has search term, highlight whole title
 				 if($(this).is(':Contains(' + searchTerm + ')')){
+					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
 					// finds.push($(this).find(".ui-dialog-title").text()) // gived the titles of the documents
 					foundElems.push($(this).attr("id"));
 					foundDocs.push($(this).find(".doc-content").attr("document_id"));
@@ -631,26 +632,6 @@ else if(query.includes('=4')){
 	big_function = (function() {
 	
 	console.log("DOCUMENT READY");
-	
-	
-		// setup some defaults for jsPlumb connectors 
-		var jsPlumbInstance = jsPlumb.getInstance({
-			
-			
-			Endpoints : [ [ "Dot", { radius:7 } ], [ "Dot", { radius:5 } ] ],
-  			EndpointStyles : [
-    			{ fillStyle:"#225588" }, 
-    			{ fillStyle:"#558822" }
-    			],
-			//Endpoint : ["Dot", {radius:5}],
-			EndpointStyle : { fillStyle: "#567567"  },
-			HoverPaintStyle : {strokeStyle:"#1e8151", lineWidth:1 },
-			Anchor : [ "TopCenter", "BottomCenter" ], // "AutoDefault",
-			Connector:[ "Bezier", { curviness: 15 } ], //[ "StateMachine", { curviness:20 } ],
-			PaintStyle:{ strokeStyle:"#5c96bc", lineWidth:1, outlineColor:"transparent", outlineWidth:1 },  // strok "#5c96bc"   // color transparent
-			DragOptions : { cursor: "crosshair" },
-			Container:"main-div"
-		});
  
 		// determine position for dialog boxes based on doc type categories
 		var docTypeList = [];
@@ -701,7 +682,6 @@ else if(query.includes('=4')){
 				{
 				dialogClass: "dlg-no-close",
 			 	closeOnEscape: false,
-			 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 			 	mouseenter: function(event,ui){console.log("mouse entered");},
 			 	dragStart: function(event, ui) { 
 			 			//console.log("drag started...");
@@ -733,10 +713,6 @@ else if(query.includes('=4')){
 					//// logData("enddrag-document", docDialog.attr("id"), docDialog.attr("id")); 
 			 		},
 		
-             	resize: function(event, ui){
-             		// handleResizeScrunch($(event.target).parents(".ui-dialog"));
-             		jsPlumbInstance.repaintEverything();
-             	},
              	//width: 1000,
              	//load : function(evt, dlg) { $(evt.target).dialogExtend("collapse"),	// ?? start boxes collapsed
 				position: [typeIndex * groupingWidth, boxPosY]   // Initial position of dialog box 
@@ -812,11 +788,6 @@ else if(query.includes('=4')){
 
 		$( ".doc-set" ).each(function( index ) {
 
-		  //$(this).dialogExtend("collapse");	// now collapsing on load
-
-		  // repaint connection lines on collapse/restore
-		  $(this).bind("dialogextendrestore", function(evt) { jsPlumbInstance.repaintEverything(); });
-		  $(this).bind("dialogextendcollapse", function(evt) { jsPlumbInstance.repaintEverything(); });
 		  $(this).bind("dialogextendbeforecollapse", function(evt, dlg) { handleDocBeforeCollapse(evt); });
 		  $(this).bind("dialogextendbeforerestore", function(evt, dlg) { handleDocBeforeRestore(evt); });
 		  $(this).bind("dragend",function(){console.log("Stopped");});
@@ -835,98 +806,7 @@ else if(query.includes('=4')){
 
 		});//end scrunchy click
 
-		var windows = $(".ui-dialog");	// this is used somewhere below
-
-		// limit connections
-		jsPlumbInstance.bind("beforeDrop", function(c) {
-
-			// don't allow connecting object to self
-            if (c.sourceId == c.targetId)
-           	{
-                return false;
-            }
-
-            // don't allow multiple of the same connections (can't connect A to B multiple times)
-            var connectionList = jsPlumbInstance.getConnections({source:[c.sourceId, c.targetId], target:[c.sourceId, c.targetId]}, true);
-			if(connectionList != "")
-            {
-				return false;
-        	}
-
-           	return true;
-        });
-
-		// bind a connection listener. note that the parameter passed to this function contains more than
-		// just the new connection - see the documentation for a full list of what is included in 'info'.
-		// this listener sets the connection's internal
-		// id as the label overlay's text.
-        jsPlumbInstance.bind("connection", function(info) {
-
-        	//console.log("overlay: " + info.connection.getOverlay("customOverlay").id);
-        	//console.log("connection: " + info);
-
-        	info.connection.addOverlay(["Custom", {
-	                create:function(component) {
-	                    //return $("<textarea class='connection-textarea' data-source='" + info.connection.sourceId + "' data-target='" + info.connection.targetId + "'>connected</textarea>");
-	                    return $("<div class='connection-textarea' data-source='" + info.connection.sourceId + "' data-target='" + info.connection.targetId + "' contenteditable='true'>connected</div>");
-	                },
-	                location:0.7,
-	                id:"customOverlay",
-	                class:"custom-connection-label",
-					events:{
-						"click":function(label, evt){
-								$(".body-class").contextMenu("hide");
-							}
-						}
-	                }
-	            ]);
-
-        	resetUndo();
-        	
-        	// var docDialog = $(evt.target).parents(".ui-dialog");
-			// var text = docDialogToText(docDialog);
-			// var doc_id = docDialog.find(".doc-content").attr("document_id");
-			// logData("open-document", docDialog.attr("id"), docDialog.attr("id"), doc_id,text);
-			
-			var docDialog1 = $("#"+info.connection.sourceId);
-			var docDialog2 = $("#"+info.connection.targetId);
-			var text = docDialogToText(docDialog1) + ' \n ' + docDialogToText(docDialog2);
-			// console.log(docDialog);
-			// console.log("that's all folks");
-			// var doubleid = info.connection.sourceId + "," + info.connection.targetId;
-						
-			if (docDialog2.find(".doc-content").attr("document_id") != null){
-			   var doubleDocId = [docDialog1.find(".doc-content").attr("document_id"), docDialog2.find(".doc-content").attr("document_id")];
-			}
-			else{
-					    var noteDialog = $(info.connection.target); 
-     					var doc_id = noteDialog.find(".ui-dialog-title").text();
-						console.log(doc_id);
-			            var doubleDocId = [docDialog1.find(".doc-content").attr("document_id"), doc_id];
-			}
-			
-			logData("create-connection", null, [info.connection.sourceId, info.connection.targetId], doubleDocId, null);
-
-        });
-
-		// suspend drawing and initialise.
-		jsPlumbInstance.doWhileSuspended(function() {
-
-			// make each ".ep" div a source and give it some parameters to work with.  here we tell it
-			// to use a dynamic anchor and the StateMachine connectors, and also we give it the
-			// connector's paint style.  note that in this demo the strokeStyle is dynamically generated,
-			// which prevents us from just setting a jsPlumb.Defaults.PaintStyle.  but that is what i
-			// would recommend you do. Note also here that we use the 'filter' option to tell jsPlumb
-			// which parts of the element should actually respond to a drag start.
-			jsPlumbInstance.makeSource(windows, {
-				filter:".ep"				// only supported by jquery
-			});
-
-			// initialise all documents as connection targets.
-	        jsPlumbInstance.makeTarget(windows);
-
-
-		});
+		// var windows = $(".ui-dialog");	// this is used somewhere below
 
         // Creating a note 
 		
@@ -986,8 +866,6 @@ else if(query.includes('=4')){
 					dialogClass: "dlg-no-close",
 				 	closeOnEscape: false,
 					position: [mouseX, mouseY],
-				 	drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-	             	resize: function(event, ui){ jsPlumbInstance.repaintEverything(); }
 	            	})
 				.resizable({handles: {'s': 'handle'}})
 				.dialogExtend(
@@ -1001,25 +879,11 @@ else if(query.includes('=4')){
 			undoAction = function(){
 				noteDialog.dialog('destroy').remove();
 			};
+			
 
 			var noteDialogParent = noteDialog.parent();
-
-			// set up jsPlumb stuff for note
-			jsPlumbInstance.doWhileSuspended(function() {
-
-				jsPlumbInstance.makeSource(noteDialogParent, {
-					filter:".ep_note"
-				});
-
-				// initialise all documents as connection targets.
-		        jsPlumbInstance.makeTarget(noteDialogParent);
-
-				//console.log("selected: " + noteDialogParent.attr('id') + ", " + noteDialogParent.attr('class') );
-			    myNotes[noteIdCounter] = noteDialogParent;
-			    //console.log(myNotes[noteIdCounter]);	
-				// noteDialogParent.find(".ui-dialog-titlebar-buttonpane").append( plumbHandleHtml );
-			});
-            
+			myNotes[noteIdCounter] = noteDialogParent;
+			
 			return noteDialog;
 
 		};// end create note dialog
@@ -1081,8 +945,6 @@ else if(query.includes('=4')){
 							{
 							height: 400,
 							 closeOnEscape: false,
-							 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-							 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 							 position: [1363, 12]
 
 							})
@@ -1094,16 +956,6 @@ else if(query.includes('=4')){
 							"collapsable" : false, //removes the colapse button
 							"dblclick" : "collapse",
 							  });
-		
-					// set up jsPlumb stuff for note
-					var provDialogParent = provDialog.parent();
-					jsPlumbInstance.doWhileSuspended(function() {
-						jsPlumbInstance.makeSource(provDialogParent, {
-							filter:".ep_prov"
-						});
-						// initialise all documents as connection targets.
-						jsPlumbInstance.makeTarget(provDialogParent);
-					});
 					return provDialog;
 			})
 		}
@@ -1124,8 +976,6 @@ else if(query.includes('=4')){
 										{
 										width: 230,
 										closeOnEscape: false,
-										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
-										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 position: [1366, 14]
 										})
 									.resizable({handles: {'s': 'handle'}})
@@ -1136,15 +986,6 @@ else if(query.includes('=4')){
 										"collapsable" : false,
 										"dblclick" : "collapse",
 										  });
-								// set up jsPlumb stuff for note
-								var provDialogParent = provDialog.parent();
-								jsPlumbInstance.doWhileSuspended(function() {
-									jsPlumbInstance.makeSource(provDialogParent, {
-										filter:".ep_prov"
-									});
-									// initialise all documents as connection targets.
-									jsPlumbInstance.makeTarget(provDialogParent);
-								});
 								return provDialog;
 						})
 		}
@@ -1153,6 +994,7 @@ else if(query.includes('=4')){
 		// right click menu for dialog boxes
 		$.contextMenu({
 	        selector: '.ui-dialog',
+			zIndex: getMaxZIndex(),
 	        autoHide: true,
 	        callback: function(key, options) {
 	        	var docDialog = options.$trigger;
@@ -1264,64 +1106,11 @@ else if(query.includes('=4')){
 			}
 	    });
 
-		// right click menu for jsplumb connectors
-	    $.contextMenu({
-	    	// _jsplumb_c_
-	        selector: '._jsPlumb_overlay',
-	        autoHide: true,
-	        zIndex: 5000,
-	        callback: function(key, options) {
-	            //console.log("click: " + options.$trigger.attr("id"));
-	            //console.log("click: " + key);
-
-	            if (key == "delete")
-	            {
-	            	var sourceId = options.$trigger.attr("data-source");
-	            	var targetId = options.$trigger.attr("data-target");
-	            	var overlayText = options.$trigger.html();
-
-	            	// get the connection by the source and target info saved in the overlay
-		            var connList = jsPlumbInstance.getConnections({
-					      source: sourceId,
-					      target: targetId
-					});
-					//console.log("conn: " + connList[0].sourceId);
-
-		            if (connList != null)
-					{
-		            	// delete connection and annotation
-		            	jsPlumbInstance.detach(connList[0]);
-
-		            	// set action for undo command
-		            	undoAction = function(){
-		            		var c = jsPlumbInstance.connect({
-							    source: sourceId,
-							    target: targetId
-							});
-
-							c.addOverlay(["Custom", {
-				                create:function(component) {
-				                    //return $("<textarea data-source='" + sourceId + "' data-target='" + targetId + "'>" + overlayText + "</textarea>");
-				                    return $("<div class='connection-textarea' data-source='" + sourceId + "' data-target='" + targetId + "' contenteditable='true'>" + overlayText + "</div>");
-				                },
-				                location:0.7,
-				                id:"customOverlay",
-				                class:"custom-connection-label"
-				                }
-				            ]);
-		            	};
-		            }
-	        	}
-	        },
-	        items: {
-	            "delete": {name: "Delete connection", icon: "delete"}
-	        }
-	    });
-
 		// right click menu for background
 		$.contextMenu({
 	        selector: '.body-class',
-	        zIndex: 5000,
+			autoHide: true,
+	        zIndex: getMaxZIndex(),
 	        callback: function(key, options) {
 	            var m = "clicked: " + key;
 
@@ -1510,6 +1299,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 	$(".ui-dialog").each(function( index ){
 		// var currentDocDiv = $(this).find(".doc-set");
 		var doc_id = $(this).find(".doc-content").attr("document_id");
+		let maxZ = getMaxZIndex();
 		if(affiliateMe.includes(doc_id)){
 			foundElems.push($(this).attr("id")); // The id of the document in the html
 			foundDocs.push($(this).find(".doc-content").attr("document_id")); //the id of the document in the original json
@@ -1519,6 +1309,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			if (typeof $titleSpan !== "undefined") {
 				$titleSpan.addClass("affiliate");
 			}
+			$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
 			jiggle($(this), 100, 15);
 		} else if (unaffiliateMe.includes(doc_id)){
 			foundOtherDocs.push($(this).find(".doc-content").attr("document_id"));
@@ -1528,6 +1319,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			if (typeof $titleSpan !== "undefined") {
 				$titleSpan.addClass("unaffiliate");
 			}
+			$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
 		}
 	})
 
@@ -1638,4 +1430,13 @@ function saveInteractionsToFile()
     var event = document.createEvent( 'MouseEvents' );
     event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
     link.dispatchEvent(event);
+}
+function getMaxZIndex(){
+	var maxZ = Math.max.apply(null,$.map($('body > div'), function(e,n){
+		if($(e).css('position')=='absolute')
+			return parseInt($(e).css('z-index'))||1 ;
+		})
+	);
+	console.log((maxZ))
+	return maxZ+1;
 }
