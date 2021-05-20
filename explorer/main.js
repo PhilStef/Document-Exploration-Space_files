@@ -965,7 +965,7 @@ else if(query.includes('=4')){
 
 	        }
 	        else{
-	        	output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
+	        	output += '<div id="' + noteId + '" class="prov-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 				'</div>';
@@ -1029,7 +1029,7 @@ else if(query.includes('=4')){
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
 			// let segments = ["Beginning",,,"Middle",,,"End",,,];
-			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
+			let output='<div id="provHistory" class="prov-set doc-content" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
 				function extractWords(words, type){
 					let wordList = words.split(/,\s?/);
@@ -1078,7 +1078,7 @@ else if(query.includes('=4')){
 				output += "</ul></div>"
 				document.getElementById("placeholder-div").innerHTML=output;
 		
-				var provDialog = $( "#provSummary" )
+				var provDialog = $( "#provHistory" )
 						.dialog(	
 							{
 							height: 400,
@@ -1112,7 +1112,7 @@ else if(query.includes('=4')){
 		
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
+						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i = 1; i < data.length; i++) {
 									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((100 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((100 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
@@ -1121,7 +1121,7 @@ else if(query.includes('=4')){
 							output += "</ul></div>"
 							document.getElementById("placeholder-div").innerHTML=output;
 					
-							var provDialog = $( "#provSummary" )
+							var provDialog = $( "#provCoverage" )
 									.dialog(	
 										{
 										width: 230,
