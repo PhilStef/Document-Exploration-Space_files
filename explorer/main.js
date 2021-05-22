@@ -115,7 +115,7 @@ else if(query.includes('=4')){
 	console.error('ERROR! - defaulting to tutorial interface');
 }
 
-;(function() {
+;(async function() {
     
 
 
@@ -161,7 +161,7 @@ else if(query.includes('=4')){
 	var globalSearchTerm = "";
      
     //Read input JSON file 
-	$.getJSON(thisDoc, function(data) {
+	await $.getJSON(thisDoc, function(data) {
 
         var jsonCounter = 0;
         var output="<div>";
@@ -185,7 +185,9 @@ else if(query.includes('=4')){
         document.getElementById("placeholder-div").innerHTML=output;
 
 		console.log("Loaded documents from JSON: " + jsonCounter);
-  	  });
+  	  }).done(() => {
+
+
 
 	// Track mouse position
 	$(document).mousemove(function(event){
@@ -216,7 +218,7 @@ else if(query.includes('=4')){
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 
-		console.log(jsonMessage);
+		// console.log(jsonMessage);
         SESSION_LOG_DATA.push(jsonMessage);
       
       // Send the log to its destiny
@@ -624,10 +626,7 @@ else if(query.includes('=4')){
 	} //end search()
 
 	
-	// $(document).ready(
-	//Some race condition exist... this is my workaound.
-		
-	setTimeout("big_function()", 50);    // To solve the race conditio
+	setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
 	
 	
 	big_function = (function() {
@@ -1463,7 +1462,7 @@ else if(query.includes('=4')){
 
 	//console.log("window height: " + $(window).height());
 
-})();
+})})();
 
 
 
@@ -1635,7 +1634,7 @@ function saveInteractionsToFile()
 		//remove the extra html stuff and format it into an array, filter removes any empty indexes in the array
 		let contentArray = htmlContent.split(/<div>|<\/div><div>|<\/div>|\r/gm).filter(Boolean)
 		let content = contentArray.join("<br>") //put the array back together with \n characters where <div> and such were
-		console.log(htmlContent, contentArray, content)
+		// console.log(htmlContent, contentArray, content)
 		noteContents.push(content);
 		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
 		// noteElems.push(noteDialog.attr("id"));
