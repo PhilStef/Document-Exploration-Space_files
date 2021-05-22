@@ -218,7 +218,7 @@ else if(query.includes('=4')){
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 
-		console.log(jsonMessage);
+		// console.log(jsonMessage);
         SESSION_LOG_DATA.push(jsonMessage);
       
       // Send the log to its destiny
@@ -1294,7 +1294,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 		if(unaffiliated_document_ids && unaffiliated_document_ids.length > 0)
 		 	jsonMessage["undoc_id"] = unaffiliated_document_ids; //The index of the documents that were not affiliated with a coverage
 
-		console.log(jsonMessage);
+		// console.log(jsonMessage);
         SESSION_LOG_DATA.push(jsonMessage);		
 	}//end logData
 
