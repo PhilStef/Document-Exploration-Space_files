@@ -240,58 +240,73 @@ path { cursor:pointer; }
 .highlight-green { background-color: #77F7A4 }
 .highlight-white { background-color: #feffdc }
 
-.highlightText { 
-	list-style-image: url('../explorer/images/page_white_edit.png'); 
-	background-color: #77F7A4;
-}
-.searchText{
-	list-style-image: url('../explorer/images/search.png'); 
-	background-color: #feffdc;
-}
-.reading{
-	list-style-image: url('../explorer/images/door.png'); 
-	background-color: #8e8000;
-}
-.noteText{
-	list-style-image: url('../explorer/images/page_white_add.png'); 
-	background-color: #fff6a5;
-}
 
-.highlightText:hover,
+.searchText, 
+.highlightText,
+.readText,
+.noteText { 
+    font-size: smaller;
+    font-weight: bold;
+    max-width: 97%;
+    display:inline-block;
+    padding: 0.2em .5em;
+    margin-bottom: -4px;
+    border-radius: 5px;
+    height: inherit;
+    overflow: hidden; 
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    cursor: text;
+}
+/*
 .searchText:hover,
-.reading:hover,
+.highlightText:hover,
+.readText:hover,
 .noteText:hover {
     background-color: #ffb577;
 }
-.highlightText > strong,
-.searchText  > strong, 
-.noteText >strong { 
-    font-size: smaller;
-    padding: .2em;
-    border-radius: 5px;
+*/
+.searchText{
+    background-color: #fff34e;
+	color: #968e2b;
+}
+.highlightText { 
+    background-color: #86ff94;
+	color: #088032;
+}
+
+.readText{
+    background-color: #ffd6e7;
+	color: #cc0f7c;
+}
+/*
+.noteText{
     color: #FFf686;
     background-color: #8e5359;
+	background-color: #bfb105;
 }
+*/
+
+
 .history{
 	margin-bottom: -10px;
 	padding:5px 8px;
     margin: 0px;
 	border-radius: 10px;
-	cursor: pointer;
+
 }
 
 .historyList > li{
-	margin: -5px 0px 0px -20px;
+	margin: -10px 0px 0px -40px;
+    list-style: none;
+	cursor: pointer;
+    background-color: #fff3dd
 }
 
-.history-seg-title{
-	padding: .3em 0em .1em 1em;
-    font-size: 10pt;
-    color: #755;
-}
 .time {
 	font-size: 10px;
-	padding: 0px 15px;
+    color: #755;
+	padding: .3em 0em .1em 1em;
 	border-bottom: solid #888 01px;
     margin: -5px -8px 5px -8px;
 }
@@ -342,18 +357,15 @@ path { cursor:pointer; }
 	color: #FF8F9E;
 }
 
+/*
 .affiliate.highlightText,
 .affiliate.searchText,
-.affiliate.noteText { 
-	background-color: #ff5e7a;
+.affiliate.noteText,
+.affiliate > .time{
+    background-color: #8e5359;
 	color: #ffff5f;
 }
-
-.affiliate.highlightText > strong,
-.affiliate.searchText  > strong, 
-.affiliate.noteText >strong { 
-    background-color: #5B4749;
-}
+*/
 
 .affiliate.cov-line {
 	background-color: hsl(339, 30%, 58%);

@@ -1029,47 +1029,70 @@ else if(query.includes('=4')){
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
 			// let segments = ["Beginning",,,"Middle",,,"End",,,];
-			let output='<div id="provHistory" class="prov-set doc-content" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
+			let output='<div id="provHistory" class="prov-set doc-content" title=" History" contenteditable="false"><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
-				function extractWords(words, type){
-					let wordList = words.split(/,\s?/);
-					let output = "";
-					// console.log(wordlist, type)
-					switch (type) {
-						case 0: //search
-							for(word in wordList){
-								output += "<strong class=\"highlight-white\">" + wordList[word] + "</strong> "
-							}
-							break;
-						case 1: //highlight
-							for(word in wordList){
-								output += "<strong class=\"highlight-green\">" + wordList[word] + "</strong> "
-							}
-							break;
-						case 2: //open
-							for(word in wordList){
-								output += "<em>" + wordList[word] + "</em> "
-							}
-							break;
-						default:
-							console.log("no type")
-							break;
+				function timesToString([start,end]){
+					function secToString (seconds){
+						// multiply by 1000 because Date() requires miliseconds
+						var date = new Date(seconds * 1000);
+						var mm = date.getUTCMinutes();
+						var ss = date.getSeconds();
+						// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
+						// if (hh > 12) {hh = hh % 12;}
+						// These lines ensure you have two-digits
+						if (mm < 10) {mm = "0"+mm;}
+						if (ss < 10) {ss = "0"+ss;}
+						// This formats your string to MM:SS
+						return mm+":"+ss;
 					}
-					return output;
+					return secToString(start) + " - " + secToString(end) + " | Dur: "+ secToString(end-start)
+				}
+				function extractWords(wordList, type, maxTerms = 3){
+					let output = "<div>";
+					if (wordList.length == 0 ){
+						return output += "</div>"
+					} else {
+						switch (type) {
+							case 0: //search
+								(wordList.length > 1)? output += "<div> Searching for terms like: " : output += "<div> Searched for 1 term: ";
+								for(word in wordList){
+									output += "<span class='searchText'>" + wordList[word] + "</span> "
+								}
+								output += "</div>"
+								break;
+							case 1: //highlight
+								(wordList.length > 1)? output += "<div> Hightlighting terms like: " : "<div> Highlighted 1 term: "
+								for(let word = 0; word < maxTerms && word < wordList.length; word++){
+									output += "<span class='highlightText'>" + wordList[word] + "</span> "
+								}
+								(wordList.length > maxTerms+1)? output += " and "+ (wordList.length - maxTerms) + " others... " : (wordList.length > maxTerms)? output+= " and 1 other..." : output += "";
+								output += "</div>"
+								break;
+							case 2: //open
+								(wordList.length > 1)? output += "<div> Documents had terms like: " : "<div> The document had terms like: "
+								for(let word = 0; word < maxTerms; word++){
+									output += "<span class='readText'>" + wordList[word] + "</span> "
+								}
+								output += "</div>"
+								break;
+							default:
+								console.err("extractWords function expects a type specified")
+								break;
+						}
+						return output += "</div>";
+					}
 				}
 				for (var i in data) {
+					let docnum =  (JSON.stringify(data[i].affiliated).split(/,\s?/).length)
+
+					output += "<li id='historyNode-"+(parseInt(i)+1)+"' class='history' onClick='affiliate( \"historyNode-"+(parseInt(i)+1)+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ "Segment " + (parseInt(i)+1) + " | " + timesToString((data[i].timestamp)) + "</div> <span class='readText'>"+ 
+					((docnum > 1)? docnum +  "</span> unique documents opened<br> " : docnum + "</span> document opened <br>") +
+					extractWords(data[i].search, 0) +
+					extractWords(data[i].highlight, 1) + 
+					extractWords(data[i].readTerms, 2) + "</li><br/>"
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
 					// 	output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
 					// }
-					if (data[i].type == "search"){
-						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div> "+ (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Searching for terms " + extractWords(JSON.stringify(data[i].message), 0) + "</li><br/>"
-					} else if(data[i].type == "highlightText"){
-						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Many words highlighted including " + extractWords(JSON.stringify(data[i].message), 1) + "</li><br/>"
-					} else if(data[i].type == "reading"){
-						output += "<li id='historyNode-read-"+i+"' class='reading history' onClick='affiliate( \"historyNode-read-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Opening documents with the following key words: " + extractWords(JSON.stringify(data[i].message), 2) + "</li><br/>"
-					} else if(data[i].type == "noteText"){
-						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> A note was created with the following text: <br>" + data[i].message + "</li><br/>"
-					}
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
 						// output += "</div>"
 					// }
