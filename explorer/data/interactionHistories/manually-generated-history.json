@@ -1,61 +1,78 @@
 [{
-    "type": "highlightText",
-    "affiliated": ["ArmsDealing67","ArmsDealing96"],
-    "message": "Leonid Minsky, Italian Prostitutes, variety of business operations, Nigerian civil engineering",
-    "timestamp": "Highlighting -- 2:14 - 5:16"
+    "affiliated": ["ArmsDealing67"],
+    "search": ["nigeria"],
+    "highlight": ["Leonid Minsky", "Italian Prostitutes", "variety of business operations", "Nigerian civil engineering and bridge construction services","Ukrainian origins associated involved in international arms and drug trafficking, money laundering, extortion and other offenses","500,000 worth of uncut diamond","Yemen","Minsky was reportedly shot to death in his jail cell by a guard two days later"],
+    "readTerms": [],
+    "timestamp": [11.532, 181.323]
   },
   {
-    "type": "search",
-    "affiliated": ["ArmsDealing96","ArmsDealing25, ArmsDealing81"], 
-    "message": "disease, illness, sickness, health, 6169, 9546",
-    "timestamp": "Searching -- 7:13 - 9:18"
+    "affiliated": ["ArmsDealing96"],
+    "search": ["disease","illness","sickness"],
+    "highlight": ["meeting on 15 April", "Family", "Dombrovski", " local health issues " ],
+    "readTerms": [],
+    "timestamp": [195.083, 386.423]
   },
   {
-    "type": "search",
-    "affiliated": "ArmsDealing31,ArmsDealing80",
-    "message": "issue, kenya, nigeria, Nairobi",
-    "timestamp": "Searching-- 11:13 - 17:47"
+    "affiliated": ["ArmsDealing25", "ArmsDealing81"],
+    "search": ["health","6169", "9546", "6169"],
+    "highlight": ["Paris", "Dubai", "Dombrovski" , " All of my business activities are legal, as I am sure are yours.","telephone number above?" ],
+    "readTerms": [],
+    "timestamp": [390.324, 576.663]
   },
   {
-    "type": "highlightText",
-    "affiliated": "ArmsDealing80,ArmsDealing68, ArmsDealing69, ArmsDealing72", 
-    "message": "KAPOLALUM, Joetomsk, boyo23826",
-    "timestamp": "Highlighting-- 18:58 - 22:32"
+    "affiliated": ["ArmsDealing31", "ArmsDealing80"],
+    "search": ["issue","kenya","Venezuela","USA", "Nigeria"],
+    "highlight": ["Dubai", "Nahid", "Nicolai", "CONFIDENTIALITY", "KAPOLALUM", "Joetomsk", "boyo23826" ],
+    "readTerms": [],
+    "timestamp": [589.206, 828.245]
   },
   {
-    "type": "search",
-    "affiliated": "ArmsDealing72", 
-    "message": "Nahid, kenya",
-    "timestamp": "Searching -- 25:14 - 27:17"
+    "affiliated": ["ArmsDealing68", "ArmsDealing69","ArmsDealing72", "ArmsDealing31"],
+    "search": ["Nairobi","Nahid", "Kenya"],
+    "highlight": ["deaths of Thabiti Otieno and Nahid Owiti of Narok on 1 May", "8 children", " May 3, 2009", "1 APRIL 2009"],
+    "readTerms": [],
+    "timestamp": [875.06, 1046.223]
   },
   {
-    "type": "highlightText",
-    "affiliated": "ArmsDealing72, ArmsDealing31", 
-    "message": "deaths of Thabiti Otieno and Nahid Owiti, 8 children, May 3, 2009, 1 APRIL 2009",
-    "timestamp": "Highlighting -- 27:34 - 34:12"
+    "affiliated": ["ArmsDealing72", "ArmsDealing103"],
+    "search": ["Otieno","Owiti", "kenya" ],
+    "highlight": ["Otieno ", "middleman for many shipments of weapons to Southern Sudan government forces","Ukraine", "TOS-1s","ostensibly consigned to the Kenyan Ministry of Defence\" but that were in fact under contract to the Government of Southern Sudan", "three shipments in 2007 and 2008 are said to include 14.5 mm machine guns, 23 mm anti-aircraft cannon, RPG-7 rocket launchers and AKM assault rifles", "Nairobi-based shipping agency ", "report by a Swedish research institute"],
+    "readTerms": [],
+    "timestamp": [1060.845, 1266.001]
   },
   {
-    "type": "highlightText",
-    "affiliated": ["ArmsDealing103"], 
-    "message": "middleman for many shipments, Ukraine, TOS-1s, Kenyan Ministry of Defence, Nairobi-based shipping agency",
-    "timestamp": "Highlighting-- 38:42 - 41:17"
+    "affiliated": ["ArmsDealing72"],
+    "search": ["Ndungu","Nyambura","Muiruri","Njeri","Kariuki","Ng'endo", "Wanjiku", "Kaniaru", "England", "Shropshire", "Thabiti"],
+    "highlight": [],
+    "readTerms": [],
+    "timestamp": [1818.652, 1867.671]
   },
   {
-    "type": "search",
-    "affiliated": ["ArmsDealing72"], 
-    "message": "Ndungu, Nyambura, Muiruri, Njeri, Kariuki, Ng'endo, Wanjiku, Kaniaru, England, Shropshire, Thabiti",
-    "timestamp": "Searching-- 42:42 - 43:17"
+    "affiliated": ["ArmsDealing73"],
+    "search": ["Syria"],
+    "highlight": ["Thailand", "Bangkok", "North Korean", "other arms to countries such as Iran, Syria and Myanmar are believed to contribute hundreds of millions of dollars annually to North Korea's hard-currency earnings."],
+    "readTerms": [],
+    "timestamp": [1908.229, 1990.127]
   },
   {
-    "type" : "highlightText",
-    "affiliated": "ArmsDealing73, ArmsDealing10, ArmsDealing17, ArmsDealing23", 
-    "message": "Thailand, Bangkok, Turkey, Syria, Iran, Syria and Myanmar",
-    "timestamp": "Highlighting -- 45:25 - 51:48"
+    "affiliated": ["ArmsDealing10", "ArmsDealing17", "ArmsDealing23"],
+    "search": [],
+    "highlight": ["Syria", "Turkey", "Saturday, November 15, 2008","school","tents, food and water, but we need textbooks" ],
+    "readTerms": [],
+    "timestamp": [2009.239, 2107.118]
   },
   {
-    "type" : "highlightText",
-    "affiliated": "ArmsDealing10, ArmsDealing26", 
-    "message": "Turkey, Saturday, school 15, 2008, tents, food and water, but we need textbooks, professor from Moscow, Baltasar, 120,000 lira, Dubai",
-    "timestamp": "Highlighting -- 54:25 - 59:48"
+    "affiliated": ["ArmsDealing10", "ArmsDealing26"],
+    "search": ["Moscow", "Baltasar", "kaya"],
+    "highlight": ["professor from Moscow", "textbook salesman", "Baltasar","Turkey, Turkey", "120,000 lira for our textbooks", "16 April", "Dubai", "travel with Kaya", "Baltasar"],
+    "readTerms": [],
+    "timestamp": [2113.763, 2242.411]
+  },
+  {
+    "affiliated": ["ArmsDealing26", "ArmsDealing10"],
+    "search": ["Adad","Ashur"],
+    "highlight": ["pick up on 16 April.", "travel April 18. And stay at the same hotel as us.", " Burj Al Arab" ],
+    "readTerms": [],
+    "timestamp": [2251.029, 2298.549]
   }
 ]

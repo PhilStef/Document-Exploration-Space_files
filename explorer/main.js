@@ -115,7 +115,7 @@ else if(query.includes('=4')){
 	console.error('ERROR! - defaulting to tutorial interface');
 }
 
-;(function() {
+;(async function() {
     
 
 
@@ -161,7 +161,7 @@ else if(query.includes('=4')){
 	var globalSearchTerm = "";
      
     //Read input JSON file 
-	$.getJSON(thisDoc, function(data) {
+	await $.getJSON(thisDoc, function(data) {
 
         var jsonCounter = 0;
         var output="<div>";
@@ -174,7 +174,7 @@ else if(query.includes('=4')){
             // '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
             '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].date + ", " + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].column + '">' +
             // '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
-            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_all + "<br>") + data[i].contents + '</div>' +
+            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_tag + "<br>") + data[i].contents + '</div>' +
             '</div>';
             "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
         }
@@ -185,7 +185,9 @@ else if(query.includes('=4')){
         document.getElementById("placeholder-div").innerHTML=output;
 
 		console.log("Loaded documents from JSON: " + jsonCounter);
-  	  });
+  	  }).done(() => {
+
+
 
 	// Track mouse position
 	$(document).mousemove(function(event){
@@ -210,7 +212,9 @@ else if(query.includes('=4')){
 		// if(element_id && element_id.length > 0)
 		//  	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
 		if(document_id && document_id.length > 0)
-		 	jsonMessage["doc_id"] = document_id; //The index of the document when it was generated.
+		 	jsonMessage["doc_id"] = document_id 
+		else
+			jsonMessage["doc_id"] = null //The index of the document when it was generated.
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 
@@ -595,7 +599,7 @@ else if(query.includes('=4')){
 				 // $(this).attr('id','base' + counter++);
 				 // if document content or title has search term, highlight whole title
 				 if($(this).is(':Contains(' + searchTerm + ')')){
-					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
+					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
 					// finds.push($(this).find(".ui-dialog-title").text()) // gived the titles of the documents
 					foundElems.push($(this).attr("id"));
 					foundDocs.push($(this).find(".doc-content").attr("document_id"));
@@ -623,10 +627,7 @@ else if(query.includes('=4')){
 	} //end search()
 
 	
-	// $(document).ready(
-	//Some race condition exist... this is my workaound.
-		
-	setTimeout("big_function()", 50);    // To solve the race conditio
+	setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
 	
 	
 	big_function = (function() {
@@ -640,7 +641,7 @@ else if(query.includes('=4')){
 			this.count = 0;
 		}
 
-		var groupingWidth = 90;  // was 235
+		var groupingWidth = 110;  // was 235
 		var groupingHeight = 33;
 
 		function getDocState(document){
@@ -730,7 +731,7 @@ else if(query.includes('=4')){
 				 
 				$(this).dialog(  // Resize and reposition dialogs after loading
 				{
-				width: 100,
+				width: 220,
 				position: [typeIndex * groupingWidth, boxPosY]   // Initial position of dialog box 
 				}); 
 				
@@ -843,7 +844,7 @@ else if(query.includes('=4')){
 
 	        }
 	        else{
-	        	output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
+	        	output += '<div id="' + noteId + '" class="prov-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 				'</div>';
@@ -891,47 +892,70 @@ else if(query.includes('=4')){
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
 			// let segments = ["Beginning",,,"Middle",,,"End",,,];
-			let output='<div id="provSummary" class="prov-set" title=" History" contenteditable="false"><div class="doc-content" document_id="providedHistory"></div><ul class="historyList">';
+			let output='<div id="provHistory" class="prov-set doc-content" title=" History" contenteditable="false"><ul class="historyList">';
 			await $.getJSON(fileName, function(data){
-				function extractWords(words, type){
-					let wordList = words.split(/,\s?/);
-					let output = "";
-					// console.log(wordlist, type)
-					switch (type) {
-						case 0: //search
-							for(word in wordList){
-								output += "<strong class=\"highlight-white\">" + wordList[word] + "</strong> "
-							}
-							break;
-						case 1: //highlight
-							for(word in wordList){
-								output += "<strong class=\"highlight-green\">" + wordList[word] + "</strong> "
-							}
-							break;
-						case 2: //open
-							for(word in wordList){
-								output += "<em>" + wordList[word] + "</em> "
-							}
-							break;
-						default:
-							console.log("no type")
-							break;
+				function timesToString([start,end]){
+					function secToString (seconds){
+						// multiply by 1000 because Date() requires miliseconds
+						var date = new Date(seconds * 1000);
+						var mm = date.getUTCMinutes();
+						var ss = date.getSeconds();
+						// If you were building a timestamp instead of a duration, you would uncomment the following line to get 12-hour (not 24) time
+						// if (hh > 12) {hh = hh % 12;}
+						// These lines ensure you have two-digits
+						if (mm < 10) {mm = "0"+mm;}
+						if (ss < 10) {ss = "0"+ss;}
+						// This formats your string to MM:SS
+						return mm+":"+ss;
 					}
-					return output;
+					return secToString(start) + " - " + secToString(end) + " | Dur: "+ secToString(end-start)
+				}
+				function extractWords(wordList, type, maxTerms = 3){
+					let output = "<div>";
+					if (wordList.length == 0 ){
+						return output += "</div>"
+					} else {
+						switch (type) {
+							case 0: //search
+								(wordList.length > 1)? output += "<div> Searching for terms like: " : output += "<div> Searched for 1 term: ";
+								for(word in wordList){
+									output += "<span class='searchText'>" + wordList[word] + "</span> "
+								}
+								output += "</div>"
+								break;
+							case 1: //highlight
+								(wordList.length > 1)? output += "<div> Hightlighting terms like: " : "<div> Highlighted 1 term: "
+								for(let word = 0; word < maxTerms && word < wordList.length; word++){
+									output += "<span class='highlightText'>" + wordList[word] + "</span> "
+								}
+								(wordList.length > maxTerms+1)? output += " and "+ (wordList.length - maxTerms) + " others... " : (wordList.length > maxTerms)? output+= " and 1 other..." : output += "";
+								output += "</div>"
+								break;
+							case 2: //open
+								(wordList.length > 1)? output += "<div> Documents had terms like: " : "<div> The document had terms like: "
+								for(let word = 0; word < maxTerms; word++){
+									output += "<span class='readText'>" + wordList[word] + "</span> "
+								}
+								output += "</div>"
+								break;
+							default:
+								console.err("extractWords function expects a type specified")
+								break;
+						}
+						return output += "</div>";
+					}
 				}
 				for (var i in data) {
+					let docnum =  (JSON.stringify(data[i].affiliated).split(/,\s?/).length)
+
+					output += "<li id='historyNode-"+(parseInt(i)+1)+"' class='history' onClick='affiliate( \"historyNode-"+(parseInt(i)+1)+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ "Segment " + (parseInt(i)+1) + " | " + timesToString((data[i].timestamp)) + "</div> <span class='readText'>"+ 
+					((docnum > 1)? docnum +  "</span> unique documents opened<br> " : docnum + "</span> document opened <br>") +
+					extractWords(data[i].search, 0) +
+					extractWords(data[i].highlight, 1) + 
+					extractWords(data[i].readTerms, 2) + "</li><br/>"
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
 					// 	output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
 					// }
-					if (data[i].type == "search"){
-						output += "<li id='historyNode-search-"+i+"' class='searchText history' onClick='affiliate( \"historyNode-search-"+i+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ data[i].timestamp + "</div> "+ (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Searching for terms " + extractWords(JSON.stringify(data[i].message), 0) + "</li><br/>"
-					} else if(data[i].type == "highlightText"){
-						output += "<li id='historyNode-highlight-"+i+"' class='highlightText history' onClick='affiliate( \"historyNode-highlight-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Many words highlighted including " + extractWords(JSON.stringify(data[i].message), 1) + "</li><br/>"
-					} else if(data[i].type == "reading"){
-						output += "<li id='historyNode-read-"+i+"' class='reading history' onClick='affiliate( \"historyNode-read-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> Opening documents with the following key words: " + extractWords(JSON.stringify(data[i].message), 2) + "</li><br/>"
-					} else if(data[i].type == "noteText"){
-						output += "<li id='historyNode-note-"+i+"' class='noteText history' onClick='affiliate( \"historyNode-note-"+i+"\", "+JSON.stringify(data[i].affiliated)+" )'> <div class='time' >"+ data[i].timestamp + "</div>" + (JSON.stringify(data[i].affiliated).split(/,\s?/).length)+ " documents opened<br> A note was created with the following text: <br>" + data[i].message + "</li><br/>"
-					}
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==2){
 						// output += "</div>"
 					// }
@@ -940,7 +964,7 @@ else if(query.includes('=4')){
 				output += "</ul></div>"
 				document.getElementById("placeholder-div").innerHTML=output;
 		
-				var provDialog = $( "#provSummary" )
+				var provDialog = $( "#provHistory" )
 						.dialog(	
 							{
 							height: 400,
@@ -962,19 +986,19 @@ else if(query.includes('=4')){
 		
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provSummary" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
+						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following shows the number documents in the dataset related to each country. The pink shows the proportional number of documents reviewed by analyst A:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i = 1; i < data.length; i++) {
-									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((100 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((100 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((150 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((150 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
 							document.getElementById("placeholder-div").innerHTML=output;
 					
-							var provDialog = $( "#provSummary" )
+							var provDialog = $( "#provCoverage" )
 									.dialog(	
 										{
-										width: 230,
+										width: 275,
 										closeOnEscape: false,
 										 position: [1366, 14]
 										})
@@ -1227,7 +1251,7 @@ else if(query.includes('=4')){
 
 	//console.log("window height: " + $(window).height());
 
-})();
+})})();
 
 
 
@@ -1280,7 +1304,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 
 	let affiliateMe, unaffiliateMe = "";
 
-	//if the list of affiliated documents is just a string, split on the ','
+	//Hopefully the list of affiliated documents is an array, but when it's just a string, split on the ','
 	if("array" === typeCheck(inDocs)){
 		affiliateMe = inDocs;
 		unaffiliateMe = otherDocs;
@@ -1308,8 +1332,8 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			var $titleSpan = $(this).find('.ui-dialog-title');
 			if (typeof $titleSpan !== "undefined") {
 				$titleSpan.addClass("affiliate");
+				$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
 			}
-			$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
 			jiggle($(this), 100, 15);
 		} else if (unaffiliateMe.includes(doc_id)){
 			foundOtherDocs.push($(this).find(".doc-content").attr("document_id"));
@@ -1318,8 +1342,8 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 			var $titleSpan = $(this).find('.ui-dialog-title');
 			if (typeof $titleSpan !== "undefined") {
 				$titleSpan.addClass("unaffiliate");
+				$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
 			}
-			$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 10)) })
 		}
 	})
 
@@ -1396,8 +1420,14 @@ function saveInteractionsToFile()
 	// let noteElems = [];
 	let noteDocs = [];
 	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
-		var noteDialog = $(myNotes[tempCounter]); 
-		noteContents.push(noteDialog.find(".note-set").text());
+		var noteDialog = $(myNotes[tempCounter]); //Get diolog element
+		//Had to complicate the capture of notes because .text() would leave out line breaks 
+		let htmlContent = noteDialog.find(".note-set").html(); //pull the html written in the element
+		//remove the extra html stuff and format it into an array, filter removes any empty indexes in the array
+		let contentArray = htmlContent.split(/<div>|<\/div><div>|<\/div>|\r/gm).filter(Boolean)
+		let content = contentArray.join("<br>") //put the array back together with \n characters where <div> and such were
+		// console.log(htmlContent, contentArray, content)
+		noteContents.push(content);
 		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
 		// noteElems.push(noteDialog.attr("id"));
 		noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
@@ -1437,6 +1467,6 @@ function getMaxZIndex(){
 			return parseInt($(e).css('z-index'))||1 ;
 		})
 	);
-	console.log((maxZ))
+	// console.log((maxZ))
 	return maxZ+1;
 }
