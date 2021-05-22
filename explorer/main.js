@@ -661,7 +661,7 @@ else if(query.includes('=4')){
 			this.count = 0;
 		}
 
-		var groupingWidth = 90;  // was 235
+		var groupingWidth = 110;  // was 235
 		var groupingHeight = 33;
 
 		function getDocState(document){
@@ -756,7 +756,7 @@ else if(query.includes('=4')){
 				 
 				$(this).dialog(  // Resize and reposition dialogs after loading
 				{
-				width: 100,
+				width: 220,
 				position: [typeIndex * groupingWidth, boxPosY]   // Initial position of dialog box 
 				}); 
 				
@@ -1138,7 +1138,7 @@ else if(query.includes('=4')){
 						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i = 1; i < data.length; i++) {
-									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((100 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((100 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((150 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((150 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"
@@ -1147,7 +1147,7 @@ else if(query.includes('=4')){
 							var provDialog = $( "#provCoverage" )
 									.dialog(	
 										{
-										width: 230,
+										width: 275,
 										closeOnEscape: false,
 										 drag: function(event, ui){ jsPlumbInstance.repaintEverything(); },
 										 resize: function(event, ui){ jsPlumbInstance.repaintEverything(); },
