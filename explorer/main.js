@@ -174,7 +174,7 @@ else if(query.includes('=4')){
             // '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
             '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].date + ", " + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].column + '">' +
             // '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
-            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_all + "<br>") + data[i].contents + '</div>' +
+            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_tag + "<br>") + data[i].contents + '</div>' +
             '</div>';
             "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
         }
@@ -1135,7 +1135,7 @@ else if(query.includes('=4')){
 		
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following are the number of documents analyst A opened from each of the following contries:</p><ul class="covList">';
+						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following shows the number documents in the dataset related to each country. The pink shows the proportional number of documents reviewed by analyst A:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i = 1; i < data.length; i++) {
 									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((150 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((150 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"

@@ -15,7 +15,7 @@ let interactedDocs = ["ArmsDealing10", "ArmsDealing103", "ArmsDealing17", "ArmsD
 // *** Exchange this array ^ with the list of documents a anaylst interacted with to generate a fresh coverage file. 
 // the list should not contain repeats.
 
-let fullDataset = './../ArmsDealing-documents-test.json' //Original Documents as json.
+let fullDataset = './../ArmsDealing-documents.json' //Original Documents as json.
 let colOfInterest = 'country_list'
 let rawdata = fs.readFileSync(fullDataset);
 let d = JSON.parse(rawdata);
@@ -80,7 +80,7 @@ fullCoverage.sort((a, b) => a.country.localeCompare(b.country));
 // sort by total documents
 // fullCoverage.sort((a, b) => b.total - a.total);
 // sort by Proportion
-fullCoverage.sort((a, b) => b.proportion - a.proportion);
+fullCoverage.sort((a, b) => b.total - a.total);
 
 // Add a control node at the front of the array so I can make all the bars the right length
 fullCoverage.unshift({
