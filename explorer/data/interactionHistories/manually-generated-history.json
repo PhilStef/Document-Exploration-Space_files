@@ -50,21 +50,21 @@
   {
     "affiliated": ["ArmsDealing73"],
     "search": ["Syria"],
-    "highlight": ["Thailand", "Bangkok", "North Korean", "other arms to countries such as Iran, Syria and Myanmar are believed to contribute hundreds of millions of dollars annually to North Korea's hard-currency earnings."],
+    "highlight": ["Thailand", "Bangkok", "other arms to countries such as Iran, Syria and Myanmar are believed to contribute hundreds of millions of dollars annually to North Korea's hard-currency earnings.", "North Korean"],
     "readTerms": [],
     "timestamp": [1908.229, 1990.127]
   },
   {
     "affiliated": ["ArmsDealing10", "ArmsDealing17", "ArmsDealing23"],
     "search": [],
-    "highlight": ["Syria", "Turkey", "Saturday, November 15, 2008","school","tents, food and water, but we need textbooks" ],
+    "highlight": ["Syria", "Turkey", "school","tents, food and water, but we need textbooks", "Saturday, November 15, 2008" ],
     "readTerms": [],
     "timestamp": [2009.239, 2107.118]
   },
   {
     "affiliated": ["ArmsDealing10", "ArmsDealing26"],
     "search": ["Moscow", "Baltasar", "kaya"],
-    "highlight": ["professor from Moscow", "textbook salesman", "Baltasar","Turkey, Turkey", "120,000 lira for our textbooks", "16 April", "Dubai", "travel with Kaya", "Baltasar"],
+    "highlight": ["professor from Moscow", "textbook salesman", "120,000 lira for our textbooks", "Baltasar","Turkey, Turkey", "16 April", "Dubai", "travel with Kaya", "Baltasar"],
     "readTerms": [],
     "timestamp": [2113.763, 2242.411]
   },
