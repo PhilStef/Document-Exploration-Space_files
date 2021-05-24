@@ -986,6 +986,14 @@ else if(query.includes('=4')){
 							  });
 					return provDialog;
 			})
+			.then(() => {
+				// console.log("done building history")
+				$('.highlightText, .searchText').on("click", (e) => {
+					$(".affiliate").removeClass("affiliate") // remove the affiliation class from anything.
+					e.stopPropagation() //prevent the bubbling of the click to leave this term as the search element
+					search(e.target.innerHTML) //Find and jiggle documents with this term
+					$(e.target).addClass("affiliate") //Color the term so it's easy to tell what was selected
+				})})
 		}
 		
 		// Generate coverage Representation
@@ -1107,6 +1115,7 @@ else if(query.includes('=4')){
 					search(cursorSelectedHtml.trim());
 				} else if (key == "clearSearch") {
 					// remove existing search highlight
+					$("span.affiliate.highlightText, span.searchText.affiliate").removeClass("affiliate");
 					$('.ui-dialog').removeHighlightAll("highlight-pink");
 					$('._jsPlumb_overlay').removeHighlightAll("highlight-pink");
 				}
@@ -1149,6 +1158,8 @@ else if(query.includes('=4')){
 					// remove existing search highlight
 					$('.ui-dialog').removeHighlightAll("highlight-pink");
 					$('._jsPlumb_overlay').removeHighlightAll("highlight-pink");
+					//remove affiliation highlight on terms in the history tool
+					$("span.affiliate.highlightText, span.searchText.affiliate").removeClass("affiliate");
 				}
 
 	        },

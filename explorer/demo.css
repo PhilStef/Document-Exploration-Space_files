@@ -256,16 +256,15 @@ path { cursor:pointer; }
     overflow: hidden; 
     text-overflow: ellipsis;
     white-space: nowrap;
-    cursor: text;
 }
-/*
+
 .searchText:hover,
 .highlightText:hover,
 .readText:hover,
 .noteText:hover {
     background-color: #ffb577;
 }
-*/
+
 .searchText{
     background-color: #fff34e;
 	color: #968e2b;
