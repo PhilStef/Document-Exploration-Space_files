@@ -1302,57 +1302,64 @@ function affiliate(callerID, inDocs, otherDocs = ""){
         SESSION_LOG_DATA.push(jsonMessage);		
 	}//end logData
 
-	//select all the documents already affiliated and remove the class
-	$('.affiliate').removeClass('affiliate');
-	$('.unaffiliate').removeClass('unaffiliate');
-
-	let affiliateMe, unaffiliateMe = "";
-
-	//Hopefully the list of affiliated documents is an array, but when it's just a string, split on the ','
-	if("array" === typeCheck(inDocs)){
-		affiliateMe = inDocs;
-		unaffiliateMe = otherDocs;
-	}else{
-		let re = /,\s?/ //Split on commas or comma+spaces
-		affiliateMe = inDocs.split(re);
-		unaffiliateMe = otherDocs.split(re);
-	}
-
-	let foundElems = [];
-	let foundDocs = [];
-	let foundOtherDocs = []
-
 	let sel = "#"+callerID
-	$(sel).addClass("affiliate")
-	$(".ui-dialog").each(function( index ){
-		// var currentDocDiv = $(this).find(".doc-set");
-		var doc_id = $(this).find(".doc-content").attr("document_id");
-		let maxZ = getMaxZIndex();
-		if(affiliateMe.includes(doc_id)){
-			foundElems.push($(this).attr("id")); // The id of the document in the html
-			foundDocs.push($(this).find(".doc-content").attr("document_id")); //the id of the document in the original json
-			
-			// grab title and highlight its text
-			var $titleSpan = $(this).find('.ui-dialog-title');
-			if (typeof $titleSpan !== "undefined") {
-				$titleSpan.addClass("affiliate");
-				$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
-			}
-			jiggle($(this), 100, 15);
-		} else if (unaffiliateMe.includes(doc_id)){
-			foundOtherDocs.push($(this).find(".doc-content").attr("document_id"));
-			
-			// grab title and highlight its text
-			var $titleSpan = $(this).find('.ui-dialog-title');
-			if (typeof $titleSpan !== "undefined") {
-				$titleSpan.addClass("unaffiliate");
-				$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
-			}
-		}
-	})
+	if( $(sel).hasClass("affiliate")){ //Is this the same one that is already affiliated? - then toggle it off.
+		//select all the documents already affiliated and remove the class
+		$('.affiliate').removeClass('affiliate');
+		$('.unaffiliate').removeClass('unaffiliate');
+		logData("deselect-affiliate", callerID, null,null)
 
-	//Log the interaction and the documetns identified.
-	logData("affiliate", callerID, foundDocs,foundOtherDocs)
+	} else {
+		//select all the documents already affiliated and remove the class
+		$('.affiliate').removeClass('affiliate');
+		$('.unaffiliate').removeClass('unaffiliate');
+
+		let affiliateMe, unaffiliateMe = "";
+
+		//Hopefully the list of affiliated documents is an array, but when it's just a string, split on the ','
+		if("array" === typeCheck(inDocs)){
+			affiliateMe = inDocs;
+			unaffiliateMe = otherDocs;
+		}else{
+			let re = /,\s?/ //Split on commas or comma+spaces
+			affiliateMe = inDocs.split(re);
+			unaffiliateMe = otherDocs.split(re);
+		}
+
+		let foundElems = [];
+		let foundDocs = [];
+		let foundOtherDocs = []
+
+		$(sel).addClass("affiliate")
+		$(".ui-dialog").each(function( index ){
+			// var currentDocDiv = $(this).find(".doc-set");
+			var doc_id = $(this).find(".doc-content").attr("document_id");
+			let maxZ = getMaxZIndex();
+			if(affiliateMe.includes(doc_id)){
+				foundElems.push($(this).attr("id")); // The id of the document in the html
+				foundDocs.push($(this).find(".doc-content").attr("document_id")); //the id of the document in the original json
+				
+				// grab title and highlight its text
+				var $titleSpan = $(this).find('.ui-dialog-title');
+				if (typeof $titleSpan !== "undefined") {
+					$titleSpan.addClass("affiliate");
+					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
+				}
+				jiggle($(this), 100, 15);
+			} else if (unaffiliateMe.includes(doc_id)){
+				foundOtherDocs.push($(this).find(".doc-content").attr("document_id"));
+				
+				// grab title and highlight its text
+				var $titleSpan = $(this).find('.ui-dialog-title');
+				if (typeof $titleSpan !== "undefined") {
+					$titleSpan.addClass("unaffiliate");
+					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
+				}
+			}
+		})
+		//Log the interaction and the documetns identified.
+		logData("affiliate", callerID, foundDocs,foundOtherDocs)
+	}
 }
 function saveInteractionsToFile()
 {
