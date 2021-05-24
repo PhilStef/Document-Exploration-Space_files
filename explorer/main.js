@@ -80,6 +80,7 @@ var instructionsPrompt = '';
 
 if(query.includes('=1')){
 	pname=guid(1);
+	$(document).attr("title", pname);
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
@@ -87,6 +88,7 @@ if(query.includes('=1')){
 }
 else if(query.includes('=2')){
 	pname=guid(2);
+	$(document).attr("title", pname);
 	var load_prov_history = false;
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
@@ -94,6 +96,7 @@ else if(query.includes('=2')){
 }
 else if(query.includes('=3')){
 	pname=guid(3);
+	$(document).attr("title", pname);
 	var load_prov_history = true;
 	var load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
@@ -101,6 +104,7 @@ else if(query.includes('=3')){
 }
 else if(query.includes('=4')){
 	pname=guid("debug");
+	$(document).attr("title", pname);
 	var load_prov_history = true;
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
