@@ -245,12 +245,12 @@ path { cursor:pointer; }
 .highlightText,
 .readText,
 .noteText { 
-    font-size: smaller;
+    font-size: xx-small;
     font-weight: bold;
-    max-width: 97%;
+    max-width: 33%;
     display:inline-block;
-    padding: 0.2em .5em;
-    margin-bottom: -4px;
+    padding: 0px 3px;
+    /* margin-bottom: -4px; */
     border-radius: 5px;
     height: inherit;
     overflow: hidden; 
@@ -286,34 +286,38 @@ path { cursor:pointer; }
 }
 */
 
-
-.history{
-	margin-bottom: -10px;
-	padding:5px 8px;
-    margin: 0px;
-	border-radius: 10px;
-
+.historyList{
+	margin-bottom: -15px;
 }
 
-.historyList > li{
-	margin: -10px 0px 0px -40px;
+.historyNode{
+	margin-bottom: -10px;
+	padding:5px 8px;
+	border-radius: 10px;
+	margin: -12px 0px 15px -40px;
     list-style: none;
 	cursor: pointer;
     background-color: #fff3dd
 }
+.historyNode:hover{
+	background-color: #ffeac3;
+}
+
+.history{
+	font-size: xx-small;
+	height: calc(100% - 14px);
+	overflow-y: auto;
+}
 
 .time {
 	font-size: 10px;
-    color: #755;
 	padding: .3em 0em .1em 1em;
 	border-bottom: solid #888 01px;
     margin: -5px -8px 5px -8px;
 }
 
 
-
-
-.coverage-brief{
+.tool-brief{
     font-size: smaller;
     margin: 0px 0px;
     padding-bottom: 5px;
@@ -341,12 +345,12 @@ path { cursor:pointer; }
 	background-color: #ffe96f;
 /*    background-color: #d99883;*/
 }
-.cov-fg {
+.seg-fg {
 	position:absolute;
 	height: 100%;
 	background-color: #FF4686;
 }
-.cov-bg{
+.seg-bg{
 	height: 6px;
 	width: 150px;
 	position: relative;
@@ -354,6 +358,14 @@ path { cursor:pointer; }
 	float: right;
 	display: block;
 	background-color: #648fbd;
+}
+
+.time>.seg-bg{
+    margin: 2px 10px 0px 0px;
+	 height:5px;
+}
+.time>.seg-bg>.seg-fg{
+	height: 8px;
 }
 
 .affiliate { background-color: #fcffb6; color: #FF4686;}

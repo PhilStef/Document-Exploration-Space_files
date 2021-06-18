@@ -896,7 +896,9 @@ else if(query.includes('=4')){
 		// Creating a Provenance Representation 
 		async function generateHistory(fileName){
 			// let segments = ["Beginning",,,"Middle",,,"End",,,];
-			let output='<div id="provHistory" class="prov-set doc-content" title=" History" contenteditable="false"><ul class="historyList">';
+			let output='<div id="provHistory" class="prov-set doc-content" document_id="providedHistory" title=" History" contenteditable="false">'+
+			'<p class="tool-brief">The following shows how Analyst A approached this problem. Their exploration is split into segments of time (corresponding to the pink line\'s width). Each segment lists what was searched and highlighted:</p><ul class="historyList">'//The following shows how Analyst A approached this problem. Their exploration is split into segments of time with lists of the terms they searched for and highlighted within that time:</p><ul class="historyList">';
+
 			await $.getJSON(fileName, function(data){
 				function timesToString([start,end]){
 					function secToString (seconds){
@@ -914,49 +916,62 @@ else if(query.includes('=4')){
 					}
 					return secToString(start) + " - " + secToString(end) + " | Dur: "+ secToString(end-start)
 				}
-				function extractWords(wordList, type, maxTerms = 3){
-					let output = "<div>";
+				//*creates the timeline visualization in the header of a segment*//
+				function makeTimeline([start,end]){
+					let knownEnd = 2298.549; //~38 min and 18 seconds
+					let w = (end-start)/knownEnd*150;
+					let l = start/knownEnd*150;
+					return"<span class='seg-bg'> <span class='seg-fg' style='width:"+w+"px; left:"+l+"px;'></span></span>"
+				}
+				//* pass the list of words and specify how you want it styled with a number (0-2). *//
+				function extractWords(wordList, type, maxTerms = 15){
+					let output = "";//<div>";
 					if (wordList.length == 0 ){
-						return output += "</div>"
+						return output += ""//"</div>"
 					} else {
 						switch (type) {
 							case 0: //search
-								(wordList.length > 1)? output += "<div> Searching for terms like: " : output += "<div> Searched for 1 term: ";
-								for(word in wordList){
+								(wordList.length > 1)? output += "<div class='historyLine'> Searched:" : output += "<div class='historyLine'> 1 Search: ";
+								for(let word = 0; word < maxTerms && word < wordList.length; word++){
 									output += "<span class='searchText'>" + wordList[word] + "</span> "
 								}
-								output += "</div>"
 								break;
 							case 1: //highlight
-								(wordList.length > 1)? output += "<div> Hightlighting terms like: " : "<div> Highlighted 1 term: "
+								(wordList.length > 1)? output += "<div class='historyLine'> Highlighted:" : "<div class='historyLine'> 1 Highlight: "
 								for(let word = 0; word < maxTerms && word < wordList.length; word++){
 									output += "<span class='highlightText'>" + wordList[word] + "</span> "
 								}
-								(wordList.length > maxTerms+1)? output += " and "+ (wordList.length - maxTerms) + " others... " : (wordList.length > maxTerms)? output+= " and 1 other..." : output += "";
-								output += "</div>"
 								break;
 							case 2: //open
-								(wordList.length > 1)? output += "<div> Documents had terms like: " : "<div> The document had terms like: "
-								for(let word = 0; word < maxTerms; word++){
+								(wordList.length > 1)? output += "<div class='historyLine'> Documents had terms like: " : "<div class='historyLine'> The document had terms like: "
+								for(let word = 0; word < maxTerms && word < wordList.length; word++){
 									output += "<span class='readText'>" + wordList[word] + "</span> "
 								}
-								output += "</div>"
 								break;
 							default:
-								console.err("extractWords function expects a type specified")
+								console.err("extractWords function expects a style type specified")
 								break;
 						}
-						return output += "</div>";
+						(wordList.length > maxTerms+1)? output += " and "+ (wordList.length - maxTerms) + " others... " : (wordList.length > maxTerms)? output+= " and 1 other..." : output += "";
+						output += "</div>"
+						return output += ""//</div>";
 					}
 				}
 				for (var i in data) {
 					let docnum =  (JSON.stringify(data[i].affiliated).split(/,\s?/).length)
 
-					output += "<li id='historyNode-"+(parseInt(i)+1)+"' class='history' onClick='affiliate( \"historyNode-"+(parseInt(i)+1)+"\", "+JSON.stringify(data[i].affiliated)+")'> <div class='time' >"+ "Segment " + (parseInt(i)+1) + " | " + timesToString((data[i].timestamp)) + "</div> <span class='readText'>"+ 
-					((docnum > 1)? docnum +  "</span> unique documents opened<br> " : docnum + "</span> document opened <br>") +
-					extractWords(data[i].search, 0) +
-					extractWords(data[i].highlight, 1) + 
-					extractWords(data[i].readTerms, 2) + "</li><br/>"
+					output += "<li id='historyNode-"+(parseInt(i)+1)+
+						"' class='historyNode' "+
+						// "style='height:"+((data[i].timestamp[1]-data[i].timestamp[0])*0.3+12)+"px;'"+ //trying to encode the length of time in the height of the bar. but it's hard to read the short segments and the overflow just makes it all a bit too small.
+						" onClick='affiliate( \"historyNode-"+(parseInt(i)+1)+"\", "+JSON.stringify(data[i].affiliated)+")'>"+
+						"<div class='time' >Seg. "+ (parseInt(i)+1) + " | <span class='readText'>"+ 
+							((docnum > 1)? docnum +  "</span> docs " : docnum + "</span> doc") + 
+								makeTimeline((data[i].timestamp)) + 
+						"</div> "+
+						"<div class='history'>"+ 
+							extractWords(data[i].search, 0) +
+							extractWords(data[i].highlight, 1) + 
+						"</div></li>"
 					// if(parseInt(i)+1 != data.length && parseInt(i)%3==0){
 					// 	output += "<div class='dotted'><div class='history-seg-title'>"+segments[i]+"</div>" 
 					// }
@@ -971,7 +986,7 @@ else if(query.includes('=4')){
 				var provDialog = $( "#provHistory" )
 						.dialog(	
 							{
-							height: 400,
+							height: 695.56,
 							 closeOnEscape: false,
 							 position: [1363, 12]
 
@@ -992,16 +1007,17 @@ else if(query.includes('=4')){
 					$(".affiliate").removeClass("affiliate") // remove the affiliation class from anything.
 					e.stopPropagation() //prevent the bubbling of the click to leave this term as the search element
 					search(e.target.innerHTML) //Find and jiggle documents with this term
+					e.target.parentNode.parentNode.parentNode.click() //Super janky way to trigger the "affiliate" function on the history node so the whole segment is turned pink
 					$(e.target).addClass("affiliate") //Color the term so it's easy to tell what was selected
 				})})
 		}
 		
 		// Generate coverage Representation
 		async function generateCoverage(fileName){
-						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="coverage-brief">The following shows the number documents in the dataset related to each country. The pink shows the proportional number of documents reviewed by analyst A:</p><ul class="covList">';
+						let output='<div id="provCoverage" class="prov-set doc-content" document_id="providedCoverage" title="Coverage" contenteditable="false"><p class="tool-brief">The following shows the number of documents in the dataset related to each country. The pink shows the proportional number of documents reviewed by analyst A:</p><ul class="covList">';
 						await $.getJSON(fileName, function(data){
 							for (var i = 1; i < data.length; i++) {
-									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='cov-bg' style='width: "+((150 / data[0].mostDoc) * data[i].total)+"px'><span class='cov-fg' style='width: "+((150 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
+									output += "<li class='cov-line' id='cov-"+data[i].country+"' onClick='affiliate( \"cov-"+data[i].country+"\", "+JSON.stringify(data[i].affiliated)+", "+JSON.stringify(data[i].unaffiliated) +" )'><coverage id='"+data[i].country+"'> "+data[i].country+"<span class='seg-bg' style='width: "+((150 / data[0].mostDoc) * data[i].total)+"px'><span class='seg-fg' style='width: "+((150 / data[0].mostDoc) * data[i].affCount)+"px' ></span></span> <span class='cov-ratio'>"+data[i].affCount+"/"+data[i].total+"</span></coverage></li>"
 							}
 						}).done(()=>{
 							output += "</ul></div>"

@@ -1,21 +1,21 @@
 [{
     "affiliated": ["ArmsDealing67"],
     "search": ["nigeria"],
-    "highlight": ["Leonid Minsky", "Italian Prostitutes", "variety of business operations", "Nigerian civil engineering and bridge construction services","Ukrainian origins associated involved in international arms and drug trafficking, money laundering, extortion and other offenses","500,000 worth of uncut diamond","Yemen","Minsky was reportedly shot to death in his jail cell by a guard two days later"],
+    "highlight": ["Leonid Minsky", "Italian Prostitutes", "Nigerian civil engineering and bridge construction services","Ukrainian origins associated involved in international arms and drug trafficking, money laundering, extortion and other offenses","500,000 worth of uncut diamond","Minsky was reportedly shot to death in his jail cell by a guard two days later"],
     "readTerms": [],
     "timestamp": [11.532, 181.323]
   },
   {
     "affiliated": ["ArmsDealing96"],
     "search": ["disease","illness","sickness"],
-    "highlight": ["meeting on 15 April", "Family", "Dombrovski", " local health issues " ],
+    "highlight": ["meeting on 15 April", "Dr. George and Family", "Dombrovski", " local health issues " ],
     "readTerms": [],
     "timestamp": [195.083, 386.423]
   },
   {
     "affiliated": ["ArmsDealing25", "ArmsDealing81"],
     "search": ["health","6169", "9546", "6169"],
-    "highlight": ["Paris", "Dubai", "Dombrovski" , " All of my business activities are legal, as I am sure are yours.","telephone number above?" ],
+    "highlight": ["in Paris…", "Dombrovski" , " All of my business activities are legal, as I am sure are yours.","telephone number above?" ],
     "readTerms": [],
     "timestamp": [390.324, 576.663]
   },
@@ -42,7 +42,7 @@
   },
   {
     "affiliated": ["ArmsDealing72"],
-    "search": ["Ndungu","Nyambura","Muiruri","Njeri","Kariuki","Ng'endo", "Wanjiku", "Kaniaru", "England", "Shropshire", "Thabiti"],
+    "search": ["Ndungu","Nyambura","Muiruri","Njeri","Kariuki", "Wanjiku", "Kaniaru", "Shropshire, England"],
     "highlight": [],
     "readTerms": [],
     "timestamp": [1818.652, 1867.671]
@@ -50,7 +50,7 @@
   {
     "affiliated": ["ArmsDealing73"],
     "search": ["Syria"],
-    "highlight": ["Thailand", "Bangkok", "other arms to countries such as Iran, Syria and Myanmar are believed to contribute hundreds of millions of dollars annually to North Korea's hard-currency earnings.", "North Korean"],
+    "highlight": ["Korea Machinery Industry Co.", "other arms to countries such as Iran, Syria and Myanmar are believed to contribute hundreds of millions of dollars annually to North Korea's hard-currency earnings.", "North Korean"],
     "readTerms": [],
     "timestamp": [1908.229, 1990.127]
   },
@@ -71,7 +71,7 @@
   {
     "affiliated": ["ArmsDealing26", "ArmsDealing10"],
     "search": ["Adad","Ashur"],
-    "highlight": ["pick up on 16 April.", "travel April 18. And stay at the same hotel as us.", " Burj Al Arab" ],
+    "highlight": ["pick up on 16 April.", "travel April 18", "hotel", " Burj Al Arab" ],
     "readTerms": [],
     "timestamp": [2251.029, 2298.549]
   }
