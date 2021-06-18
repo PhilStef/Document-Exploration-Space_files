@@ -1007,6 +1007,7 @@ else if(query.includes('=4')){
 					$(".affiliate").removeClass("affiliate") // remove the affiliation class from anything.
 					e.stopPropagation() //prevent the bubbling of the click to leave this term as the search element
 					search(e.target.innerHTML) //Find and jiggle documents with this term
+					e.target.parentNode.parentNode.parentNode.click() //Super janky way to trigger the "affiliate" function on the history node so the whole segment is turned pink
 					$(e.target).addClass("affiliate") //Color the term so it's easy to tell what was selected
 				})})
 		}
