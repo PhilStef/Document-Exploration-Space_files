@@ -21,7 +21,7 @@
   },
   {
     "affiliated": ["ArmsDealing31", "ArmsDealing80"],
-    "search": ["issue","kenya","Venezuela","USA", "Nigeria"],
+    "search": ["kenya","USA", "Nigeria"],
     "highlight": ["Dubai", "Nahid", "Nicolai", "CONFIDENTIALITY", "KAPOLALUM", "Joetomsk", "boyo23826" ],
     "readTerms": [],
     "timestamp": [589.206, 828.245]
@@ -45,7 +45,7 @@
     "search": ["Ndungu","Nyambura","Muiruri","Njeri","Kariuki", "Wanjiku", "Kaniaru", "Shropshire, England"],
     "highlight": [],
     "readTerms": [],
-    "timestamp": [1818.652, 1867.671]
+    "timestamp": [1318.652, 1367.671]
   },
   {
     "affiliated": ["ArmsDealing73"],
