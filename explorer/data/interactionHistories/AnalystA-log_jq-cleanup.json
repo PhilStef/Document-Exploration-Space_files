@@ -1,0 +1,4283 @@
+[{
+    "timestamp": 2.463,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 2.467,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 2.468,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing49"
+}, {
+    "timestamp": 2.486,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing49"
+}, {
+    "timestamp": 2.486,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing73"
+}, {
+    "timestamp": 2.507,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing73"
+}, {
+    "timestamp": 2.507,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing97"
+}, {
+    "timestamp": 2.523,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing97"
+}, {
+    "timestamp": 10.362,
+    "type": "search",
+    "msg": "Nigeria",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "providedInstructions"]
+}, {
+    "timestamp": 14.521,
+    "type": "search",
+    "msg": "disease",
+    "doc_id": ["providedInstructions"]
+}, {
+    "timestamp": 23.352,
+    "type": "search",
+    "msg": "illness"
+}, {
+    "timestamp": 25.673,
+    "type": "search",
+    "msg": "ill",
+    "doc_id": ["ArmsDealing1", "ArmsDealing4", "ArmsDealing6", "ArmsDealing8", "ArmsDealing9", "ArmsDealing10", "ArmsDealing11", "ArmsDealing15", "ArmsDealing16", "ArmsDealing17", "ArmsDealing18", "ArmsDealing19", "ArmsDealing23", "ArmsDealing24", "ArmsDealing25", "ArmsDealing26", "ArmsDealing27", "ArmsDealing28", "ArmsDealing29", "ArmsDealing30", "ArmsDealing31", "ArmsDealing34", "ArmsDealing35", "ArmsDealing36", "ArmsDealing38", "ArmsDealing41", "ArmsDealing42", "ArmsDealing44", "ArmsDealing46", "ArmsDealing47", "ArmsDealing51", "ArmsDealing54", "ArmsDealing57", "ArmsDealing58", "ArmsDealing59", "ArmsDealing61", "ArmsDealing63", "ArmsDealing65", "ArmsDealing66", "ArmsDealing67", "ArmsDealing68", "ArmsDealing69", "ArmsDealing70", "ArmsDealing71", "ArmsDealing73", "ArmsDealing74", "ArmsDealing75", "ArmsDealing76", "ArmsDealing77", "ArmsDealing78", "ArmsDealing80", "ArmsDealing82", "ArmsDealing84", "ArmsDealing85", "ArmsDealing86", "ArmsDealing89", "ArmsDealing90", "ArmsDealing92", "ArmsDealing93", "ArmsDealing94", "ArmsDealing95", "ArmsDealing96", "ArmsDealing97", "ArmsDealing98", "ArmsDealing99", "ArmsDealing100", "ArmsDealing102", "providedInstructions"]
+}, {
+    "timestamp": 37.139,
+    "type": "search",
+    "msg": "virus"
+}, {
+    "timestamp": 52.368,
+    "type": "search",
+    "msg": "desiese"
+}, {
+    "timestamp": 67.684,
+    "type": "search",
+    "msg": "desiese"
+}, {
+    "timestamp": 83.5,
+    "type": "search",
+    "msg": "disease",
+    "doc_id": ["providedInstructions"]
+}, {
+    "timestamp": 101.977,
+    "type": "search",
+    "msg": "danger"
+}, {
+    "timestamp": 103.696,
+    "type": "search",
+    "msg": "dang"
+}, {
+    "timestamp": 110.131,
+    "type": "search",
+    "msg": "nigera"
+}, {
+    "timestamp": 115.107,
+    "type": "search",
+    "msg": "nigeria",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "providedInstructions"]
+}, {
+    "timestamp": 117.152,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 117.243,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 117.243,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 117.296,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 118.235,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 118.7,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80",
+    "pos": [339, 306]
+}, {
+    "timestamp": 119.345,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80",
+    "pos": [1230, 294]
+}, {
+    "timestamp": 119.424,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 119.711,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 120.159,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [331, 344]
+}, {
+    "timestamp": 120.815,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [1170, 320]
+}, {
+    "timestamp": 120.863,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 121.015,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 121.44,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82",
+    "pos": [344, 384]
+}, {
+    "timestamp": 122.052,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82",
+    "pos": [1196, 379]
+}, {
+    "timestamp": 122.141,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 122.299,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 122.339,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 122.34,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 122.699,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85",
+    "pos": [318, 502]
+}, {
+    "timestamp": 123.38,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85",
+    "pos": [1130, 425]
+}, {
+    "timestamp": 123.491,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 123.659,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 123.779,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 123.779,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing87"
+}, {
+    "timestamp": 123.988,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing87"
+}, {
+    "timestamp": 123.989,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 124.275,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86",
+    "pos": [339, 542]
+}, {
+    "timestamp": 124.867,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86",
+    "pos": [1141, 490]
+}, {
+    "timestamp": 124.959,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 125.063,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 125.103,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 125.103,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 125.215,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 125.216,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 125.255,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 125.256,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing66"
+}, {
+    "timestamp": 125.495,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing66"
+}, {
+    "timestamp": 125.496,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 125.887,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [244, 740]
+}, {
+    "timestamp": 126.439,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [1101, 599]
+}, {
+    "timestamp": 126.519,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 126.743,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing95"
+}, {
+    "timestamp": 126.994,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing95"
+}, {
+    "timestamp": 126.994,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 127.415,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96",
+    "pos": [361, 937]
+}, {
+    "timestamp": 128.102,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96",
+    "pos": [1104, 686]
+}, {
+    "timestamp": 128.196,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 128.299,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 128.33,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 128.332,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 128.355,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 128.355,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 128.397,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 128.397,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing55"
+}, {
+    "timestamp": 128.421,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing55"
+}, {
+    "timestamp": 128.421,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing54"
+}, {
+    "timestamp": 128.427,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing54"
+}, {
+    "timestamp": 128.428,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 128.475,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 128.475,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing29"
+}, {
+    "timestamp": 128.553,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing29"
+}, {
+    "timestamp": 128.554,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 128.651,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 128.652,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing27"
+}, {
+    "timestamp": 128.723,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing27"
+}, {
+    "timestamp": 128.723,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing26"
+}, {
+    "timestamp": 128.803,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing26"
+}, {
+    "timestamp": 128.804,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.155,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [156, 21]
+}, {
+    "timestamp": 129.251,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.251,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing51"
+}, {
+    "timestamp": 129.259,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing51"
+}, {
+    "timestamp": 129.26,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing52"
+}, {
+    "timestamp": 129.261,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing52"
+}, {
+    "timestamp": 129.261,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.266,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.267,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing77"
+}, {
+    "timestamp": 129.275,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing77"
+}, {
+    "timestamp": 129.275,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 129.277,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 129.277,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.283,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.284,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 129.293,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 129.293,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.297,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.298,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing103"
+}, {
+    "timestamp": 129.308,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing103"
+}, {
+    "timestamp": 129.31,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.315,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.326,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.331,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.344,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.354,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.36,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.364,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.377,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 129.964,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [1124, 741]
+}, {
+    "timestamp": 130.131,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 135.34,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 135.863,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80",
+    "pos": [1239, 289]
+}, {
+    "timestamp": 136.407,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80",
+    "pos": [1156, 178]
+}, {
+    "timestamp": 136.491,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 136.638,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 136.983,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [1182, 320]
+}, {
+    "timestamp": 138.311,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [1151, 228]
+}, {
+    "timestamp": 138.423,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 138.67,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 139.019,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82",
+    "pos": [1189, 371]
+}, {
+    "timestamp": 140.027,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82",
+    "pos": [1151, 267]
+}, {
+    "timestamp": 140.147,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 140.29,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 140.563,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85",
+    "pos": [1161, 418]
+}, {
+    "timestamp": 141.083,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85",
+    "pos": [1161, 322]
+}, {
+    "timestamp": 141.172,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 141.47,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 141.743,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86",
+    "pos": [1148, 483]
+}, {
+    "timestamp": 142.479,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86",
+    "pos": [1156, 371]
+}, {
+    "timestamp": 142.615,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 142.846,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 143.206,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [1126, 598]
+}, {
+    "timestamp": 143.871,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [1166, 448]
+}, {
+    "timestamp": 144.007,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 144.166,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.627,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96",
+    "pos": [1106, 678]
+}, {
+    "timestamp": 144.724,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.726,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.73,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.739,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.743,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 144.746,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 145.891,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96",
+    "pos": [1157, 491]
+}, {
+    "timestamp": 145.995,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 146.454,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 146.723,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [1110, 728]
+}, {
+    "timestamp": 147.415,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [1137, 577]
+}, {
+    "timestamp": 147.751,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 147.766,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 147.774,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 147.775,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 147.782,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 147.79,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 147.798,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 147.798,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 147.806,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 147.814,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 147.83,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 147.83,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 147.878,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 147.879,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 148.895,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.206,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.613,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.632,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.638,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.642,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.647,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.674,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.681,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.694,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.701,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.715,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 154.739,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 155.042,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 155.048,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 162.417,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 163.463,
+    "type": "highlightText",
+    "msg": " ENGR. FUNSHO KAPOLALUM",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 163.505,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 193.638,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 193.85,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 199.096,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 200.402,
+    "type": "highlightText",
+    "msg": "OUR SHARE OF THE SUM IS 10% OF THE $30.6MILLION, 60% FOR US AND 15% FOR TAXATION AND MISCELLANEOUS EXPENSES AND REMAINING 15% WILL BE FOR CHARITY ORGANIZATION.",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 200.435,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 209.553,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 211.353,
+    "type": "highlightText",
+    "msg": "100% SAFE",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 211.394,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 221.547,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 222.385,
+    "type": "highlightText",
+    "msg": " VERY CONFIDENTIAL",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 222.417,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 238.436,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 240.732,
+    "type": "highlightText",
+    "msg": "KAPOLALUM",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 240.765,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 242.687,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 243.403,
+    "type": "search",
+    "msg": "KAPOLALUM",
+    "doc_id": ["ArmsDealing80", "ArmsDealing82"]
+}, {
+    "timestamp": 243.438,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 245.209,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 245.383,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 246.032,
+    "type": "collapse-doc",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 247.124,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 250.232,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 250.904,
+    "type": "search",
+    "msg": "boyo23826",
+    "doc_id": ["ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96"]
+}, {
+    "timestamp": 250.944,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 252.743,
+    "type": "collapse-doc",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 255.144,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 258.721,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80",
+    "pos": [1233, 189]
+}, {
+    "timestamp": 259.584,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80",
+    "pos": [1153, 101]
+}, {
+    "timestamp": 260.615,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 261.019,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 265.157,
+    "type": "scrunch-highlight-view",
+    "msg": [" ENGR. FUNSHO KAPOLALUM", "KAPOLALUM", "KAPOLALUM", "OUR SHARE OF THE SUM IS 10% OF THE $30.6MILLION, 60% FOR US AND 15% FOR TAXATION AND MISCELLANEOUS EXPENSES AND REMAINING 15% WILL BE FOR CHARITY ORGANIZATION.", "100% SAFE", " VERY CONFIDENTIAL"],
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 270.279,
+    "type": "startdrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing80",
+    "pos": [1093, 100]
+}, {
+    "timestamp": 270.904,
+    "type": "enddrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing80",
+    "pos": [1092, 71]
+}, {
+    "timestamp": 271.095,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 271.102,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 271.247,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 271.247,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 271.783,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 271.79,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 272.779,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 289.147,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 289.996,
+    "type": "search",
+    "msg": "Mikhail",
+    "doc_id": ["ArmsDealing25", "ArmsDealing28", "ArmsDealing81", "ArmsDealing96", "providedSummary"]
+}, {
+    "timestamp": 290.065,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 293.347,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 293.348,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 293.358,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 293.514,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing103"
+}, {
+    "timestamp": 293.682,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing103"
+}, {
+    "timestamp": 293.683,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing102"
+}, {
+    "timestamp": 293.69,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing102"
+}, {
+    "timestamp": 293.69,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 293.747,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing78"
+}, {
+    "timestamp": 293.748,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing54"
+}, {
+    "timestamp": 293.754,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing54"
+}, {
+    "timestamp": 293.755,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing53"
+}, {
+    "timestamp": 293.827,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing53"
+}, {
+    "timestamp": 293.828,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing29"
+}, {
+    "timestamp": 293.97,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing29"
+}, {
+    "timestamp": 293.971,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 294.499,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28",
+    "pos": [156, 144]
+}, {
+    "timestamp": 295.022,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 295.028,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 295.667,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28",
+    "pos": [850, 704]
+}, {
+    "timestamp": 295.862,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 296.766,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.319,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.35,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.37,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.437,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.47,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 297.478,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 298.763,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 298.954,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 299.146,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81",
+    "pos": [1247, 218]
+}, {
+    "timestamp": 300.363,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81",
+    "pos": [1424, 396]
+}, {
+    "timestamp": 301.218,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 301.297,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 301.894,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 303.258,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [1142, 506]
+}, {
+    "timestamp": 303.951,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [997, 511]
+}, {
+    "timestamp": 304.356,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 304.357,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 305.042,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 305.491,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25",
+    "pos": [1134, 596]
+}, {
+    "timestamp": 306.451,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25",
+    "pos": [1159, 518]
+}, {
+    "timestamp": 306.882,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 306.898,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 307.122,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 307.297,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 307.918,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 308.414,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28",
+    "pos": [849, 708]
+}, {
+    "timestamp": 308.75,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28",
+    "pos": [726, 710]
+}, {
+    "timestamp": 312.114,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 312.202,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 315.047,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 315.769,
+    "type": "search",
+    "msg": "Dombrovski",
+    "doc_id": ["ArmsDealing25", "ArmsDealing28", "ArmsDealing81", "ArmsDealing85", "ArmsDealing96", "providedSummary"]
+}, {
+    "timestamp": 315.855,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 318.302,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28",
+    "pos": [712, 709]
+}, {
+    "timestamp": 319.454,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28",
+    "pos": [800, 635]
+}, {
+    "timestamp": 323.958,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 323.989,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 324.554,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 324.569,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 324.802,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 324.825,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 325.042,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 390.067,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 390.158,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 390.163,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 390.352,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 390.359,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 390.967,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 390.975,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 402.56,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 403.399,
+    "type": "highlightText",
+    "msg": "TELEPHONE ",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 403.432,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 422.286,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 422.287,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 426.096,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 426.366,
+    "type": "mouseenter-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 426.983,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing80"
+}, {
+    "timestamp": 427.414,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 428.087,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 428.126,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 430.059,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 430.066,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 430.139,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 430.306,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 431.439,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 431.446,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 431.558,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 431.558,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 436.646,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 436.686,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 436.99,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 437.006,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 437.942,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 437.95,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 440.287,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 440.294,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 440.582,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 440.734,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 441.031,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 441.046,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 441.262,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 441.342,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 443.226,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 443.25,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 443.258,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 443.265,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 443.338,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 443.348,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 462.701,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 464.037,
+    "type": "highlightText",
+    "msg": "family farm",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 464.081,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 466.104,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 466.715,
+    "type": "search",
+    "msg": "farm",
+    "doc_id": ["ArmsDealing15", "ArmsDealing24", "ArmsDealing28", "ArmsDealing30", "ArmsDealing64"]
+}, {
+    "timestamp": 466.803,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 468.986,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 469.065,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 469.081,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 469.081,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 469.129,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 469.129,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+}, {
+    "timestamp": 469.185,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+}, {
+    "timestamp": 469.185,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 469.273,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 469.273,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 469.361,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 469.361,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 470.154,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 470.77,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64",
+    "pos": [228, 628]
+}, {
+    "timestamp": 471.989,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64",
+    "pos": [500, 760]
+}, {
+    "timestamp": 472.094,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 472.103,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 472.159,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 472.159,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing69"
+}, {
+    "timestamp": 472.173,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing69"
+}, {
+    "timestamp": 472.173,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing70"
+}, {
+    "timestamp": 472.181,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing70"
+}, {
+    "timestamp": 472.181,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing46"
+}, {
+    "timestamp": 472.351,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing46"
+}, {
+    "timestamp": 472.352,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing47"
+}, {
+    "timestamp": 472.501,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing47"
+}, {
+    "timestamp": 472.501,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing23"
+}, {
+    "timestamp": 472.541,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing23"
+}, {
+    "timestamp": 472.541,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 473.093,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24",
+    "pos": [45, 941]
+}, {
+    "timestamp": 474.054,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24",
+    "pos": [667, 944]
+}, {
+    "timestamp": 474.158,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 474.164,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 474.245,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 474.246,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 474.261,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 474.261,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 474.285,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 474.285,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+}, {
+    "timestamp": 474.3,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+}, {
+    "timestamp": 474.3,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 474.333,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 474.333,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing63"
+}, {
+    "timestamp": 474.356,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing63"
+}, {
+    "timestamp": 474.357,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing62"
+}, {
+    "timestamp": 474.364,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing62"
+}, {
+    "timestamp": 474.365,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing61"
+}, {
+    "timestamp": 474.388,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing61"
+}, {
+    "timestamp": 474.389,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing60"
+}, {
+    "timestamp": 474.412,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing60"
+}, {
+    "timestamp": 474.413,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing59"
+}, {
+    "timestamp": 474.444,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing59"
+}, {
+    "timestamp": 474.445,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 474.485,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 474.485,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 474.541,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 474.542,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 474.621,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 474.622,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing55"
+}, {
+    "timestamp": 474.827,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing55"
+}, {
+    "timestamp": 474.828,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing31"
+}, {
+    "timestamp": 474.841,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing31"
+}, {
+    "timestamp": 474.841,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.435,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30",
+    "pos": [154, 224]
+}, {
+    "timestamp": 475.553,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.553,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 475.555,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 475.556,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.56,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.561,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 475.572,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 475.573,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.577,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.577,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing59"
+}, {
+    "timestamp": 475.589,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing59"
+}, {
+    "timestamp": 475.589,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.598,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.598,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 475.603,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 475.603,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing61"
+}, {
+    "timestamp": 475.607,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing61"
+}, {
+    "timestamp": 475.607,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.612,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.623,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.627,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.628,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing87"
+}, {
+    "timestamp": 475.637,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing87"
+}, {
+    "timestamp": 475.637,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.643,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 475.644,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 475.649,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing88"
+}, {
+    "timestamp": 475.649,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 476.473,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30",
+    "pos": [617, 878]
+}, {
+    "timestamp": 476.593,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 476.593,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 476.625,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 476.633,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 476.641,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing92"
+}, {
+    "timestamp": 476.641,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 476.674,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 476.675,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing66"
+}, {
+    "timestamp": 476.68,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing66"
+}, {
+    "timestamp": 476.681,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 476.696,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 476.697,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing41"
+}, {
+    "timestamp": 476.713,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing41"
+}, {
+    "timestamp": 476.713,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing40"
+}, {
+    "timestamp": 476.729,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing40"
+}, {
+    "timestamp": 476.729,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing16"
+}, {
+    "timestamp": 476.769,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing16"
+}, {
+    "timestamp": 476.769,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 476.825,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 476.825,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing14"
+}, {
+    "timestamp": 477.145,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing14"
+}, {
+    "timestamp": 477.145,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 477.577,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15",
+    "pos": [36, 581]
+}, {
+    "timestamp": 477.751,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 477.752,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 477.757,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing91"
+}, {
+    "timestamp": 477.757,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 478.477,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15",
+    "pos": [705, 1009]
+}, {
+    "timestamp": 478.629,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 478.684,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 482.757,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 482.964,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 483.349,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64",
+    "pos": [515, 755]
+}, {
+    "timestamp": 484.261,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64",
+    "pos": [482, 687]
+}, {
+    "timestamp": 484.469,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing64"
+}, {
+    "timestamp": 484.828,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 485.833,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 489.028,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30",
+    "pos": [617, 874]
+}, {
+    "timestamp": 489.981,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30",
+    "pos": [615, 668]
+}, {
+    "timestamp": 490.244,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 490.245,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 490.285,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 490.58,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 492.363,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 492.363,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 495.71,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 497.208,
+    "type": "highlightText",
+    "msg": "Sana a",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 497.241,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 499.104,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 499.104,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 499.12,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 499.127,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 499.425,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing15"
+}, {
+    "timestamp": 499.62,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 500.261,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24",
+    "pos": [661, 952]
+}, {
+    "timestamp": 501.093,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24",
+    "pos": [821, 957]
+}, {
+    "timestamp": 501.277,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 501.34,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 508.621,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 508.679,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 509.469,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 511.068,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24",
+    "pos": [812, 949]
+}, {
+    "timestamp": 511.892,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24",
+    "pos": [900, 862]
+}, {
+    "timestamp": 516.204,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24",
+    "pos": [928, 1071]
+}, {
+    "timestamp": 516.285,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 516.29,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 516.772,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24",
+    "pos": [937, 832]
+}, {
+    "timestamp": 524.664,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 527.812,
+    "type": "highlightText",
+    "msg": "order for the farm equipment.",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 527.85,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 529.16,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 529.183,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 529.255,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 529.697,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 533.084,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 534.247,
+    "type": "search",
+    "msg": "family <span class=\"highlight-pink\">farm</span>."
+}, {
+    "timestamp": 534.303,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 535.616,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 536.267,
+    "type": "search",
+    "msg": "family farm.",
+    "doc_id": ["ArmsDealing28"]
+}, {
+    "timestamp": 536.322,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 537.548,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 537.944,
+    "type": "search",
+    "msg": "family farm.",
+    "doc_id": ["ArmsDealing28"]
+}, {
+    "timestamp": 538.005,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 541.792,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 542.459,
+    "type": "search",
+    "msg": "family farm",
+    "doc_id": ["ArmsDealing28"]
+}, {
+    "timestamp": 542.529,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 544.324,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 545.057,
+    "type": "search",
+    "msg": "family",
+    "doc_id": ["ArmsDealing28", "ArmsDealing65", "ArmsDealing96"]
+}, {
+    "timestamp": 545.113,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 547.063,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 547.078,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 547.095,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 547.166,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 547.351,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing89"
+}, {
+    "timestamp": 547.352,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 547.903,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65",
+    "pos": [227, 657]
+}, {
+    "timestamp": 548.868,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing65",
+    "pos": [658, 594]
+}, {
+    "timestamp": 549.379,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 558.035,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 558.378,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 564.164,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 565.098,
+    "type": "highlightText",
+    "msg": "safety of my family",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 565.129,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 570.867,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 571.758,
+    "type": "search",
+    "msg": "Yemen",
+    "doc_id": ["ArmsDealing28", "ArmsDealing30", "ArmsDealing53", "ArmsDealing58", "ArmsDealing64", "ArmsDealing65", "ArmsDealing67", "ArmsDealing71", "ArmsDealing74", "ArmsDealing77", "ArmsDealing97", "providedInstructions"]
+}, {
+    "timestamp": 571.823,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 575.94,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 576.942,
+    "type": "highlightText",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 577.059,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 580.091,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65",
+    "pos": [678, 601]
+}, {
+    "timestamp": 580.243,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 580.245,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 583.558,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65",
+    "pos": [464, 445]
+}, {
+    "timestamp": 583.998,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 583.998,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 584.367,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing30"
+}, {
+    "timestamp": 594.677,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 595.578,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 595.593,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 597.396,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 598.326,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 598.341,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 598.341,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 598.358,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 598.366,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 598.381,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 598.391,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 598.441,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 598.613,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 608.178,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 608.186,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 608.217,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 608.625,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 608.658,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 608.658,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 608.685,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 608.693,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 608.806,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 610.005,
+    "type": "createNote",
+    "doc_id": "note1",
+    "pos": [1342, 330]
+}, {
+    "timestamp": 612.177,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 612.209,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing82"
+}, {
+    "timestamp": 615.397,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 615.426,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 615.429,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 615.444,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 615.445,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 615.5,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 620.157,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 620.776,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81",
+    "pos": [1370, 403]
+}, {
+    "timestamp": 621.157,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81",
+    "pos": [1385, 338]
+}, {
+    "timestamp": 640.733,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 641.54,
+    "type": "search",
+    "msg": "Nigeria",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "providedInstructions", "noteSolution", "note1"]
+}, {
+    "timestamp": 641.584,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 647.169,
+    "type": "collapse-doc",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 647.72,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [1438, 339]
+}, {
+    "timestamp": 648.512,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81",
+    "pos": [1408, 213]
+}, {
+    "timestamp": 648.712,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing81"
+}, {
+    "timestamp": 649.403,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 703.587,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 703.762,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.422,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.442,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.465,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.492,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.495,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 704.526,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 716.494,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 717.327,
+    "type": "search",
+    "msg": "Mikhail Dombrovski",
+    "doc_id": ["ArmsDealing25", "ArmsDealing28", "ArmsDealing81", "ArmsDealing96", "providedSummary"]
+}, {
+    "timestamp": 717.399,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 724.614,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 726.269,
+    "type": "createNote",
+    "doc_id": "note2",
+    "pos": [1378, 502]
+}, {
+    "timestamp": 782.839,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 783.028,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 783.099,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 783.524,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25",
+    "pos": [1233, 519]
+}, {
+    "timestamp": 784.149,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25",
+    "pos": [1437, 432]
+}, {
+    "timestamp": 784.532,
+    "type": "collapse-doc",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 784.916,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [1437, 429]
+}, {
+    "timestamp": 785.419,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25",
+    "pos": [1448, 421]
+}, {
+    "timestamp": 785.665,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 785.728,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 785.736,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 785.8,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 786.688,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [997, 506]
+}, {
+    "timestamp": 787.296,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [1345, 494]
+}, {
+    "timestamp": 789.637,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 789.647,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 789.651,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 789.673,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 802.891,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 803.034,
+    "type": "search",
+    "msg": "sickness",
+    "doc_id": ["ArmsDealing96", "providedInstructions"]
+}, {
+    "timestamp": 803.152,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 804.428,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 806.729,
+    "type": "highlightText",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 807.199,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 808.907,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 809.699,
+    "type": "highlightText",
+    "msg": "sickness",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 809.744,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 812.968,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 813.746,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 823.707,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [1377, 503]
+}, {
+    "timestamp": 824.203,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96",
+    "pos": [1314, 521]
+}, {
+    "timestamp": 824.716,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 826.046,
+    "type": "createNote",
+    "doc_id": "note3",
+    "pos": [1414, 644]
+}, {
+    "timestamp": 826.262,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 826.383,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 848.434,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 855.517,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 856.438,
+    "type": "highlightText",
+    "msg": "meeting on 15 April.",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 856.482,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 867.112,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 869.315,
+    "type": "search",
+    "msg": "Nigeria",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "providedInstructions", "noteSolution", "note1", "note2", "note3"]
+}, {
+    "timestamp": 869.369,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 878.47,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 878.533,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 879.501,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 879.67,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 884.049,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 884.129,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 884.179,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 884.179,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 884.314,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 884.314,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 884.753,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65",
+    "pos": [455, 450]
+}, {
+    "timestamp": 886.061,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65",
+    "pos": [463, 375]
+}, {
+    "timestamp": 886.261,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 886.478,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 888.569,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 888.681,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 892.241,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 892.28,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 893.714,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 898.937,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing25"
+}, {
+    "timestamp": 898.938,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 908.148,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 909.1,
+    "type": "search",
+    "msg": "EMAIL",
+    "doc_id": ["ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "noteSolution", "note1"]
+}, {
+    "timestamp": 909.153,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 910.393,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 910.409,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 910.448,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 910.552,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 911.557,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 913.936,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86",
+    "pos": [1177, 374]
+}, {
+    "timestamp": 914.976,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86",
+    "pos": [1042, 460]
+}, {
+    "timestamp": 916.637,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 916.76,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.855,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.856,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 916.859,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 916.859,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.89,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.891,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 916.921,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 916.921,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.931,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 916.931,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.205,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.205,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.214,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.214,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.219,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.219,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.229,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.229,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.236,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.236,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.363,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.364,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.366,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.366,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.379,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.38,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.389,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 917.389,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.399,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing96"
+}, {
+    "timestamp": 917.4,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 919.424,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 919.44,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 919.72,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 919.735,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 923.74,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86",
+    "pos": [1179, 774]
+}, {
+    "timestamp": 924.545,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86",
+    "pos": [1079, 377]
+}, {
+    "timestamp": 937.321,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 937.991,
+    "type": "search",
+    "msg": "LAGOS",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing86"]
+}, {
+    "timestamp": 938.084,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 972.487,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 973.284,
+    "type": "search",
+    "msg": "NGOKI",
+    "doc_id": ["ArmsDealing85", "ArmsDealing86"]
+}, {
+    "timestamp": 973.325,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 980.316,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 981.447,
+    "type": "highlightText",
+    "msg": "DR. GEORGE NGOKI",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 981.479,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 981.765,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing24"
+}, {
+    "timestamp": 981.766,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 987.574,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 987.886,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1006.742,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1007.799,
+    "type": "search",
+    "msg": "067",
+    "doc_id": ["ArmsDealing56", "ArmsDealing85", "ArmsDealing86"]
+}, {
+    "timestamp": 1007.861,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1011.689,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1011.69,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 1011.761,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 1011.857,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 1011.939,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 1011.945,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 1012.057,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing84"
+}, {
+    "timestamp": 1012.058,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 1012.112,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing83"
+}, {
+    "timestamp": 1012.112,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 1012.185,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing58"
+}, {
+    "timestamp": 1012.186,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 1013.193,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 1013.193,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 1013.942,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 1016.334,
+    "type": "collapse-doc",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 1017.097,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing56"
+}, {
+    "timestamp": 1017.098,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 1017.121,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing57"
+}, {
+    "timestamp": 1017.146,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 1017.194,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing65"
+}, {
+    "timestamp": 1017.265,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1017.657,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1017.664,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1018.565,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1079.477,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1080.384,
+    "type": "highlightText",
+    "msg": "December 5, 2008",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1080.428,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1081.444,
+    "type": "scrunch-highlight-view",
+    "msg": ["December 5, 2008"],
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1082.296,
+    "type": "startdrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing85",
+    "pos": [1163, 327]
+}, {
+    "timestamp": 1082.864,
+    "type": "enddrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing85",
+    "pos": [1177, 317]
+}, {
+    "timestamp": 1083.083,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing85"
+}, {
+    "timestamp": 1083.083,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1096.012,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1097.108,
+    "type": "highlightText",
+    "msg": "7 DECEMBER 2008",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1097.141,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1108.221,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1109.431,
+    "type": "highlightText",
+    "msg": "WRITTEN REPORT THAT YOUR COMPANY EXECUTED A CONTRACT",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1109.469,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1110.491,
+    "type": "scrunch-highlight-view",
+    "msg": ["7 DECEMBER 2008", "WRITTEN REPORT THAT YOUR COMPANY EXECUTED A CONTRACT", "DR. GEORGE NGOKI"],
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1111.431,
+    "type": "startdrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86",
+    "pos": [1090, 378]
+}, {
+    "timestamp": 1113.371,
+    "type": "enddrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86",
+    "pos": [1058, 489]
+}, {
+    "timestamp": 1113.547,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1113.562,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1113.73,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1113.73,
+    "type": "mouseenter-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1113.81,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1113.811,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1114.079,
+    "type": "startdrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [1139, 450]
+}, {
+    "timestamp": 1114.427,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1114.427,
+    "type": "mouseenter-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1114.429,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1114.429,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1114.927,
+    "type": "enddrag-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67",
+    "pos": [1104, 626]
+}, {
+    "timestamp": 1115.039,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1115.061,
+    "type": "mouseenter-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1115.59,
+    "type": "startdrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86",
+    "pos": [1072, 481]
+}, {
+    "timestamp": 1116.623,
+    "type": "enddrag-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86",
+    "pos": [1140, 381]
+}, {
+    "timestamp": 1116.758,
+    "type": "mouseleave-doc",
+    "msg": "scrunch",
+    "doc_id": "ArmsDealing86"
+}, {
+    "timestamp": 1116.886,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1117.631,
+    "type": "open-doc",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1154.618,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1155.814,
+    "type": "highlightText",
+    "msg": "Minsky ",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1155.857,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1161.55,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1162.517,
+    "type": "highlightText",
+    "msg": "New York Times\n",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1162.563,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1167.757,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1170.065,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1174.031,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1175.786,
+    "type": "search",
+    "msg": "Nigeria",
+    "doc_id": ["ArmsDealing25", "ArmsDealing67", "ArmsDealing80", "ArmsDealing81", "ArmsDealing82", "ArmsDealing85", "ArmsDealing86", "ArmsDealing96", "providedInstructions", "noteSolution", "note1", "note2", "note3"]
+}, {
+    "timestamp": 1175.822,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1177.79,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1177.807,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1177.811,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.069,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.097,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.106,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.152,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.175,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.18,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.191,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.196,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.207,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.212,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1178.236,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1180.11,
+    "type": "startdrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67",
+    "pos": [1175, 629]
+}, {
+    "timestamp": 1180.813,
+    "type": "enddrag-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67",
+    "pos": [1101, 428]
+}, {
+    "timestamp": 1194.117,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1195.756,
+    "type": "highlightText",
+    "msg": "Nigerian civil engineering and bridge construction services",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1195.789,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1206.58,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1207.9,
+    "type": "highlightText",
+    "msg": "Pyongyang",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1207.931,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1213.276,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1214.2,
+    "type": "highlightText",
+    "msg": "Room 341",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1214.237,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1227.887,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing67"
+}, {
+    "timestamp": 1227.935,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 1227.975,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing28"
+}, {
+    "timestamp": 1664.949,
+    "type": "search",
+    "msg": "medditeranian",
+    "doc_id": ["noteSolution"]
+}, {
+    "timestamp": 1667.302,
+    "type": "endStudy",
+    "msg": "1_1914318e",
+    "elem_id": {
+        "windowSize": [1679, 1338],
+        "monitorResolution": [2560, 1440],
+        "availResolution": [2518, 1417],
+        "pixelRatio": 1,
+        "zoom": 100,
+        "browser": "Google Chrome or Chromium",
+        "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36"
+    },
+    "doc_id": null,
+    "pos": null
+}, {
+    "timestamp": 1667.302,
+    "type": "Notes",
+    "msg": ["I can't be sure about this, but there is an article from the New York Times from March 10 2009, where they describe the death of Leonid Minsky. In the article there is evidence that he was involved in many different activities including a Nigerian Civil Engineering project. Minsky had dimonds from Yemen, documents in medditeranian and baltic languages as well as a payment of $30,333.23 to Anna Nicole Smith. I wonder if Minsky is Patient 0.�", "There is a Nigerian scam email from Engr. Funsho Kapolalum - something about $30.6 million being processed?", "Mikhail Dombrovski is communicating with Nigeria to set up some kind of suspicious activity. But nothing about disease yet.", "found the refrence of sickness in Nigeria mentioned in Feb 2009"],
+    "doc_id": ["noteSolution", "note1", "note2", "note3"]
+}]
