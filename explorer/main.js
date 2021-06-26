@@ -95,7 +95,7 @@ else if(query.includes('=2')){
 	instructionsPrompt = instructions_Jeremy
 }
 else if(query.includes('=3')){
-	pname=guid(3);
+	pname=guid(4);
 	$(document).attr("title", pname);
 	var load_prov_history = true;
 	var load_prov_Coverage = false;
