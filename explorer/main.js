@@ -111,7 +111,8 @@ else if(query.includes('=4')){
 	instructionsPrompt = instructions_Jeremy
 }else{
 	pname=guid("tut");
-	thisDoc = './explorer/data/tutorial-documents.json';
+	// thisDoc = './explorer/data/tutorial-documents.json';
+		thisDoc = './explorer/data/Maverick/mav.json';
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface. <br> Analyst A Notes will be displayed when condition provided."
@@ -164,7 +165,7 @@ else if(query.includes('=4')){
 	var scrunchedCode = "scrunched";
 	var globalSearchTerm = "";
      
-    //Read input JSON file 
+    //Read input JSON file This is how the docs get read and inputted
 	await $.getJSON(thisDoc, function(data) {
 
         var jsonCounter = 0;
@@ -180,8 +181,7 @@ else if(query.includes('=4')){
             // '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
             '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].country_origin + "<br>": ">Interaction between: "+ data[i].country_tag + "<br>") + data[i].contents + '</div>' +
             '</div>';
-            "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
-        }
+            "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"        } 
 		// output += '<div onClick="saveInteractionsToFile()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
 		// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
 		// '</div>';
@@ -196,9 +196,9 @@ else if(query.includes('=4')){
 	// Track mouse position
 	$(document).mousemove(function(event){
 		mouseX = event.pageX;
-		mouseY = event.pageY;
+		mouseY = event.pageY; 
 	});
-	
+
     
     // Writes log for interactions
     //logData("mouseenter-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,text);
@@ -221,12 +221,10 @@ else if(query.includes('=4')){
 			jsonMessage["doc_id"] = null //The index of the document when it was generated.
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
-
 		// console.log(jsonMessage);
         SESSION_LOG_DATA.push(jsonMessage);
-      
       // Send the log to its destiny
-	    if (log_url != 'http://localhost:8080/log') 
+	    if (log_url != 'http://localhost:8080/log')  
 		   sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
 		
 	}//end logData
@@ -234,8 +232,7 @@ else if(query.includes('=4')){
 
     // Sends log to assigned URL (global var) using ajax, if it's local address, just SESSION_LOG_DATA
 	function sendLogData(message){
-		  //SESSION_LOG_DATA.push(message);
- 
+		//   SESSION_LOG_DATA.push(message);
 		  $.ajax({
 			    type: 'POST'
 			  , url: log_url
@@ -245,7 +242,7 @@ else if(query.includes('=4')){
 			  , xhrFields: { withCredentials: false }
 			  })
 			  .done(function(data, status) {
-			  	 //console.log('log succes: ' + data);
+			  	//  console.log('log succes: ' + data);
 			  })
 			  .fail(function(xhr, status, err) {
 			     console.log('log failed');
@@ -265,7 +262,7 @@ else if(query.includes('=4')){
 	  	currentDocDiv.attr( "id", currentDocDiv.attr("data-id"));	// restore original id
 	  	currentDocDiv.attr( "data-id", scrunchOriginal);	// reset data-id code
         
-       // console.log(currentDocDiv.find("id").toString());  // my test 
+    //    console.log(currentDocDiv.find("id").toString());  // my test 
         
 		// try to add back any removed dialog-ui classes
 		currentDocDiv.addClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
@@ -689,8 +686,8 @@ else if(query.includes('=4')){
 			 	closeOnEscape: false,
 			 	mouseenter: function(event,ui){console.log("mouse entered");},
 			 	dragStart: function(event, ui) { 
-			 			//console.log("drag started...");
-			 			//console.log(event);
+			 			// console.log("drag started...");
+			 			// console.log(event);
 			 			//console.log(ui);
 			 			////logData("newConnection", info.connection.sourceId + "," + info.connection.targetId, info.connection.sourceId);
 			 			var docDialog = $(event.target).parents(".ui-dialog");
@@ -702,7 +699,7 @@ else if(query.includes('=4')){
 			 		},
 			 		
 			 		dragStop: function(event) { 
-			 			//console.log(event.clientX);
+			 			// console.log(event.clientX);
 			 			//console.log(event.clientY);
 			 			//console.log(event);
 			 			//console.log(ui);
@@ -768,7 +765,7 @@ else if(query.includes('=4')){
 			
 		$("div[role='dialog']").bind("mouseleave",function(){  // $("div[role='dialog']").bind("mouseexit",function(event,ui){
 			
-		     	 // console.log("mouose enter...");
+		     	 console.log("mouose enter...");
 			 			// console.log(event);
 			 			// console.log(ui);
 			 			var docDialog = $(this); //$(event.target);//.parents(".ui-dialog");
@@ -1147,7 +1144,7 @@ else if(query.includes('=4')){
 				show: function(opt) {
 					cursorSelectedHtml = getSelectionHtml();
 					cursorSelectedText = window.getSelection().toString();
-
+				
 					if (cursorSelectedHtml == " " || cursorSelectedHtml == "  ") {
 						cursorSelectedHtml = "";
 					}
