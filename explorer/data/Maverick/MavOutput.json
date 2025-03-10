@@ -1,1262 +1,1262 @@
 [
     {
-        "id": "0",
+        "id": "1",
         "title": "Police",
         "date": "Sunday 9:15AM",
-        "column": "setPolice",
+        "column": "set1.0",
         "contents": "Source confirms that call from a male named Henry Wadsworth was received at 8:30AM, Sunday June 5th, reporting Walter Boddy was found dead in the Bathroom of Boddy Estate. \n\nPolice arrived at approximately 8:40AM, Sunday June 5th, and confirmed that Walter Boddy was dead and his body was in the bathroom of the main building of the Boddy Estate.  Mr. Boddy was a Caucasian male, 68 years old with grey hair who was 5'10\" tall and weighted 250 pounds."
-    },
-    {
-        "id": "1",
-        "title": "Brauman",
-        "date": "Sunday 9:15AM",
-        "column": "setBrauman",
-        "contents": "Source reports, three other people were found to be in the foyer of the main building of Boddy Estate along with the police as of 9:00AM, Sunday, June 5th.  The individuals included Henry Wadsworth, another one of Boddy's house staff employees, a brown-haired female, and an African American male who was approximately 6\u20194\u201d tall with brown hair.\n\nSource also reports, Wadsworth is an Indian male who is approximately 6\u20190\u201d tall and weighs 300lbs.  According to public tax records, Wadsworth was employed by Boddy as a servant."
     },
     {
         "id": "2",
         "title": "Brauman",
         "date": "Sunday 9:15AM",
-        "column": "setBrauman",
-        "contents": "Source reports that the foyer of the main building of Boddy Estate was connected to a long hallway that ran the length of the home and provided access to several rooms with closed doors."
+        "column": "set1.0",
+        "contents": "Source reports, three other people were found to be in the foyer of the main building of Boddy Estate along with the police as of 9:00AM, Sunday, June 5th.  The individuals included Henry Wadsworth, another one of Boddy's house staff employees, a brown-haired female, and an African American male who was approximately 6\u20194\u201d tall with brown hair.\n\nSource also reports, Wadsworth is an Indian male who is approximately 6\u20190\u201d tall and weighs 300lbs.  According to public tax records, Wadsworth was employed by Boddy as a servant."
     },
     {
         "id": "3",
-        "title": "Wadsworth",
+        "title": "Brauman",
         "date": "Sunday 9:15AM",
-        "column": "setWadsworth",
-        "contents": "Source reports that the brown-haired female in the foyer was employed by Walter Boddy as a live-in maid. "
+        "column": "set1.0",
+        "contents": "Source reports that the foyer of the main building of Boddy Estate was connected to a long hallway that ran the length of the home and provided access to several rooms with closed doors."
     },
     {
         "id": "4",
-        "title": "Coroner",
+        "title": "Wadsworth",
         "date": "Sunday 9:15AM",
-        "column": "setCoroner",
-        "contents": "Source reports the victim died at 2:00AM, Sunday,  June 5th, but the cause of death is still unknown.  Evidence also shows that Boddy did not die in the room he was found in (Bathroom) and was moved there from somewhere nearby shortly after he died and was not moved for the past 3 hours."
+        "column": "set1.0",
+        "contents": "Source reports that the brown-haired female in the foyer was employed by Walter Boddy as a live-in maid. "
     },
     {
         "id": "5",
-        "title": "Police",
+        "title": "Coroner",
         "date": "Sunday 9:15AM",
-        "column": "setPolice",
-        "contents": "Source reports police have taken the brown-haired female and African American male into the Study of the main building of Boddy Estate for questioning."
+        "column": "set1.0",
+        "contents": "Source reports the victim died at 2:00AM, Sunday,  June 5th, but the cause of death is still unknown.  Evidence also shows that Boddy did not die in the room he was found in (Bathroom) and was moved there from somewhere nearby shortly after he died and was not moved for the past 3 hours."
     },
     {
         "id": "6",
-        "title": "Brauman",
+        "title": "Police",
         "date": "Sunday 9:15AM",
-        "column": "setBrauman",
-        "contents": "Source reports that the second staff member in the foyer was a female named Yvette Duster.  She is 27 years old, 5\u20194\u201d tall and weighs 125 pounds.  She has brown hair and is Indian."
+        "column": "set1.0",
+        "contents": "Source reports police have taken the brown-haired female and African American male into the Study of the main building of Boddy Estate for questioning."
     },
     {
         "id": "7",
-        "title": "Yvette",
+        "title": "Brauman",
         "date": "Sunday 9:15AM",
-        "column": "setYvette",
-        "contents": "Source confirms that Yvette was employed as a maid for Walter Boddy.  She was in the Servant\u2019s Building of Boddy Estate from 8:00PM, Saturday, June 4th until Sunday, June 5th at 9:00AM when she was retrieved by the police looking for clues to Boddy\u2019s murder.\n\nSource claims a surveillance camera exists in Servant\u2019s Building that will validate Yvette\u2019s location at the time of the murder."
+        "column": "set1.0",
+        "contents": "Source reports that the second staff member in the foyer was a female named Yvette Duster.  She is 27 years old, 5\u20194\u201d tall and weighs 125 pounds.  She has brown hair and is Indian."
     },
     {
         "id": "8",
-        "title": "Wadsworth",
-        "date": "Sunday 9:35AM",
-        "column": "setWadsworth",
-        "contents": "Source claims Henry Wadsworth left Boddy Estate, Saturday June 4th at 8:30PM to travel into the nearby town of Essex.  He returned to Boddy Estate at 1:00AM, Sunday June 5th and went directly to the Servant\u2019s Building where he fell asleep for the night.  \n\nSource reports Wadsworth woke up Sunday at 7:00AM and went to the town farmer\u2019s market in Essex to gather ingredients to make Walter Boddy\u2019s morning breakfast.  He returned to Boddy Estate and the main building at 8:15AM."
+        "title": "Yvette",
+        "date": "Sunday 9:15AM",
+        "column": "set1.0",
+        "contents": "Source confirms that Yvette was employed as a maid for Walter Boddy.  She was in the Servant\u2019s Building of Boddy Estate from 8:00PM, Saturday, June 4th until Sunday, June 5th at 9:00AM when she was retrieved by the police looking for clues to Boddy\u2019s murder.\n\nSource claims a surveillance camera exists in Servant\u2019s Building that will validate Yvette\u2019s location at the time of the murder."
     },
     {
         "id": "9",
         "title": "Wadsworth",
         "date": "Sunday 9:35AM",
-        "column": "setWadsworth",
-        "contents": "Source reports Henry Wadsworth uncovered Walter Boddy\u2019s dead body when he entered bathroom at 8:30AM on Sunday, June 5th as he was going to use the restroom and wash his hands before making breakfast for Mr. Boddy.\u00a0  He set his groceries down next to the sink and then noticed Boddy's body in the bathtub."
+        "column": "set2.0",
+        "contents": "Source claims Henry Wadsworth left Boddy Estate, Saturday June 4th at 8:30PM to travel into the nearby town of Essex.  He returned to Boddy Estate at 1:00AM, Sunday June 5th and went directly to the Servant\u2019s Building where he fell asleep for the night.  \n\nSource reports Wadsworth woke up Sunday at 7:00AM and went to the town farmer\u2019s market in Essex to gather ingredients to make Walter Boddy\u2019s morning breakfast.  He returned to Boddy Estate and the main building at 8:15AM."
     },
     {
         "id": "10",
-        "title": "Police",
+        "title": "Wadsworth",
         "date": "Sunday 9:35AM",
-        "column": "setPolice",
-        "contents": "Source reports a broken martini glass was found in the theater of the main building of Boddy Estate."
+        "column": "set2.0",
+        "contents": "Source reports Henry Wadsworth uncovered Walter Boddy\u2019s dead body when he entered bathroom at 8:30AM on Sunday, June 5th as he was going to use the restroom and wash his hands before making breakfast for Mr. Boddy.\u00a0  He set his groceries down next to the sink and then noticed Boddy's body in the bathtub."
     },
     {
         "id": "11",
-        "title": "Wadsworth",
+        "title": "Police",
         "date": "Sunday 9:35AM",
-        "column": "setWadsworth",
-        "contents": "Source claims that Yvette doesn\u2019t head to work until 10:00AM on Sundays, so she would have been sleeping when Wadsworth left the Sunday morning at 7:00AM for the market."
+        "column": "set2.0",
+        "contents": "Source reports a broken martini glass was found in the theater of the main building of Boddy Estate."
     },
     {
         "id": "12",
-        "title": "Police",
+        "title": "Wadsworth",
         "date": "Sunday 9:35AM",
-        "column": "setPolice",
-        "contents": "Source reports there is a surveillance camera in the Servant\u2019s Building that should have captured Wadsworth's and Yvette's coming and going over the past 24 hours."
+        "column": "set2.0",
+        "contents": "Source claims that Yvette doesn\u2019t head to work until 10:00AM on Sundays, so she would have been sleeping when Wadsworth left the Sunday morning at 7:00AM for the market."
     },
     {
         "id": "13",
         "title": "Police",
         "date": "Sunday 9:35AM",
-        "column": "setPolice",
-        "contents": "Source reports that credit card records show purchases made by Henry Wadsworth at a local bar in Essex (a town approximately 30 minutes from Boddy Estate) from 9:00PM Saturday, June 4th through 12:30AM Sunday, June 5th.   A purchase was also made at 7:55AM on Sunday, June 5th at the Essex Farmer\u2019s Market Organic Dairy Vendor."
+        "column": "set2.0",
+        "contents": "Source reports there is a surveillance camera in the Servant\u2019s Building that should have captured Wadsworth's and Yvette's coming and going over the past 24 hours."
     },
     {
         "id": "14",
         "title": "Police",
         "date": "Sunday 9:35AM",
-        "column": "setPolice",
-        "contents": "Source reports that a carving knife was found stuck in the wall about 5 feet off the ground in the kitchen of the main building of Boddy Estate."
+        "column": "set2.0",
+        "contents": "Source reports that credit card records show purchases made by Henry Wadsworth at a local bar in Essex (a town approximately 30 minutes from Boddy Estate) from 9:00PM Saturday, June 4th through 12:30AM Sunday, June 5th.   A purchase was also made at 7:55AM on Sunday, June 5th at the Essex Farmer\u2019s Market Organic Dairy Vendor."
     },
     {
         "id": "15",
-        "title": "Security Camera",
+        "title": "Police",
         "date": "Sunday 9:35AM",
-        "column": "setSecurity Camera",
-        "contents": "Security footage revealed that an Indian female with brown-hair in her mid-twenties entered the Servant\u2019s Building at 7:55PM, Saturday June 4th.  The woman entered a room off the main hallway and did not exit the room or building until 9:00AM on Sunday, June 5th when she came out of her room and went to the front door, briefly spoke with someone then left.\n\nThe same footage also showed Henry Wadsworth enter the building at 1:00AM on Sunday, June 5th.  He entered a room across the hall from the room the female entered and then did not leave the room or building until 7:00AM on Sunday, June 5th."
+        "column": "set2.0",
+        "contents": "Source reports that a carving knife was found stuck in the wall about 5 feet off the ground in the kitchen of the main building of Boddy Estate."
     },
     {
         "id": "16",
-        "title": "Mustard",
+        "title": "Security Camera",
         "date": "Sunday 9:35AM",
-        "column": "setMustard",
-        "contents": "Source reports that Walter Boddy placed an $800,000 bet on a single hand of blackjack at the Mohegan Sun Casino and lost.  Boddy claimed he yelled at the dealer and cursed him out but the casino manager quickly had him removed from the casino floor for the outburst as he shouted to the dealer - \"you double-crossing bastard, I'll get you for this, you better watch your back!\" "
+        "column": "set2.0",
+        "contents": "Security footage revealed that an Indian female with brown-hair in her mid-twenties entered the Servant\u2019s Building at 7:55PM, Saturday June 4th.  The woman entered a room off the main hallway and did not exit the room or building until 9:00AM on Sunday, June 5th when she came out of her room and went to the front door, briefly spoke with someone then left.\n\nThe same footage also showed Henry Wadsworth enter the building at 1:00AM on Sunday, June 5th.  He entered a room across the hall from the room the female entered and then did not leave the room or building until 7:00AM on Sunday, June 5th."
     },
     {
         "id": "17",
-        "title": "Yvette",
+        "title": "Mustard",
         "date": "Sunday 9:35AM",
-        "column": "setYvette",
-        "contents": "Source reports that while removing Walter Boddy\u2019s corpse from the main building she noticed his solid gold Rolex\u00ae watch was missing from his wrist.   She claims he never takes it off as it was a gift from an older woman, estimated to be in her mid-50\u2019s, that Boddy had been dating for the past few months."
+        "column": "set2.0",
+        "contents": "Source reports that Walter Boddy placed an $800,000 bet on a single hand of blackjack at the Mohegan Sun Casino and lost.  Boddy claimed he yelled at the dealer and cursed him out but the casino manager quickly had him removed from the casino floor for the outburst as he shouted to the dealer - \"you double-crossing bastard, I'll get you for this, you better watch your back!\" "
     },
     {
         "id": "18",
-        "title": "Coroner",
+        "title": "Yvette",
         "date": "Sunday 9:35AM",
-        "column": "setCoroner",
-        "contents": "Source reports that there is a cut on the wrist of Walter Boddy\u2019s corpse that was likely caused by his watch coming off during a struggle.  Source suggests that if the watch was not stolen by the murderer, then it would be most likely located in the room where Mr. Boddy was murdered."
+        "column": "set2.0",
+        "contents": "Source reports that while removing Walter Boddy\u2019s corpse from the main building she noticed his solid gold Rolex\u00ae watch was missing from his wrist.   She claims he never takes it off as it was a gift from an older woman, estimated to be in her mid-50\u2019s, that Boddy had been dating for the past few months."
     },
     {
         "id": "19",
-        "title": "Wadsworth",
+        "title": "Coroner",
         "date": "Sunday 9:35AM",
-        "column": "setWadsworth",
-        "contents": "Source reports Walter Boddy invited 6 guests to visit Boddy Estate to discuss what source refers to as \u201cShared Interests.\u201d\n\nSource claims guests arrived at 2:00PM on Saturday, June 4th.  Wadsworth collected physical invitations from each as they arrived and were escorted to the Lounge of the main building of Boddy Estate."
+        "column": "set2.0",
+        "contents": "Source reports that there is a cut on the wrist of Walter Boddy\u2019s corpse that was likely caused by his watch coming off during a struggle.  Source suggests that if the watch was not stolen by the murderer, then it would be most likely located in the room where Mr. Boddy was murdered."
     },
     {
         "id": "20",
-        "title": "Police",
+        "title": "Wadsworth",
         "date": "Sunday 9:35AM",
-        "column": "setPolice",
-        "contents": "Source reports that groceries including eggs, milk, cheese, spices, and bacon with a credit card record receipt from the farmer's market in the town of Essex were found in a brown shopping bag in the bathroom next to the sink of the main building of Boddy Estate."
+        "column": "set2.0",
+        "contents": "Source reports Walter Boddy invited 6 guests to visit Boddy Estate to discuss what source refers to as \u201cShared Interests.\u201d\n\nSource claims guests arrived at 2:00PM on Saturday, June 4th.  Wadsworth collected physical invitations from each as they arrived and were escorted to the Lounge of the main building of Boddy Estate."
     },
     {
         "id": "21",
-        "title": "Wadsworth",
-        "date": "Sunday 9:55AM",
-        "column": "setWadsworth",
-        "contents": "Source reports that six guests visited the home of Walter Boddy on Saturday, June 4th.  The guests included three males guests, named Adam Mustard, Antonio Green, and Scott Plum, and three females guests, named Christine Scarlet, Katie Peacock, and Jill White.\n\nSource describes Jill White and Antonio Green as being African American.  Source describes Katie Peacock and Christine Scarlet as having brown hair."
+        "title": "Police",
+        "date": "Sunday 9:35AM",
+        "column": "set2.0",
+        "contents": "Source reports that groceries including eggs, milk, cheese, spices, and bacon with a credit card record receipt from the farmer's market in the town of Essex were found in a brown shopping bag in the bathroom next to the sink of the main building of Boddy Estate."
     },
     {
         "id": "22",
-        "title": "Scarlet",
+        "title": "Wadsworth",
         "date": "Sunday 9:55AM",
-        "column": "setScarlet",
-        "contents": "Source claims the murderer was one of the female guests who the source describes as an \u201cold hag.\u201d  Source claims that the accused woman was jealous of Christine Scarlet because of her recent romantic relationship with Walter D. Boddy."
+        "column": "set3.0",
+        "contents": "Source reports that six guests visited the home of Walter Boddy on Saturday, June 4th.  The guests included three males guests, named Adam Mustard, Antonio Green, and Scott Plum, and three females guests, named Christine Scarlet, Katie Peacock, and Jill White.\n\nSource describes Jill White and Antonio Green as being African American.  Source describes Katie Peacock and Christine Scarlet as having brown hair."
     },
     {
         "id": "23",
         "title": "Scarlet",
         "date": "Sunday 9:55AM",
-        "column": "setScarlet",
-        "contents": "Source claims that Christine Scarlet was asleep in the conservatory of the main building of Boddy Estate from approximately 2:35AM on Sunday June 5th until sometime after 8:30AM that morning when she was awoken by the police and surprised with the news that Walter Boddy had been killed and she was a suspect.  They then held her in the main building for questioning on the morning of Sunday, June 5th."
+        "column": "set3.0",
+        "contents": "Source claims the murderer was one of the female guests who the source describes as an \u201cold hag.\u201d  Source claims that the accused woman was jealous of Christine Scarlet because of her recent romantic relationship with Walter D. Boddy."
     },
     {
         "id": "24",
-        "title": "Police",
+        "title": "Scarlet",
         "date": "Sunday 9:55AM",
-        "column": "setPolice",
-        "contents": "Source reports that security footage from the perimeter of Boddy Estate confirms 6 individuals did visit Boddy Estate, arriving at or before 2:00PM on Saturday June 4th, in addition to Walter Boddy, Henry Wadsworth and Yvette Duster who were already on the grounds. \n\nSource also confirms that no other persons visited the estate until on Saturday June 4th, but 5 individuals were seen leaving the estate at various times from 8:30PM, Saturday June 4th through 3:15AM, Sunday June 5th. "
+        "column": "set3.0",
+        "contents": "Source claims that Christine Scarlet was asleep in the conservatory of the main building of Boddy Estate from approximately 2:35AM on Sunday June 5th until sometime after 8:30AM that morning when she was awoken by the police and surprised with the news that Walter Boddy had been killed and she was a suspect.  They then held her in the main building for questioning on the morning of Sunday, June 5th."
     },
     {
         "id": "25",
         "title": "Police",
         "date": "Sunday 9:55AM",
-        "column": "setPolice",
-        "contents": "The individual seen leaving Boddy Estate at 8:30PM, Saturday June 4th on the security footage was an Indian male, driving a blue Buick sedan that was registered to Henry Wadsworth."
+        "column": "set3.0",
+        "contents": "Source reports that security footage from the perimeter of Boddy Estate confirms 6 individuals did visit Boddy Estate, arriving at or before 2:00PM on Saturday June 4th, in addition to Walter Boddy, Henry Wadsworth and Yvette Duster who were already on the grounds. \n\nSource also confirms that no other persons visited the estate until on Saturday June 4th, but 5 individuals were seen leaving the estate at various times from 8:30PM, Saturday June 4th through 3:15AM, Sunday June 5th. "
     },
     {
         "id": "26",
-        "title": "Yvette",
+        "title": "Police",
         "date": "Sunday 9:55AM",
-        "column": "setYvette",
-        "contents": "Source claims that Adam Mustard was a Caucasian male with blonde hair.  Source also claims another one of Mr. Boddy\u2019s guests was a Caucasian, but can\u2019t recall if it was a man or a woman."
+        "column": "set3.0",
+        "contents": "The individual seen leaving Boddy Estate at 8:30PM, Saturday June 4th on the security footage was an Indian male, driving a blue Buick sedan that was registered to Henry Wadsworth."
     },
     {
         "id": "27",
-        "title": "Brauman",
+        "title": "Yvette",
         "date": "Sunday 9:55AM",
-        "column": "setBrauman",
-        "contents": "Source claims Jill White is an African American female with grey hair."
+        "column": "set3.0",
+        "contents": "Source claims that Adam Mustard was a Caucasian male with blonde hair.  Source also claims another one of Mr. Boddy\u2019s guests was a Caucasian, but can\u2019t recall if it was a man or a woman."
     },
     {
         "id": "28",
-        "title": "Yvette",
+        "title": "Brauman",
         "date": "Sunday 9:55AM",
-        "column": "setYvette",
-        "contents": "Source confirms that guests arrived at 2:00PM on Saturday, June 4th and met with Mr. Boddy in the Lounge initially. \n\nSource claims that Boddy told the guests during this initial meeting that they could enjoy the estate but should meet in the Dining Room at 4:00PM sharp for dinner at 4:15PM.  He then told them he would meet with them each individually to discuss \u201cShared Interests\u201d after dinner. \n\nSource claims after the announcement guests began dispersing throughout the main building of the estate."
+        "column": "set3.0",
+        "contents": "Source claims Jill White is an African American female with grey hair."
     },
     {
         "id": "29",
         "title": "Yvette",
         "date": "Sunday 9:55AM",
-        "column": "setYvette",
-        "contents": "Source confirms that Yvette Duster typically works starting at 10:00AM on Sundays for Mr. Boddy."
+        "column": "set3.0",
+        "contents": "Source confirms that guests arrived at 2:00PM on Saturday, June 4th and met with Mr. Boddy in the Lounge initially. \n\nSource claims that Boddy told the guests during this initial meeting that they could enjoy the estate but should meet in the Dining Room at 4:00PM sharp for dinner at 4:15PM.  He then told them he would meet with them each individually to discuss \u201cShared Interests\u201d after dinner. \n\nSource claims after the announcement guests began dispersing throughout the main building of the estate."
     },
     {
         "id": "30",
-        "title": "Police",
-        "date": "Sunday 10:20AM",
-        "column": "setPolice",
-        "contents": "Source provides a hand drawn sketch of the layout of the main building of Body Estate (*attached).  The main building has 9 rooms connected by a central foyer and a hallway that splits the building into northern and southern sections.   Rooms include a theatre, lounge, billiard room, conservatory and library in the northern section and a kitchen, bathroom, dining room, and study in the southern section."
+        "title": "Yvette",
+        "date": "Sunday 9:55AM",
+        "column": "set3.0",
+        "contents": "Source confirms that Yvette Duster typically works starting at 10:00AM on Sundays for Mr. Boddy."
     },
     {
         "id": "31",
-        "title": "Wadsworth",
+        "title": "Police",
         "date": "Sunday 10:20AM",
-        "column": "setWadsworth",
-        "contents": "Source claims dinner was served at 4:15PM in the dining room and all 6 guests, Mr. Boddy, Wadsworth and Yvette were all present.  Wadsworth and Yvette were serving the food to the others."
+        "column": "set4.0",
+        "contents": "Source provides a hand drawn sketch of the layout of the main building of Body Estate (*attached).  The main building has 9 rooms connected by a central foyer and a hallway that splits the building into northern and southern sections.   Rooms include a theatre, lounge, billiard room, conservatory and library in the northern section and a kitchen, bathroom, dining room, and study in the southern section."
     },
     {
         "id": "32",
         "title": "Wadsworth",
         "date": "Sunday 10:20AM",
-        "column": "setWadsworth",
-        "contents": "Source reports that Walter Boddy's car keys, his Giorgio Armani brand leather driving gloves, and his checkbook were all missing from the drawer of the desk found in the study of the main room of Boddy Estate."
+        "column": "set4.0",
+        "contents": "Source claims dinner was served at 4:15PM in the dining room and all 6 guests, Mr. Boddy, Wadsworth and Yvette were all present.  Wadsworth and Yvette were serving the food to the others."
     },
     {
         "id": "33",
-        "title": "Police",
+        "title": "Wadsworth",
         "date": "Sunday 10:20AM",
-        "column": "setPolice",
-        "contents": "Police learned that Adam Mustard visited a Chili's restaurant in Essex for dinner and drinks on Saturday, June 4th at 11:00PM until 1:45AM."
+        "column": "set4.0",
+        "contents": "Source reports that Walter Boddy's car keys, his Giorgio Armani brand leather driving gloves, and his checkbook were all missing from the drawer of the desk found in the study of the main room of Boddy Estate."
     },
     {
         "id": "34",
-        "title": "Wadsworth",
+        "title": "Police",
         "date": "Sunday 10:20AM",
-        "column": "setWadsworth",
-        "contents": "Source claims that at dinner, Mr. Boddy gave each of the 6 guests a card that had a room of the main building of Boddy Estate named on it.  After dinner, at approximately 6:00PM, Saturday June 4th, guests were to go to their assigned room and wait to speak with Mr. Boddy.  All guests agreed they would do this.\n\nThe location of these guest-to-room assignment cards was unknown by the source."
+        "column": "set4.0",
+        "contents": "Police learned that Adam Mustard visited a Chili's restaurant in Essex for dinner and drinks on Saturday, June 4th at 11:00PM until 1:45AM."
     },
     {
         "id": "35",
-        "title": "White",
+        "title": "Wadsworth",
         "date": "Sunday 10:20AM",
-        "column": "setWhite",
-        "contents": "Source reports that Jill White went outside the main building of Boddy Estate for \"fresh air\" and to \"calm her nerves\" at 12:00AM on Sunday, June 5th.  White claims she walked around the grounds for 3 hours trying to think about what she should do regarding what she had learned from her conversation with Walter Boddy that took place earlier that night, and specifically what to do about the brown-haired Latin American woman that was at the estate that evening was dating Walter Boddy."
+        "column": "set4.0",
+        "contents": "Source claims that at dinner, Mr. Boddy gave each of the 6 guests a card that had a room of the main building of Boddy Estate named on it.  After dinner, at approximately 6:00PM, Saturday June 4th, guests were to go to their assigned room and wait to speak with Mr. Boddy.  All guests agreed they would do this.\n\nThe location of these guest-to-room assignment cards was unknown by the source."
     },
     {
         "id": "36",
-        "title": "Wadsworth",
+        "title": "White",
         "date": "Sunday 10:20AM",
-        "column": "setWadsworth",
-        "contents": "Source claims dinner adjourned at 5:30PM on Saturday, June 4th, and all 6 guests, Yvette Duster, and Mr. Boddy left the Dining Room.  Wadsworth remained in the dining room to clean until 8:30PM on Saturday (June 4th).  During that time source claims no other people entered the dining room."
+        "column": "set4.0",
+        "contents": "Source reports that Jill White went outside the main building of Boddy Estate for \"fresh air\" and to \"calm her nerves\" at 12:00AM on Sunday, June 5th.  White claims she walked around the grounds for 3 hours trying to think about what she should do regarding what she had learned from her conversation with Walter Boddy that took place earlier that night, and specifically what to do about the brown-haired Latin American woman that was at the estate that evening was dating Walter Boddy."
     },
     {
         "id": "37",
-        "title": "Brauman",
+        "title": "Wadsworth",
         "date": "Sunday 10:20AM",
-        "column": "setBrauman",
-        "contents": "Source reports a receipt for a Tiffany's & Co.  Model 321 diamond engagement ring was found in a jewelry box in the lounge of the main building of Boddy Estate.  The receipt was dated Friday, June 3rd."
+        "column": "set4.0",
+        "contents": "Source claims dinner adjourned at 5:30PM on Saturday, June 4th, and all 6 guests, Yvette Duster, and Mr. Boddy left the Dining Room.  Wadsworth remained in the dining room to clean until 8:30PM on Saturday (June 4th).  During that time source claims no other people entered the dining room."
     },
     {
         "id": "38",
-        "title": "Police",
+        "title": "Brauman",
         "date": "Sunday 10:20AM",
-        "column": "setPolice",
-        "contents": "Source confirms that Christine Scarlet is a Latin American female with brown hair and is 5\u201910\u201d tall."
+        "column": "set4.0",
+        "contents": "Source reports a receipt for a Tiffany's & Co.  Model 321 diamond engagement ring was found in a jewelry box in the lounge of the main building of Boddy Estate.  The receipt was dated Friday, June 3rd."
     },
     {
         "id": "39",
         "title": "Police",
         "date": "Sunday 10:20AM",
-        "column": "setPolice",
-        "contents": "Source confirms that Katie Peacock is a Caucasian woman with brown hair.  She is 50 years old and weighs 140 pounds."
+        "column": "set4.0",
+        "contents": "Source confirms that Christine Scarlet is a Latin American female with brown hair and is 5\u201910\u201d tall."
     },
     {
         "id": "40",
-        "title": "Wadsworth",
+        "title": "Police",
         "date": "Sunday 10:20AM",
-        "column": "setWadsworth",
-        "contents": "Source recalls an \u201codd encounter\u201d that took place during diner on Saturday, June 4th.   Scott Plum was seated at dinner near an aquarium filled with rare fish.  Source claims that when Plum noticed the fish he became visibly ill at the sight of them. "
+        "column": "set4.0",
+        "contents": "Source confirms that Katie Peacock is a Caucasian woman with brown hair.  She is 50 years old and weighs 140 pounds."
     },
     {
         "id": "41",
-        "title": "Scarlet",
-        "date": "Sunday 10:40AM",
-        "column": "setScarlet",
-        "contents": "Source reported that Scott Plum can\u2019t stand fish and has ichthyophobia (fear of fish).  He has a debilitating fear of being alone in the same room as any fish.  Source requested that Scott Plum not be assigned to wait in a room for Mr. Boddy that had fish in it. "
+        "title": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "column": "set4.0",
+        "contents": "Source recalls an \u201codd encounter\u201d that took place during diner on Saturday, June 4th.   Scott Plum was seated at dinner near an aquarium filled with rare fish.  Source claims that when Plum noticed the fish he became visibly ill at the sight of them. "
     },
     {
         "id": "42",
-        "title": "Wadsworth",
+        "title": "Scarlet",
         "date": "Sunday 10:40AM",
-        "column": "setWadsworth",
-        "contents": "Source says Scott Plum would not be asked to wait in the Dining Room or Library, the only rooms with aquariums them due to his fear of fish, per a request from one of the guests."
+        "column": "set5.0",
+        "contents": "Source reported that Scott Plum can\u2019t stand fish and has ichthyophobia (fear of fish).  He has a debilitating fear of being alone in the same room as any fish.  Source requested that Scott Plum not be assigned to wait in a room for Mr. Boddy that had fish in it. "
     },
     {
         "id": "43",
-        "title": "Green",
+        "title": "Wadsworth",
         "date": "Sunday 10:40AM",
-        "column": "setGreen",
-        "contents": "Source confirms that the African American male from the foyer with the police is Antonio Green and the female was Christine Scarlet, who is a Latin American woman."
+        "column": "set5.0",
+        "contents": "Source says Scott Plum would not be asked to wait in the Dining Room or Library, the only rooms with aquariums them due to his fear of fish, per a request from one of the guests."
     },
     {
         "id": "44",
         "title": "Green",
         "date": "Sunday 10:40AM",
-        "column": "setGreen",
-        "contents": "Source reports that Antonio Green and the other guests left dinner in the dining room at 5:30 PM on Saturday June 4th.  Green then went to the billiard room to play pool with Christine Scarlet.  They remained there for 30 minutes and then Green and Scarlet departed the billiard room as they agreed to do at 6:00PM to go to their assigned rooms.  Source does not know where Scarlet was headed. "
+        "column": "set5.0",
+        "contents": "Source confirms that the African American male from the foyer with the police is Antonio Green and the female was Christine Scarlet, who is a Latin American woman."
     },
     {
         "id": "45",
         "title": "Green",
         "date": "Sunday 10:40AM",
-        "column": "setGreen",
-        "contents": "Source claims Green left the billiard room at 6:00PM on Saturday June 4th and went to the library, which was the room assigned to him on the card given to him by Walter Boddy during dinner that evening."
+        "column": "set5.0",
+        "contents": "Source reports that Antonio Green and the other guests left dinner in the dining room at 5:30 PM on Saturday June 4th.  Green then went to the billiard room to play pool with Christine Scarlet.  They remained there for 30 minutes and then Green and Scarlet departed the billiard room as they agreed to do at 6:00PM to go to their assigned rooms.  Source does not know where Scarlet was headed. "
     },
     {
         "id": "46",
-        "title": "Police",
+        "title": "Green",
         "date": "Sunday 10:40AM",
-        "column": "setPolice",
-        "contents": "Source reports that Walter Boddy owned a handgun that was usually kept in the study of the main building of Boddy Estate."
+        "column": "set5.0",
+        "contents": "Source claims Green left the billiard room at 6:00PM on Saturday June 4th and went to the library, which was the room assigned to him on the card given to him by Walter Boddy during dinner that evening."
     },
     {
         "id": "47",
-        "title": "Scarlet",
+        "title": "Police",
         "date": "Sunday 10:40AM",
-        "column": "setScarlet",
-        "contents": "Source reports seeing a glass bottle with the label \"POISON\" sitting on a table in one of the rooms of the main building of Boddy Estate sometime after dinner on Saturday, June 4th.  Source does not recall the room, but remembers that the bottle was sitting on a wooden table, which had ornate claw feet carved into the legs of the table."
+        "column": "set5.0",
+        "contents": "Source reports that Walter Boddy owned a handgun that was usually kept in the study of the main building of Boddy Estate."
     },
     {
         "id": "48",
-        "title": "Green",
+        "title": "Scarlet",
         "date": "Sunday 10:40AM",
-        "column": "setGreen",
-        "contents": "Source reports that Walter Boddy visited Antonio Green in the Library at 6:30PM on Saturday June 4th after Green had been watching television for 30 minutes waiting.  Source reports Green had been invited to the Boddy Estate that evening to oversee the final authorization of the sale of a company Walter Boddy was purchasing."
+        "column": "set5.0",
+        "contents": "Source reports seeing a glass bottle with the label \"POISON\" sitting on a table in one of the rooms of the main building of Boddy Estate sometime after dinner on Saturday, June 4th.  Source does not recall the room, but remembers that the bottle was sitting on a wooden table, which had ornate claw feet carved into the legs of the table."
     },
     {
         "id": "49",
-        "title": "Security Camera",
+        "title": "Green",
         "date": "Sunday 10:40AM",
-        "column": "setSecurity Camera",
-        "contents": "Video footage of the foyer and hallway of the main building of Boddy Estate was found that revealed footage from 1:50AM on Sunday, June 5th until 2:10AM.  During this time none of Boddy's guests or Boddy himself were located in the foyer or hallway."
+        "column": "set5.0",
+        "contents": "Source reports that Walter Boddy visited Antonio Green in the Library at 6:30PM on Saturday June 4th after Green had been watching television for 30 minutes waiting.  Source reports Green had been invited to the Boddy Estate that evening to oversee the final authorization of the sale of a company Walter Boddy was purchasing."
     },
     {
         "id": "50",
-        "title": "Mustard",
+        "title": "Security Camera",
         "date": "Sunday 10:40AM",
-        "column": "setMustard",
-        "contents": "Source claims Adam Mustard was alone in the study of the main room of Boddy Estates on Saturday, June 4th, from the time Walter Boddy left the room until 8:30PM when Scott Plum entered the study to speak with Mustard."
+        "column": "set5.0",
+        "contents": "Video footage of the foyer and hallway of the main building of Boddy Estate was found that revealed footage from 1:50AM on Sunday, June 5th until 2:10AM.  During this time none of Boddy's guests or Boddy himself were located in the foyer or hallway."
     },
     {
         "id": "51",
-        "title": "White",
+        "title": "Mustard",
         "date": "Sunday 10:40AM",
-        "column": "setWhite",
-        "contents": "Source claims that Jill White was given a card at dinner by Walter Boddy asking her to go to the kitchen of the main building of Boddy Estate after dinner and wait to meet with him there.  White claims she went to the kitchen after dinner and waited for Boddy to visit."
+        "column": "set5.0",
+        "contents": "Source claims Adam Mustard was alone in the study of the main room of Boddy Estates on Saturday, June 4th, from the time Walter Boddy left the room until 8:30PM when Scott Plum entered the study to speak with Mustard."
     },
     {
         "id": "52",
-        "title": "Plum",
+        "title": "White",
         "date": "Sunday 10:40AM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum left the Dining Room at 8:30PM and went to find Adam Mustard who he found in the study of the main building of Boddy Estate."
+        "column": "set5.0",
+        "contents": "Source claims that Jill White was given a card at dinner by Walter Boddy asking her to go to the kitchen of the main building of Boddy Estate after dinner and wait to meet with him there.  White claims she went to the kitchen after dinner and waited for Boddy to visit."
     },
     {
         "id": "53",
-        "title": "Green",
-        "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports that Walter Boddy was working with 2 silent partners (names unknown) to acquire the Dalia Surveillance Equipment Company which was currently owned by Katie Peacock.  The sale price was $800,000 - $400,000 coming from Walter Boddy and $400,000 coming from the 2 silent partners, however, Boddy also had a contract that was signed by the 2 silent partners giving him full power of attorney for the partners as they wished to remain anonymous.  This meant that Boddy was legally the only person required to agree to contracts and transactions involving the sale or purchase of Dalia Surveillance Equipment Company."
+        "title": "Plum",
+        "date": "Sunday 10:40AM",
+        "column": "set5.0",
+        "contents": "Source reports that Scott Plum left the Dining Room at 8:30PM and went to find Adam Mustard who he found in the study of the main building of Boddy Estate."
     },
     {
         "id": "54",
         "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports Boddy provided a sales contract to Green that was already signed by Ms. Katie Peacock and then signed it and asked Green to process the sale on the laptop computer in the Library \u2013 which Green did."
+        "column": "set6.0",
+        "contents": "Source reports that Walter Boddy was working with 2 silent partners (names unknown) to acquire the Dalia Surveillance Equipment Company which was currently owned by Katie Peacock.  The sale price was $800,000 - $400,000 coming from Walter Boddy and $400,000 coming from the 2 silent partners, however, Boddy also had a contract that was signed by the 2 silent partners giving him full power of attorney for the partners as they wished to remain anonymous.  This meant that Boddy was legally the only person required to agree to contracts and transactions involving the sale or purchase of Dalia Surveillance Equipment Company."
     },
     {
         "id": "55",
-        "title": "Security Camera",
+        "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setSecurity Camera",
-        "contents": "Security footage was found from the theatre of the main building of Boddy Estate that showed a brown-haired female was in the theatre from 1:30AM until 2:05AM.  The video footage was not available outside of that time frame."
+        "column": "set6.0",
+        "contents": "Source reports Boddy provided a sales contract to Green that was already signed by Ms. Katie Peacock and then signed it and asked Green to process the sale on the laptop computer in the Library \u2013 which Green did."
     },
     {
         "id": "56",
-        "title": "Mustard",
+        "title": "Security Camera",
         "date": "Sunday 11:00AM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard was invited to Boddy Estate on Saturday, June 4th by Walter Boddy to discuss a business partnership they had entered into, the purchase of the Dalia Surveillance Equipment Company. "
+        "column": "set6.0",
+        "contents": "Security footage was found from the theatre of the main building of Boddy Estate that showed a brown-haired female was in the theatre from 1:30AM until 2:05AM.  The video footage was not available outside of that time frame."
     },
     {
         "id": "57",
-        "title": "Green",
+        "title": "Mustard",
         "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports that at approximately 6:45PM on Saturday, June 4th, Walter Boddy exited the Library but asked Antonio Green to remain there and meet with him to broker one more transaction later in the evening."
+        "column": "set6.0",
+        "contents": "Source reports that Adam Mustard was invited to Boddy Estate on Saturday, June 4th by Walter Boddy to discuss a business partnership they had entered into, the purchase of the Dalia Surveillance Equipment Company. "
     },
     {
         "id": "58",
-        "title": "Plum",
+        "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum claims he saw a Caucasian woman with brown hair go into the study at the other end of the hallway when he was leaving the lounge to exit through the West entrance of the main building of Boddy Estate for the night on Saturday, June 4th around 8:45PM."
+        "column": "set6.0",
+        "contents": "Source reports that at approximately 6:45PM on Saturday, June 4th, Walter Boddy exited the Library but asked Antonio Green to remain there and meet with him to broker one more transaction later in the evening."
     },
     {
         "id": "59",
-        "title": "Green",
+        "title": "Plum",
         "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports that Walter Boddy visited Green in the Library at 9:00PM on Saturday, June 4th with a contract to sell Dalia Surveillance Equipment Company from Walter Boddy\u2019s ownership to an undisclosed party that had already authorized the sale.  The sale price was $2 million, the full amount of which would be transferred directly to Boddy, with $0 going to the 2 silent partners that purchased Dalia with Boddy earlier that evening.  This payout structure was possible as Boddy had power of attorney of the sale and acquisition of Dalia Surveillance Equipment Company for the other two individuals who owned the company and thus could structure the contract as he saw fit."
+        "column": "set6.0",
+        "contents": "Source reports that Scott Plum claims he saw a Caucasian woman with brown hair go into the study at the other end of the hallway when he was leaving the lounge to exit through the West entrance of the main building of Boddy Estate for the night on Saturday, June 4th around 8:45PM."
     },
     {
         "id": "60",
-        "title": "Mustard",
+        "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard met with Walter Boddy in the study at 8:00PM on Saturday, June 4th."
+        "column": "set6.0",
+        "contents": "Source reports that Walter Boddy visited Green in the Library at 9:00PM on Saturday, June 4th with a contract to sell Dalia Surveillance Equipment Company from Walter Boddy\u2019s ownership to an undisclosed party that had already authorized the sale.  The sale price was $2 million, the full amount of which would be transferred directly to Boddy, with $0 going to the 2 silent partners that purchased Dalia with Boddy earlier that evening.  This payout structure was possible as Boddy had power of attorney of the sale and acquisition of Dalia Surveillance Equipment Company for the other two individuals who owned the company and thus could structure the contract as he saw fit."
     },
     {
         "id": "61",
-        "title": "Green",
+        "title": "Mustard",
         "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports that after Green processed the second sale of Dalia Surveillance Equipment Company, he was told by Boddy during his conversation in the Library sometime after 9:00PM that he would not receive his commission for the sale of Dalia.  Green was visibly upset describing this event, and source claims it meant Green was losing out on a $500,000 commission check.  Green inquired with Boddy how he was able to do this and he told him that he wrote into both contracts that all fees would be paid out by the 2 silent parties from the original sale of Dalia.  Boddy then assured Green that the 2 silent parties did not have the funds to cover the fee so pursuing the debt was a waste of time.   Source admits that Green verbally threatened Boddy calling him a scumbag, to which Boddy responded that if he ensured the transaction went through with no problems he would pay him $50,000 in the morning, after which Boddy left the Library, at 9:45PM on Saturday, June 4th."
+        "column": "set6.0",
+        "contents": "Source reports that Adam Mustard met with Walter Boddy in the study at 8:00PM on Saturday, June 4th."
     },
     {
         "id": "62",
-        "title": "Plum",
+        "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum was alone in the Dining Room from 8:00PM until 8:30PM on Saturday, June 4th thinking about how to deal with the news he had been given by Walter Boddy, that he had lost his $200,000."
+        "column": "set6.0",
+        "contents": "Source reports that after Green processed the second sale of Dalia Surveillance Equipment Company, he was told by Boddy during his conversation in the Library sometime after 9:00PM that he would not receive his commission for the sale of Dalia.  Green was visibly upset describing this event, and source claims it meant Green was losing out on a $500,000 commission check.  Green inquired with Boddy how he was able to do this and he told him that he wrote into both contracts that all fees would be paid out by the 2 silent parties from the original sale of Dalia.  Boddy then assured Green that the 2 silent parties did not have the funds to cover the fee so pursuing the debt was a waste of time.   Source admits that Green verbally threatened Boddy calling him a scumbag, to which Boddy responded that if he ensured the transaction went through with no problems he would pay him $50,000 in the morning, after which Boddy left the Library, at 9:45PM on Saturday, June 4th."
     },
     {
         "id": "63",
-        "title": "Green",
+        "title": "Plum",
         "date": "Sunday 11:00AM",
-        "column": "setGreen",
-        "contents": "Source reports that after the sale of Dalia Surveillance Equipment Company from Boddy to the undisclosed party was processed, Antonio Green was left alone in the library from 9:45PM on Saturday June 4th, until the following morning when the police awoke him around 8:45AM (Sunday, June 5th).  During that time source claims that Green claims he was responding to work e-mails on the laptop computer in the Library until around 2:10AM on Sunday and then fell asleep on the couch in the library shortly after, while re-watching his DVD of When Harry Met Sally\u00a9."
+        "column": "set6.0",
+        "contents": "Source reports that Scott Plum was alone in the Dining Room from 8:00PM until 8:30PM on Saturday, June 4th thinking about how to deal with the news he had been given by Walter Boddy, that he had lost his $200,000."
     },
     {
         "id": "64",
-        "title": "Police",
+        "title": "Green",
         "date": "Sunday 11:00AM",
-        "column": "setPolice",
-        "contents": "Search of the main building library Sunday morning, June 5th at 9:55AM confirms Antonio Green was in the library at some point as a DVD case for When Harry Met Sally\u00a9 was found in the room along with copies of two different contracts for the sale of Dalia Surveillance Equipment Company that were notarized by Green.  Contracts specified that original sale was from Katie Peacock to Boddy & two undisclosed parties for $800,000, with Boddy contributing 50%.  Second sale was selling the company from Boddy to Jill White for the sum of $2,000,000, with all legal and broker fees to be paid by two undisclosed parties, while the $2M went completely to Boddy.  Both sales were notarized by Antonio Green through the Dagobah Finance Bank.  Library also contained a couch and a television."
+        "column": "set6.0",
+        "contents": "Source reports that after the sale of Dalia Surveillance Equipment Company from Boddy to the undisclosed party was processed, Antonio Green was left alone in the library from 9:45PM on Saturday June 4th, until the following morning when the police awoke him around 8:45AM (Sunday, June 5th).  During that time source claims that Green claims he was responding to work e-mails on the laptop computer in the Library until around 2:10AM on Sunday and then fell asleep on the couch in the library shortly after, while re-watching his DVD of When Harry Met Sally\u00a9."
     },
     {
         "id": "65",
-        "title": "Brauman",
+        "title": "Police",
         "date": "Sunday 11:00AM",
-        "column": "setBrauman",
-        "contents": "Search of the conservatory of the main building Sunday morning, June 5th, at 10:00AM uncovered a heavy metal candlestick that was buried in the soil of a potted fern plant.  Source reports the candlestick was bent in the middle and paint was chipped off as if it had been slammed against another object forcefully."
+        "column": "set6.0",
+        "contents": "Search of the main building library Sunday morning, June 5th at 9:55AM confirms Antonio Green was in the library at some point as a DVD case for When Harry Met Sally\u00a9 was found in the room along with copies of two different contracts for the sale of Dalia Surveillance Equipment Company that were notarized by Green.  Contracts specified that original sale was from Katie Peacock to Boddy & two undisclosed parties for $800,000, with Boddy contributing 50%.  Second sale was selling the company from Boddy to Jill White for the sum of $2,000,000, with all legal and broker fees to be paid by two undisclosed parties, while the $2M went completely to Boddy.  Both sales were notarized by Antonio Green through the Dagobah Finance Bank.  Library also contained a couch and a television."
     },
     {
         "id": "66",
-        "title": "Police",
+        "title": "Brauman",
         "date": "Sunday 11:00AM",
-        "column": "setPolice",
-        "contents": "Source confirms that the damage to the metal candlestick found in the conservatory is evident of it being used as a possible blunt force weapon.  They subsequently categorized it as a possible murder weapon."
+        "column": "set6.0",
+        "contents": "Search of the conservatory of the main building Sunday morning, June 5th, at 10:00AM uncovered a heavy metal candlestick that was buried in the soil of a potted fern plant.  Source reports the candlestick was bent in the middle and paint was chipped off as if it had been slammed against another object forcefully."
     },
     {
         "id": "67",
         "title": "Police",
         "date": "Sunday 11:00AM",
-        "column": "setPolice",
-        "contents": "Source report that Henry Wadsworth provided the physical invitations that were mailed to the 6 invited guests to the police investigators.  The invitations included each guests name and a mailing address.  Source reports that officers have been sent to each address to look for possible clues and to try and bring the remaining 4 guests in for questioning."
+        "column": "set6.0",
+        "contents": "Source confirms that the damage to the metal candlestick found in the conservatory is evident of it being used as a possible blunt force weapon.  They subsequently categorized it as a possible murder weapon."
     },
     {
         "id": "68",
-        "title": "Scarlet",
-        "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source claims that Saturday, June 4th at 11:45PM Christine Scarlet was in the conservatory, where Boddy had asked she wait on the card she received at dinner, when another woman came in and accused Scarlet of having an affair with Boddy.  Source did not know the accuser\u2019s name, but described her as 5\u20194\u201d tall and 56 years old.  Source then claims that Christine Scarlet attempted to instigate the accusing woman by telling her she was \u201cabsolutely sleeping with Walter, but it wasn\u2019t affair since he doesn\u2019t want to be with you [the accused woman] anymore!\u201d  The accused woman then smacked Scarlet with an open hand, and stormed out around 11:50PM and Scarlet called after her that \u201cWalter was going to kick her to the curb tonight!\u201d and laughed."
+        "title": "Police",
+        "date": "Sunday 11:00AM",
+        "column": "set6.0",
+        "contents": "Source report that Henry Wadsworth provided the physical invitations that were mailed to the 6 invited guests to the police investigators.  The invitations included each guests name and a mailing address.  Source reports that officers have been sent to each address to look for possible clues and to try and bring the remaining 4 guests in for questioning."
     },
     {
         "id": "69",
         "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source reports that Christine Scarlet and Walter Boddy started a romantic relationship approximately 3 weeks ago.  The couple met when Scarlet was installing a surveillance system at Boddy\u2019s estate.  Scarlet was working for Dalia Surveillance Equipment Company."
+        "column": "set7.0",
+        "contents": "Source claims that Saturday, June 4th at 11:45PM Christine Scarlet was in the conservatory, where Boddy had asked she wait on the card she received at dinner, when another woman came in and accused Scarlet of having an affair with Boddy.  Source did not know the accuser\u2019s name, but described her as 5\u20194\u201d tall and 56 years old.  Source then claims that Christine Scarlet attempted to instigate the accusing woman by telling her she was \u201cabsolutely sleeping with Walter, but it wasn\u2019t affair since he doesn\u2019t want to be with you [the accused woman] anymore!\u201d  The accused woman then smacked Scarlet with an open hand, and stormed out around 11:50PM and Scarlet called after her that \u201cWalter was going to kick her to the curb tonight!\u201d and laughed."
     },
     {
         "id": "70",
         "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source believes that Christine Scarlet was among the 6 guests invited to Walter Boddy\u2019s Estate on Saturday June 4th, as Boddy was expected to propose to Scarlet that evening."
+        "column": "set7.0",
+        "contents": "Source reports that Christine Scarlet and Walter Boddy started a romantic relationship approximately 3 weeks ago.  The couple met when Scarlet was installing a surveillance system at Boddy\u2019s estate.  Scarlet was working for Dalia Surveillance Equipment Company."
     },
     {
         "id": "71",
         "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source reports that Walter Boddy visited Christine Scarlet in the conservatory of the main building of Boddy Estate at 8:30PM on Saturday, June 4th.  Boddy told Scarlet that he would be coming into a large sum of money very soon for selling off a company he had recently acquired.  Source reports that Boddy\u2019s first of two surprises for Scarlet that evening was that the two of them were to take a trip around the world to celebrate the small fortune he\u2019d gained from the sale of the company."
+        "column": "set7.0",
+        "contents": "Source believes that Christine Scarlet was among the 6 guests invited to Walter Boddy\u2019s Estate on Saturday June 4th, as Boddy was expected to propose to Scarlet that evening."
     },
     {
         "id": "72",
-        "title": "Police",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setPolice",
-        "contents": "Source confirms Scott Plum is an Indian Male."
+        "column": "set7.0",
+        "contents": "Source reports that Walter Boddy visited Christine Scarlet in the conservatory of the main building of Boddy Estate at 8:30PM on Saturday, June 4th.  Boddy told Scarlet that he would be coming into a large sum of money very soon for selling off a company he had recently acquired.  Source reports that Boddy\u2019s first of two surprises for Scarlet that evening was that the two of them were to take a trip around the world to celebrate the small fortune he\u2019d gained from the sale of the company."
     },
     {
         "id": "73",
-        "title": "Scarlet",
+        "title": "Police",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source reports that Walter Boddy left the conservatory Saturday June 4th at 8:40PM.  Christine Scarlet remained in the conservatory however and was asked to wait there for Boddy to return with a \u201csecond surprise that would be the real reason for them to celebrate.\u201d"
+        "column": "set7.0",
+        "contents": "Source confirms Scott Plum is an Indian Male."
     },
     {
         "id": "74",
-        "title": "Plum",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum claims Walter Boddy scammed him out of $200,000 dollars and was sleeping with his ex-wife, but he did not kill Walter Boddy."
+        "column": "set7.0",
+        "contents": "Source reports that Walter Boddy left the conservatory Saturday June 4th at 8:40PM.  Christine Scarlet remained in the conservatory however and was asked to wait there for Boddy to return with a \u201csecond surprise that would be the real reason for them to celebrate.\u201d"
     },
     {
         "id": "75",
-        "title": "Scarlet",
+        "title": "Plum",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source reports that Christine Scarlet waited for Walter Boddy in the conservatory on Saturday June 4th from 8:40PM until early Sunday morning at 1:30AM when Boddy returned to the conservatory.  Source reports that Boddy told Scarlet he had purchased the tickets for their trip around the world and he just had to fetch something out of his safe before he gave her the second surprise.  Source suspected it was an engagement ring; however, source claims Boddy left at 1:50AM and after waiting 45 minutes for Boddy to return fell asleep sitting in a lounge chair waiting for him to return."
+        "column": "set7.0",
+        "contents": "Source reports that Scott Plum claims Walter Boddy scammed him out of $200,000 dollars and was sleeping with his ex-wife, but he did not kill Walter Boddy."
     },
     {
         "id": "76",
-        "title": "Police",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setPolice",
-        "contents": "Source reports burnt ashes and melted video tapes were found in a trashcan in the theatre of the main building of Boddy Estate."
+        "column": "set7.0",
+        "contents": "Source reports that Christine Scarlet waited for Walter Boddy in the conservatory on Saturday June 4th from 8:40PM until early Sunday morning at 1:30AM when Boddy returned to the conservatory.  Source reports that Boddy told Scarlet he had purchased the tickets for their trip around the world and he just had to fetch something out of his safe before he gave her the second surprise.  Source suspected it was an engagement ring; however, source claims Boddy left at 1:50AM and after waiting 45 minutes for Boddy to return fell asleep sitting in a lounge chair waiting for him to return."
     },
     {
         "id": "77",
-        "title": "Scarlet",
+        "title": "Police",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source reports that Christine Scarlet installed a multi-camera surveillance system in the main building of Boddy estate approximately 3 weeks ago.  The system was a remote setup, meaning that Walter Boddy was paying Dalia Surveillance Equipment Company to monitor the footage at their facility for anything suspicious.  Source reports that access to this footage may be available via Dalia Security Company and the best chance to obtain it would be to speak with Scarlet\u2019s supervisor and the head of the group that monitors the footage, Mr. Adam Mustard, who source claims was one of the men present at Boddy\u2019s invitation only dinner last night (Saturday, June 4th)."
+        "column": "set7.0",
+        "contents": "Source reports burnt ashes and melted video tapes were found in a trashcan in the theatre of the main building of Boddy Estate."
     },
     {
         "id": "78",
-        "title": "White",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setWhite",
-        "contents": "Source reports that during a second meeting between Jill White and Walter Boddy that took place just after 11:15PM in the kitchen on the night of Saturday, June 4th, Boddy provided White with a copy of the sales contracts for Dalia Surveillance Equipment Company and confirmed that she now owned the company."
+        "column": "set7.0",
+        "contents": "Source reports that Christine Scarlet installed a multi-camera surveillance system in the main building of Boddy estate approximately 3 weeks ago.  The system was a remote setup, meaning that Walter Boddy was paying Dalia Surveillance Equipment Company to monitor the footage at their facility for anything suspicious.  Source reports that access to this footage may be available via Dalia Security Company and the best chance to obtain it would be to speak with Scarlet\u2019s supervisor and the head of the group that monitors the footage, Mr. Adam Mustard, who source claims was one of the men present at Boddy\u2019s invitation only dinner last night (Saturday, June 4th)."
     },
     {
         "id": "79",
-        "title": "Scarlet",
+        "title": "White",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "Source denies any knowledge of Dalia Surveillance Equipment Company being sold or on the market for sale.  Source claims that any information on the sale of the company would be held by the company\u2019s executives, and primarily with the family that owns the company, and has owned the company as a family business for 3 generations.  Source denies knowing any of the company\u2019s current owners and claims she has never met them personally."
+        "column": "set7.0",
+        "contents": "Source reports that during a second meeting between Jill White and Walter Boddy that took place just after 11:15PM in the kitchen on the night of Saturday, June 4th, Boddy provided White with a copy of the sales contracts for Dalia Surveillance Equipment Company and confirmed that she now owned the company."
     },
     {
         "id": "80",
-        "title": "Brauman",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setBrauman",
-        "contents": "Source reports a broken laptop computer was found burnt and in several pieces in the fireplace of the study of the main building of Boddy Estate."
+        "column": "set7.0",
+        "contents": "Source denies any knowledge of Dalia Surveillance Equipment Company being sold or on the market for sale.  Source claims that any information on the sale of the company would be held by the company\u2019s executives, and primarily with the family that owns the company, and has owned the company as a family business for 3 generations.  Source denies knowing any of the company\u2019s current owners and claims she has never met them personally."
     },
     {
         "id": "81",
-        "title": "Scarlet",
+        "title": "Brauman",
         "date": "Sunday 11:25AM",
-        "column": "setScarlet",
-        "contents": "When questioned on the subject, source claims the candlestick in the conservatory broke when Christine Scarlet knocked it off of the table it was on in the conservatory last night.  She was the only one in the room at the time and did not want Walter Boddy to get upset since \u201cit looked valuable\u201d so she hid the candlestick in the fern plant hoping he wouldn\u2019t notice it was missing."
+        "column": "set7.0",
+        "contents": "Source reports a broken laptop computer was found burnt and in several pieces in the fireplace of the study of the main building of Boddy Estate."
     },
     {
         "id": "82",
-        "title": "Mustard",
+        "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "setMustard",
-        "contents": "Source confirms that Adam Mustard is Christine Scarlet\u2019s supervisor at the Dalia Surveillance Equipment Company, and is also in charge of the team that monitors the Boddy Estate security system."
+        "column": "set7.0",
+        "contents": "When questioned on the subject, source claims the candlestick in the conservatory broke when Christine Scarlet knocked it off of the table it was on in the conservatory last night.  She was the only one in the room at the time and did not want Walter Boddy to get upset since \u201cit looked valuable\u201d so she hid the candlestick in the fern plant hoping he wouldn\u2019t notice it was missing."
     },
     {
         "id": "83",
-        "title": "Security Camera",
+        "title": "Mustard",
         "date": "Sunday 11:25AM",
-        "column": "setSecurity Camera",
-        "contents": "A security camera positioned to view the West entrance to the main building of Boddy Estate was obtained by police.  The camera was set to record all movement through this entrance.  The tape showed Wadsworth and Yvette leaving the main building at 8:30PM and 8:00PM respectively.  The tape showed an African American woman exit at 12:00AM on Sunday, June 5th.  The tape showed a man exit the main building out the West entrance at 2:45AM and a Caucasian woman exit at 3:00AM."
+        "column": "set7.0",
+        "contents": "Source confirms that Adam Mustard is Christine Scarlet\u2019s supervisor at the Dalia Surveillance Equipment Company, and is also in charge of the team that monitors the Boddy Estate security system."
     },
     {
         "id": "84",
-        "title": "Brauman",
+        "title": "Security Camera",
         "date": "Sunday 11:25AM",
-        "column": "setBrauman",
-        "contents": "Source reports a pair of Giorgio Armani leather driving gloves were found inside the piano located in the lounge of the main building of Boddy Estate."
+        "column": "set7.0",
+        "contents": "A security camera positioned to view the West entrance to the main building of Boddy Estate was obtained by police.  The camera was set to record all movement through this entrance.  The tape showed Wadsworth and Yvette leaving the main building at 8:30PM and 8:00PM respectively.  The tape showed an African American woman exit at 12:00AM on Sunday, June 5th.  The tape showed a man exit the main building out the West entrance at 2:45AM and a Caucasian woman exit at 3:00AM."
     },
     {
         "id": "85",
-        "title": "Mustard",
-        "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard met Walter Boddy 3 weeks ago when Mustard and his employee Christine Scarlet were setting up the remote monitoring equipment at Boddy\u2019s Estate. Source also claims that Mustard and Boddy become close as Mustard had visit Boddy\u2019s estate multiple times over the first 2 weeks to make sure all the equipment was working properly."
+        "title": "Brauman",
+        "date": "Sunday 11:25AM",
+        "column": "set7.0",
+        "contents": "Source reports a pair of Giorgio Armani leather driving gloves were found inside the piano located in the lounge of the main building of Boddy Estate."
     },
     {
         "id": "86",
-        "title": "Peacock",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setPeacock",
-        "contents": "Source claims that Katie Peacock was invited to Boddy Estate on Saturday, June 4th at 2:00PM and she presumed it was because Boddy was going to request a sum of money from her in return for the video tapes he was blackmailing her with."
+        "column": "set8.0",
+        "contents": "Source reports that Adam Mustard met Walter Boddy 3 weeks ago when Mustard and his employee Christine Scarlet were setting up the remote monitoring equipment at Boddy\u2019s Estate. Source also claims that Mustard and Boddy become close as Mustard had visit Boddy\u2019s estate multiple times over the first 2 weeks to make sure all the equipment was working properly."
     },
     {
         "id": "87",
-        "title": "Mustard",
+        "title": "Peacock",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source claims that after several visits to Boddy\u2019s estate to setup surveillance system components, Adam Mustard and Walter Boddy went for drinks at a local pub called Connor Larkin\u2019s in Essex.  Source doesn\u2019t recall the exact date but he suspects it was probably 2 weeks ago.\n\nSource claims that during the meet-up, Walter Boddy asked Mustard for insider information regarding Dalia Surveillance Company.  Mustard then disclosed to Boddy that the company had a new patent that was about to be approved for licensing, which executives expected would triple the value of the company.  Source claims that when Boddy heard this news he said that he and Mustard should try and cash in on that information. "
+        "column": "set8.0",
+        "contents": "Source claims that Katie Peacock was invited to Boddy Estate on Saturday, June 4th at 2:00PM and she presumed it was because Boddy was going to request a sum of money from her in return for the video tapes he was blackmailing her with."
     },
     {
         "id": "88",
-        "title": "Police",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Source confirms that Antonio Green is a merger and acquisition broker working for the Dagobah Finance Bank.  He is currently under contract to work with Mr. Walter D. Boddy for the sale of a large company valued at roughly $1.5 million; however, the name and specifics of the deal were unavailable."
+        "column": "set8.0",
+        "contents": "Source claims that after several visits to Boddy\u2019s estate to setup surveillance system components, Adam Mustard and Walter Boddy went for drinks at a local pub called Connor Larkin\u2019s in Essex.  Source doesn\u2019t recall the exact date but he suspects it was probably 2 weeks ago.\n\nSource claims that during the meet-up, Walter Boddy asked Mustard for insider information regarding Dalia Surveillance Company.  Mustard then disclosed to Boddy that the company had a new patent that was about to be approved for licensing, which executives expected would triple the value of the company.  Source claims that when Boddy heard this news he said that he and Mustard should try and cash in on that information. "
     },
     {
         "id": "89",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that Walter Boddy and Adam Mustard had a second meet up for drinks at Connor Larkin\u2019s pub in Essex, two days after their initial meeting there.  During the meeting Boddy suggested to Mustard that they should purchase the Dalia Surveillance Equipment Company before the information on the new patent, which Mustard told Boddy about previously, becomes public information."
+        "column": "set8.0",
+        "contents": "Source confirms that Antonio Green is a merger and acquisition broker working for the Dagobah Finance Bank.  He is currently under contract to work with Mr. Walter D. Boddy for the sale of a large company valued at roughly $1.5 million; however, the name and specifics of the deal were unavailable."
     },
     {
         "id": "90",
-        "title": "White",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setWhite",
-        "contents": "Source claims that Jill White met Walter Boddy at the Onset Bay Marina Yachting Club about 3 months ago at a club sponsored event.  They two started a romantic relationship shortly after and White believed things were going well up until 3 weeks ago, when Boddy seemed to become too busy with work to spend time with her."
+        "column": "set8.0",
+        "contents": "Source reports that Walter Boddy and Adam Mustard had a second meet up for drinks at Connor Larkin\u2019s pub in Essex, two days after their initial meeting there.  During the meeting Boddy suggested to Mustard that they should purchase the Dalia Surveillance Equipment Company before the information on the new patent, which Mustard told Boddy about previously, becomes public information."
     },
     {
         "id": "91",
-        "title": "Mustard",
+        "title": "White",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that during their second meeting in Essex, Walter Boddy told Adam Mustard that they could purchase Dalia Surveillance Equipment Co. for only $800,000, despite its $1.5 million valuation.  Boddy suggested they split the cost 50/50 and be equal stakeholders.  Mustard showed interest in pursuing the opportunity with Boddy, but he could only contribute $200,000, which would involve him taking out a line of credit against his home.   Boddy suggested that Mustard find a third party to contribute the additional $200,000 needed. Boddy cautioned Mustard however, that Mustard should only get someone he can fully trust since the person would get a 25% stake in the company."
+        "column": "set8.0",
+        "contents": "Source claims that Jill White met Walter Boddy at the Onset Bay Marina Yachting Club about 3 months ago at a club sponsored event.  They two started a romantic relationship shortly after and White believed things were going well up until 3 weeks ago, when Boddy seemed to become too busy with work to spend time with her."
     },
     {
         "id": "92",
-        "title": "Wadsworth",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setWadsworth",
-        "contents": "Source reports that a gun owned by Walter Boddy was missing from the Study of the main room of Boddy Estate.  The gun was typically kept in a drawer of the desk found in the study."
+        "column": "set8.0",
+        "contents": "Source reports that during their second meeting in Essex, Walter Boddy told Adam Mustard that they could purchase Dalia Surveillance Equipment Co. for only $800,000, despite its $1.5 million valuation.  Boddy suggested they split the cost 50/50 and be equal stakeholders.  Mustard showed interest in pursuing the opportunity with Boddy, but he could only contribute $200,000, which would involve him taking out a line of credit against his home.   Boddy suggested that Mustard find a third party to contribute the additional $200,000 needed. Boddy cautioned Mustard however, that Mustard should only get someone he can fully trust since the person would get a 25% stake in the company."
     },
     {
         "id": "93",
-        "title": "Mustard",
+        "title": "Wadsworth",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard contacted Walter Boddy one week after their second meeting at Connor Larkin\u2019s pub in Essex.  Mustard told Boddy that he had found a third party to contribute the $200,000 needed to purchase Dalia Surveillance Equipment Company along with Boddy\u2019s $400,000 and Mustard\u2019s $200,000.  The man\u2019s name was Scott Plum and Mustard claims he could be trusted as he was the husband of one of his employees, Christine Scarlet.  Boddy said this was fine and that he would draft up contracts for the sale and then get back in touch with Mustard."
+        "column": "set8.0",
+        "contents": "Source reports that a gun owned by Walter Boddy was missing from the Study of the main room of Boddy Estate.  The gun was typically kept in a drawer of the desk found in the study."
     },
     {
         "id": "94",
-        "title": "Plum",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum agreed to contribute $200,000 to match Mustard's contribution towards the purchase of Dalia Surveillance Equipment Company as he was in debt.   Plum was about to lose his house to foreclosure so he was going to put it up against a loan as collateral and take out a $200,000 black market loan to get the money."
+        "column": "set8.0",
+        "contents": "Source reports that Adam Mustard contacted Walter Boddy one week after their second meeting at Connor Larkin\u2019s pub in Essex.  Mustard told Boddy that he had found a third party to contribute the $200,000 needed to purchase Dalia Surveillance Equipment Company along with Boddy\u2019s $400,000 and Mustard\u2019s $200,000.  The man\u2019s name was Scott Plum and Mustard claims he could be trusted as he was the husband of one of his employees, Christine Scarlet.  Boddy said this was fine and that he would draft up contracts for the sale and then get back in touch with Mustard."
     },
     {
         "id": "95",
-        "title": "Police",
+        "title": "Plum",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Source reports that several empty boxes of chocolate chip cookie mix were found in the trash in the kitchen of the main building of Boddy Estate.  There were also about 4 dozen cookies sitting on a tray that was half full."
+        "column": "set8.0",
+        "contents": "Source reports that Scott Plum agreed to contribute $200,000 to match Mustard's contribution towards the purchase of Dalia Surveillance Equipment Company as he was in debt.   Plum was about to lose his house to foreclosure so he was going to put it up against a loan as collateral and take out a $200,000 black market loan to get the money."
     },
     {
         "id": "96",
         "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Police confirm that the ring Christine Scarlet was wearing was a Tiffany & Co Model 321 diamond engagement ring.  "
+        "column": "set8.0",
+        "contents": "Source reports that several empty boxes of chocolate chip cookie mix were found in the trash in the kitchen of the main building of Boddy Estate.  There were also about 4 dozen cookies sitting on a tray that was half full."
     },
     {
         "id": "97",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that Walter Boddy met with Adam Mustard and Scott Plum at Connor Larkin\u2019s pub, one day after Mustard told Boddy that Plum could contribute the additional funds needed to purchase Dalia Surveillance Equipment Company.  Mustard introduced Plum to Boddy as he'd agreed to be a part of the business deal.  During this meeting, Boddy explained that since Mustard and Plum\u2019s wife, Christine Scarlet, both worked for Dalia, they could be exposed to insider information trading charges if their names were on the sales contracts. \n\nSource claims neither Mustard nor Plum were legally savvy, but they did not want to expose themselves to potential legal charges, so they agreed to Boddy\u2019s solution.  They signed over their power of attorney for dealing with the purchase or sale of Dalia to Boddy so he would be the only one that needed to sign the contract.  Boddy had already prepared this contract and brought it with him for them to sign.  Source reports that this decision is what eventually led to Boddy being able to double-cross Mustard and Plum."
+        "column": "set8.0",
+        "contents": "Police confirm that the ring Christine Scarlet was wearing was a Tiffany & Co Model 321 diamond engagement ring.  "
     },
     {
         "id": "98",
         "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that Scott Plum gave Adam Mustard a cashier\u2019s check for $200,000 to be used towards the purchase of Dalia Surveillance Equipment Company.  Mustard deposited this check in his account at his bank, Dagobah Finance."
+        "column": "set8.0",
+        "contents": "Source reports that Walter Boddy met with Adam Mustard and Scott Plum at Connor Larkin\u2019s pub, one day after Mustard told Boddy that Plum could contribute the additional funds needed to purchase Dalia Surveillance Equipment Company.  Mustard introduced Plum to Boddy as he'd agreed to be a part of the business deal.  During this meeting, Boddy explained that since Mustard and Plum\u2019s wife, Christine Scarlet, both worked for Dalia, they could be exposed to insider information trading charges if their names were on the sales contracts. \n\nSource claims neither Mustard nor Plum were legally savvy, but they did not want to expose themselves to potential legal charges, so they agreed to Boddy\u2019s solution.  They signed over their power of attorney for dealing with the purchase or sale of Dalia to Boddy so he would be the only one that needed to sign the contract.  Boddy had already prepared this contract and brought it with him for them to sign.  Source reports that this decision is what eventually led to Boddy being able to double-cross Mustard and Plum."
     },
     {
         "id": "99",
         "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setMustard",
-        "contents": "Source reports that on Saturday, June 4th, while driving to visit Walter Boddy at Boddy Estates, Adam Mustard received a call from his bank, Dagobah Finance, requesting a transfer of $400,000 from his account to the account of Walter D. Boddy.   Mustard approved the transfer assuming this meant that they were going to successfully purchase Dalia Surveillance Equipment Company.  "
+        "column": "set8.0",
+        "contents": "Source reports that Scott Plum gave Adam Mustard a cashier\u2019s check for $200,000 to be used towards the purchase of Dalia Surveillance Equipment Company.  Mustard deposited this check in his account at his bank, Dagobah Finance."
     },
     {
         "id": "100",
-        "title": "Police",
+        "title": "Mustard",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Security footage revealed that a heavyset Indian male entered the bathroom of the main building of Boddy Estate just before 8:30AM on Sunday, June 5th.  The man set down a bag of groceries and then jumped back as if he'd been startled by something in the bathtub."
+        "column": "set8.0",
+        "contents": "Source reports that on Saturday, June 4th, while driving to visit Walter Boddy at Boddy Estates, Adam Mustard received a call from his bank, Dagobah Finance, requesting a transfer of $400,000 from his account to the account of Walter D. Boddy.   Mustard approved the transfer assuming this meant that they were going to successfully purchase Dalia Surveillance Equipment Company.  "
     },
     {
         "id": "101",
         "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Police found a gift receipt for a Rolex watch purchased 2 months ago by Jill White on Boddy's desk in the study among a stack of folders."
+        "column": "set8.0",
+        "contents": "Security footage revealed that a heavyset Indian male entered the bathroom of the main building of Boddy Estate just before 8:30AM on Sunday, June 5th.  The man set down a bag of groceries and then jumped back as if he'd been startled by something in the bathtub."
     },
     {
         "id": "102",
         "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setPolice",
-        "contents": "Source provides descriptions of all 6 house guests of Walter Boddy.  Adam Mustard was a Caucasian Male who was 6'0\" tall and 185 pounds with blonde hair and was 45 years old.  Peacock was a Caucasian female who was 5'5\" tall, weighed 140 pounds with brown hair and was 50 years old.  Antonio Green was an African American male, 41 years old who was 6'4\" tall, weighed 220 pounds with brown hair.  Scott Plum was an Indian Male, who was 32 years old, 5'11\" and weighed 180 pounds with blonde hair.  Christine Scarlet was a Latin American female who was 35 years old, 5'10\" tall, weighing 110 pounds with brown hair.  Jill white was an African American female, who was 5'4\" tall, weight 100 pounds, 56 years old with grey hair."
+        "column": "set8.0",
+        "contents": "Police found a gift receipt for a Rolex watch purchased 2 months ago by Jill White on Boddy's desk in the study among a stack of folders."
     },
     {
         "id": "103",
-        "title": "Security Camera",
+        "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "setSecurity Camera",
-        "contents": "Security footage reveals that all six guests, Walter Boddy, Yvette and Wadsworth entered the dining room at 4:00PM on Saturday, June 4th."
+        "column": "set8.0",
+        "contents": "Source provides descriptions of all 6 house guests of Walter Boddy.  Adam Mustard was a Caucasian Male who was 6'0\" tall and 185 pounds with blonde hair and was 45 years old.  Peacock was a Caucasian female who was 5'5\" tall, weighed 140 pounds with brown hair and was 50 years old.  Antonio Green was an African American male, 41 years old who was 6'4\" tall, weighed 220 pounds with brown hair.  Scott Plum was an Indian Male, who was 32 years old, 5'11\" and weighed 180 pounds with blonde hair.  Christine Scarlet was a Latin American female who was 35 years old, 5'10\" tall, weighing 110 pounds with brown hair.  Jill white was an African American female, who was 5'4\" tall, weight 100 pounds, 56 years old with grey hair."
     },
     {
         "id": "104",
-        "title": "Brauman",
+        "title": "Security Camera",
         "date": "Sunday 11:45AM",
-        "column": "setBrauman",
-        "contents": "Source provided a list of notable items found in various rooms of the main building of Boddy Estate.  List included the following:\nConservatory: Fern plant, Cactus plant, Small glass table, potting supplies, and binoculars.\nLibrary: DVD set, television, set of chairs, books, laptop computer, two wood tables, aquarium with fish, and couch\nDining room: wood table with unique claw foot leg design, dinner table, multiple chairs, serving cart, aquarium with fish, buffet with china, hutch, and porcelain tea set\nKitchen: center island with cabinets underneath, microwave, small table with two chairs, serving cart, knife set, hutch\nLounge: safe, couch, piano, reclining chairs, fireplace, drink cart, coffee table, two end tables\nTheatre: \"Clue\" movie reel, \"Wall-E\" movie reel, four trash cans, stadium seating, popcorn machine\nBilliard room: pool table, bar and stools, cabinets above bar, piano, drum set, pool cues\nStudy: Desk"
+        "column": "set8.0",
+        "contents": "Security footage reveals that all six guests, Walter Boddy, Yvette and Wadsworth entered the dining room at 4:00PM on Saturday, June 4th."
     },
     {
         "id": "105",
-        "title": "Peacock",
+        "title": "Brauman",
         "date": "Sunday 11:45AM",
-        "column": "setPeacock",
-        "contents": "Source reports seeing a brown-haired woman in her 30's enter the billiard room with an African American man at 5:30PM on Saturday, June 4th after dinner ended."
+        "column": "set8.0",
+        "contents": "Source provided a list of notable items found in various rooms of the main building of Boddy Estate.  List included the following:\nConservatory: Fern plant, Cactus plant, Small glass table, potting supplies, and binoculars.\nLibrary: DVD set, television, set of chairs, books, laptop computer, two wood tables, aquarium with fish, and couch\nDining room: wood table with unique claw foot leg design, dinner table, multiple chairs, serving cart, aquarium with fish, buffet with china, hutch, and porcelain tea set\nKitchen: center island with cabinets underneath, microwave, small table with two chairs, serving cart, knife set, hutch\nLounge: safe, couch, piano, reclining chairs, fireplace, drink cart, coffee table, two end tables\nTheatre: \"Clue\" movie reel, \"Wall-E\" movie reel, four trash cans, stadium seating, popcorn machine\nBilliard room: pool table, bar and stools, cabinets above bar, piano, drum set, pool cues\nStudy: Desk"
     },
     {
         "id": "106",
-        "title": "White",
+        "title": "Peacock",
         "date": "Sunday 11:45AM",
-        "column": "setWhite",
-        "contents": "Source reports that Jill White found records of plane tickets and hotel rooms that Walter Boddy had recently purchased for himself and a woman name Christine Scarlet to take a trip to multiple destinations around the world.  She found this information on a laptop computer in the study, shortly after 3:05AM on Sunday, June 5th.  White assumed that Christine Scarlet was the brown-haired woman who Boddy told her he was now dating."
+        "column": "set8.0",
+        "contents": "Source reports seeing a brown-haired woman in her 30's enter the billiard room with an African American man at 5:30PM on Saturday, June 4th after dinner ended."
     },
     {
         "id": "107",
-        "title": "Police",
-        "date": "Sunday 12:00PM",
-        "column": "setPolice",
-        "contents": "Police spoke with Dalia Surveillance Equipment Company to confirm that Adam Mustard was the supervisor in charge of monitoring Boddy's camera system.  They also confirmed they had a new patent that was going to be publically disclosed in the near future that would increase the company's valuation."
+        "title": "White",
+        "date": "Sunday 11:45AM",
+        "column": "set8.0",
+        "contents": "Source reports that Jill White found records of plane tickets and hotel rooms that Walter Boddy had recently purchased for himself and a woman name Christine Scarlet to take a trip to multiple destinations around the world.  She found this information on a laptop computer in the study, shortly after 3:05AM on Sunday, June 5th.  White assumed that Christine Scarlet was the brown-haired woman who Boddy told her he was now dating."
     },
     {
         "id": "108",
         "title": "Police",
         "date": "Sunday 12:00PM",
-        "column": "setPolice",
-        "contents": "Executives at Dagobah Finance Bank confirm that Adam Mustard recently took out a $200,000 loan listing his home as collateral.  They also confirmed that Mustard recently deposited $200,000 from Scott Plum and transferred $400,000 to Walter Boddy shortly after the deposit was made."
+        "column": "set9.0",
+        "contents": "Police spoke with Dalia Surveillance Equipment Company to confirm that Adam Mustard was the supervisor in charge of monitoring Boddy's camera system.  They also confirmed they had a new patent that was going to be publically disclosed in the near future that would increase the company's valuation."
     },
     {
         "id": "109",
-        "title": "Peacock",
+        "title": "Police",
         "date": "Sunday 12:00PM",
-        "column": "setPeacock",
-        "contents": "Source reports seeing an African American woman enter the kitchen at 6:00PM on Saturday, June 4th"
+        "column": "set9.0",
+        "contents": "Executives at Dagobah Finance Bank confirm that Adam Mustard recently took out a $200,000 loan listing his home as collateral.  They also confirmed that Mustard recently deposited $200,000 from Scott Plum and transferred $400,000 to Walter Boddy shortly after the deposit was made."
     },
     {
         "id": "110",
-        "title": "Mustard",
+        "title": "Peacock",
         "date": "Sunday 12:00PM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard arrived at Boddy Estate at 2:00PM on Saturday, June 4th.  Upon arrival he was escorted by one of Boddy\u2019s servants (an Indian man named Wadsworth) to the lounge of the main building of the estate. \n\nMustard thought he was invited to discuss business and meet with Walter Boddy and Scott Plum regarding their shared purchase of Dalia Surveillance Equipment Company.  He claims he was surprised to see that Christine Scarlet, Plum\u2019s wife, was also present in the lounge, along with an African American man, and two females that were both in their mid-50\u2019s whom he did not recognize."
+        "column": "set9.0",
+        "contents": "Source reports seeing an African American woman enter the kitchen at 6:00PM on Saturday, June 4th"
     },
     {
         "id": "111",
-        "title": "Police",
+        "title": "Mustard",
         "date": "Sunday 12:00PM",
-        "column": "setPolice",
-        "contents": "Police discovered that Walter Boddy, Christine Scarlet, Scott Plum, and Jill White were all members of the Onset Bay Marina Yachting Club when they were searching for connections between suspects and the murder victim"
+        "column": "set9.0",
+        "contents": "Source reports that Adam Mustard arrived at Boddy Estate at 2:00PM on Saturday, June 4th.  Upon arrival he was escorted by one of Boddy\u2019s servants (an Indian man named Wadsworth) to the lounge of the main building of the estate. \n\nMustard thought he was invited to discuss business and meet with Walter Boddy and Scott Plum regarding their shared purchase of Dalia Surveillance Equipment Company.  He claims he was surprised to see that Christine Scarlet, Plum\u2019s wife, was also present in the lounge, along with an African American man, and two females that were both in their mid-50\u2019s whom he did not recognize."
     },
     {
         "id": "112",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 12:00PM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard was given a card from Walter Boddy during dinner at Boddy Estate on Saturday, June 4th.  The card told Mustard to wait to meet Boddy after dinner in the study of the main building of Boddy Estate.  Mustard reportedly went straight to the study after dinner was over (5:30PM) and waited for Boddy to arrive."
+        "column": "set9.0",
+        "contents": "Police discovered that Walter Boddy, Christine Scarlet, Scott Plum, and Jill White were all members of the Onset Bay Marina Yachting Club when they were searching for connections between suspects and the murder victim"
     },
     {
         "id": "113",
-        "title": "Scarlet",
+        "title": "Mustard",
         "date": "Sunday 12:00PM",
-        "column": "setScarlet",
-        "contents": "Source reports that Christine Scarlet and Scott Plum were married but had separated when she started dating Walter Boddy.  After a week dating Boddy, Scarlet had filed the papers to divorce Scott Plum, expecting that Boddy would be proposing to her soon.  The reason given for the divorce was irreconcilable differences with Scarlet stating that \"she wasn't happy with Scott anymore because he was broke and couldn't provide her with the life she deserved\" after she found out that their home was being foreclosed upon."
+        "column": "set9.0",
+        "contents": "Source reports that Adam Mustard was given a card from Walter Boddy during dinner at Boddy Estate on Saturday, June 4th.  The card told Mustard to wait to meet Boddy after dinner in the study of the main building of Boddy Estate.  Mustard reportedly went straight to the study after dinner was over (5:30PM) and waited for Boddy to arrive."
     },
     {
         "id": "114",
-        "title": "Brauman",
+        "title": "Scarlet",
         "date": "Sunday 12:00PM",
-        "column": "setBrauman",
-        "contents": "There are no tables located in the foyer or hallway of the main building of Boddy Estate."
+        "column": "set9.0",
+        "contents": "Source reports that Christine Scarlet and Scott Plum were married but had separated when she started dating Walter Boddy.  After a week dating Boddy, Scarlet had filed the papers to divorce Scott Plum, expecting that Boddy would be proposing to her soon.  The reason given for the divorce was irreconcilable differences with Scarlet stating that \"she wasn't happy with Scott anymore because he was broke and couldn't provide her with the life she deserved\" after she found out that their home was being foreclosed upon."
     },
     {
         "id": "115",
-        "title": "Scarlet",
+        "title": "Brauman",
         "date": "Sunday 12:00PM",
-        "column": "setScarlet",
-        "contents": "Source recalls seeing a brown-haired, Caucasian woman, weighing 140 pounds who peeking her head out of the lounge and into the foyer of the main building of Boddy Estate.  This event took place shortly before 9:00PM on Saturday, June 4th.  The brown-haired woman did not leave the lounge, but source believes she saw the woman was holding a gun."
+        "column": "set9.0",
+        "contents": "There are no tables located in the foyer or hallway of the main building of Boddy Estate."
     },
     {
         "id": "116",
-        "title": "Police",
+        "title": "Scarlet",
         "date": "Sunday 12:00PM",
-        "column": "setPolice",
-        "contents": "Source reports that a search of a laptop, found securely chained to the desk in the library, revealed two emails that had been sent to Dagobah Finance, sent by Antonio Green.  The first email contained contracts that transferred ownership of the Dalia Surveillance Equipment Company from Katie Peacock to Walter Boddy and 2 undisclosed parties.  The second email contained contracts that transferred ownership of the companies from Walter Boddy and the 2 undisclosed parties to Jill White.\n\nAdditional emails found on the laptop included messages from Antonio Green which were sent discussing terms of the contract to various parties at Dagobah Finance.  These emails were sent at 1:55AM, 2:00AM, 2:05AM, 2:07AM, 2:08AM, and 2:17AM on Sunday, June 5th."
+        "column": "set9.0",
+        "contents": "Source recalls seeing a brown-haired, Caucasian woman, weighing 140 pounds who peeking her head out of the lounge and into the foyer of the main building of Boddy Estate.  This event took place shortly before 9:00PM on Saturday, June 4th.  The brown-haired woman did not leave the lounge, but source believes she saw the woman was holding a gun."
     },
     {
         "id": "117",
-        "title": "Scarlet",
+        "title": "Police",
         "date": "Sunday 12:00PM",
-        "column": "setScarlet",
-        "contents": "Source claims Jill White is the woman that was dating Boddy who accused Christine Scarlet of having an affair and then smacked her in the face on the night of Saturday, June 4th."
+        "column": "set9.0",
+        "contents": "Source reports that a search of a laptop, found securely chained to the desk in the library, revealed two emails that had been sent to Dagobah Finance, sent by Antonio Green.  The first email contained contracts that transferred ownership of the Dalia Surveillance Equipment Company from Katie Peacock to Walter Boddy and 2 undisclosed parties.  The second email contained contracts that transferred ownership of the companies from Walter Boddy and the 2 undisclosed parties to Jill White.\n\nAdditional emails found on the laptop included messages from Antonio Green which were sent discussing terms of the contract to various parties at Dagobah Finance.  These emails were sent at 1:55AM, 2:00AM, 2:05AM, 2:07AM, 2:08AM, and 2:17AM on Sunday, June 5th."
     },
     {
         "id": "118",
-        "title": "White",
+        "title": "Scarlet",
         "date": "Sunday 12:00PM",
-        "column": "setWhite",
-        "contents": "Source claims that Jill White received an invitation a few days ago to visit Boddy Estate on the day of Saturday, June 4th.  The invitation invited her to arrive at 2:00PM; however, source claims White called ahead and spoke with Henry Wadsworth so she could arrive at the house at 12:30PM on Saturday, June 4th to have lunch with Walter Boddy."
+        "column": "set9.0",
+        "contents": "Source claims Jill White is the woman that was dating Boddy who accused Christine Scarlet of having an affair and then smacked her in the face on the night of Saturday, June 4th."
     },
     {
         "id": "119",
         "title": "White",
         "date": "Sunday 12:00PM",
-        "column": "setWhite",
-        "contents": "Source claims that Jill White confessed to Walter Boddy that she loved him and wanted to do whatever she could to save their relationship when they met for lunch at Boddy Estate shortly after 12:30PM on Saturday, June 4th.  "
+        "column": "set9.0",
+        "contents": "Source claims that Jill White received an invitation a few days ago to visit Boddy Estate on the day of Saturday, June 4th.  The invitation invited her to arrive at 2:00PM; however, source claims White called ahead and spoke with Henry Wadsworth so she could arrive at the house at 12:30PM on Saturday, June 4th to have lunch with Walter Boddy."
     },
     {
         "id": "120",
         "title": "White",
         "date": "Sunday 12:00PM",
-        "column": "setWhite",
-        "contents": "Source claims that Walter Boddy told Jill White that he was under a great deal of stress trying to complete a business deal that would help secure their future financially.  Boddy then confessed to White that he had lost the vast majority of his fortune recently on a failed investment in a Japanese energy drink company and really needed this deal to go through or he may go bankrupt.  He had invited key stakeholders to visit his home that day to try and tie up all the loose ends on the deal.  White responded to Boddy that he did not need to worry about that because her parents had left her $2,000,000 when they died a year ago.  This conversation took place over a lunch at Boddy Estate on the afternoon of Saturday, June 4th."
+        "column": "set9.0",
+        "contents": "Source claims that Jill White confessed to Walter Boddy that she loved him and wanted to do whatever she could to save their relationship when they met for lunch at Boddy Estate shortly after 12:30PM on Saturday, June 4th.  "
     },
     {
         "id": "121",
-        "title": "Mustard",
+        "title": "White",
         "date": "Sunday 12:00PM",
-        "column": "setMustard",
-        "contents": "Source claims that Adam Mustard was on his way home from Boddy Estate on Saturday June 4th, when he decided he would not be able to fall asleep after all that had transpired that night.  To pass the time Mustard drove around for a bit just thinking to himself.  Then at about 11:00PM Mustard visited a local Chili's restaurant in Essex to get a late dinner and had several presidente margaritas at the bar until around 1:45AM when he finally headed home for the night."
+        "column": "set9.0",
+        "contents": "Source claims that Walter Boddy told Jill White that he was under a great deal of stress trying to complete a business deal that would help secure their future financially.  Boddy then confessed to White that he had lost the vast majority of his fortune recently on a failed investment in a Japanese energy drink company and really needed this deal to go through or he may go bankrupt.  He had invited key stakeholders to visit his home that day to try and tie up all the loose ends on the deal.  White responded to Boddy that he did not need to worry about that because her parents had left her $2,000,000 when they died a year ago.  This conversation took place over a lunch at Boddy Estate on the afternoon of Saturday, June 4th."
     },
     {
         "id": "122",
-        "title": "White",
+        "title": "Mustard",
         "date": "Sunday 12:00PM",
-        "column": "setWhite",
-        "contents": "Source claims that Jill White and Walter Boddy were eating lunch together from shortly after 12:30PM until 1:30PM.  After lunch, White moved to the lounge as other guests invited by Walter Boddy began arriving at 2:00PM on Saturday, June 4th."
+        "column": "set9.0",
+        "contents": "Source claims that Adam Mustard was on his way home from Boddy Estate on Saturday June 4th, when he decided he would not be able to fall asleep after all that had transpired that night.  To pass the time Mustard drove around for a bit just thinking to himself.  Then at about 11:00PM Mustard visited a local Chili's restaurant in Essex to get a late dinner and had several presidente margaritas at the bar until around 1:45AM when he finally headed home for the night."
     },
     {
         "id": "123",
         "title": "White",
-        "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source claims that Walter Boddy visited Jill White in the kitchen on Saturday, June 4th at 7:00PM.  During the meeting Boddy told White that he had a business opportunity that was sure to make them a ton of money and relieve all their worries about their future together.  Boddy told White that he had received information that the Dalia Surveillance Equipment Company, which was currently valued at $1.5 million, was about to secure a new patent that would triple the companies value.  He suggested that White purchase the company using the money her parents left her prior to the patent information going public.  Boddy told White that if she offered $2 million for the company the shareholders would have no choice but to sell.  White protested the idea, saying that the $2 million she inherited was enough for them to live comfortably and she didn't want to risk losing it.   White however agreed to the deal after Boddy told her that if she loved him she would trust him that this was what was best to secure their future together."
+        "date": "Sunday 12:00PM",
+        "column": "set9.0",
+        "contents": "Source claims that Jill White and Walter Boddy were eating lunch together from shortly after 12:30PM until 1:30PM.  After lunch, White moved to the lounge as other guests invited by Walter Boddy began arriving at 2:00PM on Saturday, June 4th."
     },
     {
         "id": "124",
-        "title": "Scarlet",
+        "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setScarlet",
-        "contents": "Source reports that when Christine Scarlet was questioned regarding Scott Plum's information that the two were rekindling their relationship, Scarlet denied it claiming it would never happen, although she claims that she told Plum she would think about getting back together when he gave her a diamond ring from Tiffany & Co.. She had not mentioned it previously as she did not want Boddy to know she had accepted such a lavish gift from Plum."
+        "column": "set10.0",
+        "contents": "Source claims that Walter Boddy visited Jill White in the kitchen on Saturday, June 4th at 7:00PM.  During the meeting Boddy told White that he had a business opportunity that was sure to make them a ton of money and relieve all their worries about their future together.  Boddy told White that he had received information that the Dalia Surveillance Equipment Company, which was currently valued at $1.5 million, was about to secure a new patent that would triple the companies value.  He suggested that White purchase the company using the money her parents left her prior to the patent information going public.  Boddy told White that if she offered $2 million for the company the shareholders would have no choice but to sell.  White protested the idea, saying that the $2 million she inherited was enough for them to live comfortably and she didn't want to risk losing it.   White however agreed to the deal after Boddy told her that if she loved him she would trust him that this was what was best to secure their future together."
     },
     {
         "id": "125",
-        "title": "White",
+        "title": "Scarlet",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that after agreeing to Walter Boddy's proposal to purchase the Dalia Surveillance she transferred $2 million to Walter Boddy using a laptop computer in the kitchen at 7:15PM on Saturday, June 4th.  She then signed a contract that Boddy provided to her to purchase Dalia Surveillance Equipment Company using the $2 million she had transferred to Boddy to broker the deal.  "
+        "column": "set10.0",
+        "contents": "Source reports that when Christine Scarlet was questioned regarding Scott Plum's information that the two were rekindling their relationship, Scarlet denied it claiming it would never happen, although she claims that she told Plum she would think about getting back together when he gave her a diamond ring from Tiffany & Co.. She had not mentioned it previously as she did not want Boddy to know she had accepted such a lavish gift from Plum."
     },
     {
         "id": "126",
         "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that after Jill White signed the contract to purchase Dalia Surveillance Equipment Company, Walter Boddy left the kitchen at 7:30PM on Saturday, June 4th.  White claims Boddy told her he was going to meet with Antonio Green, another guest at Boddy's home that evening, who was Boddy's broker that was going to process the contracts to finalize the sale.  Prior to leaving the kitchen Boddy told White to wait for him there and he would return once the deal was done so they could celebrate the rest of the evening together."
+        "column": "set10.0",
+        "contents": "Source reports that after agreeing to Walter Boddy's proposal to purchase the Dalia Surveillance she transferred $2 million to Walter Boddy using a laptop computer in the kitchen at 7:15PM on Saturday, June 4th.  She then signed a contract that Boddy provided to her to purchase Dalia Surveillance Equipment Company using the $2 million she had transferred to Boddy to broker the deal.  "
     },
     {
         "id": "127",
         "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that Walter Boddy met with Jill White in the kitchen for the second time on the evening of Saturday, June 4th at 11:15PM."
+        "column": "set10.0",
+        "contents": "Source reports that after Jill White signed the contract to purchase Dalia Surveillance Equipment Company, Walter Boddy left the kitchen at 7:30PM on Saturday, June 4th.  White claims Boddy told her he was going to meet with Antonio Green, another guest at Boddy's home that evening, who was Boddy's broker that was going to process the contracts to finalize the sale.  Prior to leaving the kitchen Boddy told White to wait for him there and he would return once the deal was done so they could celebrate the rest of the evening together."
     },
     {
         "id": "128",
         "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source claims that after providing White with the sales contracts on the night of Saturday, June 4th, Boddy told White that he no longer wanted to be in a relationship with her as he was in love with another, much younger, woman.  White claims she was shocked by this news and \"nearly had a heart attack\" when she heard him say it.  White responded to Boddy by demanding he get her money back, stating she \"didn't want some stupid surveillance company, [she] wanted her money back!\"  Boddy told her it was too late, but she owned the Dalia Surveillance Equipment Company and she could do with it as she pleased."
+        "column": "set10.0",
+        "contents": "Source reports that Walter Boddy met with Jill White in the kitchen for the second time on the evening of Saturday, June 4th at 11:15PM."
     },
     {
         "id": "129",
-        "title": "Mustard",
+        "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setMustard",
-        "contents": "Source reports Adam Mustard claims to have seen a man who was 5'11\" tall and weighed 180 pounds speaking with a brown-haired woman in the conservatory shortly after 8:46PM on Saturday, June 4th.  Mustard viewed the two individuals speaking to one another through the keyhole in the door of the conservatory.  Mustard claims that the man pulled a handgun out and a pair of gloves and showed them to the woman.  Mustard then claims he thought he would not want the man to catch him eavesdropping on his conversation so he left the foyer and exited the main building of Boddy Estate at 9:00PM to head home for the night."
+        "column": "set10.0",
+        "contents": "Source claims that after providing White with the sales contracts on the night of Saturday, June 4th, Boddy told White that he no longer wanted to be in a relationship with her as he was in love with another, much younger, woman.  White claims she was shocked by this news and \"nearly had a heart attack\" when she heard him say it.  White responded to Boddy by demanding he get her money back, stating she \"didn't want some stupid surveillance company, [she] wanted her money back!\"  Boddy told her it was too late, but she owned the Dalia Surveillance Equipment Company and she could do with it as she pleased."
     },
     {
         "id": "130",
-        "title": "White",
+        "title": "Mustard",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that after Walter Boddy broke off his relationship with Jill White on Saturday, June 4th, White told Boddy that if the other woman he was seeing was just a fling she was okay with it and they could get past it as a couple.  Boddy told her however it was no fling and that he was going to propose to her tonight and take a lavish trip around the world to celebrate.  White was so furious after hearing this information that she took a carving knife and hurled it at Boddy, who ducked out of the way as the knife flew past and stuck into the wall behind him.  White then stormed out of the room at 11:45PM, hoping Boddy would chase after her, but he did not."
+        "column": "set10.0",
+        "contents": "Source reports Adam Mustard claims to have seen a man who was 5'11\" tall and weighed 180 pounds speaking with a brown-haired woman in the conservatory shortly after 8:46PM on Saturday, June 4th.  Mustard viewed the two individuals speaking to one another through the keyhole in the door of the conservatory.  Mustard claims that the man pulled a handgun out and a pair of gloves and showed them to the woman.  Mustard then claims he thought he would not want the man to catch him eavesdropping on his conversation so he left the foyer and exited the main building of Boddy Estate at 9:00PM to head home for the night."
     },
     {
         "id": "131",
-        "title": "Police",
+        "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setPolice",
-        "contents": "Police spoke with officials at the Mohegan Sun Casino who confirmed that no bets for $800,000 were placed by any persons within the last 2 weeks on their blackjack tables.  The table limit is set at $2000, so a bet that large would have needed approval from a pit boss."
+        "column": "set10.0",
+        "contents": "Source reports that after Walter Boddy broke off his relationship with Jill White on Saturday, June 4th, White told Boddy that if the other woman he was seeing was just a fling she was okay with it and they could get past it as a couple.  Boddy told her however it was no fling and that he was going to propose to her tonight and take a lavish trip around the world to celebrate.  White was so furious after hearing this information that she took a carving knife and hurled it at Boddy, who ducked out of the way as the knife flew past and stuck into the wall behind him.  White then stormed out of the room at 11:45PM, hoping Boddy would chase after her, but he did not."
     },
     {
         "id": "132",
-        "title": "Peacock",
+        "title": "Police",
         "date": "Sunday 12:15PM",
-        "column": "setPeacock",
-        "contents": "Source reports that shortly before 9PM on Saturday, June 4th, Katie Peacock was going to leave the theatre to use the bathroom when she noticed a blonde haired man standing outside the conservatory looking through the keyhole of the door.  She claims it \"seemed like he was up to no good\" so she returned to the theatre not wanting him to see that she had seen him."
+        "column": "set10.0",
+        "contents": "Police spoke with officials at the Mohegan Sun Casino who confirmed that no bets for $800,000 were placed by any persons within the last 2 weeks on their blackjack tables.  The table limit is set at $2000, so a bet that large would have needed approval from a pit boss."
     },
     {
         "id": "133",
-        "title": "White",
+        "title": "Peacock",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that after leaving the kitchen where Walter Boddy broke off his relationship with Jill White, Jill White decided to confront the woman that Boddy said he was in love with.  She checked two rooms, but does not recall which they were since she was so angry at the time and eventually found a brown-haired Latin American woman who she figured was Boddy's new girlfriend in the conservatory, at 11:45PM.   White confronted the woman who then admitted to being Boddy's other lover so White left the conservatory in a furious rage.  White claims she wasn't thinking clearly and wanted to cause Boddy the same hurt that he caused her, especially after tricking her into giving away all her inheritance for some \"dumb company.\""
+        "column": "set10.0",
+        "contents": "Source reports that shortly before 9PM on Saturday, June 4th, Katie Peacock was going to leave the theatre to use the bathroom when she noticed a blonde haired man standing outside the conservatory looking through the keyhole of the door.  She claims it \"seemed like he was up to no good\" so she returned to the theatre not wanting him to see that she had seen him."
     },
     {
         "id": "134",
         "title": "White",
         "date": "Sunday 12:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that when she returned to the kitchen at 11:50PM after confronting Walter Boddy's lover in the conservatory, Jill White found that Walter Boddy had left the kitchen.   White was immediately disheartened so she began eating the chocolate chip cookies she baked previously until she felt physically ill from consuming too many of them."
+        "column": "set10.0",
+        "contents": "Source reports that after leaving the kitchen where Walter Boddy broke off his relationship with Jill White, Jill White decided to confront the woman that Boddy said he was in love with.  She checked two rooms, but does not recall which they were since she was so angry at the time and eventually found a brown-haired Latin American woman who she figured was Boddy's new girlfriend in the conservatory, at 11:45PM.   White confronted the woman who then admitted to being Boddy's other lover so White left the conservatory in a furious rage.  White claims she wasn't thinking clearly and wanted to cause Boddy the same hurt that he caused her, especially after tricking her into giving away all her inheritance for some \"dumb company.\""
     },
     {
         "id": "135",
         "title": "White",
-        "date": "Sunday 12:35PM",
-        "column": "setWhite",
-        "contents": "Source reports that Jill White visited the study of the main building of Boddy Estate after walking around outside from 12:00AM until 3:00AM on Sunday, June 5th.  White claimed she visited the study looking for Walter Boddy as she knew he would spend many nights working there late into the night.  Boddy was not in the study when she arrived there at 3:05AM, however a laptop computer was sitting on his desk."
+        "date": "Sunday 12:15PM",
+        "column": "set10.0",
+        "contents": "Source reports that when she returned to the kitchen at 11:50PM after confronting Walter Boddy's lover in the conservatory, Jill White found that Walter Boddy had left the kitchen.   White was immediately disheartened so she began eating the chocolate chip cookies she baked previously until she felt physically ill from consuming too many of them."
     },
     {
         "id": "136",
         "title": "White",
         "date": "Sunday 12:35PM",
-        "column": "setWhite",
-        "contents": "Source reports that after finding airline and hotel records for Walter Boddy and Christine Scarlet on a laptop computer in the study, Jill White threw the computer into the fireplace in the study in a self-described \"fit of rage.\"  White then left Boddy Estate and headed home around 3:15AM, on Sunday, June 5th, fearing that if she stayed and ran into Boddy or Scarlet that evening she may do or say something she would regret."
+        "column": "set11.0",
+        "contents": "Source reports that Jill White visited the study of the main building of Boddy Estate after walking around outside from 12:00AM until 3:00AM on Sunday, June 5th.  White claimed she visited the study looking for Walter Boddy as she knew he would spend many nights working there late into the night.  Boddy was not in the study when she arrived there at 3:05AM, however a laptop computer was sitting on his desk."
     },
     {
         "id": "137",
-        "title": "Brauman",
+        "title": "White",
         "date": "Sunday 12:35PM",
-        "column": "setBrauman",
-        "contents": "Source reports that a wood table with a distinct claw foot design on the legs was located in the Dining Room of the main building of Boddy Estate.  A glass bottle, labeled as \"Poison\", was found inside the drawer of the table; however, the bottle was empty.  The label on the bottle said that the solution was a fast acting paint stripper that would kill someone almost instantly if ingested.  The solution is quick to evaporate when exposed to air and will completely dissolve in water."
+        "column": "set11.0",
+        "contents": "Source reports that after finding airline and hotel records for Walter Boddy and Christine Scarlet on a laptop computer in the study, Jill White threw the computer into the fireplace in the study in a self-described \"fit of rage.\"  White then left Boddy Estate and headed home around 3:15AM, on Sunday, June 5th, fearing that if she stayed and ran into Boddy or Scarlet that evening she may do or say something she would regret."
     },
     {
         "id": "138",
-        "title": "Police",
+        "title": "Brauman",
         "date": "Sunday 12:35PM",
-        "column": "setPolice",
-        "contents": "Police source reports that after an extensive search of the study of the main building of Boddy Estate, they concluded the murder did not take place in the study."
+        "column": "set11.0",
+        "contents": "Source reports that a wood table with a distinct claw foot design on the legs was located in the Dining Room of the main building of Boddy Estate.  A glass bottle, labeled as \"Poison\", was found inside the drawer of the table; however, the bottle was empty.  The label on the bottle said that the solution was a fast acting paint stripper that would kill someone almost instantly if ingested.  The solution is quick to evaporate when exposed to air and will completely dissolve in water."
     },
     {
         "id": "139",
-        "title": "Plum",
+        "title": "Police",
         "date": "Sunday 12:35PM",
-        "column": "setPlum",
-        "contents": "Source claims that Scott Plum was friends with Adam Mustard and that Mustard was the one who introduced Plum to Walter Boddy.  The introduction was made after Plum requested Mustard introduce him to Boddy.  He made this request as Plum's wife, Christine Scarlet, had told Plum that Boddy and Mustard were looking for a third party to finance the purchase of the Dalia Surveillance Equipment Company from Katie Peacock."
+        "column": "set11.0",
+        "contents": "Police source reports that after an extensive search of the study of the main building of Boddy Estate, they concluded the murder did not take place in the study."
     },
     {
         "id": "140",
         "title": "Plum",
         "date": "Sunday 12:35PM",
-        "column": "setPlum",
-        "contents": "Source claims that Scott Plum's house was under foreclosure so he urged Adam Mustard to let him in on the deal Mustard was making with Walter Boddy.  After Mustard explained the opportunity to Plum, Plum quickly agreed and shortly after gave Mustard the $200,000 needed to finance his portion of the deal.  Plum claims the deal was purchasing some company that was supposed to quickly triple in value after some new information about their products was released but that's all he knew."
+        "column": "set11.0",
+        "contents": "Source claims that Scott Plum was friends with Adam Mustard and that Mustard was the one who introduced Plum to Walter Boddy.  The introduction was made after Plum requested Mustard introduce him to Boddy.  He made this request as Plum's wife, Christine Scarlet, had told Plum that Boddy and Mustard were looking for a third party to finance the purchase of the Dalia Surveillance Equipment Company from Katie Peacock."
     },
     {
         "id": "141",
         "title": "Plum",
         "date": "Sunday 12:35PM",
-        "column": "setPlum",
-        "contents": "Source reports that Walter Boddy and Scott Plum met in the Dining Room at 7:30PM on Saturday, June 4th.  Boddy reportedly told Plum he had lost Plum's $200,000  gambling with it.  Plum was reportedly \"Blown Away\" by the news as he thought he had been invited to Boddy Estate to collect the gains on his investment, not find out he had lost it all.  Plum claimed he threatened Boddy because he was so furious, telling him he had better get his money back.  Boddy responded to the threat by saying that Plum knew there was a risk investing and if he had any issues he could take it up with Boddy's broker Antonio Green.  Source reports that Boddy then left Plum in the dining room around 8:00PM."
+        "column": "set11.0",
+        "contents": "Source claims that Scott Plum's house was under foreclosure so he urged Adam Mustard to let him in on the deal Mustard was making with Walter Boddy.  After Mustard explained the opportunity to Plum, Plum quickly agreed and shortly after gave Mustard the $200,000 needed to finance his portion of the deal.  Plum claims the deal was purchasing some company that was supposed to quickly triple in value after some new information about their products was released but that's all he knew."
     },
     {
         "id": "142",
         "title": "Plum",
         "date": "Sunday 12:35PM",
-        "column": "setPlum",
-        "contents": "Source reports that Adam Mustard and Scott Plum argued over how to deal with the news that Walter Boddy had lost their combined $400,000 investment in the Study shortly after 8:30PM on Saturday, June 4th.  The two men decided that Mustard would contact Plum's lawyer, Gregory Kenney, to see if they had an legal channels to recoup their money.  Mustard told Plum he would call Plum the following day after he had spoken with the lawyer to discuss their options and that he should go home until then before they did something they'd regret."
+        "column": "set11.0",
+        "contents": "Source reports that Walter Boddy and Scott Plum met in the Dining Room at 7:30PM on Saturday, June 4th.  Boddy reportedly told Plum he had lost Plum's $200,000  gambling with it.  Plum was reportedly \"Blown Away\" by the news as he thought he had been invited to Boddy Estate to collect the gains on his investment, not find out he had lost it all.  Plum claimed he threatened Boddy because he was so furious, telling him he had better get his money back.  Boddy responded to the threat by saying that Plum knew there was a risk investing and if he had any issues he could take it up with Boddy's broker Antonio Green.  Source reports that Boddy then left Plum in the dining room around 8:00PM."
     },
     {
         "id": "143",
         "title": "Plum",
         "date": "Sunday 12:35PM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum exited the study and the main building of Boddy Estate, via the East Entrance, at 8:45PM on Saturday, June 4th to leave for the evening."
+        "column": "set11.0",
+        "contents": "Source reports that Adam Mustard and Scott Plum argued over how to deal with the news that Walter Boddy had lost their combined $400,000 investment in the Study shortly after 8:30PM on Saturday, June 4th.  The two men decided that Mustard would contact Plum's lawyer, Gregory Kenney, to see if they had an legal channels to recoup their money.  Mustard told Plum he would call Plum the following day after he had spoken with the lawyer to discuss their options and that he should go home until then before they did something they'd regret."
     },
     {
         "id": "144",
-        "title": "Mustard",
+        "title": "Plum",
         "date": "Sunday 12:35PM",
-        "column": "setMustard",
-        "contents": "Source reports that Adam Mustard was told by Walter Boddy in the Study that Boddy had lost their collective investment on Saturday, June 4th in the Study of the main building of Boddy Estate.  According to Boddy, he needed $1.5 Million to purchase the Dalia Surveillance Equipment Company, which was $700,000 more than he had originally told Mustard it would cost.  Boddy told Mustard that as he had told Mustard in their previous meetings he had a connection to allow him to buy Dalia for the $800,000 he had told Mustard; however, that connection was a friend of Boddy's who worked as a blackjack dealer at a local casino called, Mohegan Sun.  "
+        "column": "set11.0",
+        "contents": "Source reports that Scott Plum exited the study and the main building of Boddy Estate, via the East Entrance, at 8:45PM on Saturday, June 4th to leave for the evening."
     },
     {
         "id": "145",
         "title": "Mustard",
         "date": "Sunday 12:35PM",
-        "column": "setMustard",
-        "contents": "Source reports that Walter Boddy reportedly had a deal with a friend who was a blackjack dealer at the Mohegan Sun casino where Boddy would place an $800,000 bet on one hand of blackjack, the dealer would let him win and then Boddy would later pay the dealer friend $100,000 in exchange for letting him win the hand of blackjack."
+        "column": "set11.0",
+        "contents": "Source reports that Adam Mustard was told by Walter Boddy in the Study that Boddy had lost their collective investment on Saturday, June 4th in the Study of the main building of Boddy Estate.  According to Boddy, he needed $1.5 Million to purchase the Dalia Surveillance Equipment Company, which was $700,000 more than he had originally told Mustard it would cost.  Boddy told Mustard that as he had told Mustard in their previous meetings he had a connection to allow him to buy Dalia for the $800,000 he had told Mustard; however, that connection was a friend of Boddy's who worked as a blackjack dealer at a local casino called, Mohegan Sun.  "
     },
     {
         "id": "146",
-        "title": "Police",
+        "title": "Mustard",
         "date": "Sunday 12:35PM",
-        "column": "setPolice",
-        "contents": "A traffic camera caught footage of a car registered to Adam Mustard running a red light at 1:59AM on Sunday, June 5th in the town of Essex.  The driver was a Caucasian male, with blonde hair."
+        "column": "set11.0",
+        "contents": "Source reports that Walter Boddy reportedly had a deal with a friend who was a blackjack dealer at the Mohegan Sun casino where Boddy would place an $800,000 bet on one hand of blackjack, the dealer would let him win and then Boddy would later pay the dealer friend $100,000 in exchange for letting him win the hand of blackjack."
     },
     {
         "id": "147",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 12:35PM",
-        "column": "setMustard",
-        "contents": "Source reports Adam Mustard was \"floored\" by the news that Walter Boddy had gambled away the money that Mustard and Scott Plum had provided.  Mustard claims that if he had known Boddy's \"connection\" to purchase Dalia was a crooked blackjack dealer he never would have given him the money in the first place.  Mustard admits that he threatened Boddy when he first heard the news, saying \"Walter you had better get us our money back or I'll make sure you pay for it in a more creative and violent manner!\"  Boddy responded to this threat by telling Mustard if he wanted to spend the night he could provide him with some other investments he knows of in the morning to recoup their losses.  Boddy then left Mustard alone in the study at 8:25PM."
+        "column": "set11.0",
+        "contents": "A traffic camera caught footage of a car registered to Adam Mustard running a red light at 1:59AM on Sunday, June 5th in the town of Essex.  The driver was a Caucasian male, with blonde hair."
     },
     {
         "id": "148",
-        "title": "Police",
-        "date": "Sunday 12:50PM",
-        "column": "setPolice",
-        "contents": "Police spoke with pub owner of Connor Larkin's  in Essex.  He confirmed receipts for purchases from several days over the past three weeks were available from a man named Adam Mustard, who the owner recalls visited the pub several times with Walter Boddy.  On one of these occasion they also brought an Indian gentleman with them."
+        "title": "Mustard",
+        "date": "Sunday 12:35PM",
+        "column": "set11.0",
+        "contents": "Source reports Adam Mustard was \"floored\" by the news that Walter Boddy had gambled away the money that Mustard and Scott Plum had provided.  Mustard claims that if he had known Boddy's \"connection\" to purchase Dalia was a crooked blackjack dealer he never would have given him the money in the first place.  Mustard admits that he threatened Boddy when he first heard the news, saying \"Walter you had better get us our money back or I'll make sure you pay for it in a more creative and violent manner!\"  Boddy responded to this threat by telling Mustard if he wanted to spend the night he could provide him with some other investments he knows of in the morning to recoup their losses.  Boddy then left Mustard alone in the study at 8:25PM."
     },
     {
         "id": "149",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 12:50PM",
-        "column": "setMustard",
-        "contents": "Source claims that Scott Plum and Adam Mustard spoke in the study shortly after 8:30PM on Saturday, June 4th.  Mustard claims Plum was visibly shaken after having learned that Walter Boddy had lost their shared investment.  Mustard had to sit Plum down at the desk in the study to calm him down as he was refusing to leave Boddy's home until they got their money back.  After Plum calmed down, source claims the two men agreed Adam Mustard would speak with Plum's lawyer, Gregory Kenney, the following day to see if their was any legal action they could take against Boddy to recover their money.  The two then agreed Mustard would call Plum as soon as he spoke with the lawyer the following day.  "
+        "column": "set12.0",
+        "contents": "Police spoke with pub owner of Connor Larkin's  in Essex.  He confirmed receipts for purchases from several days over the past three weeks were available from a man named Adam Mustard, who the owner recalls visited the pub several times with Walter Boddy.  On one of these occasion they also brought an Indian gentleman with them."
     },
     {
         "id": "150",
-        "title": "Police",
+        "title": "Mustard",
         "date": "Sunday 12:50PM",
-        "column": "setPolice",
-        "contents": "Source reports that Christine Scarlet was asked to wait in the conservatory of the main building of Boddy Estate after dinner on the night of Saturday, June 4th.  She received a card at dinner asking that she stay there and wait to meet with Walter Boddy in private.  The card also read that Scarlet could \u201cexpect not one, but two big surprises\u201d that evening."
+        "column": "set12.0",
+        "contents": "Source claims that Scott Plum and Adam Mustard spoke in the study shortly after 8:30PM on Saturday, June 4th.  Mustard claims Plum was visibly shaken after having learned that Walter Boddy had lost their shared investment.  Mustard had to sit Plum down at the desk in the study to calm him down as he was refusing to leave Boddy's home until they got their money back.  After Plum calmed down, source claims the two men agreed Adam Mustard would speak with Plum's lawyer, Gregory Kenney, the following day to see if their was any legal action they could take against Boddy to recover their money.  The two then agreed Mustard would call Plum as soon as he spoke with the lawyer the following day.  "
     },
     {
         "id": "151",
-        "title": "Mustard",
+        "title": "Police",
         "date": "Sunday 12:50PM",
-        "column": "setMustard",
-        "contents": "Source claims that Scott Plum exited the study at 8:45PM on Saturday, June 4th after speaking with Adam Mustard.  The two men had made an agreement to head home for the night prior to his exit, so Mustard presumed Plum was heading home out the East entrance.  Adam Mustard left the study to head home for the night at 8:46PM, shortly after Plum left him in the study."
+        "column": "set12.0",
+        "contents": "Source reports that Christine Scarlet was asked to wait in the conservatory of the main building of Boddy Estate after dinner on the night of Saturday, June 4th.  She received a card at dinner asking that she stay there and wait to meet with Walter Boddy in private.  The card also read that Scarlet could \u201cexpect not one, but two big surprises\u201d that evening."
     },
     {
         "id": "152",
         "title": "Mustard",
         "date": "Sunday 12:50PM",
-        "column": "setMustard",
-        "contents": "On the morning of Sunday, June 5th, Adam Mustard claims he called the lawyer, Gregory Kenney, to discuss what happened with the money he and Scott Plum gave to Walter Boddy.  The lawyer said he would look into it and get back to Mustard later that day once he knew what their options were, but not to worry because he was sure there was some action they could take. "
+        "column": "set12.0",
+        "contents": "Source claims that Scott Plum exited the study at 8:45PM on Saturday, June 4th after speaking with Adam Mustard.  The two men had made an agreement to head home for the night prior to his exit, so Mustard presumed Plum was heading home out the East entrance.  Adam Mustard left the study to head home for the night at 8:46PM, shortly after Plum left him in the study."
     },
     {
         "id": "153",
-        "title": "Security Camera",
+        "title": "Mustard",
         "date": "Sunday 12:50PM",
-        "column": "setSecurity Camera",
-        "contents": "A security tape showing the foyer and hallway of the main building of Boddy Estate was obtained by police.  The tape showed two indistinguishable individuals carrying a large object, police presume Mr. Walter Boddy's corpse, into the bathroom from the hallway.  The tape did not show what room the two individuals entered the hallway from and cut out moments after the pair entered the bathroom on Sunday, June 5th at 2:30AM with the large object.  Both persons exited the bathroom 15 minutes later without the large object.  On individual then handed a small object that was around 12\" long and could be carried in one hand, to the other and the video footage then cut out."
+        "column": "set12.0",
+        "contents": "On the morning of Sunday, June 5th, Adam Mustard claims he called the lawyer, Gregory Kenney, to discuss what happened with the money he and Scott Plum gave to Walter Boddy.  The lawyer said he would look into it and get back to Mustard later that day once he knew what their options were, but not to worry because he was sure there was some action they could take. "
     },
     {
         "id": "154",
         "title": "Security Camera",
         "date": "Sunday 12:50PM",
-        "column": "setSecurity Camera",
-        "contents": "Security footage from a camera above the West entrance to the main building of Boddy Estate showed an African American female with grey hair was seen walking past the camera approximately every 15 minutes between 12:00AM on Sunday, June 5th and 3:00AM.  Specifically, police say it is worth noting that the individual was seen passing the camera at 1:58AM and then again at 2:15AM.  Police presume the individual was walking around the main building in 15 minute loops."
+        "column": "set12.0",
+        "contents": "A security tape showing the foyer and hallway of the main building of Boddy Estate was obtained by police.  The tape showed two indistinguishable individuals carrying a large object, police presume Mr. Walter Boddy's corpse, into the bathroom from the hallway.  The tape did not show what room the two individuals entered the hallway from and cut out moments after the pair entered the bathroom on Sunday, June 5th at 2:30AM with the large object.  Both persons exited the bathroom 15 minutes later without the large object.  On individual then handed a small object that was around 12\" long and could be carried in one hand, to the other and the video footage then cut out."
     },
     {
         "id": "155",
-        "title": "Peacock",
+        "title": "Security Camera",
         "date": "Sunday 12:50PM",
-        "column": "setPeacock",
-        "contents": "Source reports that Katie Peacock sold the Dalia Surveillance Equipment Company for the sum of $800,000, but claims she was coerced into doing so against her will.  Peacock claims that Walter Boddy blackmailed her into selling her family business after she told him she would never sell it as the company was founded by her great grandfather and has been run by the Peacock's for over 60 years.  When questioned as to how Boddy blackmailed her into selling the company, Peacock claimed that Boddy had a set of \"concerning video tapes\" that she could not let see the light of day."
+        "column": "set12.0",
+        "contents": "Security footage from a camera above the West entrance to the main building of Boddy Estate showed an African American female with grey hair was seen walking past the camera approximately every 15 minutes between 12:00AM on Sunday, June 5th and 3:00AM.  Specifically, police say it is worth noting that the individual was seen passing the camera at 1:58AM and then again at 2:15AM.  Police presume the individual was walking around the main building in 15 minute loops."
     },
     {
         "id": "156",
         "title": "Peacock",
         "date": "Sunday 12:50PM",
-        "column": "setPeacock",
-        "contents": "Source claims that at 6:15PM on Saturday, June 4th, Walter Boddy entered the theatre of the main building of Boddy Estate to meet with Katie Peacock who was in the theatre waiting to meet with him.  During the meeting Boddy informed Peacock that he would give her the tapes, only if she would sell him her family's company, the Dalia Surveillance Equipment Company, for the sum of $800,000, which he claimed was a fair price given the contents of the video tapes.  After protests from Peacock, Boddy threatened to release the tapes that night to the press unless she signed the sale contract that Boddy had already had drafted by a bank broker.  Peacock claims she was forced to sign the contracts as having those tapes released was NEVER an option; however, after signing the contracts she demanded Boddy bring her the tapes that evening or she would go to the police and charge him with blackmail and whatever else she could and bring them both down."
+        "column": "set12.0",
+        "contents": "Source reports that Katie Peacock sold the Dalia Surveillance Equipment Company for the sum of $800,000, but claims she was coerced into doing so against her will.  Peacock claims that Walter Boddy blackmailed her into selling her family business after she told him she would never sell it as the company was founded by her great grandfather and has been run by the Peacock's for over 60 years.  When questioned as to how Boddy blackmailed her into selling the company, Peacock claimed that Boddy had a set of \"concerning video tapes\" that she could not let see the light of day."
     },
     {
         "id": "157",
-        "title": "Wadsworth",
+        "title": "Peacock",
         "date": "Sunday 12:50PM",
-        "column": "setWadsworth",
-        "contents": "Wadsworth confirms that Jill White was dating Boddy and called ahead on Saturday to visit him for lunch prior to the arrival of the other guests."
+        "column": "set12.0",
+        "contents": "Source claims that at 6:15PM on Saturday, June 4th, Walter Boddy entered the theatre of the main building of Boddy Estate to meet with Katie Peacock who was in the theatre waiting to meet with him.  During the meeting Boddy informed Peacock that he would give her the tapes, only if she would sell him her family's company, the Dalia Surveillance Equipment Company, for the sum of $800,000, which he claimed was a fair price given the contents of the video tapes.  After protests from Peacock, Boddy threatened to release the tapes that night to the press unless she signed the sale contract that Boddy had already had drafted by a bank broker.  Peacock claims she was forced to sign the contracts as having those tapes released was NEVER an option; however, after signing the contracts she demanded Boddy bring her the tapes that evening or she would go to the police and charge him with blackmail and whatever else she could and bring them both down."
     },
     {
         "id": "158",
-        "title": "Peacock",
-        "date": "Sunday 1:00PM",
-        "column": "setPeacock",
-        "contents": "Source reports that Katie Peacock left the dining room of the main building of Boddy Estate at 5:30PM on Saturday, June 4th, and went to the theatre where she was asked to wait to meet with Walter Boddy.  After meeting with Boddy in the theatre, he left at 6:25PM to retrieve the video tapes he was blackmailing her with so Peacock waited in the theatre for him to return until 9:45PM on Saturday, June 4th when she left to use the restroom and \"freshen up,\" but returned to the theatre at 10:15PM after visiting the bathroom.  Peacock then remained in the theatre watching two different movies - \"Clue\" from 1985 and \"Wall-E\" from 2008 - until Walter Boddy returned to the theatre at 12:00AM on Sunday, June 5th."
+        "title": "Wadsworth",
+        "date": "Sunday 12:50PM",
+        "column": "set12.0",
+        "contents": "Wadsworth confirms that Jill White was dating Boddy and called ahead on Saturday to visit him for lunch prior to the arrival of the other guests."
     },
     {
         "id": "159",
-        "title": "Scarlet",
+        "title": "Peacock",
         "date": "Sunday 1:00PM",
-        "column": "setScarlet",
-        "contents": "Source reports that Scott Plum was unaware that Christine Scarlet and Walter Boddy were in a relationship.  Walter Boddy had ensured it was kept a secret as he told the source he was working on a business deal with Scott Plum and didn't want him to find out and compromise the deal."
+        "column": "set13.0",
+        "contents": "Source reports that Katie Peacock left the dining room of the main building of Boddy Estate at 5:30PM on Saturday, June 4th, and went to the theatre where she was asked to wait to meet with Walter Boddy.  After meeting with Boddy in the theatre, he left at 6:25PM to retrieve the video tapes he was blackmailing her with so Peacock waited in the theatre for him to return until 9:45PM on Saturday, June 4th when she left to use the restroom and \"freshen up,\" but returned to the theatre at 10:15PM after visiting the bathroom.  Peacock then remained in the theatre watching two different movies - \"Clue\" from 1985 and \"Wall-E\" from 2008 - until Walter Boddy returned to the theatre at 12:00AM on Sunday, June 5th."
     },
     {
         "id": "160",
-        "title": "Peacock",
+        "title": "Scarlet",
         "date": "Sunday 1:00PM",
-        "column": "setPeacock",
-        "contents": "Source claims that at midnight on Sunday, June 5th Walter Boddy returned to the theatre of the main building of Boddy Estate for the second time that evening to provide Katie Peacock with the video tapes he had used to blackmail her with.  Peacock wanted to ensure that the tapes contained what Boddy claimed they did, so she demanded he play the tapes in the theatre and that they both watch them together.  Boddy obliged and set up the films to play and the two individuals watched 85 minutes of footage, after which Boddy left the theatre after telling Peacock their \"business together was finished\" and she should \"never cross his path again.\""
+        "column": "set13.0",
+        "contents": "Source reports that Scott Plum was unaware that Christine Scarlet and Walter Boddy were in a relationship.  Walter Boddy had ensured it was kept a secret as he told the source he was working on a business deal with Scott Plum and didn't want him to find out and compromise the deal."
     },
     {
         "id": "161",
         "title": "Peacock",
         "date": "Sunday 1:00PM",
-        "column": "setPeacock",
-        "contents": "Source claims that after Walter Boddy left the theatre at approximately 1:25AM on Sunday, June 5th, Katie Peacock sat and thought what she should do for about 5 minutes and then decided to rewatch the video tapes she had purchased from Boddy one last time.  After watching the tapes for a second time Peacock claims she threw the video tapes into a trash can in the theatre and threw in her cigarette lighter to light them on fire and destroy them.  She then left Boddy Estate at 3:00AM and went to her home, \"hoping that the fire would catch and his whole damn house would burn to the ground.\""
+        "column": "set13.0",
+        "contents": "Source claims that at midnight on Sunday, June 5th Walter Boddy returned to the theatre of the main building of Boddy Estate for the second time that evening to provide Katie Peacock with the video tapes he had used to blackmail her with.  Peacock wanted to ensure that the tapes contained what Boddy claimed they did, so she demanded he play the tapes in the theatre and that they both watch them together.  Boddy obliged and set up the films to play and the two individuals watched 85 minutes of footage, after which Boddy left the theatre after telling Peacock their \"business together was finished\" and she should \"never cross his path again.\""
     },
     {
         "id": "162",
-        "title": "Police",
+        "title": "Peacock",
         "date": "Sunday 1:00PM",
-        "column": "setPolice",
-        "contents": "Source confirms that a 14\" long lead pipe that was wrapped in a white cloth with some sort of red stain on it was found in the cabinet above the bar in the billiard room of the main building of Boddy Estate.  Police sent the cloth out to be analyzed by the forensics team, and the pipe was taken as evidence and a possible murder weapon."
+        "column": "set13.0",
+        "contents": "Source claims that after Walter Boddy left the theatre at approximately 1:25AM on Sunday, June 5th, Katie Peacock sat and thought what she should do for about 5 minutes and then decided to rewatch the video tapes she had purchased from Boddy one last time.  After watching the tapes for a second time Peacock claims she threw the video tapes into a trash can in the theatre and threw in her cigarette lighter to light them on fire and destroy them.  She then left Boddy Estate at 3:00AM and went to her home, \"hoping that the fire would catch and his whole damn house would burn to the ground.\""
     },
     {
         "id": "163",
         "title": "Police",
         "date": "Sunday 1:00PM",
-        "column": "setPolice",
-        "contents": "Source reports that the broken candlestick found in the conservatory belonged in the lounge of the main building of Boddy Estate, a second matching candlestick was still located in the lounge."
+        "column": "set13.0",
+        "contents": "Source confirms that a 14\" long lead pipe that was wrapped in a white cloth with some sort of red stain on it was found in the cabinet above the bar in the billiard room of the main building of Boddy Estate.  Police sent the cloth out to be analyzed by the forensics team, and the pipe was taken as evidence and a possible murder weapon."
     },
     {
         "id": "164",
-        "title": "Scarlet",
+        "title": "Police",
         "date": "Sunday 1:00PM",
-        "column": "setScarlet",
-        "contents": "Source reports that Christine Scarlet was questionned about Adam Mustard's statement that a woman was seen conversing with a man in the conservatory around 9PM on Saturday, June 4th.  Scarlet responded by saying that Mustard was likely lying or must have seen someone else in the conservatory.  Scarlet claims that a little after 8:35PM, Scarlet when to the bathroom with Walter Boddy, whom she was meeting with in the conservatory at the time, and proceeded to fool around for a bit.  She had not told this to anyone previously because she was embarassed by it.  Scarlet said they were in the bathroom until Boddy said he had to go to another meeting, so Scarlet returned to the conservatory around 9:05PM to wait for Boddy to return as he went to his next meeting of the evening."
+        "column": "set13.0",
+        "contents": "Source reports that the broken candlestick found in the conservatory belonged in the lounge of the main building of Boddy Estate, a second matching candlestick was still located in the lounge."
     },
     {
         "id": "165",
-        "title": "Coroner",
+        "title": "Scarlet",
         "date": "Sunday 1:00PM",
-        "column": "setCoroner",
-        "contents": "The coroner reports that Walter Boddy died from a blow to the head with a blunt object.  Additional wounds on his body indicate that there was likely a struggle between Boddy and his attacker prior to his death."
+        "column": "set13.0",
+        "contents": "Source reports that Christine Scarlet was questionned about Adam Mustard's statement that a woman was seen conversing with a man in the conservatory around 9PM on Saturday, June 4th.  Scarlet responded by saying that Mustard was likely lying or must have seen someone else in the conservatory.  Scarlet claims that a little after 8:35PM, Scarlet when to the bathroom with Walter Boddy, whom she was meeting with in the conservatory at the time, and proceeded to fool around for a bit.  She had not told this to anyone previously because she was embarassed by it.  Scarlet said they were in the bathroom until Boddy said he had to go to another meeting, so Scarlet returned to the conservatory around 9:05PM to wait for Boddy to return as he went to his next meeting of the evening."
     },
     {
         "id": "166",
-        "title": "Police",
+        "title": "Coroner",
         "date": "Sunday 1:00PM",
-        "column": "setPolice",
-        "contents": "Source confirms that no fingerprints were found on the candlistick found in the conservatory or the lead pipe that was found in the billiard room.   Fingerprints that were a positive match for Walter Boddy were found on the poison bottle that was discovered in the dining room.  Fingerprints that were a positive match for Scott Plum were found on a gun that was found in a trash can located in the theatre.  The gun was Boddy's missing gun. "
+        "column": "set13.0",
+        "contents": "The coroner reports that Walter Boddy died from a blow to the head with a blunt object.  Additional wounds on his body indicate that there was likely a struggle between Boddy and his attacker prior to his death."
     },
     {
         "id": "167",
         "title": "Police",
         "date": "Sunday 1:00PM",
-        "column": "setPolice",
-        "contents": "Police obtained the room assignment cards that were handed out at dinner to tell guests where they would meet with Boddy on the night of Saturday, June 4th.  The cards did not include the guests' names, but the rooms where the guests were asked to wait were the theatre, conservatory, lounge, library, kitchen, and study."
+        "column": "set13.0",
+        "contents": "Source confirms that no fingerprints were found on the candlistick found in the conservatory or the lead pipe that was found in the billiard room.   Fingerprints that were a positive match for Walter Boddy were found on the poison bottle that was discovered in the dining room.  Fingerprints that were a positive match for Scott Plum were found on a gun that was found in a trash can located in the theatre.  The gun was Boddy's missing gun. "
     },
     {
         "id": "168",
         "title": "Police",
         "date": "Sunday 1:00PM",
-        "column": "setPolice",
-        "contents": "The police forensics team was able to determine that the individuals seen carrying a large object into the bathroom of the main building of Boddy Estate were in fact carrying Walter Boddy's corpse."
+        "column": "set13.0",
+        "contents": "Police obtained the room assignment cards that were handed out at dinner to tell guests where they would meet with Boddy on the night of Saturday, June 4th.  The cards did not include the guests' names, but the rooms where the guests were asked to wait were the theatre, conservatory, lounge, library, kitchen, and study."
     },
     {
         "id": "169",
-        "title": "White",
-        "date": "Sunday 1:15PM",
-        "column": "setWhite",
-        "contents": "Source reports that while waiting for Walter Boddy to return to the kitchen and meet with Jill White, White passed the time by baking several batches of cookies."
+        "title": "Police",
+        "date": "Sunday 1:00PM",
+        "column": "set13.0",
+        "contents": "The police forensics team was able to determine that the individuals seen carrying a large object into the bathroom of the main building of Boddy Estate were in fact carrying Walter Boddy's corpse."
     },
     {
         "id": "170",
-        "title": "Police",
+        "title": "White",
         "date": "Sunday 1:15PM",
-        "column": "setPolice",
-        "contents": "Source reports that Walter Boddy was always punctual to his meetings and recovered his schedule for meeting with guests on  Saturday, June 4th.  He had the following meetings on schedule for the evening: (notes he wrote in the book are provided in parentheses)\n1: Lunch with Jill from 12:30-2:00PM\n2: Guest reception in Lounge @ 2:00PM-4:00PM\n3: Dinner 4:00-5:30PM\n4: Meet with Peacock, 6:15PM -6:25PM\n5: Meet with Green, 6:30PM-6:55PM\n6: Meet with Jill again in Kitchen at 7:00 for 25 minutes\n7: Meet with Plum, 7:30PM-7:55PM\n8: Mustard in my study, 8:00 for 25 minutes\n9: Talk with Christine, 8:30-8:40PM (TWO SUPRISES!)\n10: Green to finalize contracts, 9:00-9:45PM (Offer $50K for services)\n\n"
+        "column": "set14.0",
+        "contents": "Source reports that while waiting for Walter Boddy to return to the kitchen and meet with Jill White, White passed the time by baking several batches of cookies."
     },
     {
         "id": "171",
-        "title": "Plum",
+        "title": "Police",
         "date": "Sunday 1:15PM",
-        "column": "setPlum",
-        "contents": "Source reports that Scott Plum was questionned about an item that was discovered to be missing from the study of the main room of Boddy Estate, which is a room that the police believed only 3 people had entered including Plum.  Upon hearing this source reports that Plum confessed to taking Walter Boddy's checkbook while he was sitting at the desk in the study when Adam Mustard's back was turned and they were conversing.  Plum claims he was going to write himself a check to cover the $200,000 Boddy stole from him, but decided against it as he didn't want to go to jail for check fraud and there was no way he could get away with writing himself a $200,000 check.  Instead, when he was leaving the estate for the night he went and grabbed his belongings from the lounge and threw the checkbook into the fireplace to at least destroy it out of spite.  Plum noted however that the checkbook had a standing balance of well over $25 Million dollars and was updated just 3 days ago."
+        "column": "set14.0",
+        "contents": "Source reports that Walter Boddy was always punctual to his meetings and recovered his schedule for meeting with guests on  Saturday, June 4th.  He had the following meetings on schedule for the evening: (notes he wrote in the book are provided in parentheses)\n1: Lunch with Jill from 12:30-2:00PM\n2: Guest reception in Lounge @ 2:00PM-4:00PM\n3: Dinner 4:00-5:30PM\n4: Meet with Peacock, 6:15PM -6:25PM\n5: Meet with Green, 6:30PM-6:55PM\n6: Meet with Jill again in Kitchen at 7:00 for 25 minutes\n7: Meet with Plum, 7:30PM-7:55PM\n8: Mustard in my study, 8:00 for 25 minutes\n9: Talk with Christine, 8:30-8:40PM (TWO SUPRISES!)\n10: Green to finalize contracts, 9:00-9:45PM (Offer $50K for services)\n\n"
     },
     {
         "id": "172",
-        "title": "Green",
+        "title": "Plum",
         "date": "Sunday 1:15PM",
-        "column": "setGreen",
-        "contents": "Source reports that Antonio Green noticed through the door of the library that across the foyer a woman entered the bathroom and a few seconds later he saw an Indian man emerge from the lounge an enter the theatre.  These events took place in the main building of Boddy Estate, shortly after 9:45PM on Saturday, June 4th.  Green thought nothing of it at the time."
+        "column": "set14.0",
+        "contents": "Source reports that Scott Plum was questionned about an item that was discovered to be missing from the study of the main room of Boddy Estate, which is a room that the police believed only 3 people had entered including Plum.  Upon hearing this source reports that Plum confessed to taking Walter Boddy's checkbook while he was sitting at the desk in the study when Adam Mustard's back was turned and they were conversing.  Plum claims he was going to write himself a check to cover the $200,000 Boddy stole from him, but decided against it as he didn't want to go to jail for check fraud and there was no way he could get away with writing himself a $200,000 check.  Instead, when he was leaving the estate for the night he went and grabbed his belongings from the lounge and threw the checkbook into the fireplace to at least destroy it out of spite.  Plum noted however that the checkbook had a standing balance of well over $25 Million dollars and was updated just 3 days ago."
     },
     {
         "id": "173",
-        "title": "Police",
+        "title": "Green",
         "date": "Sunday 1:15PM",
-        "column": "setPolice",
-        "contents": "Police reported that they spoke with Scott Plum's lawyer, Gregory Kenney, who confirms he was contacted by Mustard on the morning of Sunday, June 5th.  The lawyer confirmed that Mustard called him to discuss a business deal with a man named Walter Boddy that Mustard felt was illegal and cost him and Scott Plum, who was also a client of the lawyer, $200,000 each.  They wanted to see if they could pursue any legal channels to recover their money."
+        "column": "set14.0",
+        "contents": "Source reports that Antonio Green noticed through the door of the library that across the foyer a woman entered the bathroom and a few seconds later he saw an Indian man emerge from the lounge an enter the theatre.  These events took place in the main building of Boddy Estate, shortly after 9:45PM on Saturday, June 4th.  Green thought nothing of it at the time."
     },
     {
         "id": "174",
         "title": "Police",
         "date": "Sunday 1:15PM",
-        "column": "setPolice",
-        "contents": "Financial records that were uncovered on Scott Plum show that he had just over $3.7 million dollars in his bank account.   Walter Boddy had just over $25MM."
+        "column": "set14.0",
+        "contents": "Police reported that they spoke with Scott Plum's lawyer, Gregory Kenney, who confirms he was contacted by Mustard on the morning of Sunday, June 5th.  The lawyer confirmed that Mustard called him to discuss a business deal with a man named Walter Boddy that Mustard felt was illegal and cost him and Scott Plum, who was also a client of the lawyer, $200,000 each.  They wanted to see if they could pursue any legal channels to recover their money."
     },
     {
         "id": "175",
-        "title": "Green",
+        "title": "Police",
         "date": "Sunday 1:15PM",
-        "column": "setGreen",
-        "contents": "Source reports Antonio Green waited in the Library from 6:45PM on Saturday, June 4th while watching an extended cut version DVD of the movie When Harry Met Sally\u00a9 on the laptop computer that was in the room.  He watched the movie until 9:00PM that night, when Walter Boddy returned to the Library to meet with him."
+        "column": "set14.0",
+        "contents": "Financial records that were uncovered on Scott Plum show that he had just over $3.7 million dollars in his bank account.   Walter Boddy had just over $25MM."
     },
     {
         "id": "176",
-        "title": "Police",
-        "date": "Sunday 1:30PM",
-        "column": "setPolice",
-        "contents": "Police reported that Scott Plum contacted a lawyer, Gregory Kenney, several weeks ago inquiring about divorce law.  Plum wanted to know how long two people had to be married before a divorce would result in a division of shared assests between the husband and wife.  He then asked if one of the parties entering the marriage was separated from a spouse in a previous marriage, if he or she could legally enter a new marriage.  The lawyer explained to him that this would not work since a separation would not nullify the previous marriage so the party could not enter into a new marriage contract.  The lawyer further explained that once divorce papers were signed for the individual's first marriage the party could enter into a second marriage legally.  "
+        "title": "Green",
+        "date": "Sunday 1:15PM",
+        "column": "set14.0",
+        "contents": "Source reports Antonio Green waited in the Library from 6:45PM on Saturday, June 4th while watching an extended cut version DVD of the movie When Harry Met Sally\u00a9 on the laptop computer that was in the room.  He watched the movie until 9:00PM that night, when Walter Boddy returned to the Library to meet with him."
     },
     {
         "id": "177",
         "title": "Police",
         "date": "Sunday 1:30PM",
-        "column": "setPolice",
-        "contents": "Police claim that divorce papers were filed between Scott Plum and Christine Scarlet 2 days after a conversation between Scott Plum and his lawyer, Gregory Kenney took place discussing marriage and divorce law."
+        "column": "set15.0",
+        "contents": "Police reported that Scott Plum contacted a lawyer, Gregory Kenney, several weeks ago inquiring about divorce law.  Plum wanted to know how long two people had to be married before a divorce would result in a division of shared assests between the husband and wife.  He then asked if one of the parties entering the marriage was separated from a spouse in a previous marriage, if he or she could legally enter a new marriage.  The lawyer explained to him that this would not work since a separation would not nullify the previous marriage so the party could not enter into a new marriage contract.  The lawyer further explained that once divorce papers were signed for the individual's first marriage the party could enter into a second marriage legally.  "
     },
     {
         "id": "178",
         "title": "Police",
         "date": "Sunday 1:30PM",
-        "column": "setPolice",
-        "contents": "Police spoke with the Tiffany & Co. store in Essex and were able to confirm that the ring Christine Scarlet was found wearing was actually the same one that was purchased by Walter Boddy on Friday, June 3rd according to the receipt that was found in the empty jewelry box in the lounge of the main building of Boddy Estate."
+        "column": "set15.0",
+        "contents": "Police claim that divorce papers were filed between Scott Plum and Christine Scarlet 2 days after a conversation between Scott Plum and his lawyer, Gregory Kenney took place discussing marriage and divorce law."
     },
     {
         "id": "179",
         "title": "Police",
         "date": "Sunday 1:30PM",
-        "column": "setPolice",
+        "column": "set15.0",
+        "contents": "Police spoke with the Tiffany & Co. store in Essex and were able to confirm that the ring Christine Scarlet was found wearing was actually the same one that was purchased by Walter Boddy on Friday, June 3rd according to the receipt that was found in the empty jewelry box in the lounge of the main building of Boddy Estate."
+    },
+    {
+        "id": "180",
+        "title": "Police",
+        "date": "Sunday 1:30PM",
+        "column": "set15.0",
         "contents": "The police recovered Walter Boddy's missing Rolex wristwatch which was found in the lounge of the main building of Boddy Estate, a fingerprint check on the face of the watch matched with Scott Plum's left index finger."
     }
 ]

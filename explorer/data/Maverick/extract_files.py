@@ -15,7 +15,7 @@ def excel_to_json(input_file, output_file):
             "id": str(i-1),
             "title": row.iloc[4],
             "date": f"{row.iloc[2]} {row.iloc[3]}",
-            "column": "set" + str(row.iloc[4]),
+            "column": "set" + str(row.iloc[0]),
             "contents": row.iloc[7]
         }
         json_data.append(json_entry)
