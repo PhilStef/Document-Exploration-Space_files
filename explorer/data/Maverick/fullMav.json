@@ -609,7 +609,290 @@
                 "date": "Sunday 11:45AM",
                 "column": "set8",
                 "contents": "Source reports that Adam Mustard met Walter Boddy 3 weeks ago when Mustard and his employee Christine Scarlet were setting up the remote monitoring equipment at Boddy’s Estate. Source also claims that Mustard and Boddy become close as Mustard had visit Boddy’s estate multiple times over the first 2 weeks to make sure all the equipment was working properly."
-            } 
+            },
+            
+                {
+                    "id": "88",
+                    "title": "Peacock",
+                    "date": "Sunday 12:10PM",
+                    "column": "set8",
+                    "contents": "Source claims that Evelyn Peacock was seen exiting the study in a hurry around 12:05PM, carrying what appeared to be a rolled-up document. Witnesses noted that she seemed distressed."
+                },
+                {
+                    "id": "89",
+                    "title": "Scarlet",
+                    "date": "Sunday 12:30PM",
+                    "column": "set8",
+                    "contents": "Christine Scarlet was overheard arguing with Walter Boddy in the library late Saturday night. Source reports the argument was about payment for a project that Scarlet had worked on for Boddy."
+                },
+                {
+                    "id": "90",
+                    "title": "Plum",
+                    "date": "Sunday 12:50PM",
+                    "column": "set9",
+                    "contents": "Professor Victor Plum was last seen in the conservatory at approximately 12:45PM. Source notes that Plum seemed preoccupied and was reviewing notes on an old case involving Boddy."
+                },
+                
+                    {
+                        "id": "91",
+                        "title": "White",
+                        "date": "Sunday 1:15PM",
+                        "column": "set9",
+                        "contents": "Source reports that Blanche White was seen near the dining hall, cleaning up broken glass. Witnesses claim she was muttering about 'keeping things in order' and seemed agitated."
+                    },
+                    {
+                        "id": "92",
+                        "title": "Green",
+                        "date": "Sunday 1:40PM",
+                        "column": "set9",
+                        "contents": "Source states that Jonathan Green had a private meeting with Walter Boddy in the lounge late Saturday night. It is unclear what was discussed, but Green left the meeting appearing frustrated."
+                    },
+                    {
+                        "id": "93",
+                        "title": "Boddy",
+                        "date": "Sunday 2:00PM",
+                        "column": "set10",
+                        "contents": "New information suggests that Walter Boddy had made plans to change his will. A legal associate was scheduled to visit him next week to finalize the details."
+                    },
+                    {
+                        "id": "94",
+                        "title": "Brunette",
+                        "date": "Sunday 2:25PM",
+                        "column": "set10",
+                        "contents": "Source reports that Alistair Brunette was seen pacing outside the billiard room, visibly nervous. A staff member overheard him saying, 'This changes everything.'"
+                    },
+                    {
+                        "id": "95",
+                        "title": "Ash",
+                        "date": "Sunday 2:45PM",
+                        "column": "set10",
+                        "contents": "A cigar ash was discovered on the carpet in Boddy’s private study. Source notes that Walter Boddy was known to despise smoking and did not allow it in his study."
+                    },
+                    
+                        {
+                            "id": "96",
+                            "title": "Rose",
+                            "date": "Sunday 3:10PM",
+                            "column": "set10",
+                            "contents": "Source reports that Lucille Rose was seen near the back entrance of Boddy Estate, appearing anxious. She left in a hurry when approached."
+                        },
+                        {
+                            "id": "97",
+                            "title": "Peacock",
+                            "date": "Sunday 3:30PM",
+                            "column": "set10",
+                            "contents": "Source claims that Eleanor Peacock had a heated argument with Walter Boddy over financial matters late Saturday night."
+                        },
+                        {
+                            "id": "98",
+                            "title": "Plum",
+                            "date": "Sunday 3:50PM",
+                            "column": "set10",
+                            "contents": "Professor Victor Plum was seen reviewing documents in the library, muttering about 'hidden discrepancies' in Boddy’s financial records."
+                        },
+                        {
+                            "id": "99",
+                            "title": "Scarlet",
+                            "date": "Sunday 4:15PM",
+                            "column": "set10",
+                            "contents": "Christine Scarlet was seen talking in hushed tones with Adam Mustard near the conservatory."
+                        },
+                        {
+                            "id": "100",
+                            "title": "Clock",
+                            "date": "Sunday 4:45PM",
+                            "column": "set10",
+                            "contents": "A broken clock was found near the fireplace in the main hall. The time was frozen at 11:10 PM."
+                        },
+                        {
+                            "id": "101",
+                            "title": "Footprints",
+                            "date": "Sunday 5:00PM",
+                            "column": "set10",
+                            "contents": "Muddy footprints were found leading from the study to the garden. The prints appear to belong to formal dress shoes."
+                        },
+                        {
+                            "id": "102",
+                            "title": "Gloves",
+                            "date": "Sunday 5:20PM",
+                            "column": "set11",
+                            "contents": "A pair of black leather gloves were discovered in the kitchen trash bin. They appear to have been recently discarded."
+                        },
+                        {
+                            "id": "103",
+                            "title": "Letter",
+                            "date": "Sunday 5:45PM",
+                            "column": "set11",
+                            "contents": "A torn letter was found in Boddy’s desk. The remaining words read: 'If you proceed with this, you will regret it.'"
+                        },
+                        {
+                            "id": "104",
+                            "title": "Phone Call",
+                            "date": "Sunday 6:10PM",
+                            "column": "set11",
+                            "contents": "A phone call was placed from Boddy’s private line at 10:45 PM on Saturday night. The recipient is currently unknown."
+                        },
+                        {
+                            "id": "105",
+                            "title": "Wine Glass",
+                            "date": "Sunday 6:35PM",
+                            "column": "set11",
+                            "contents": "A wine glass with traces of a suspicious substance was found near Boddy’s chair in the dining hall."
+                        },
+                        {
+                            "id": "106",
+                            "title": "Safe",
+                            "date": "Sunday 7:00PM",
+                            "column": "set11",
+                            "contents": "Boddy’s safe was found open, with some documents missing. No signs of forced entry."
+                        },
+                        {
+                            "id": "107",
+                            "title": "Gunshot",
+                            "date": "Sunday 7:25PM",
+                            "column": "set11",
+                            "contents": "A neighbor reports hearing what sounded like a gunshot around 11:00 PM Saturday night."
+                        },
+                        {
+                            "id": "108",
+                            "title": "Candle Wax",
+                            "date": "Sunday 7:45PM",
+                            "column": "set11",
+                            "contents": "Traces of candle wax were found on the floor near the staircase. It appears to have dripped from an old-fashioned candle."
+                        },
+                        {
+                            "id": "109",
+                            "title": "Note",
+                            "date": "Sunday 8:10PM",
+                            "column": "set12",
+                            "contents": "A small handwritten note was found inside Boddy’s coat pocket. It simply reads: 'Meet me at midnight.'"
+                        },
+                        {
+                            "id": "110",
+                            "title": "Key",
+                            "date": "Sunday 8:30PM",
+                            "column": "set12",
+                            "contents": "A single brass key was found under a loose floorboard in Boddy’s study."
+                        },
+                        {
+                            "id": "111",
+                            "title": "Knife",
+                            "date": "Sunday 8:50PM",
+                            "column": "set12",
+                            "contents": "A kitchen knife was discovered behind the bar, wiped clean but still showing traces of a reddish stain."
+                        },
+                        {
+                            "id": "112",
+                            "title": "Watch",
+                            "date": "Sunday 9:10PM",
+                            "column": "set12",
+                            "contents": "Walter Boddy’s gold pocket watch was found on the ground near the hedge maze."
+                        },
+                        {
+                            "id": "113",
+                            "title": "Shoes",
+                            "date": "Sunday 9:30PM",
+                            "column": "set12",
+                            "contents": "A pair of muddy shoes were discovered in the laundry room. They match the footprints found leading to the garden."
+                        },
+                        {
+                            "id": "114",
+                            "title": "Handkerchief",
+                            "date": "Sunday 9:50PM",
+                            "column": "set12",
+                            "contents": "A monogrammed handkerchief with the initials 'A.M.' was found near the back exit."
+                        },
+                        {
+                            "id": "115",
+                            "title": "Cufflink",
+                            "date": "Sunday 10:15PM",
+                            "column": "set12",
+                            "contents": "A single cufflink was discovered under the grand piano."
+                        },
+                        {
+                            "id": "116",
+                            "title": "Fireplace Poker",
+                            "date": "Sunday 10:40PM",
+                            "column": "set12",
+                            "contents": "A fireplace poker with a bent handle was found near the study’s fireplace."
+                        },
+                        {
+                            "id": "117",
+                            "title": "Coat",
+                            "date": "Sunday 11:05PM",
+                            "column": "set12",
+                            "contents": "A damp trench coat was found hanging in the greenhouse."
+                        },
+                        {
+                            "id": "118",
+                            "title": "Shoe Print",
+                            "date": "Sunday 11:30PM",
+                            "column": "set13",
+                            "contents": "A single shoe print was found outside the main entrance, leading away toward the stables."
+                        },
+                        {
+                            "id": "119",
+                            "title": "Torn Fabric",
+                            "date": "Sunday 11:55PM",
+                            "column": "set13",
+                            "contents": "A piece of torn fabric was found caught on a nail near the cellar door."
+                        },
+                        {
+                            "id": "120",
+                            "title": "Briefcase",
+                            "date": "Monday 12:20AM",
+                            "column": "set13",
+                            "contents": "A locked briefcase was found hidden under the desk in Boddy’s office."
+                        },
+                        {
+                            "id": "121",
+                            "title": "Revolver",
+                            "date": "Monday 12:45AM",
+                            "column": "set13",
+                            "contents": "A small revolver was found inside a drawer in the billiard room."
+                        },
+                        {
+                            "id": "122",
+                            "title": "Bloody Cloth",
+                            "date": "Monday 1:10AM",
+                            "column": "set13",
+                            "contents": "A piece of blood-stained cloth was discovered in the laundry chute."
+                        },
+                        {
+                            "id": "123",
+                            "title": "Ledger",
+                            "date": "Monday 1:35AM",
+                            "column": "set13",
+                            "contents": "A financial ledger with several pages missing was found inside a bookshelf."
+                        },
+                        {
+                            "id": "124",
+                            "title": "Ripped Envelope",
+                            "date": "Monday 2:00AM",
+                            "column": "set13",
+                            "contents": "A torn envelope addressed to Walter Boddy was found in the fireplace ashes."
+                        },
+                        {
+                            "id": "125",
+                            "title": "Lighter",
+                            "date": "Monday 2:25AM",
+                            "column": "set13",
+                            "contents": "A silver lighter with the initials 'J.G.' was found near the library entrance."
+                        },
+                        {
+                            "id": "126",
+                            "title": "Stained Rug",
+                            "date": "Monday 2:50AM",
+                            "column": "set13",
+                            "contents": "A dark stain was found on the rug in the main hallway."
+                        },
+                        {
+                            "id": "127",
+                            "title": "Safe Combination",
+                            "date": "Monday 3:15AM",
+                            "column": "set13",
+                            "contents": "A slip of paper with a sequence of numbers was found tucked inside a book in the study."
+                        }            
         ]
             
     
