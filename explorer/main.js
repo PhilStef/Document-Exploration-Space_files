@@ -112,7 +112,7 @@ else if(query.includes('=4')){
 }else{
 	pname=guid("tut");
 	// thisDoc = './explorer/data/tutorial-documents.json';
-		thisDoc = './explorer/data/Maverick/mav.json';
+		thisDoc = './explorer/data/Maverick/MavOutput.json';
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface. <br> Analyst A Notes will be displayed when condition provided."
