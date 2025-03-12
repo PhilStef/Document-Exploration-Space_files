@@ -224,7 +224,8 @@ else if(query.includes('=4')){
 		if(position && position.length > 0) //The position of the event if appliable
 		 	jsonMessage["pos"] = position;
 		// console.log(jsonMessage);
-        SESSION_LOG_DATA.push(jsonMessage);
+        SESSION_LOG_DATA.push(jsonMessage); 
+		console.log(SESSION_LOG_DATA.length);
       // Send the log to its destiny
 	    if (log_url != 'http://localhost:8080/log')  
 		   sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
