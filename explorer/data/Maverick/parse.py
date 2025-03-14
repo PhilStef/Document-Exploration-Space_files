@@ -2,9 +2,9 @@ import json
 
 def process_json(filename, func):
     with open(filename, "r") as file:
-        data = json.load(file)  # Load JSON file as a Python list/dictionary
+        data = json.load(file)  
     
-    func(data)  # Call the function with the JSON data
+    my_function(data)  
 
 def my_function(data): 
     count = 0

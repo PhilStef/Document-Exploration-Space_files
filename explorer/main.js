@@ -768,7 +768,6 @@ else if(query.includes('=4')){
 			
 		$("div[role='dialog']").bind("mouseleave",function(){  // $("div[role='dialog']").bind("mouseexit",function(event,ui){
 			
-		     	 console.log("mouose enter...");
 			 			// console.log(event);
 			 			// console.log(ui);
 			 			var docDialog = $(this); //$(event.target);//.parents(".ui-dialog");
