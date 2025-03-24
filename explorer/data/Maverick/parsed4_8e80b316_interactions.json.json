@@ -1,0 +1,88 @@
+[
+    {
+        "timestamp": 5.56,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing84"
+    },
+    {
+        "timestamp": 6.387,
+        "type": "open-doc",
+        "doc_id": "ArmsDealing84"
+    },
+    {
+        "timestamp": 9.276,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing84"
+    },
+    {
+        "timestamp": 9.976,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 10.427,
+        "type": "open-doc",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 11.519,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 12.136,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing36"
+    },
+    {
+        "timestamp": 12.558,
+        "type": "open-doc",
+        "doc_id": "ArmsDealing36"
+    },
+    {
+        "timestamp": 15.051,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing36"
+    },
+    {
+        "timestamp": 17.358,
+        "type": "end-study",
+        "msg": "4_8e80b316",
+        "elem_id": {
+            "windowSize": [
+                1528,
+                834
+            ],
+            "monitorResolution": [
+                1536,
+                960
+            ],
+            "availResolution": [
+                1536,
+                912
+            ],
+            "pixelRatio": 1.25,
+            "zoom": 125,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 17.358,
+        "type": "end-notes",
+        "msg": [
+            ""
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]
