@@ -24,8 +24,7 @@ def timeInDoc(obj,i,data):
     ##Returns the time in the doc
     return data[i]["timestamp"] - obj["timestamp"]
 
-
-##How many seconds in the doc needed to be included
+# How many seconds in the doc needed to be included
 time_limit = 0.75
 skip = False
 drag = False
@@ -34,13 +33,13 @@ for i, current in enumerate(data):
     if(skip):
         skip = False
         continue 
-    ##If it is drag end, get rid of the drag false and continue on
+    #If it is drag end, get rid of the drag false and continue on
     if(current["type"] == "drag-end"):
         drag = False
-    ##if it is in a drag, continue until it is a drag end
+    #if it is in a drag, continue until it is a drag end
     if(drag):
         continue 
-    ##if it is a drag start, set the drag bool to True to ensure nothing is saved until it is drag end
+    #if it is a drag start, set the drag bool to True to ensure nothing is saved until it is drag end
     if(current["type"] == "drag-start"):
         drag = True
     if(current["type"] == "mouseenter-doc"): 
@@ -63,9 +62,6 @@ file_path = os.path.join(folder_path, f'parsed{file_name}')
 # Write JSON data to a file in the same folder
 with open(file_path, 'w') as json_file:
     json.dump(newData, json_file, indent=4)
-
-
-
 #Draggin slowly 
 # dragging fast
 #Highliting and Searching 

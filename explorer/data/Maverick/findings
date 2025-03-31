@@ -1,0 +1,4 @@
+All the tests looked pretty good. Changed the code a little so that the drag feature is better. Slow dragging was fine, Fast dragging had lots of fluff in the middle, made it so things in between start and end dragging are not saved.
+Also with highlighting/searching, im pretty sure a few objects get taken out but they are not important, when the word is searched, it seems like it leaves the doc it is in and then comes back
+
+I want to hear you thoughts on giving them every message and say out of the listed character "Plum, Mustard ..." find as many of their connections to Boddy as you can.
