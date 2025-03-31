@@ -1,59 +1,46 @@
 [
     {
-        "timestamp": 5.56,
+        "timestamp": 3.54,
         "type": "mouseenter-doc",
         "msg": "closed",
-        "doc_id": "ArmsDealing84"
+        "doc_id": "ArmsDealing96"
     },
     {
-        "timestamp": 6.387,
-        "type": "open-doc",
-        "doc_id": "ArmsDealing84"
+        "timestamp": 6.13,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "ArmsDealing96",
+        "pos": [
+            532,
+            780
+        ]
     },
     {
-        "timestamp": 9.276,
-        "type": "mouseleave-doc",
-        "msg": "open",
-        "doc_id": "ArmsDealing84"
+        "timestamp": 18.582,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "ArmsDealing96",
+        "pos": [
+            -4,
+            688
+        ]
     },
     {
-        "timestamp": 9.976,
+        "timestamp": 18.607,
         "type": "mouseenter-doc",
         "msg": "closed",
-        "doc_id": "ArmsDealing93"
+        "doc_id": "ArmsDealing96"
     },
     {
-        "timestamp": 10.427,
-        "type": "open-doc",
-        "doc_id": "ArmsDealing93"
-    },
-    {
-        "timestamp": 11.519,
+        "timestamp": 19.476,
         "type": "mouseleave-doc",
-        "msg": "open",
-        "doc_id": "ArmsDealing93"
-    },
-    {
-        "timestamp": 12.136,
-        "type": "mouseenter-doc",
         "msg": "closed",
-        "doc_id": "ArmsDealing36"
+        "doc_id": "ArmsDealing96"
     },
     {
-        "timestamp": 12.558,
-        "type": "open-doc",
-        "doc_id": "ArmsDealing36"
-    },
-    {
-        "timestamp": 15.051,
-        "type": "mouseleave-doc",
-        "msg": "open",
-        "doc_id": "ArmsDealing36"
-    },
-    {
-        "timestamp": 17.358,
+        "timestamp": 21.776,
         "type": "end-study",
-        "msg": "4_8e80b316",
+        "msg": "4_5bc5c9d3",
         "elem_id": {
             "windowSize": [
                 1528,
@@ -76,7 +63,7 @@
         "pos": null
     },
     {
-        "timestamp": 17.358,
+        "timestamp": 21.776,
         "type": "end-notes",
         "msg": [
             ""

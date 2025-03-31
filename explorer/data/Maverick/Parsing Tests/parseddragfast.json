@@ -1,0 +1,121 @@
+[
+    {
+        "timestamp": 68.918,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 70.295,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            542,
+            611
+        ]
+    },
+    {
+        "timestamp": 73.415,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            404,
+            384
+        ]
+    },
+    {
+        "timestamp": 75.219,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            404,
+            382
+        ]
+    },
+    {
+        "timestamp": 77.227,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            388,
+            421
+        ]
+    },
+    {
+        "timestamp": 77.649,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 78.233,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 78.946,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            364,
+            423
+        ]
+    },
+    {
+        "timestamp": 81.231,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91",
+        "pos": [
+            400,
+            326
+        ]
+    },
+    {
+        "timestamp": 81.933,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 83.525,
+        "type": "end-study",
+        "msg": "4_49d138f8",
+        "elem_id": {
+            "windowSize": [
+                1528,
+                834
+            ],
+            "monitorResolution": [
+                1536,
+                960
+            ],
+            "availResolution": [
+                1536,
+                912
+            ],
+            "pixelRatio": 1.25,
+            "zoom": 125,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 83.525,
+        "type": "end-notes",
+        "msg": [
+            ""
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]

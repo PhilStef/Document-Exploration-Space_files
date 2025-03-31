@@ -1,0 +1,93 @@
+[
+    {
+        "timestamp": 1374.02,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1374.788,
+        "type": "open-doc",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1382.739,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1387.242,
+        "type": "highlight",
+        "msg": "United Arab Emerites",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1387.286,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1390.922,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1393.531,
+        "type": "search",
+        "msg": "United Arab Emerites",
+        "doc_id": [
+            "ArmsDealing19",
+            "ArmsDealing93"
+        ]
+    },
+    {
+        "timestamp": 1393.586,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1395.621,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "ArmsDealing93"
+    },
+    {
+        "timestamp": 1396.892,
+        "type": "end-study",
+        "msg": "4_e53ae3ad",
+        "elem_id": {
+            "windowSize": [
+                1528,
+                834
+            ],
+            "monitorResolution": [
+                1536,
+                960
+            ],
+            "availResolution": [
+                1536,
+                912
+            ],
+            "pixelRatio": 1.25,
+            "zoom": 125,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 1396.892,
+        "type": "end-notes",
+        "msg": [
+            ""
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]

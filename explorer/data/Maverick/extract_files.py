@@ -6,13 +6,16 @@ def excel_to_json(input_file, output_file):
     df = pd.read_excel(input_file)
     # Create an empty list to store the JSON data
     json_data = []
-
+    prev = (1,0)
     # Process each row in the DataFrame
-    for i, row in df.iterrows(): 
-        if i<2 or i > 181:
-            continue
+    for i, row in df.iterrows():
+        if i<1 or i > 181:
+            continue 
+        if(int(row.iloc[0]) != prev[0]):
+            print(f"batch {prev[0]} has {row.iloc[1]- prev[1]} docs") 
+            prev = (int(row.iloc[0]), row.iloc[1])
         json_entry = {
-            "id": str(i-1),
+            "id": str(int(row.iloc[1])),
             "title": row.iloc[4],
             "date": f"{row.iloc[2]} {row.iloc[3]}",
             #180/20 columns
@@ -20,9 +23,10 @@ def excel_to_json(input_file, output_file):
             "contents": row.iloc[7], 
             "batch" : str(int(row.iloc[0]))
         }
-        json_data.append(json_entry)
-
-    # Write the JSON data to a file
+        json_data.append(json_entry) 
+        
+    print(f"batch {prev[0]} has {182- prev[1]} docs") 
+   # Write the JSON data to a file
     with open(output_file, 'w') as json_file:
         json.dump(json_data, json_file, indent=4)
 

@@ -1,0 +1,69 @@
+[
+    {
+        "timestamp": 18.49,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing92"
+    },
+    {
+        "timestamp": 20.094,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "ArmsDealing92",
+        "pos": [
+            526,
+            645
+        ]
+    },
+    {
+        "timestamp": 37.855,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "ArmsDealing92",
+        "pos": [
+            732,
+            610
+        ]
+    },
+    {
+        "timestamp": 38.109,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing92"
+    },
+    {
+        "timestamp": 38.907,
+        "type": "end-study",
+        "msg": "4_f65bf5ac",
+        "elem_id": {
+            "windowSize": [
+                1528,
+                834
+            ],
+            "monitorResolution": [
+                1536,
+                960
+            ],
+            "availResolution": [
+                1536,
+                912
+            ],
+            "pixelRatio": 1.25,
+            "zoom": 125,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 38.907,
+        "type": "end-notes",
+        "msg": [
+            ""
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]
