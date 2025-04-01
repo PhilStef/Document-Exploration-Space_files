@@ -64,7 +64,7 @@ var prompt_Jeremy = "Here's what I have so far. I don't think this is perfect, b
 						//"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
 						// "<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
-var instructions_Jeremy = "You are a reporter working for a major newspaper publisher.  Sunday morning at 9:00AM you received a call from a man named HENRY WADSWORTH.  Mr. WADSWORTH claims he has a big story if you're willing to help him out.  Mr. WADSWORTH reports that there has been a murder at The Boddy Estate and the police have named WADSWORTH as their primary suspect.<br>HENRY WADSWORTH claims he did not do it and wants you to help solve the murder and clear his name.<br>You agree to help and enlist a field reporter, Hans Brauman, to go to the scene of the crime and collect information and report back to you what he finds while you work on figuring out what happened.<br>Mr. Brauman will head to Boddy Estate and speak with the police and any other persons he can when he gets there.  He will also do his best to snoop around for clues.  Mr. Brauman will send you periodic updates in the form of brief text based messages with the occasional attachment (e.g., a photograph).  These updates will come in batches, so you will receive a group of messages every 10 minutes.<br>Your goal is to use the information from Mr. Brauman to get the story to the news before other reporters or the police so you can receive a bonus.  You can do this by answering key questions surrounding the murder before the police figure out what happens and the truth is released to the public.<br>" +
+var instructions_Jeremy = "Walter Boddy has been murdered at his estate. The police have named Mr. HENRY WADSWORTH  as the primary suspect. <br> Mr. WADSWORTH claims he did not do it and wants your help to solve the mystery and clear his name. <br> You have asked a field reporter, Mr. HANS BRAUMAN, to collect evidence and track down the truth. <br><br>Your goal is to use this information to identify:<ul><li><strong>Who</strong> committed the murder and</li><li> <strong> Where</strong> it occurred at the Boddy Estate.</li></ul>" +
 						"<strong>Prepare a summary for your supervisor; it should be complete and stand independant of the documents.</strong><br>"+
 						"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
 						'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>';
@@ -109,7 +109,7 @@ else if(query.includes('=4')){
 	var load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
-}else if(query.includes('=6')){
+}else if(query.includes('=5')){
 	pname=guid(4);
 	$(document).attr("title", pname);
 	thisDoc = './explorer/data/Maverick/MavOutputWW.json';
@@ -853,14 +853,6 @@ else{
 				logData("create-note", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
 
 	        }
-	        else{
-	        	output += '<div id="' + noteId + '" class="prov-set doc-content" document_id="providedSummary" title="Notes from Analyst A" contenteditable="false">' +
-				noteHtml +
-				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
-				'</div>';
-	            	  
-	        	output+="</div>";
-	        };
   
              
              
@@ -1238,10 +1230,10 @@ else{
 			generateCoverage(prov_Coverage_file)
 		}
 		// Add prompt note on initialization
-		mouseX = 565;
+		mouseX = 965;
 		mouseY = 22;
-		var instructionsWindow = createNote('instructions', 290);
-		mouseX = 510;
+		var instructionsWindow = createNote('instructions', 320);
+		mouseX = 810;
 		mouseY = 464;
 		var participantSummary = createNote('response', 305);
 	});    //end jsPlumb.ready end the  big function 
