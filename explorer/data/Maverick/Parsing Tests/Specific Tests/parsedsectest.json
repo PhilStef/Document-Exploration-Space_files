@@ -1,0 +1,49 @@
+[
+    {
+        "timestamp": 2.352,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 7.254,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "ArmsDealing91"
+    },
+    {
+        "timestamp": 8.267,
+        "type": "end-study",
+        "msg": "4_f9eabcb0",
+        "elem_id": {
+            "windowSize": [
+                1528,
+                834
+            ],
+            "monitorResolution": [
+                1536,
+                960
+            ],
+            "availResolution": [
+                1536,
+                912
+            ],
+            "pixelRatio": 1.25,
+            "zoom": 125,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 8.267,
+        "type": "end-notes",
+        "msg": [
+            ""
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]

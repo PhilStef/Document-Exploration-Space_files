@@ -1,7 +1,7 @@
 import json
 import os
 
-main_file_path = 'Parsing Tests\\highlighttest.json'
+main_file_path = 'Parsing Tests\\Specific Tests\\sectest.json'
 file_name = os.path.basename(main_file_path)
 
 print(file_name)
@@ -56,16 +56,24 @@ print(newData)
 # Get the current directory
 current_dir = os.getcwd()
 folder_path = os.path.join(current_dir, "Parsing Tests")
+folder_path = os.path.join(folder_path, "Specific Tests")
 # Define the file path as the current directory with your desired file name
 file_path = os.path.join(folder_path, f'parsed{file_name}')
 
 # Write JSON data to a file in the same folder
 with open(file_path, 'w') as json_file:
     json.dump(newData, json_file, indent=4)
+
 #Draggin slowly 
 # dragging fast
 #Highliting and Searching 
 #enter open leave enter close
 #Document edges
 
-# 2 or 3 Tasks and the batches for them
+# 2 or 3 Tasks and the batches for them 
+
+
+
+## onlydrag fast was just dragging fast: only the drag was kept
+# chs was clicking highlighting and selecting:  nothing changed 
+#Scrolled to one doc on edge, stopped and then stopped study: Only kept the one doc I stopped on

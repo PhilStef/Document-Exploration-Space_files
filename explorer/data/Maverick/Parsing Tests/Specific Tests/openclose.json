@@ -1,0 +1,74 @@
+[
+  {
+    "timestamp": 1.881,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing52"
+  },
+  {
+    "timestamp": 1.882,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing52"
+  },
+  {
+    "timestamp": 3.555,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+  },
+  { "timestamp": 4.481, "type": "open-doc", "doc_id": "ArmsDealing90" },
+  {
+    "timestamp": 12.088,
+    "type": "mouseleave-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing90"
+  },
+  {
+    "timestamp": 12.088,
+    "type": "mouseenter-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+  },
+  {
+    "timestamp": 13.604,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing67"
+  },
+  {
+    "timestamp": 13.605,
+    "type": "mouseenter-doc",
+    "msg": "open",
+    "doc_id": "ArmsDealing90"
+  },
+  { "timestamp": 15.868, "type": "collapse-doc", "doc_id": "ArmsDealing90" },
+  {
+    "timestamp": 16.356,
+    "type": "mouseleave-doc",
+    "msg": "closed",
+    "doc_id": "ArmsDealing90"
+  },
+  {
+    "timestamp": 18.972,
+    "type": "end-study",
+    "msg": "4_39938269",
+    "elem_id": {
+      "windowSize": [1528, 834],
+      "monitorResolution": [1536, 960],
+      "availResolution": [1536, 912],
+      "pixelRatio": 1.25,
+      "zoom": 125,
+      "browser": "Google Chrome or Chromium",
+      "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36 Edg/134.0.0.0"
+    },
+    "doc_id": null,
+    "pos": null
+  },
+  {
+    "timestamp": 18.972,
+    "type": "end-notes",
+    "msg": [""],
+    "doc_id": ["noteSolution"]
+  }
+]
