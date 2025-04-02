@@ -1,0 +1,4543 @@
+[
+  {
+    "id": "1",
+    "source": "Wadsworth",
+    "date": "Sunday 9:15AM",
+    "summary": "Mr. Walter D. Boddy found dead at work",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter D. Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      }
+    ],
+    "topics": [
+      "Manslaughter",
+      "Death",
+      "Workplace"
+    ]
+  },
+  {
+    "id": "2",
+    "source": "Police",
+    "date": "Sunday 9:15AM",
+    "summary": "Walter Boddy found dead at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Murder",
+      "Estate",
+      "Death"
+    ]
+  },
+  {
+    "id": "3",
+    "source": "Brauman",
+    "date": "Sunday 9:15AM",
+    "summary": "Three individuals found in foyer at Boddy Estate with police",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Brown-haired female"
+      },
+      {
+        "type": "PERSON",
+        "name": "African American male"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Police Presence",
+      "Staff Member"
+    ]
+  },
+  {
+    "id": "4",
+    "source": "Brauman",
+    "date": "Sunday 9:15AM",
+    "summary": "Boddy Estate connection found",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Estate layout",
+      "Building connections",
+      "Home access"
+    ]
+  },
+  {
+    "id": "5",
+    "source": "Wadsworth",
+    "date": "Sunday 9:15AM",
+    "summary": "Document about a maid employed by Walter Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "brown-haired female"
+      }
+    ],
+    "topics": [
+      "Employment",
+      "Maid",
+      "Location",
+      "JobTitle"
+    ]
+  },
+  {
+    "id": "6",
+    "source": "Coroner",
+    "date": "Sunday 9:15AM",
+    "summary": "Victim died under unknown cause, moved to bathroom shortly after death",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      },
+      {
+        "type": "TIME",
+        "name": "2:00AM"
+      },
+      {
+        "type": "DATE",
+        "name": "Sunday, June 5th"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Crime Scene Analysis",
+      "Death Details"
+    ]
+  },
+  {
+    "id": "7",
+    "source": "Police",
+    "date": "Sunday 9:15AM",
+    "summary": "Police have taken two individuals into questioning at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "brown-haired female"
+      },
+      {
+        "type": "PERSON",
+        "name": "African American male"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Police questioning",
+      "Arrest"
+    ]
+  },
+  {
+    "id": "8",
+    "source": "Brauman",
+    "date": "Sunday 9:15AM",
+    "summary": "Document contains information about Yvette Duster, a staff member.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Yvette Duster"
+      }
+    ],
+    "topics": [
+      "Staff Member",
+      "Biography",
+      "Person Information"
+    ]
+  },
+  {
+    "id": "9",
+    "source": "Yvette",
+    "date": "Sunday 9:15AM",
+    "summary": "Yvette was employed as a maid at Walter Boddy's estate, and her location is being investigated for Boddy's murder.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th at 8:00PM - Sunday, June 5th at 9:00AM"
+      }
+    ],
+    "topics": [
+      "Maid Employment",
+      "Boddy Murder Investigation",
+      "Servant Building"
+    ]
+  },
+  {
+    "id": "10",
+    "source": "Wadsworth",
+    "date": "Sunday 9:35AM",
+    "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Wadsworth",
+      "Movement",
+      "Boddy Estate"
+    ]
+  },
+  {
+    "id": "11",
+    "source": "Wadsworth",
+    "date": "Sunday 9:35AM",
+    "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Bathroom Discovery",
+      "Dead Body"
+    ]
+  },
+  {
+    "id": "12",
+    "source": "Police",
+    "date": "Sunday 9:35AM",
+    "summary": "A broken martini glass was found in a theater.",
+    "entities": [
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Theater Damage",
+      "Martini Glass",
+      "Boddy Estate Incident"
+    ]
+  },
+  {
+    "id": "13",
+    "source": "Wadsworth",
+    "date": "Sunday 9:35AM",
+    "summary": "Yvette does not go to work on Sundays",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, 10:00AM"
+      },
+      {
+        "type": "EVENT",
+        "name": "Wadsworth left the market"
+      }
+    ],
+    "topics": [
+      "Sunday",
+      "Work",
+      "Time"
+    ]
+  },
+  {
+    "id": "14",
+    "source": "Police",
+    "date": "Sunday 9:35AM",
+    "summary": "Surveillance camera reported for Wadsworth and Yvette",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Servant's Building"
+      },
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      }
+    ],
+    "topics": [
+      "Surveillance",
+      "Camera",
+      "Security"
+    ]
+  },
+  {
+    "id": "15",
+    "source": "Police",
+    "date": "Sunday 9:35AM",
+    "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "LOC",
+        "name": "Essex"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th through Sunday, June 5th"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Organic Dairy"
+      }
+    ],
+    "topics": [
+      "Credit Card",
+      "Purchases",
+      "Local Bar",
+      "Dairy Vendor"
+    ]
+  },
+  {
+    "id": "16",
+    "source": "Police",
+    "date": "Sunday 9:35AM",
+    "summary": "Carving knife found in kitchen wall at Boddy Estate",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "NORP",
+        "name": "knife"
+      }
+    ],
+    "topics": [
+      "Crime Scene",
+      "Knife Incident",
+      "Kitchen Investigation"
+    ]
+  },
+  {
+    "id": "17",
+    "source": "Security Camera",
+    "date": "Sunday 9:35AM",
+    "summary": "Security footage shows an Indian female with brown-hair entering Servant's Building, followed by Henry Wadsworth.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Indian female"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Servant's Building"
+      },
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      }
+    ],
+    "topics": [
+      "Building Security",
+      "Female Intruder",
+      "Midnight Visit"
+    ]
+  },
+  {
+    "id": "18",
+    "source": "Mustard",
+    "date": "Sunday 9:35AM",
+    "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Mohegan Sun Casino"
+      }
+    ],
+    "topics": [
+      "Blackjack",
+      "Bet",
+      "Casino Outburst"
+    ]
+  },
+  {
+    "id": "19",
+    "source": "Yvette",
+    "date": "Sunday 9:35AM",
+    "summary": "Missing solid gold Rolex watch from Walter Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Rolex"
+      },
+      {
+        "type": "PERSON",
+        "name": "older woman"
+      }
+    ],
+    "topics": [
+      "Missing Watch",
+      "Gold Theft",
+      "Celebrity Crime"
+    ]
+  },
+  {
+    "id": "20",
+    "source": "Coroner",
+    "date": "Sunday 9:35AM",
+    "summary": "Corpus report about Walter Boddy murder investigation",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Murder",
+      "Investigation",
+      "Corpus"
+    ]
+  },
+  {
+    "id": "21",
+    "source": "Wadsworth",
+    "date": "Sunday 9:35AM",
+    "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Shared Interest",
+      "Meeting",
+      "Guests"
+    ]
+  },
+  {
+    "id": "22",
+    "source": "Police",
+    "date": "Sunday 9:35AM",
+    "summary": "Groceries found in bathroom at Boddy Estate.",
+    "entities": [
+      {
+        "type": "GPE",
+        "name": "Essex"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Bathroom",
+      "Groceries",
+      "Theater",
+      "Suspicious Activity"
+    ]
+  },
+  {
+    "id": "23",
+    "source": "Wadsworth",
+    "date": "Sunday 9:55AM",
+    "summary": "Document describes guests visiting Walter Boddy\\u2019s home on June 4th.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Guests",
+      "Visit",
+      "Home",
+      "Party"
+    ]
+  },
+  {
+    "id": "24",
+    "source": "Scarlet",
+    "date": "Sunday 9:55AM",
+    "summary": "Document discusses a murder suspect and possible motives.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter D. Boddy"
+      }
+    ],
+    "topics": [
+      "Murder Suspect",
+      "Jealousy",
+      "Romance"
+    ]
+  },
+  {
+    "id": "25",
+    "source": "Scarlet",
+    "date": "Sunday 9:55AM",
+    "summary": "Document about Christine Scarlet's arrest at Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "2:35AM"
+      },
+      {
+        "type": "TIME",
+        "name": "8:30AM"
+      }
+    ],
+    "topics": [
+      "Arrest",
+      "Mystery",
+      "Police",
+      "Investigation"
+    ]
+  },
+  {
+    "id": "26",
+    "source": "Police",
+    "date": "Sunday 9:55AM",
+    "summary": "6 individuals visited Boddy Estate on Saturday, June 4th, with 5 leaving after midnight.",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette Duster"
+      }
+    ],
+    "topics": [
+      "Boddy Estate Visitation",
+      "Security Footage",
+      "Estate Visitors"
+    ]
+  },
+  {
+    "id": "27",
+    "source": "Police",
+    "date": "Sunday 9:55AM",
+    "summary": "Security footage shows an individual leaving Boddy Estate on June 4th.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "June 4th",
+      "Blue Buick"
+    ]
+  },
+  {
+    "id": "28",
+    "source": "Yvette",
+    "date": "Sunday 9:55AM",
+    "summary": "Document contains information about Adam Mustard and Mr. Boddy's guests.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Mr. Boddy"
+      },
+      {
+        "type": "GPE",
+        "name": "Caucasian"
+      }
+    ],
+    "topics": [
+      "Guest Information",
+      "Racial Identity",
+      "Mystery Guests"
+    ]
+  },
+  {
+    "id": "29",
+    "source": "Brauman",
+    "date": "Sunday 9:55AM",
+    "summary": "Information about Jill White",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "African American",
+      "Grey Hair",
+      "Female Identity"
+    ]
+  },
+  {
+    "id": "30",
+    "source": "Yvette",
+    "date": "Sunday 9:55AM",
+    "summary": "Guests arrived at Mr. Boddy's estate, met with him, and were invited to dinner.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "estate"
+      },
+      {
+        "type": "EVENT",
+        "name": "dinner"
+      },
+      {
+        "type": "PERSON",
+        "name": "Mr. Boddy"
+      }
+    ],
+    "topics": [
+      "Guests Arrival",
+      "Dinner Invitation",
+      "Estate Meeting"
+    ]
+  },
+  {
+    "id": "31",
+    "source": "Yvette",
+    "date": "Sunday 9:55AM",
+    "summary": "Yvette Duster's work schedule on Sundays for Mr. Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Yvette Duster"
+      },
+      {
+        "type": "PERSON",
+        "name": "Mr. Boddy"
+      },
+      {
+        "type": "TIME",
+        "name": "10:00AM"
+      }
+    ],
+    "topics": [
+      "Work Schedule",
+      "Sunday Routine",
+      "Mr Boddy"
+    ]
+  },
+  {
+    "id": "32",
+    "source": "Police",
+    "date": "Sunday 10:20AM",
+    "summary": "Hand drawn sketch of Body Estate building layout.",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Body Estate"
+      }
+    ],
+    "topics": [
+      "Building Layout",
+      "Facility Plan",
+      "Estate Map"
+    ]
+  },
+  {
+    "id": "33",
+    "source": "Wadsworth",
+    "date": "Sunday 10:20AM",
+    "summary": "Dinner details provided",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Mr. Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      }
+    ],
+    "topics": [
+      "Dinner Details",
+      "Guest List",
+      "Time Frame"
+    ]
+  },
+  {
+    "id": "34",
+    "source": "Wadsworth",
+    "date": "Sunday 10:20AM",
+    "summary": "Missing personal items reported at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Giorgio Armani brand leather driving gloves"
+      },
+      {
+        "type": "CARDINAL",
+        "name": "car keys"
+      },
+      {
+        "type": "NORP",
+        "name": "checkbook"
+      }
+    ],
+    "topics": [
+      "Theft Report",
+      "Missing Items",
+      "Boddy Estate"
+    ]
+  },
+  {
+    "id": "35",
+    "source": "Police",
+    "date": "Sunday 10:20AM",
+    "summary": "Adam Mustard visited Chili",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "LOC",
+        "name": "Essex"
+      }
+    ],
+    "topics": [
+      "Chili",
+      "Visit",
+      "Restaurant"
+    ]
+  },
+  {
+    "id": "36",
+    "source": "Wadsworth",
+    "date": "Sunday 10:20AM",
+    "summary": "Guests at Boddy Estate receive cards with room assignments.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Room Assignments",
+      "Dinner"
+    ]
+  },
+  {
+    "id": "37",
+    "source": "White",
+    "date": "Sunday 10:20AM",
+    "summary": "Jill White's night at Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th at 12:00AM"
+      }
+    ],
+    "topics": [
+      "Jill White",
+      "Boddy Estate",
+      "Night"
+    ]
+  },
+  {
+    "id": "38",
+    "source": "Wadsworth",
+    "date": "Sunday 10:20AM",
+    "summary": "Meeting attendees and time frame",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Dining Room"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette Duster"
+      },
+      {
+        "type": "PERSON",
+        "name": "Mr. Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      }
+    ],
+    "topics": [
+      "Dinner Meeting",
+      "Dining Room",
+      "Time Frame"
+    ]
+  },
+  {
+    "id": "39",
+    "source": "Brauman",
+    "date": "Sunday 10:20AM",
+    "summary": "Receipt for Tiffany's diamond engagement ring found at Boddy Estate.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Engagement Ring",
+      "Diamond",
+      "Theft"
+    ]
+  },
+  {
+    "id": "40",
+    "source": "Police",
+    "date": "Sunday 10:20AM",
+    "summary": "Information about Christine Scarlet",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "LOC",
+        "name": "Latin America"
+      }
+    ],
+    "topics": [
+      "Ethnicity",
+      "Height",
+      "Appearance"
+    ]
+  },
+  {
+    "id": "41",
+    "source": "Police",
+    "date": "Sunday 10:20AM",
+    "summary": "Document about Katie Peacock",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "GPE",
+        "name": ""
+      }
+    ],
+    "topics": [
+      "Caucasian Person",
+      "Physical Description",
+      "Demographics"
+    ]
+  },
+  {
+    "id": "42",
+    "source": "Wadsworth",
+    "date": "Sunday 10:20AM",
+    "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Fish",
+      "Illness",
+      "Aquarium"
+    ]
+  },
+  {
+    "id": "43",
+    "source": "Scarlet",
+    "date": "Sunday 10:40AM",
+    "summary": "Scott Plum has a fear of fish due to ichthyophobia and cannot be assigned to wait in a room with fish.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "ORG",
+        "name": "Mr. Boddy"
+      }
+    ],
+    "topics": [
+      "Fish Phobia",
+      "Fear of Fish",
+      "Ichthyophobia"
+    ]
+  },
+  {
+    "id": "44",
+    "source": "Wadsworth",
+    "date": "Sunday 10:40AM",
+    "summary": "Scott Plum won't wait in rooms with aquariums due to his fear.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Fish phobia",
+      "Room restrictions",
+      "Guest request"
+    ]
+  },
+  {
+    "id": "45",
+    "source": "Green",
+    "date": "Sunday 10:40AM",
+    "summary": "Document confirms identities of African American male and Latin American female at police foyer.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Police Incident",
+      "Racial Identity",
+      "Forensic Evidence"
+    ]
+  },
+  {
+    "id": "46",
+    "source": "Green",
+    "date": "Sunday 10:40AM",
+    "summary": "Antonio Green leaves dinner and goes to billiard room",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      },
+      {
+        "type": "TIME",
+        "name": "5:30 PM"
+      },
+      {
+        "type": "TIME",
+        "name": "6:00 PM"
+      }
+    ],
+    "topics": [
+      "Dinner",
+      "Billiard Room",
+      "Departure Time",
+      "Pool Game"
+    ]
+  },
+  {
+    "id": "47",
+    "source": "Green",
+    "date": "Sunday 10:40AM",
+    "summary": "Green left billiard room at 6:00PM on June 4th to go to library.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Green"
+      },
+      {
+        "type": "TIME",
+        "name": "6:00PM"
+      },
+      {
+        "type": "DATE",
+        "name": "June 4th"
+      },
+      {
+        "type": "LOC",
+        "name": "library"
+      }
+    ],
+    "topics": [
+      "Green's movement",
+      "billiard room",
+      "leaving time"
+    ]
+  },
+  {
+    "id": "48",
+    "source": "Police",
+    "date": "Sunday 10:40AM",
+    "summary": "Walter Boddy owned a handgun kept in his study",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Gun ownership",
+      "Handgun",
+      "Study"
+    ]
+  },
+  {
+    "id": "49",
+    "source": "Scarlet",
+    "date": "Sunday 10:40AM",
+    "summary": "Glass bottle with poison label found in Boddy Estate",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "glass bottle"
+      }
+    ],
+    "topics": [
+      "Poison",
+      "Estate",
+      "Investigation",
+      "Safety"
+    ]
+  },
+  {
+    "id": "50",
+    "source": "Green",
+    "date": "Sunday 10:40AM",
+    "summary": "Document about Walter Boddy visiting Antonio Green at the Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      }
+    ],
+    "topics": [
+      "Company Sale",
+      "Visit Meeting",
+      "Boddy Estate"
+    ]
+  },
+  {
+    "id": "51",
+    "source": "Security Camera",
+    "date": "Sunday 10:40AM",
+    "summary": "Video footage shows Boddy Estate empty",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "DATE",
+        "name": "Sunday, June 5th"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Empty House",
+      "Mystery Footage"
+    ]
+  },
+  {
+    "id": "52",
+    "source": "Mustard",
+    "date": "Sunday 10:40AM",
+    "summary": "Adam Mustard was alone in a study",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "ORG",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Boddy Estates",
+      "Study Alone",
+      "Saturday Visit"
+    ]
+  },
+  {
+    "id": "53",
+    "source": "White",
+    "date": "Sunday 10:40AM",
+    "summary": "Jill White claims she was asked to meet Walter Boddy in a kitchen after dinner",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Dinner Invitation",
+      "Boddy Estate",
+      "Kitchen Meeting"
+    ]
+  },
+  {
+    "id": "54",
+    "source": "Plum",
+    "date": "Sunday 10:40AM",
+    "summary": "Scott Plum left Dining Room at 8:30PM and found Adam Mustard in study.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Study",
+      "Leaving Event"
+    ]
+  },
+  {
+    "id": "55",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Walter Boddy acquires Dalia Surveillance Equipment Company with anonymous partners.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      }
+    ],
+    "topics": [
+      "Acquisition",
+      "Surveillance",
+      "Company"
+    ]
+  },
+  {
+    "id": "56",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Boddy provided a signed sales contract to Green, which was then processed on a laptop computer.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Ms. Katie Peacock"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Green"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "laptop computer"
+      }
+    ],
+    "topics": [
+      "Sales Contract",
+      "Authorized Personnel",
+      "Procurement Process"
+    ]
+  },
+  {
+    "id": "57",
+    "source": "Security Camera",
+    "date": "Sunday 11:00AM",
+    "summary": "Security footage shows a person in theatre at midnight",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "brown-haired female"
+      }
+    ],
+    "topics": [
+      "theatre break",
+      "midnight security",
+      "female suspect"
+    ]
+  },
+  {
+    "id": "58",
+    "source": "Mustard",
+    "date": "Sunday 11:00AM",
+    "summary": "Adam Mustard invited to discuss business partnership at Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Business Partnership",
+      "Dalia Surveillance Equipment",
+      "Boddy Estate"
+    ]
+  },
+  {
+    "id": "59",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Walter Boddy exits library to meet Antonio Green later",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Library Encounter",
+      "Evening Meeting",
+      "Walter Boddy"
+    ]
+  },
+  {
+    "id": "60",
+    "source": "Plum",
+    "date": "Sunday 11:00AM",
+    "summary": "Witness reports seeing a woman entering a building",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th at 8:45PM"
+      }
+    ],
+    "topics": [
+      "Building Incident",
+      "Witness Report",
+      "Nighttime Surveillance"
+    ]
+  },
+  {
+    "id": "61",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Walter Boddy sells Dalia Surveillance Equipment Company for $2 million",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Corporate Sale",
+      "Financial Dealings",
+      "Ownership Structure"
+    ]
+  },
+  {
+    "id": "62",
+    "source": "Mustard",
+    "date": "Sunday 11:00AM",
+    "summary": "Encounter between Adam Mustard and Walter Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Meeting",
+      "Encounter",
+      "Social Gathering"
+    ]
+  },
+  {
+    "id": "63",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Green lost out on a $500,000 commission check after Boddy assured him that pursuing debt was a waste of time.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      }
+    ],
+    "topics": [
+      "Commission Dispute",
+      "Sales Negotiation",
+      "Payment Disruption"
+    ]
+  },
+  {
+    "id": "64",
+    "source": "Plum",
+    "date": "Sunday 11:00AM",
+    "summary": "Scott Plum was alone in his dining room from 8:00PM to 8:30PM on June 4th, thinking about losing $200,000.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th"
+      },
+      {
+        "type": "MONEY",
+        "name": "$200,000"
+      }
+    ],
+    "topics": [
+      "Financial Loss",
+      "Alone",
+      "Loss"
+    ]
+  },
+  {
+    "id": "65",
+    "source": "Green",
+    "date": "Sunday 11:00AM",
+    "summary": "Antonio Green alone in library on Saturday, June 4th to Sunday, June 5th",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "LOCATION",
+        "name": "library"
+      },
+      {
+        "type": "EVENT",
+        "name": "sale of Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th to Sunday, June 5th"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "DVD of When Harry Met Sally"
+      }
+    ],
+    "topics": [
+      "Antonio",
+      "Green",
+      "Sale",
+      "Library"
+    ]
+  },
+  {
+    "id": "66",
+    "source": "Police",
+    "date": "Sunday 11:00AM",
+    "summary": "Antonio Green was found in library with DVDs and contracts for Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "GPE",
+        "name": "Dagobah Finance Bank"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy &"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Surveillance Equipment",
+      "Library Search",
+      "Antonio Green"
+    ]
+  },
+  {
+    "id": "67",
+    "source": "Brauman",
+    "date": "Sunday 11:00AM",
+    "summary": "A metal candlestick was found buried in a potted fern plant.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "conservatory"
+      },
+      {
+        "type": "EVENT",
+        "name": "search"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday morning, June 5th, at 10:00AM"
+      }
+    ],
+    "topics": [
+      "Candlestick Discovery",
+      "Plant Discovery",
+      "Conservatory Search"
+    ]
+  },
+  {
+    "id": "68",
+    "source": "Police",
+    "date": "Sunday 11:00AM",
+    "summary": "Document describes damage to metal candlestick possibly used as murder weapon.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": ""
+      },
+      {
+        "type": "PERSON",
+        "name": ""
+      },
+      {
+        "type": "PRODUCT",
+        "name": "metal candlestick"
+      }
+    ],
+    "topics": [
+      "Murder",
+      "Investigation",
+      "Evidence"
+    ]
+  },
+  {
+    "id": "69",
+    "source": "Police",
+    "date": "Sunday 11:00AM",
+    "summary": "Henry Wadsworth provided invitations to police investigators",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "the guests"
+      }
+    ],
+    "topics": [
+      "Missing Person",
+      "Investigation Invite",
+      "Police Inquiry"
+    ]
+  },
+  {
+    "id": "70",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Christine Scarlet is accused of having an affair with Boddy by another woman, leading to a physical altercation.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      },
+      {
+        "type": "LOC",
+        "name": "conservatory"
+      },
+      {
+        "type": "PERSON",
+        "name": "the accused woman"
+      }
+    ],
+    "topics": [
+      "Affair Accusation",
+      "Physical Altercation",
+      "Dinner Party",
+      "Confrontation"
+    ]
+  },
+  {
+    "id": "71",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Christine Scarlet and Walter Boddy started a romantic relationship.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Celebrity Relationship",
+      "Surveillance System",
+      "Romantic Affair"
+    ]
+  },
+  {
+    "id": "72",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Walter Boddy invited Christine Scarlet to his estate on June 4th",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Wedding Proposal",
+      "Estate Visit",
+      "Saturday Plans"
+    ]
+  },
+  {
+    "id": "73",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Walter Boddy visits Christine Scarlet and announces a large sum of money from selling a company.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      },
+      {
+        "type": "TIME",
+        "name": "8:30PM"
+      }
+    ],
+    "topics": [
+      "Walter Boddy",
+      "Company Sale",
+      "Money Gain",
+      "Trip Announcement"
+    ]
+  },
+  {
+    "id": "74",
+    "source": "Police",
+    "date": "Sunday 11:25AM",
+    "summary": "Document provides basic information about Scott Plum",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Person Profile",
+      "Indian Male",
+      "Basic Identification"
+    ]
+  },
+  {
+    "id": "75",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Walter Boddy left conservatory on June 4th, with Christine Scarlet staying behind.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Conservatory",
+      "Celebration",
+      "Departure"
+    ]
+  },
+  {
+    "id": "76",
+    "source": "Plum",
+    "date": "Sunday 11:25AM",
+    "summary": "Report on Walter Boddy scandal",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "MONEY",
+        "name": "200,000"
+      }
+    ],
+    "topics": [
+      "Scandal",
+      "Death",
+      "Investigation"
+    ]
+  },
+  {
+    "id": "77",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Christine Scarlet waited for Walter Boddy in conservatory on June 4th.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Engagement",
+      "Ticket",
+      "Surprise"
+    ]
+  },
+  {
+    "id": "78",
+    "source": "Police",
+    "date": "Sunday 11:25AM",
+    "summary": "Burnt ashes and melted video tapes found in a trashcan at Boddy Estate theatre.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "LOCATION",
+        "name": "theatre"
+      }
+    ],
+    "topics": [
+      "Burnt Ashes",
+      "Video Tapes",
+      "Theatre Fire"
+    ]
+  },
+  {
+    "id": "79",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Surveillance system installed at Boddy estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Surveillance",
+      "Boddy estate",
+      "Investigation"
+    ]
+  },
+  {
+    "id": "80",
+    "source": "White",
+    "date": "Sunday 11:25AM",
+    "summary": "Jill White receives sales contracts for Dalia Surveillance Equipment Company from Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Company Acquisition",
+      "Meeting Details",
+      "Personal Ownership"
+    ]
+  },
+  {
+    "id": "81",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Source denies knowledge of Dalia Surveillance Equipment Company sale",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "PERSON",
+        "name": "Source"
+      },
+      {
+        "type": "PERIOD",
+        "name": "3 generations"
+      }
+    ],
+    "topics": [
+      "Surveillance Sales",
+      "Company Denials",
+      "Family Business"
+    ]
+  },
+  {
+    "id": "82",
+    "source": "Brauman",
+    "date": "Sunday 11:25AM",
+    "summary": "A laptop was found burnt and broken in a fireplace.",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Burnt Laptop",
+      "Fireplace Incident",
+      "Body Location"
+    ]
+  },
+  {
+    "id": "83",
+    "source": "Scarlet",
+    "date": "Sunday 11:25AM",
+    "summary": "Candlestick broken in conservatory, attributed to Christine Scarlet hiding it.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Candlestick",
+      "Conservatory",
+      "Theft"
+    ]
+  },
+  {
+    "id": "84",
+    "source": "Mustard",
+    "date": "Sunday 11:25AM",
+    "summary": "Adam Mustard is Christine Scarlet's supervisor at Dalia Surveillance Equipment Company.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      }
+    ],
+    "topics": [
+      "Surveillance",
+      "Company",
+      "Supervisor"
+    ]
+  },
+  {
+    "id": "85",
+    "source": "Security Camera",
+    "date": "Sunday 11:25AM",
+    "summary": "Security camera footage shows exits at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      },
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th"
+      }
+    ],
+    "topics": [
+      "Security Camera",
+      "Footage",
+      "Exits"
+    ]
+  },
+  {
+    "id": "86",
+    "source": "Brauman",
+    "date": "Sunday 11:25AM",
+    "summary": "Pair of Giorgio Armani leather driving gloves found inside piano",
+    "entities": [
+      {
+        "type": "PRODUCT",
+        "name": "Giorgio Armani leather driving gloves"
+      }
+    ],
+    "topics": [
+      "Driving Gloves",
+      "Piano",
+      "Boddy Estate"
+    ]
+  },
+  {
+    "id": "87",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Adam Mustard and Walter Boddy interacted at Boddy's estate over equipment setup.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Equipment Setup",
+      "Mustard-Boddy Interaction"
+    ]
+  },
+  {
+    "id": "88",
+    "source": "Peacock",
+    "date": "Sunday 11:45AM",
+    "summary": "Katie Peacock was invited to Boddy Estate on June 4th, assuming a blackmail motive.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "DATE",
+        "name": "June 4th"
+      }
+    ],
+    "topics": [
+      "Blackmail",
+      "Invitation",
+      "Motive"
+    ]
+  },
+  {
+    "id": "89",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Adam Mustard and Walter Boddy met at a pub in Essex to discuss Dalia Surveillance Company's new patent.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "GPE",
+        "name": "Connor Larkin's"
+      },
+      {
+        "type": "LOC",
+        "name": "Essex"
+      },
+      {
+        "type": "DATE",
+        "name": "2 weeks ago"
+      }
+    ],
+    "topics": [
+      "Dalia Surveillance",
+      "New Patent",
+      "Pub Meeting"
+    ]
+  },
+  {
+    "id": "90",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Antonio Green is a merger and acquisition broker working for Dagobah Finance Bank on a $1.5 million sale deal.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "ORG",
+        "name": "Dagobah Finance Bank"
+      },
+      {
+        "type": "CARDINAL",
+        "name": "$1.5 million"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter D. Boddy"
+      }
+    ],
+    "topics": [
+      "Mergers and Acquisitions",
+      "Financial Deals",
+      "Brokerage",
+      "Banking",
+      "Sale Contracts"
+    ]
+  },
+  {
+    "id": "91",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Walter Boddy and Adam Mustard discuss buying Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Business Acquisition",
+      "Surveillance Equipment",
+      "Meeting Discussion"
+    ]
+  },
+  {
+    "id": "92",
+    "source": "White",
+    "date": "Sunday 11:45AM",
+    "summary": "Summary of Jill White and Walter Boddy relationship",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Relationship",
+      "Work",
+      "Marina",
+      "Event"
+    ]
+  },
+  {
+    "id": "93",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Walter Boddy and Adam Mustard discuss purchasing Dalia Surveillance Equipment Co. for $800,000 with a proposed split and stake distribution.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      }
+    ],
+    "topics": [
+      "Business",
+      "Deal",
+      "Mergers"
+    ]
+  },
+  {
+    "id": "94",
+    "source": "Wadsworth",
+    "date": "Sunday 11:45AM",
+    "summary": "Walter Boddy's gun reported missing from study.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Gun Theft",
+      "Missing Item",
+      "Crime Scene"
+    ]
+  },
+  {
+    "id": "95",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "GPE",
+        "name": "Connor Larkin's pub in Essex"
+      }
+    ],
+    "topics": [
+      "Investment",
+      "Business",
+      "Essex",
+      "Companies"
+    ]
+  },
+  {
+    "id": "96",
+    "source": "Plum",
+    "date": "Sunday 11:45AM",
+    "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "MONEY",
+        "name": "$200,000"
+      }
+    ],
+    "topics": [
+      "Business Deal",
+      "Foreclosure Risk",
+      "Company Funding"
+    ]
+  },
+  {
+    "id": "97",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Boddy Estate: Trash with Cookie Mix and Unbaked Cookies",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Chocolate Chip Cookie Mix"
+      },
+      {
+        "type": "QUANTITY",
+        "name": "4 dozen"
+      }
+    ],
+    "topics": [
+      "Cookie Mix",
+      "Trash",
+      "Unbaked Cookies"
+    ]
+  },
+  {
+    "id": "98",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Police confirm the ring worn by Christine Scarlet was a Tiffany & Co Model 321 diamond engagement ring.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Tiffany & Co"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Tiffany & Co",
+      "Diamond Ring",
+      "Engagement Ring"
+    ]
+  },
+  {
+    "id": "99",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Walter Boddy meets with Adam Mustard and Scott Plum to discuss purchasing Dalia Surveillance Equipment Company, where Boddy convinces them to sign over their power of attorney due to potential insider information charges.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "EVENT",
+        "name": "meeting"
+      }
+    ],
+    "topics": [
+      "Business Deal",
+      "Power Of Attorney",
+      "Insider Trading"
+    ]
+  },
+  {
+    "id": "100",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Scott Plum gave Adam Mustard $200,000 for Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "MONEY",
+        "name": "$200,000"
+      }
+    ],
+    "topics": [
+      "Business Transaction",
+      "Cash Donation",
+      "Company Purchase"
+    ]
+  },
+  {
+    "id": "101",
+    "source": "Mustard",
+    "date": "Sunday 11:45AM",
+    "summary": "Adam Mustard receives suspicious call from bank requesting large transfer to Walter Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "ORG",
+        "name": "Dagobah Finance"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Suspicious Bank Call",
+      "Large Financial Transfer",
+      "Investment Scam"
+    ]
+  },
+  {
+    "id": "102",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Security footage shows a man entering Boddy Estate bathroom",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Indian male"
+      },
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "DATE",
+        "name": "Sunday, June 5th"
+      }
+    ],
+    "topics": [
+      "Bathroom Incident",
+      "Security Footage",
+      "Property Break-In"
+    ]
+  },
+  {
+    "id": "103",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Rolex"
+      }
+    ],
+    "topics": [
+      "Theft at Boddy",
+      "Gift Receipt",
+      "Jill White"
+    ]
+  },
+  {
+    "id": "104",
+    "source": "Police",
+    "date": "Sunday 11:45AM",
+    "summary": "Document contains descriptions of 6 house guests",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "House Guests",
+      "Physical Descriptions",
+      "Demographics",
+      "Age",
+      "Ethnicity"
+    ]
+  },
+  {
+    "id": "105",
+    "source": "Security Camera",
+    "date": "Sunday 11:45AM",
+    "summary": "Security footage reveals guests' entry time",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Yvette"
+      },
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Guest Entry",
+      "Security Footage",
+      "Timeline Analysis"
+    ]
+  },
+  {
+    "id": "106",
+    "source": "Brauman",
+    "date": "Sunday 11:45AM",
+    "summary": "List of items found in various rooms of Boddy Estate.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Fern plant"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Cactus plant"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Small glass table"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Potting supplies"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Binoculars"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "DVD set"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Television"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Set of chairs"
+      },
+      {
+        "type": "BOOK",
+        "name": "Books"
+      },
+      {
+        "type": "ELECTRONIC_DEVICE",
+        "name": "Laptop computer"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Two wood tables"
+      },
+      {
+        "type": "ANIMAL",
+        "name": "Fish"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Couch"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Dinner table"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Multiple chairs"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Serving cart"
+      },
+      {
+        "type": "ANIMAL",
+        "name": "Fish"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Buffet with china"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Hutch"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Porcelain tea set"
+      },
+      {
+        "type": "ELECTRONIC_DEVICE",
+        "name": "Microwave"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Small table with two chairs"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Serving cart"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Knife set"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Hutch"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Safe"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Piano"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Reclining chairs"
+      },
+      {
+        "type": "FIREPLACE",
+        "name": "Fireplace"
+      },
+      {
+        "type": "DRINK CART",
+        "name": "Drink cart"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Coffee table"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Two end tables"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Movie reel - Clue"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Movie reel - Wall-E"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Pool table"
+      },
+      {
+        "type": "BAR",
+        "name": "Bar and stools"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Piano"
+      },
+      {
+        "type": "MUSIC_INSTRUMENT",
+        "name": "Drum set"
+      },
+      {
+        "type": "SPORTSEquipment",
+        "name": "Pool cues"
+      },
+      {
+        "type": "FURNITURE",
+        "name": "Desk"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Rooms and Furniture",
+      "Movies and Music",
+      "Entertainment"
+    ]
+  },
+  {
+    "id": "107",
+    "source": "Peacock",
+    "date": "Sunday 11:45AM",
+    "summary": "A brown-haired woman enters a billiard room with an African American man",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "woman"
+      },
+      {
+        "type": "PERSON",
+        "name": "man"
+      }
+    ],
+    "topics": [
+      "Billiards",
+      "Woman",
+      "Meeting"
+    ]
+  },
+  {
+    "id": "108",
+    "source": "White",
+    "date": "Sunday 11:45AM",
+    "summary": "Jill White found records of plane tickets and hotel rooms purchased by Walter Boddy for himself and Christine Scarlet.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th 3:05AM"
+      }
+    ],
+    "topics": [
+      "Travel Plans",
+      "Walter Boddy",
+      "Christine Scarlet",
+      "Trip Details",
+      "Time Found"
+    ]
+  },
+  {
+    "id": "109",
+    "source": "Police",
+    "date": "Sunday 12:00PM",
+    "summary": "Police confirm Adam Mustard as Boddy camera system supervisor, company to disclose new patent.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Patent Disclosure",
+      "Camera System",
+      "Company Valuation"
+    ]
+  },
+  {
+    "id": "110",
+    "source": "Police",
+    "date": "Sunday 12:00PM",
+    "summary": "Adam Mustard took out a $200,000 loan from Dagobah Finance Bank.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "ORG",
+        "name": "Dagobah Finance Bank"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Loan",
+      "Banking",
+      "Finance"
+    ]
+  },
+  {
+    "id": "111",
+    "source": "Peacock",
+    "date": "Sunday 12:00PM",
+    "summary": "Report of an African American woman entering a kitchen at 6:00PM on June 4th",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "African American woman"
+      }
+    ],
+    "topics": [
+      "Racial Profiling",
+      "Kitchen Surveillance",
+      "Identity Bias"
+    ]
+  },
+  {
+    "id": "112",
+    "source": "Mustard",
+    "date": "Sunday 12:00PM",
+    "summary": "Adam Mustard's visit to Boddy Estate on June 4th",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Investigations",
+      "Business Meeting",
+      "Surveillance Equipment",
+      "Estate Visit"
+    ]
+  },
+  {
+    "id": "113",
+    "source": "Police",
+    "date": "Sunday 12:00PM",
+    "summary": "Suspects found in Onset Bay Marina Yachting Club",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Onset Bay Marina Yachting Club"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Yachting Club",
+      "Marina Suspects",
+      "Bay Investigation"
+    ]
+  },
+  {
+    "id": "114",
+    "source": "Mustard",
+    "date": "Sunday 12:00PM",
+    "summary": "Adam Mustard receives card from Walter Boddy at Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Meeting",
+      "Card",
+      "Location"
+    ]
+  },
+  {
+    "id": "115",
+    "source": "Scarlet",
+    "date": "Sunday 12:00PM",
+    "summary": "Christine Scarlet files for divorce from Scott Plum due to financial issues, then dates Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Financial Issues",
+      "Divorce Proceedings",
+      "Marital Separation"
+    ]
+  },
+  {
+    "id": "116",
+    "source": "Brauman",
+    "date": "Sunday 12:00PM",
+    "summary": "Document about Boddy Estate foyer and hallway",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "NORP",
+        "name": "foyer"
+      },
+      {
+        "type": "NORP",
+        "name": "hallway"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Foyer Search",
+      "Estate Inspection"
+    ]
+  },
+  {
+    "id": "117",
+    "source": "Scarlet",
+    "date": "Sunday 12:00PM",
+    "summary": "A woman is seen at Boddy Estate with a gun",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "the woman"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Woman",
+      "Gun"
+    ]
+  },
+  {
+    "id": "118",
+    "source": "Police",
+    "date": "Sunday 12:00PM",
+    "summary": "Emails reveal transfers of ownership in companies Dalia Surveillance Equipment Company, Katie Peacock, Walter Boddy, and Jill White.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Company Ownership",
+      "Financial Transfers",
+      "Late Night Deals"
+    ]
+  },
+  {
+    "id": "119",
+    "source": "Scarlet",
+    "date": "Sunday 12:00PM",
+    "summary": "Document about a source claim about Jill White and Christine Scarlet",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Dating Scandal",
+      "Physical Assault",
+      "June Incident"
+    ]
+  },
+  {
+    "id": "120",
+    "source": "White",
+    "date": "Sunday 12:00PM",
+    "summary": "Invitation details for Jill White to visit Boddy Estate on June 4th",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Henry Wadsworth"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th; 12:30PM-2:00PM"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "White Visit",
+      "June 4th Event",
+      "Lunch Invitation"
+    ]
+  },
+  {
+    "id": "121",
+    "source": "White",
+    "date": "Sunday 12:00PM",
+    "summary": "Jill White confessed to Walter Boddy about her feelings for him.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      },
+      {
+        "type": "TIME",
+        "name": "12:30PM"
+      }
+    ],
+    "topics": [
+      "Love Confession",
+      "Relationship Issues",
+      "Confidentiality",
+      "Family Matters"
+    ]
+  },
+  {
+    "id": "122",
+    "source": "White",
+    "date": "Sunday 12:00PM",
+    "summary": "Walter Boddy confides in Jill White about his financial struggles and reliance on their business deal to secure his future.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Business Failure",
+      "Financial Struggles",
+      "Investment Losses"
+    ]
+  },
+  {
+    "id": "123",
+    "source": "Mustard",
+    "date": "Sunday 12:00PM",
+    "summary": "Adam Mustard was out on June 4th, driving around and then visiting Chili's for dinner.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "LOC",
+        "name": "Essex"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Chili's Visit",
+      "Driving",
+      "Dinner",
+      "Nighttime Activity"
+    ]
+  },
+  {
+    "id": "124",
+    "source": "White",
+    "date": "Sunday 12:00PM",
+    "summary": "Jill White and Walter Boddy were eating lunch together from 12:30PM to 1:30PM, then White moved to the lounge.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "TIME",
+        "name": "12:30PM"
+      }
+    ],
+    "topics": [
+      "Lunch",
+      "Guests",
+      "Meeting"
+    ]
+  },
+  {
+    "id": "125",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Walter Boddy convinces Jill White to invest in Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Investment Scam",
+      "Surveillance Equipment",
+      "Love Manipulation"
+    ]
+  },
+  {
+    "id": "126",
+    "source": "Scarlet",
+    "date": "Sunday 12:15PM",
+    "summary": "Christine Scarlet denies rekindling relationship with Scott Plum, citing condition involving Tiffany & Co. gift",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "ORG",
+        "name": "Tiffany & Co."
+      }
+    ],
+    "topics": [
+      "Relationship Rumors",
+      "Gift Condition",
+      "Celebrity News"
+    ]
+  },
+  {
+    "id": "127",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "A transfer of $2 million was made to Walter Boddy for a deal involving Dalia Surveillance Equipment Company.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      },
+      {
+        "type": "TIME",
+        "name": "7:15PM"
+      }
+    ],
+    "topics": [
+      "Surveillance Deal",
+      "Company Purchase",
+      "Financial Transaction"
+    ]
+  },
+  {
+    "id": "128",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Jill White and Walter Boddy discussed a contract meeting, but details are unclear about what actually occurred.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "PERIOD",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Contract",
+      "Meeting",
+      "Boddy White"
+    ]
+  },
+  {
+    "id": "129",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Encounter between Walter Boddy and Jill White",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "DATE",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Encounter",
+      "Meeting",
+      "Personnel"
+    ]
+  },
+  {
+    "id": "130",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Boddy ends relationship with White, demands money back from Dalia Surveillance Equipment Company",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "White"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Dalia Surveillance Equipment Company"
+      },
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      }
+    ],
+    "topics": [
+      "Break up",
+      "Surveillance",
+      "Money"
+    ]
+  },
+  {
+    "id": "131",
+    "source": "Mustard",
+    "date": "Sunday 12:15PM",
+    "summary": "Adam Mustard witnessed a man showing a handgun to a woman in the conservatory.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "the man"
+      }
+    ],
+    "topics": [
+      "Assault",
+      "Conversational",
+      "Witness"
+    ]
+  },
+  {
+    "id": "132",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Walter Boddy breaks off relationship with Jill White, she reacts violently",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Relationship Breakup",
+      "Domestic Violence",
+      "Proposition"
+    ]
+  },
+  {
+    "id": "133",
+    "source": "Police",
+    "date": "Sunday 12:15PM",
+    "summary": "No large bets were placed at Mohegan Sun Casino blackjack tables recently",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Mohegan Sun Casino"
+      },
+      {
+        "type": "MONEY",
+        "name": "$800,000"
+      }
+    ],
+    "topics": [
+      "Casino Bets",
+      "Blackjack Limits",
+      "Poker Rules"
+    ]
+  },
+  {
+    "id": "134",
+    "source": "Peacock",
+    "date": "Sunday 12:15PM",
+    "summary": "A person reported a suspicious individual seen outside a theatre.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "GPE",
+        "name": "theatre"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th, 9PM"
+      }
+    ],
+    "topics": [
+      "Theatre Incident",
+      "Suspicious Person",
+      "Theatre Security"
+    ]
+  },
+  {
+    "id": "135",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Jill White confronts a woman in the conservatory she suspects to be Walter Boddy's new lover",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "TIME",
+        "name": "11:45PM"
+      },
+      {
+        "type": "LOCATION",
+        "name": "conservatory"
+      }
+    ],
+    "topics": [
+      "infidelity",
+      "confrontation",
+      "heartbreak"
+    ]
+  },
+  {
+    "id": "136",
+    "source": "White",
+    "date": "Sunday 12:15PM",
+    "summary": "Jill White returns to kitchen, finds Walter Boddy gone after confrontation.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Confrontation",
+      "Return",
+      "Boddy"
+    ]
+  },
+  {
+    "id": "137",
+    "source": "White",
+    "date": "Sunday 12:35PM",
+    "summary": "Jill White visits Boddy Estate study",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th 12:00AM-3:00AM"
+      }
+    ],
+    "topics": [
+      "Mysterious visit",
+      "Study break-in",
+      "Late night activity"
+    ]
+  },
+  {
+    "id": "138",
+    "source": "White",
+    "date": "Sunday 12:35PM",
+    "summary": "Jill White throws laptop into fireplace in fit of rage after discovering records on Walter Boddy and Christine Scarlet.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Fire incident",
+      "Rage",
+      "Discovery"
+    ]
+  },
+  {
+    "id": "139",
+    "source": "Brauman",
+    "date": "Sunday 12:35PM",
+    "summary": "A wood table with a distinct claw foot design was found in Boddy Estate's Dining Room, containing an empty glass bottle labeled as 'Poison' with a fast-acting paint stripper solution.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Paint Stripper Solution"
+      }
+    ],
+    "topics": [
+      "Wood Table",
+      "Poisonous Substance",
+      "Estate Discovery"
+    ]
+  },
+  {
+    "id": "140",
+    "source": "Police",
+    "date": "Sunday 12:35PM",
+    "summary": "Murder investigation updated: no evidence found in study",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Study Update",
+      "Investigation Findings"
+    ]
+  },
+  {
+    "id": "141",
+    "source": "Plum",
+    "date": "Sunday 12:35PM",
+    "summary": "Scott Plum requested Adam Mustard to introduce him to Walter Boddy, as Boddy and Mustard were looking for a third party to finance the purchase of Dalia Surveillance Equipment Company.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Finance Deal",
+      "Company Purchase",
+      "Introduction Request"
+    ]
+  },
+  {
+    "id": "142",
+    "source": "Plum",
+    "date": "Sunday 12:35PM",
+    "summary": "Scott Plum invests in deal with Adam Mustard and Walter Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Foreclosure Deal",
+      "Real Estate Investment",
+      "Financial Transaction"
+    ]
+  },
+  {
+    "id": "143",
+    "source": "Plum",
+    "date": "Sunday 12:35PM",
+    "summary": "Walter Boddy and Scott Plum had a disagreement over gambling debt.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Gambling Debt",
+      "Conflict",
+      "Investment"
+    ]
+  },
+  {
+    "id": "144",
+    "source": "Plum",
+    "date": "Sunday 12:35PM",
+    "summary": "Adam Mustard and Scott Plum argued over how to deal with $400,000 loss.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "LANGUAGE",
+        "name": "Gregory Kenney"
+      }
+    ],
+    "topics": [
+      "Investment",
+      "Loss",
+      "Dispute"
+    ]
+  },
+  {
+    "id": "145",
+    "source": "Plum",
+    "date": "Sunday 12:35PM",
+    "summary": "Scott Plum exited Boddy Estate",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Event Exit",
+      "Location Boddy",
+      "Person Scott"
+    ]
+  },
+  {
+    "id": "146",
+    "source": "Mustard",
+    "date": "Sunday 12:35PM",
+    "summary": "Adam Mustard was told by Walter Boddy that their collective investment on Saturday, June 4th in the Study of the main building of Boddy Estate had lost $700,000.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      }
+    ],
+    "topics": [
+      "Investment Loss",
+      "Boddy Estate",
+      "Dalia Surveillance Equipment Company"
+    ]
+  },
+  {
+    "id": "147",
+    "source": "Mustard",
+    "date": "Sunday 12:35PM",
+    "summary": "Walter Boddy allegedly made a deal with a friend at Mohegan Sun casino to win $800,000 in blackjack.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Mohegan Sun"
+      }
+    ],
+    "topics": [
+      "Blackjack",
+      "Casino",
+      "Deal"
+    ]
+  },
+  {
+    "id": "148",
+    "source": "Police",
+    "date": "Sunday 12:35PM",
+    "summary": "Traffic camera footage captures a red-light running incident involving a vehicle registered to Adam Mustard.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "GPE",
+        "name": "Essex"
+      }
+    ],
+    "topics": [
+      "Red-Light Running",
+      "Traffic Cameras",
+      "Incident Report",
+      "License Plate"
+    ]
+  },
+  {
+    "id": "149",
+    "source": "Mustard",
+    "date": "Sunday 12:35PM",
+    "summary": "Adam Mustard confronts Walter Boddy about Boddy losing money invested by Mustard and Scott Plum",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Financial Scandal",
+      "Threats",
+      "Investment Losses"
+    ]
+  },
+  {
+    "id": "150",
+    "source": "Police",
+    "date": "Sunday 12:50PM",
+    "summary": "Pub owner confirms receipts for purchases made by Adam Mustard and Walter Boddy, with an Indian gentleman present on one occasion.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Connor Larkin"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "LOC",
+        "name": "Essex"
+      }
+    ],
+    "topics": [
+      "Indian Gentleman",
+      "Pub Visit",
+      "Purchase Records"
+    ]
+  },
+  {
+    "id": "151",
+    "source": "Mustard",
+    "date": "Sunday 12:50PM",
+    "summary": "Scott Plum and Adam Mustard discuss recovering investment loss from Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "TIME",
+        "name": "Saturday, June 4th"
+      }
+    ],
+    "topics": [
+      "Investment Loss",
+      "Recovery Efforts",
+      "Walter Boddy"
+    ]
+  },
+  {
+    "id": "152",
+    "source": "Police",
+    "date": "Sunday 12:50PM",
+    "summary": "Christine Scarlet was asked to wait in a conservatory after dinner on June 4th.",
+    "entities": [
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Suspicious Events",
+      "Dinner Invitation",
+      "Unexpected Surprises"
+    ]
+  },
+  {
+    "id": "153",
+    "source": "Mustard",
+    "date": "Sunday 12:50PM",
+    "summary": "Document describes the exit of Scott Plum from a study with Adam Mustard",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      }
+    ],
+    "topics": [
+      "Study Exit",
+      "Time Leaving",
+      "Saturday Night"
+    ]
+  },
+  {
+    "id": "154",
+    "source": "Mustard",
+    "date": "Sunday 12:50PM",
+    "summary": "Adam Mustard discusses money with lawyer Gregory Kenney.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Gregory Kenney"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th"
+      }
+    ],
+    "topics": [
+      "Money Discussion",
+      "Lawyer Client",
+      "Financial Issue"
+    ]
+  },
+  {
+    "id": "155",
+    "source": "Security Camera",
+    "date": "Sunday 12:50PM",
+    "summary": "Security footage shows two individuals carrying an unknown object into a bathroom at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "GPE",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "TIME",
+        "name": "Sunday, June 5th at 2:30AM"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Security Footage",
+      "Crime Scene"
+    ]
+  },
+  {
+    "id": "156",
+    "source": "Security Camera",
+    "date": "Sunday 12:50PM",
+    "summary": "Security footage shows African American female with grey hair walking past camera in 15 minute loops.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "African American female"
+      },
+      {
+        "type": "TIME",
+        "name": "12:00AM to 3:00AM"
+      }
+    ],
+    "topics": [
+      "Security Footage",
+      "Nighttime Activity",
+      "Building Surveillance"
+    ]
+  },
+  {
+    "id": "157",
+    "source": "Peacock",
+    "date": "Sunday 12:50PM",
+    "summary": "Katie Peacock sold Dalia Surveillance Equipment Company for $800,000 under coercion from Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Company Sale",
+      "Blackmail",
+      "Coercion"
+    ]
+  },
+  {
+    "id": "158",
+    "source": "Peacock",
+    "date": "Sunday 12:50PM",
+    "summary": "Walter Boddy threatens Katie Peacock to sell her family's company in exchange for video tapes.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "ORG",
+        "name": "Dalia Surveillance Equipment Company"
+      }
+    ],
+    "topics": [
+      "Blackmail Threat",
+      "Corporate Dealings",
+      "Video Release"
+    ]
+  },
+  {
+    "id": "159",
+    "source": "Wadsworth",
+    "date": "Sunday 12:50PM",
+    "summary": "Jill White's lunch visit to Boddy",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      }
+    ],
+    "topics": [
+      "Relationship",
+      "Lunch",
+      "Dating"
+    ]
+  },
+  {
+    "id": "160",
+    "source": "Peacock",
+    "date": "Sunday 1:00PM",
+    "summary": "Katie Peacock meets Walter Boddy at theatre, waits for him to return with video tapes",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Theatre Meeting",
+      "Blackmail Tapes",
+      "Movie Night"
+    ]
+  },
+  {
+    "id": "161",
+    "source": "Scarlet",
+    "date": "Sunday 1:00PM",
+    "summary": "Scott Plum unaware of secret relationship between Christine Scarlet and Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Secret Relationship",
+      "Business Deal",
+      "Conflict of Interest"
+    ]
+  },
+  {
+    "id": "162",
+    "source": "Peacock",
+    "date": "Sunday 1:00PM",
+    "summary": "Walter Boddy returns to theatre with video tapes for Katie Peacock",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      }
+    ],
+    "topics": [
+      "Theatre",
+      "Blackmail",
+      "Video"
+    ]
+  },
+  {
+    "id": "163",
+    "source": "Peacock",
+    "date": "Sunday 1:00PM",
+    "summary": "Katie Peacock destroys video tapes and plans to burn down Walter Boddy's house",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Katie Peacock"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "House Fire",
+      "Theatre Incident",
+      "Vandalism"
+    ]
+  },
+  {
+    "id": "164",
+    "source": "Police",
+    "date": "Sunday 1:00PM",
+    "summary": "A lead pipe was found as a possible murder weapon at Boddy Estate.",
+    "entities": [
+      {
+        "type": "LOCATION",
+        "name": "Boddy Estate"
+      },
+      {
+        "type": "PRODUCT",
+        "name": "Lead Pipe"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Crime Scene",
+      "Forensic Analysis"
+    ]
+  },
+  {
+    "id": "165",
+    "source": "Police",
+    "date": "Sunday 1:00PM",
+    "summary": "A candlestick found at Boddy Estate.",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Candlestick",
+      "Discovery",
+      "Estate"
+    ]
+  },
+  {
+    "id": "166",
+    "source": "Scarlet",
+    "date": "Sunday 1:00PM",
+    "summary": "Christine Scarlet denied making a statement about a woman conversing with someone in the conservatory, and claimed to have been with Walter Boddy in the bathroom from 8:35PM, returning to the conservatory at 9:05PM.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "PERSON",
+        "name": "Adam Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Bathroom Incident",
+      "Conservatory Encounter",
+      "Time Frame"
+    ]
+  },
+  {
+    "id": "167",
+    "source": "Coroner",
+    "date": "Sunday 1:00PM",
+    "summary": "Walter Boddy died from a blow to the head with a blunt object, indicating a struggle prior to death.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "LOCATION",
+        "name": "None"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Fatal Injury",
+      "Struggle to Death"
+    ]
+  },
+  {
+    "id": "168",
+    "source": "Police",
+    "date": "Sunday 1:00PM",
+    "summary": "Fingerprints found on items linked to Boddy and Plum",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Investigation",
+      "Crime Scene",
+      "Evidence"
+    ]
+  },
+  {
+    "id": "169",
+    "source": "Police",
+    "date": "Sunday 1:00PM",
+    "summary": "Police obtained room assignment cards to determine where guests would meet Boddy on June 4th.",
+    "entities": [
+      {
+        "type": "LOC",
+        "name": "theatre"
+      },
+      {
+        "type": "LOC",
+        "name": "conservatory"
+      },
+      {
+        "type": "LOC",
+        "name": "lounge"
+      },
+      {
+        "type": "LOC",
+        "name": "library"
+      },
+      {
+        "type": "LOC",
+        "name": "kitchen"
+      },
+      {
+        "type": "LOC",
+        "name": "study"
+      }
+    ],
+    "topics": [
+      "Room assignments",
+      "Guest meeting",
+      "Boddy's event"
+    ]
+  },
+  {
+    "id": "170",
+    "source": "Police",
+    "date": "Sunday 1:00PM",
+    "summary": "Police forensics team identifies Walter Boddy's corpse",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "ORG",
+        "name": "Boddy Estate"
+      }
+    ],
+    "topics": [
+      "Murder Investigation",
+      "Police Forensics",
+      "Corpse Discovery"
+    ]
+  },
+  {
+    "id": "171",
+    "source": "White",
+    "date": "Sunday 1:15PM",
+    "summary": "Walter Boddy waits for Jill White to return from meeting in kitchen.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Jill White"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Kitchen Meeting",
+      "Waiting",
+      "Baking"
+    ]
+  },
+  {
+    "id": "172",
+    "source": "Police",
+    "date": "Sunday 1:15PM",
+    "summary": "Walter Boddy's schedule for Saturday, June 4th",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "GPE",
+        "name": "Lounge"
+      },
+      {
+        "type": "EVENT",
+        "name": "Meet with Peacock"
+      },
+      {
+        "type": "TIME",
+        "name": "12:30PM-2:00PM"
+      },
+      {
+        "type": "TIME",
+        "name": "6:15PM-6:25PM"
+      },
+      {
+        "type": "PERSON",
+        "name": "Peacock"
+      },
+      {
+        "type": "TIME",
+        "name": "6:30PM-6:55PM"
+      },
+      {
+        "type": "PERSON",
+        "name": "Green"
+      },
+      {
+        "type": "TIME",
+        "name": "7:00 for 25 minutes"
+      },
+      {
+        "type": "TIME",
+        "name": "8:00 for 25 minutes"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine"
+      },
+      {
+        "type": "MONEY",
+        "value": "$50K"
+      }
+    ],
+    "topics": [
+      "Schedule",
+      "Meetings",
+      "Dinner"
+    ]
+  },
+  {
+    "id": "173",
+    "source": "Plum",
+    "date": "Sunday 1:15PM",
+    "summary": "Scott Plum confessed to stealing Walter Boddy's checkbook from the study at Boddy Estate.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "MONEY",
+        "name": "$200,000"
+      }
+    ],
+    "topics": [
+      "Check Fraud",
+      "Theft",
+      "Estates"
+    ]
+  },
+  {
+    "id": "174",
+    "source": "Green",
+    "date": "Sunday 1:15PM",
+    "summary": "A brief summary of the document is not provided as there is no actual information in the document to summarize. The document appears to be a fragment of a larger text and lacks context.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "EVENT",
+        "name": "theater entry"
+      }
+    ],
+    "topics": [
+      "Boddy Estate",
+      "Library",
+      "Theater Entry"
+    ]
+  },
+  {
+    "id": "175",
+    "source": "Police",
+    "date": "Sunday 1:15PM",
+    "summary": "Scott Plum's lawyer discusses a business deal with Walter Boddy and seeks to recover $200,000 from Mustard",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Gregory Kenney"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Mustard"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Business Deal",
+      "Money Recovery",
+      "Crime Investigation"
+    ]
+  },
+  {
+    "id": "176",
+    "source": "Police",
+    "date": "Sunday 1:15PM",
+    "summary": "Financial records reveal large bank balances for Scott Plum and Walter Boddy.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "MONEY",
+        "name": "$3.7 million"
+      },
+      {
+        "type": "MONEY",
+        "name": "$25MM"
+      }
+    ],
+    "topics": [
+      "Bank Balance",
+      "Financial Records",
+      "Wealth"
+    ]
+  },
+  {
+    "id": "177",
+    "source": "Green",
+    "date": "Sunday 1:15PM",
+    "summary": "Antonio Green watched a movie at the Library on June 4th.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Antonio Green"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Library"
+      },
+      {
+        "type": "EVENT",
+        "name": "When Harry Met Sally"
+      }
+    ],
+    "topics": [
+      "Movie Night",
+      "Library Visit",
+      "Date Watched"
+    ]
+  },
+  {
+    "id": "178",
+    "source": "Police",
+    "date": "Sunday 1:30PM",
+    "summary": "Scott Plum inquires about divorce law, separation and remarriage laws.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Gregory Kenney"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Divorce Law",
+      "Remarriage Rules",
+      "Marital Separation"
+    ]
+  },
+  {
+    "id": "179",
+    "source": "Police",
+    "date": "Sunday 1:30PM",
+    "summary": "Divorce papers filed between Scott Plum and Christine Scarlet after discussion with Gregory Kenney.",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      },
+      {
+        "type": "ORGANIZATION",
+        "name": "Gregory Kenney"
+      },
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      }
+    ],
+    "topics": [
+      "Divorce",
+      "Law",
+      "Court"
+    ]
+  },
+  {
+    "id": "180",
+    "source": "Police",
+    "date": "Sunday 1:30PM",
+    "summary": "Tiffany & Co. store confirms purchase link between Walter Boddy and Christine Scarlet",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Christine Scarlet"
+      },
+      {
+        "type": "ORG",
+        "name": "Tiffany & Co."
+      },
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      }
+    ],
+    "topics": [
+      "Jewelry Link",
+      "Purchase Confirmation",
+      "Ring Match"
+    ]
+  },
+  {
+    "id": "181",
+    "source": "Police",
+    "date": "Sunday 1:30PM",
+    "summary": "Police recovered stolen Rolex watch",
+    "entities": [
+      {
+        "type": "PERSON",
+        "name": "Walter Boddy"
+      },
+      {
+        "type": "PERSON",
+        "name": "Scott Plum"
+      }
+    ],
+    "topics": [
+      "Lost Watch",
+      "Stolen Rolex",
+      "Police Recovery"
+    ]
+  }
+]
