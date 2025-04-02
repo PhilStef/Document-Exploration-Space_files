@@ -29,21 +29,23 @@ Here is a document:
 
 Please extract the following:
 - A brief summary of the document.
-- Key named entities (people, places, organizations).
+- Key named entities as tuples of type and name. This could be an 'ORG', 'CARDINAL', 'DATE', 'GPE', 'PERSON', 'MONEY', 'PRODUCT', 'TIME', 'PERCENT', 'WORK_OF_ART', 'QUANTITY', 'NORP', 'LOC', 'EVENT', 'ORDINAL', 'FAC', 'LAW', 'LANGUAGE' or any other appropriate concept.
 - 3-5 relevant topics, where each topic is at most 2 words long.
 
-Respond in this JSON format:
+Respond using only valid JSON format with no extra characters.
+
+Please follow this format:
 
 {{
   "summary": "...",
   "entities": [
     {{
-    "type": "person", 
-    "name": "<the name of the identified person>", 
+    "type": "<type of entity>", 
+    "name": "<the name of the identified thing>", 
     }},    
     "..."
     ],
-  "topics": ["...", "...", "..."]
+  "topics": ["...", "...", "...", "..."]
 }}"""
 
     try:
