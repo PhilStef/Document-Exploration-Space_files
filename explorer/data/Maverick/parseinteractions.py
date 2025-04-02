@@ -1,68 +1,91 @@
 import json
 import os
 
-main_file_path = 'Parsing Tests\\Specific Tests\\sectest.json'
-file_name = os.path.basename(main_file_path)
-
-print(file_name)
-try:
-    data = []
-    # Try to open the file
-    with open(main_file_path, 'r') as file:
-        data = json.load(file)   
-        print("File is opened successfully.")
-except IOError:
-    print("File is already opened or doesn't exist.")  
-
-newData = [] 
-##First checks if the next object is a mouse leave, if not, it will be added to the result
-def timeInDoc(obj,i,data): 
+def timeInDoc(obj, i, data): 
+    """Calculate time spent in a document"""
     i = i+1
-    if(data[i]["type"] != "mouseleave-doc"):
+    if(i >= len(data) or data[i]["type"] != "mouseleave-doc"):
         return 1000
-    print(f"{obj["doc_id"]} and {data[i]["doc_id"]}   is       {data[i]["timestamp"] - obj["timestamp"]}")
-    ##Returns the time in the doc
+    print(f"{obj['doc_id']} and {data[i]['doc_id']}   is       {data[i]['timestamp'] - obj['timestamp']}")
     return data[i]["timestamp"] - obj["timestamp"]
 
-# How many seconds in the doc needed to be included
-time_limit = 0.75
-skip = False
-drag = False
-for i, current in enumerate(data):
-    #If this is true, it does not add the mouse leave object 
-    if(skip):
-        skip = False
-        continue 
-    #If it is drag end, get rid of the drag false and continue on
-    if(current["type"] == "drag-end"):
-        drag = False
-    #if it is in a drag, continue until it is a drag end
-    if(drag):
-        continue 
-    #if it is a drag start, set the drag bool to True to ensure nothing is saved until it is drag end
-    if(current["type"] == "drag-start"):
-        drag = True
-    if(current["type"] == "mouseenter-doc"): 
-        #If the time is less than the limit, this will make skip true, not adding the leaving instant and also will not add the current enter object
-        if (timeInDoc(current, i, data) < time_limit):
-            skip = True
-            continue
-    print("adding " + current["type"] + " " + str(i)) 
-    newData.append(current)
-print(len(data))
-print(len(newData))
-print(newData) 
+def parse_json_file(input_file_path, time_limit=0.75):
+    """
+    Parse a JSON file to filter data based on specific conditions
+    
+    Args:
+        input_file_path (str): Path to the input JSON file
+        time_limit (float): Time limit in seconds for document interactions
+        
+    Returns:
+        list: Filtered data
+        str: Path to the output file
+    """
+    file_name = os.path.basename(input_file_path)
+    print(f"Processing file: {file_name}")
+    
+    # Load the data
+    try:
+        with open(input_file_path, 'r') as file:
+            data = json.load(file)   
+            print("File is opened successfully.")
+    except IOError as e:
+        print(f"Error opening file: {e}")
+        return [], ""
+    
+    newData = [] 
+    skip = False
+    drag = False
+    
+    for i, current in enumerate(data):
+        if skip:
+            skip = False
+            continue 
+        
+        if current["type"] == "drag-end":
+            drag = False
+            
+        if drag:
+            continue 
+            
+        if current["type"] == "drag-start":
+            drag = True
+            
+        if current["type"] == "mouseenter-doc": 
+            if timeInDoc(current, i, data) < time_limit:
+                skip = True
+                continue
+                
+        print(f"adding {current['type']} {i}") 
+        newData.append(current)
+    
+    print(f"Original data length: {len(data)}")
+    print(f"New data length: {len(newData)}")
+    
+    # Create output path
+    current_dir = os.getcwd()
+    folder_path = os.path.join(current_dir, "Parsing Tests", "Specific Tests")
+    
+    # Create the directory if it doesn't exist
+    os.makedirs(folder_path, exist_ok=True)
+    
+    output_file_path = os.path.join(folder_path, f'parsed_{file_name}')
+    
+    # Write filtered data to output file
+    with open(output_file_path, 'w') as json_file:
+        json.dump(newData, json_file, indent=4)
+    
+    return newData, output_file_path
 
-# Get the current directory
-current_dir = os.getcwd()
-folder_path = os.path.join(current_dir, "Parsing Tests")
-folder_path = os.path.join(folder_path, "Specific Tests")
-# Define the file path as the current directory with your desired file name
-file_path = os.path.join(folder_path, f'parsed{file_name}')
+def main():
+    """Main function if you want to run the script directly"""
+    logToParse = 'sectest.json'
+    main_file_path = os.path.join('Parsing Tests','Specific Tests',logToParse) 
+    results, output_path = parse_json_file(main_file_path)
+    print(f"Results saved to: {output_path}")
 
-# Write JSON data to a file in the same folder
-with open(file_path, 'w') as json_file:
-    json.dump(newData, json_file, indent=4)
+if __name__ == "__main__":
+    main()
 
 #Draggin slowly 
 # dragging fast
