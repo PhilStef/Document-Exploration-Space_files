@@ -19,6 +19,7 @@ augmented = []
 for entry in tqdm(data, desc="Augmenting documents"):
     doc_id = entry.get("id")
     title = entry.get("title")
+    date = entry.get("date")
     contents = entry.get("contents")
 
     prompt = f"""You are an intelligence analyst.
@@ -35,7 +36,13 @@ Respond in this JSON format:
 
 {{
   "summary": "...",
-  "entities": ["..."],
+  "entities": [
+    {{
+    "type": "person", 
+    "name": "<the name of the identified person>", 
+    }},    
+    "..."
+    ],
   "topics": ["...", "...", "..."]
 }}"""
 
@@ -56,7 +63,8 @@ Respond in this JSON format:
         parsed = json.loads(json_str)
         augmented.append({
             "id": doc_id,
-            "title": title,
+            "source": title,
+            "date": date,
             "summary": parsed.get("summary"),
             "entities": parsed.get("entities", []),
             "topics": parsed.get("topics", [])
