@@ -42,8 +42,10 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
     # Augment the data
     augmented_data = []
     for event in data:
-        print(event)
-        if "doc_id" in event and isinstance(event["doc_id"], list) and event["doc_id"] in lookup_dict:
+        # print(event["doc_id"])
+        # print(type(event["doc_id"])==True)
+        # todo check that this is actually working for search events.
+        if (type(event["doc_id"])!=list) and "doc_id" in event and event["doc_id"] in lookup_dict:
             # Merge the lookup data into the event
             lookup_info = lookup_dict[event["doc_id"]]
             for key, value in lookup_info.items():
@@ -55,7 +57,7 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
     
     # Create output path
     current_dir = os.getcwd()
-    folder_path = os.path.join(current_dir, "Parsing Tests", "Specific Tests")
+    folder_path = os.path.join(current_dir, "PreparedInteractionLogs", "02-augmented")
 
     # Create the directory if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
@@ -71,7 +73,7 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
 def main():
     """Main function if you want to run the script directly"""
     logToAugment = 'parsed_4_ac11c30b_interactions.json'
-    main_file_path = os.path.join('Parsing Tests','Specific Tests',logToAugment) 
+    main_file_path = os.path.join("PreparedInteractionLogs", "01-cleaned",logToAugment) 
     results, output_path = augment_data(main_file_path)
     print(f"Results saved to: {output_path}")
 
