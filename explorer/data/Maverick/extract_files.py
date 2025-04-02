@@ -12,7 +12,7 @@ def excel_to_json(input_file, output_file):
     for i, row in df.iterrows(): 
         if i<1 or i > 181:
             continue 
-        if((int(row.iloc[0])) not in [2,4,8,14,15]):
+        if((int(row.iloc[0])) not in [2,4,7,8,13,14,15]):
             continue
         # if(int(row.iloc[0]) != prev[0]):
         #     print(f"batch {prev[0]} has {row.iloc[1]- prev[1]} docs") 
