@@ -41,7 +41,7 @@ def process_file(input_file):
     
     # Step 2: Augment with lookup data
     print("\n--- Step 2: Augmenting data ---")
-    lookup_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "augmented.json")
+    lookup_file_path = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "explorer", "data", "Maverick", "augmentedMavOutput_04-01_23-53-38.json")
     
     augmented_data, augmented_file_path = augment_data(cleaned_file_path, lookup_file_path)
     results["augmented"] = augmented_file_path
@@ -57,7 +57,7 @@ def process_file(input_file):
     # Print a sample of the narrative
     if "session_narrative" in generated_results:
         narrative_preview = generated_results["session_narrative"].split('\n')[:5]
-        print("\nNarrative Preview:")
+        print("\n**Narrative Preview:***")
         for line in narrative_preview:
             print(f"  {line}")
         print("  ...")
