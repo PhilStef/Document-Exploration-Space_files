@@ -1,0 +1,145 @@
+{
+  "MentalModelQuiz": {
+    "type": "questionnaire",
+    "response": [
+      {
+        "id": "q-1",
+        "prompt": "Who discovered Walter Boddy's body?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "Henry Wadsworth",
+          "Yvette Duster",
+          "Adam Mustard",
+          "Scott Plum"
+        ]
+      },
+      {
+        "id": "q-2",
+        "prompt": "Which object is most directly linked as a potential murder weapon?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "The candlestick found in the conservatory",
+          "A carving knife stuck in the wall of the kitchen",
+          "A broken martini glass discovered in the theater",
+          "A missing gun from the study"
+        ]
+      },
+      {
+        "id": "q-3",
+        "prompt": "In which room was Walter Boddy's body found?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "In the bathroom (bathtub)",
+          "In the dining room",
+          "In the study",
+          "In the kitchen"
+        ]
+      },
+      {
+        "id": "q-4",
+        "prompt": "Which suspect's fingerprint was found on Walter Boddy's missing Rolex watch?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "Scott Plum",
+          "Yvette Duster",
+          "Adam Mustard",
+          "Henry Wadsworth"
+        ]
+      },
+      {
+        "id": "q-5",
+        "prompt": "Where was Walter Boddy's missing Rolex watch found?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "In the lounge",
+          "In the study",
+          "In the bathroom",
+          "In the dining room"
+        ]
+      },
+      {
+        "id": "q-6",
+        "prompt": "What best describes Adam Mustard's underlying motivation in his interactions with Walter Boddy?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "The pursuit of lucrative business deals and personal financial gain",
+          "A covert desire to frame Boddy for financial fraud",
+          "An effort to protect Boddy's reputation by managing insider trading risks",
+          "A purely personal grudge rooted in an old rivalry unrelated to business"
+        ]
+      },
+      {
+        "id": "q-7",
+        "prompt": "What motivated Scott Plum's actions regarding the handling of Walter Boddy's checkbook?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "Financial desperation and resentment over a monetary grievance with Boddy",
+          "An attempt to sabotage Boddy's business ventures by stealing sensitive documents",
+          "A covert strategy to redirect funds into a rival company",
+          "A ploy to frame Adam Mustard for financial mismanagement"
+        ]
+      },
+      {
+        "id": "q-8",
+        "prompt": "What is the primary motivation behind Antonio Green's interactions with Walter Boddy?",
+        "location": "aboveStimulus",
+        "type": "radio",
+        "withDontKnow": true,
+        "options": [
+          "Advancing a business deal through his role as a merger and acquisition broker",
+          "Settling a personal score that stemmed from past disputes",
+          "Attempting to expose Boddy's unethical practices to the public",
+          "Organizing an elaborate scheme to embezzle funds from Boddy's estate"
+        ]
+      }
+    ],
+    "correctAnswer": [
+      {
+        "id": "q-1",
+        "answer": "Henry Wadsworth"
+      },
+      {
+        "id": "q-2",
+        "answer": "The candlestick found in the conservatory"
+      },
+      {
+        "id": "q-3",
+        "answer": "In the bathroom (bathtub)"
+      },
+      {
+        "id": "q-4",
+        "answer": "Scott Plum"
+      },
+      {
+        "id": "q-5",
+        "answer": "In the lounge"
+      },
+      {
+        "id": "q-6",
+        "answer": "The pursuit of lucrative business deals and personal financial gain"
+      },
+      {
+        "id": "q-7",
+        "answer": "Financial desperation and resentment over a monetary grievance with Boddy"
+      },
+      {
+        "id": "q-8",
+        "answer": "Advancing a business deal through his role as a merger and acquisition broker"
+      }
+    ]
+  }
+}

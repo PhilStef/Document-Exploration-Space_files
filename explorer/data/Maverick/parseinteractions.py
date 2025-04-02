@@ -6,7 +6,7 @@ def timeInDoc(obj, i, data):
     i = i+1
     if(i >= len(data) or data[i]["type"] != "mouseleave-doc"):
         return 1000
-    print(f"{obj['doc_id']} and {data[i]['doc_id']}   is       {data[i]['timestamp'] - obj['timestamp']}")
+    print(f"{obj['doc_id']} and {data[i]['doc_id']} lasts {data[i]['timestamp'] - obj['timestamp']}")
     return data[i]["timestamp"] - obj["timestamp"]
 
 def parse_json_file(input_file_path, time_limit=0.75):
