@@ -67,6 +67,11 @@ def generate_sentence_for_event(event):
         # Generic fallback
         return f"Performed {event_type} action with the following information {event}."
 
+def convert_ms_to_human_time(ms):
+    seconds = (ms // 1000) % 60
+    minutes = (ms // 1000) // 60
+    return f"{minutes} minutes, {seconds} seconds"
+ 
 def add_sentences_to_events(events):
     """
     Add sentence field to each event
@@ -180,9 +185,8 @@ def generate_session_narrative(events):
     # Add sentence of each key event to the narrative
     for event in sampled_events:
         sentence = generate_sentence_for_event(event)
-        timestamp = event.get("timestamp", 0)
-        #todo convert timestamp to human-readable time.
-        narrative.append(f"- At {timestamp:.2f}s: {sentence}")
+        timestamp = convert_ms_to_human_time(event.get("timestamp", 0))
+        narrative.append(f"- At {timestamp}: {sentence}")
     
     return "\n".join(narrative)
 
