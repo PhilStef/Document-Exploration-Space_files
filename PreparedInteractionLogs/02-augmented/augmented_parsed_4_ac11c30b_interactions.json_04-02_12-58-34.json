@@ -1,0 +1,4870 @@
+[
+    {
+        "timestamp": 1.405,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "41",
+        "source": "Police",
+        "date": "Sunday 10:20AM",
+        "summary": "Document about Katie Peacock",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Katie Peacock"
+            },
+            {
+                "type": "GPE",
+                "name": ""
+            }
+        ],
+        "topics": [
+            "Caucasian Person",
+            "Physical Description",
+            "Demographics"
+        ]
+    },
+    {
+        "timestamp": 39.287,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "41",
+        "source": "Police",
+        "date": "Sunday 10:20AM",
+        "summary": "Document about Katie Peacock",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Katie Peacock"
+            },
+            {
+                "type": "GPE",
+                "name": ""
+            }
+        ],
+        "topics": [
+            "Caucasian Person",
+            "Physical Description",
+            "Demographics"
+        ]
+    },
+    {
+        "timestamp": 61.429,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "176",
+        "source": "Police",
+        "date": "Sunday 1:15PM",
+        "summary": "Financial records reveal large bank balances for Scott Plum and Walter Boddy.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "MONEY",
+                "name": "$3.7 million"
+            },
+            {
+                "type": "MONEY",
+                "name": "$25MM"
+            }
+        ],
+        "topics": [
+            "Bank Balance",
+            "Financial Records",
+            "Wealth"
+        ]
+    },
+    {
+        "timestamp": 62.388,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "176",
+        "source": "Police",
+        "date": "Sunday 1:15PM",
+        "summary": "Financial records reveal large bank balances for Scott Plum and Walter Boddy.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "MONEY",
+                "name": "$3.7 million"
+            },
+            {
+                "type": "MONEY",
+                "name": "$25MM"
+            }
+        ],
+        "topics": [
+            "Bank Balance",
+            "Financial Records",
+            "Wealth"
+        ]
+    },
+    {
+        "timestamp": 63.021,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 64.538,
+        "type": "open-doc",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 66.521,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 66.871,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 90.947,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 91.025,
+        "type": "search",
+        "msg": "Saturday June 4th at 8:30PM",
+        "doc_id": [
+            "10"
+        ]
+    },
+    {
+        "timestamp": 91.026,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 105.239,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 105.333,
+        "type": "search",
+        "msg": "1:00AM, Sunday June 5th",
+        "doc_id": [
+            "10"
+        ]
+    },
+    {
+        "timestamp": 105.335,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 111.02,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 112.303,
+        "type": "highlight",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 112.333,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 118.725,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 123.675,
+        "type": "highlight",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 123.704,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 127.247,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 130.321,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 133.684,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 134.992,
+        "type": "highlight",
+        "msg": "Saturday June 4th at 8:30PM ",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 135.023,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 139.988,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 143.211,
+        "type": "highlight",
+        "msg": "1:00AM, Sunday June 5th",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 143.239,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 158.494,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 159.647,
+        "type": "highlight",
+        "msg": "Source reports Wadsworth woke up Sunday at 7:00AM ",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 159.677,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 171.659,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 172.778,
+        "type": "highlight",
+        "msg": "8:15AM.",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 172.995,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 174.84,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "10",
+        "pos": [
+            188,
+            20
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 176.084,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "10",
+        "pos": [
+            193,
+            639
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 176.195,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 176.803,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 185.926,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 189.236,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "37",
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 190.054,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "37",
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 191.795,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 192.687,
+        "type": "open-doc",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 225.918,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 227.145,
+        "type": "highlight",
+        "msg": "8:30AM on Sunday, June 5th",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 227.182,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 233.279,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "11",
+        "pos": [
+            116,
+            48
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 234.441,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "11",
+        "pos": [
+            491,
+            630
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 234.482,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "11",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth discovers Walter Boddy's dead body in his bathroom",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            }
+        ],
+        "topics": [
+            "Murder Investigation",
+            "Bathroom Discovery",
+            "Dead Body"
+        ]
+    },
+    {
+        "timestamp": 234.948,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 235.896,
+        "type": "open-doc",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 260.095,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "12",
+        "pos": [
+            118,
+            85
+        ],
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 260.413,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "12",
+        "pos": [
+            141,
+            23
+        ],
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 262.308,
+        "type": "collapse-doc",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 262.453,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 262.869,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "13",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Yvette does not go to work on Sundays",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, 10:00AM"
+            },
+            {
+                "type": "EVENT",
+                "name": "Wadsworth left the market"
+            }
+        ],
+        "topics": [
+            "Sunday",
+            "Work",
+            "Time"
+        ]
+    },
+    {
+        "timestamp": 263.481,
+        "type": "open-doc",
+        "doc_id": "13",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Yvette does not go to work on Sundays",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, 10:00AM"
+            },
+            {
+                "type": "EVENT",
+                "name": "Wadsworth left the market"
+            }
+        ],
+        "topics": [
+            "Sunday",
+            "Work",
+            "Time"
+        ]
+    },
+    {
+        "timestamp": 274.409,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "13",
+        "pos": [
+            138,
+            119
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Yvette does not go to work on Sundays",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, 10:00AM"
+            },
+            {
+                "type": "EVENT",
+                "name": "Wadsworth left the market"
+            }
+        ],
+        "topics": [
+            "Sunday",
+            "Work",
+            "Time"
+        ]
+    },
+    {
+        "timestamp": 275.191,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "13",
+        "pos": [
+            1580,
+            473
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Yvette does not go to work on Sundays",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, 10:00AM"
+            },
+            {
+                "type": "EVENT",
+                "name": "Wadsworth left the market"
+            }
+        ],
+        "topics": [
+            "Sunday",
+            "Work",
+            "Time"
+        ]
+    },
+    {
+        "timestamp": 275.857,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "13",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Yvette does not go to work on Sundays",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, 10:00AM"
+            },
+            {
+                "type": "EVENT",
+                "name": "Wadsworth left the market"
+            }
+        ],
+        "topics": [
+            "Sunday",
+            "Work",
+            "Time"
+        ]
+    },
+    {
+        "timestamp": 282.462,
+        "type": "search",
+        "msg": "Yvette",
+        "doc_id": [
+            "13",
+            "14",
+            "19",
+            "33",
+            "38",
+            "105"
+        ]
+    },
+    {
+        "timestamp": 285.294,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 285.844,
+        "type": "open-doc",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 286.728,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "19",
+        "pos": [
+            160,
+            315
+        ],
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 288.11,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "19",
+        "pos": [
+            1611,
+            624
+        ],
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 289.024,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 289.032,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 304.967,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 305.911,
+        "type": "highlight",
+        "msg": " Rolex\ufffd watch was missing from his wrist.",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 305.94,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 310.212,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 315.158,
+        "type": "search",
+        "msg": "rolex",
+        "doc_id": [
+            "19",
+            "103",
+            "181"
+        ]
+    },
+    {
+        "timestamp": 316.823,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "103",
+        "source": "Police",
+        "date": "Sunday 11:45AM",
+        "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            }
+        ],
+        "topics": [
+            "Theft at Boddy",
+            "Gift Receipt",
+            "Jill White"
+        ]
+    },
+    {
+        "timestamp": 317.44,
+        "type": "open-doc",
+        "doc_id": "103",
+        "source": "Police",
+        "date": "Sunday 11:45AM",
+        "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            }
+        ],
+        "topics": [
+            "Theft at Boddy",
+            "Gift Receipt",
+            "Jill White"
+        ]
+    },
+    {
+        "timestamp": 318.258,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "103",
+        "pos": [
+            635,
+            349
+        ],
+        "source": "Police",
+        "date": "Sunday 11:45AM",
+        "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            }
+        ],
+        "topics": [
+            "Theft at Boddy",
+            "Gift Receipt",
+            "Jill White"
+        ]
+    },
+    {
+        "timestamp": 319.426,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "103",
+        "pos": [
+            1384,
+            630
+        ],
+        "source": "Police",
+        "date": "Sunday 11:45AM",
+        "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            }
+        ],
+        "topics": [
+            "Theft at Boddy",
+            "Gift Receipt",
+            "Jill White"
+        ]
+    },
+    {
+        "timestamp": 326.748,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "103",
+        "source": "Police",
+        "date": "Sunday 11:45AM",
+        "summary": "Police found a gift receipt for a Rolex watch purchased by Jill White.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            }
+        ],
+        "topics": [
+            "Theft at Boddy",
+            "Gift Receipt",
+            "Jill White"
+        ]
+    },
+    {
+        "timestamp": 327.213,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 327.981,
+        "type": "open-doc",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 328.658,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "181",
+        "pos": [
+            845,
+            377
+        ],
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 330.025,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "181",
+        "pos": [
+            1360,
+            774
+        ],
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 344.228,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 347.551,
+        "type": "highlight",
+        "msg": "a fingerprint check on the face of the watch matched with Scott Plum's left index finger.",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 358.763,
+        "type": "search",
+        "msg": "scott",
+        "doc_id": [
+            "42",
+            "95",
+            "96",
+            "99",
+            "100",
+            "104",
+            "173",
+            "175",
+            "176",
+            "178",
+            "179",
+            "181"
+        ]
+    },
+    {
+        "timestamp": 360.685,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "42",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 361.648,
+        "type": "open-doc",
+        "doc_id": "42",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 362.399,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "42",
+        "pos": [
+            398,
+            282
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 363.088,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "42",
+        "pos": [
+            1036,
+            581
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 376.18,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "42",
+        "pos": [
+            1008,
+            584
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 376.846,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "42",
+        "pos": [
+            853,
+            469
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 376.885,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "42",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "A source recalls a person becoming ill after seeing rare fish at an aquarium.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Fish",
+            "Illness",
+            "Aquarium"
+        ]
+    },
+    {
+        "timestamp": 377.393,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "95",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "GPE",
+                "name": "Connor Larkin's pub in Essex"
+            }
+        ],
+        "topics": [
+            "Investment",
+            "Business",
+            "Essex",
+            "Companies"
+        ]
+    },
+    {
+        "timestamp": 377.952,
+        "type": "open-doc",
+        "doc_id": "95",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "GPE",
+                "name": "Connor Larkin's pub in Essex"
+            }
+        ],
+        "topics": [
+            "Investment",
+            "Business",
+            "Essex",
+            "Companies"
+        ]
+    },
+    {
+        "timestamp": 413.484,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "95",
+        "pos": [
+            596,
+            91
+        ],
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "GPE",
+                "name": "Connor Larkin's pub in Essex"
+            }
+        ],
+        "topics": [
+            "Investment",
+            "Business",
+            "Essex",
+            "Companies"
+        ]
+    },
+    {
+        "timestamp": 414.832,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "95",
+        "pos": [
+            678,
+            867
+        ],
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "GPE",
+                "name": "Connor Larkin's pub in Essex"
+            }
+        ],
+        "topics": [
+            "Investment",
+            "Business",
+            "Essex",
+            "Companies"
+        ]
+    },
+    {
+        "timestamp": 414.968,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "95",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Adam Mustard finds potential investor for Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "GPE",
+                "name": "Connor Larkin's pub in Essex"
+            }
+        ],
+        "topics": [
+            "Investment",
+            "Business",
+            "Essex",
+            "Companies"
+        ]
+    },
+    {
+        "timestamp": 415.563,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 416.112,
+        "type": "open-doc",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 442.918,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 446.781,
+        "type": "highlight",
+        "msg": "$200,000 black market loan to get the money.",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 446.831,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 447.82,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "96",
+        "pos": [
+            591,
+            119
+        ],
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 449.322,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "96",
+        "pos": [
+            931,
+            874
+        ],
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 449.445,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "96",
+        "source": "Plum",
+        "date": "Sunday 11:45AM",
+        "summary": "Scott Plum contributes $200,000 to Dalia Surveillance Equipment Company",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "ORG",
+                "name": "Dalia Surveillance Equipment Company"
+            },
+            {
+                "type": "MONEY",
+                "name": "$200,000"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Foreclosure Risk",
+            "Company Funding"
+        ]
+    },
+    {
+        "timestamp": 467.869,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 472.711,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 503.717,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "99",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Walter Boddy meets with Adam Mustard and Scott Plum to discuss purchasing Dalia Surveillance Equipment Company, where Boddy convinces them to sign over their power of attorney due to potential insider information charges.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Adam Mustard"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "EVENT",
+                "name": "meeting"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Power Of Attorney",
+            "Insider Trading"
+        ]
+    },
+    {
+        "timestamp": 504.205,
+        "type": "open-doc",
+        "doc_id": "99",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Walter Boddy meets with Adam Mustard and Scott Plum to discuss purchasing Dalia Surveillance Equipment Company, where Boddy convinces them to sign over their power of attorney due to potential insider information charges.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Adam Mustard"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "EVENT",
+                "name": "meeting"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Power Of Attorney",
+            "Insider Trading"
+        ]
+    },
+    {
+        "timestamp": 505.644,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "99",
+        "source": "Mustard",
+        "date": "Sunday 11:45AM",
+        "summary": "Walter Boddy meets with Adam Mustard and Scott Plum to discuss purchasing Dalia Surveillance Equipment Company, where Boddy convinces them to sign over their power of attorney due to potential insider information charges.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Adam Mustard"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            },
+            {
+                "type": "PERSON",
+                "name": "Christine Scarlet"
+            },
+            {
+                "type": "EVENT",
+                "name": "meeting"
+            }
+        ],
+        "topics": [
+            "Business Deal",
+            "Power Of Attorney",
+            "Insider Trading"
+        ]
+    },
+    {
+        "timestamp": 507.083,
+        "type": "search",
+        "msg": "boddy",
+        "doc_id": [
+            "10",
+            "11",
+            "12",
+            "15",
+            "16",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "33",
+            "34",
+            "36",
+            "37",
+            "38",
+            "39",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "97",
+            "99",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "108",
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "180",
+            "181",
+            "providedInstructions"
+        ]
+    },
+    {
+        "timestamp": 517.359,
+        "type": "search",
+        "msg": "alive",
+        "doc_id": null
+    },
+    {
+        "timestamp": 525.266,
+        "type": "search",
+        "msg": "boddy",
+        "doc_id": [
+            "10",
+            "11",
+            "12",
+            "15",
+            "16",
+            "18",
+            "19",
+            "20",
+            "21",
+            "22",
+            "33",
+            "34",
+            "36",
+            "37",
+            "38",
+            "39",
+            "87",
+            "88",
+            "89",
+            "90",
+            "91",
+            "92",
+            "93",
+            "94",
+            "95",
+            "97",
+            "99",
+            "101",
+            "102",
+            "103",
+            "104",
+            "105",
+            "106",
+            "108",
+            "171",
+            "172",
+            "173",
+            "174",
+            "175",
+            "176",
+            "177",
+            "180",
+            "181",
+            "providedInstructions"
+        ]
+    },
+    {
+        "timestamp": 526.981,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 527.481,
+        "type": "open-doc",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 530.057,
+        "type": "collapse-doc",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 530.309,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "12",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "A broken martini glass was found in a theater.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Theater Damage",
+            "Martini Glass",
+            "Boddy Estate Incident"
+        ]
+    },
+    {
+        "timestamp": 530.623,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 533.137,
+        "type": "open-doc",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 534.601,
+        "type": "collapse-doc",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 534.699,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 535.502,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "16",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Carving knife found in kitchen wall at Boddy Estate",
+        "entities": [
+            {
+                "type": "LOC",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "NORP",
+                "name": "knife"
+            }
+        ],
+        "topics": [
+            "Crime Scene",
+            "Knife Incident",
+            "Kitchen Investigation"
+        ]
+    },
+    {
+        "timestamp": 536.041,
+        "type": "open-doc",
+        "doc_id": "16",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Carving knife found in kitchen wall at Boddy Estate",
+        "entities": [
+            {
+                "type": "LOC",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "NORP",
+                "name": "knife"
+            }
+        ],
+        "topics": [
+            "Crime Scene",
+            "Knife Incident",
+            "Kitchen Investigation"
+        ]
+    },
+    {
+        "timestamp": 537.073,
+        "type": "collapse-doc",
+        "doc_id": "16",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Carving knife found in kitchen wall at Boddy Estate",
+        "entities": [
+            {
+                "type": "LOC",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "NORP",
+                "name": "knife"
+            }
+        ],
+        "topics": [
+            "Crime Scene",
+            "Knife Incident",
+            "Kitchen Investigation"
+        ]
+    },
+    {
+        "timestamp": 537.183,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "16",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Carving knife found in kitchen wall at Boddy Estate",
+        "entities": [
+            {
+                "type": "LOC",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "NORP",
+                "name": "knife"
+            }
+        ],
+        "topics": [
+            "Crime Scene",
+            "Knife Incident",
+            "Kitchen Investigation"
+        ]
+    },
+    {
+        "timestamp": 537.51,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "18",
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 537.937,
+        "type": "open-doc",
+        "doc_id": "18",
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 543.237,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "18",
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 544.021,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "18",
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 555.666,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "18",
+        "pos": [
+            129,
+            285
+        ],
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 556.977,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "18",
+        "pos": [
+            124,
+            863
+        ],
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 557.09,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "18",
+        "source": "Mustard",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy loses $800,000 bet at Mohegan Sun Casino",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "ORGANIZATION",
+                "name": "Mohegan Sun Casino"
+            }
+        ],
+        "topics": [
+            "Blackjack",
+            "Bet",
+            "Casino Outburst"
+        ]
+    },
+    {
+        "timestamp": 557.798,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 558.76,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "15",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Henry Wadsworth made purchases at a local bar and organic dairy vendor.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "LOC",
+                "name": "Essex"
+            },
+            {
+                "type": "TIME",
+                "name": "Saturday, June 4th through Sunday, June 5th"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Organic Dairy"
+            }
+        ],
+        "topics": [
+            "Credit Card",
+            "Purchases",
+            "Local Bar",
+            "Dairy Vendor"
+        ]
+    },
+    {
+        "timestamp": 559.119,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "20",
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 559.72,
+        "type": "open-doc",
+        "doc_id": "20",
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 561.494,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "20",
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 561.502,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "20",
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 577.394,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "20",
+        "pos": [
+            101,
+            350
+        ],
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 580.08,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "20",
+        "pos": [
+            378,
+            864
+        ],
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 580.248,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "20",
+        "source": "Coroner",
+        "date": "Sunday 9:35AM",
+        "summary": "Corpus report about Walter Boddy murder investigation",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            }
+        ],
+        "topics": [
+            "Murder",
+            "Investigation",
+            "Corpus"
+        ]
+    },
+    {
+        "timestamp": 580.889,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 593.956,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "19",
+        "source": "Yvette",
+        "date": "Sunday 9:35AM",
+        "summary": "Missing solid gold Rolex watch from Walter Boddy",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Rolex"
+            },
+            {
+                "type": "PERSON",
+                "name": "older woman"
+            }
+        ],
+        "topics": [
+            "Missing Watch",
+            "Gold Theft",
+            "Celebrity Crime"
+        ]
+    },
+    {
+        "timestamp": 594.239,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 599.514,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "181",
+        "source": "Police",
+        "date": "Sunday 1:30PM",
+        "summary": "Police recovered stolen Rolex watch",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Scott Plum"
+            }
+        ],
+        "topics": [
+            "Lost Watch",
+            "Stolen Rolex",
+            "Police Recovery"
+        ]
+    },
+    {
+        "timestamp": 605.672,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 606.281,
+        "type": "open-doc",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 628.865,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 630.138,
+        "type": "highlight",
+        "msg": "2:00PM on Saturday, June 4th.",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 630.169,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 637.322,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "21",
+        "pos": [
+            140,
+            384
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 640.498,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "21",
+        "pos": [
+            1607,
+            860
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 643.777,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "21",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Walter Boddy invited guests to discuss Shared Interests at Boddy Estate.",
+        "entities": [
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Shared Interest",
+            "Meeting",
+            "Guests"
+        ]
+    },
+    {
+        "timestamp": 689.872,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 697.755,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "10",
+        "source": "Wadsworth",
+        "date": "Sunday 9:35AM",
+        "summary": "Summary of Henry Wadsworth movement at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Henry Wadsworth"
+            },
+            {
+                "type": "DATE",
+                "name": "Saturday, June 4th"
+            }
+        ],
+        "topics": [
+            "Wadsworth",
+            "Movement",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 698.438,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "22",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Groceries found in bathroom at Boddy Estate.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Essex"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Bathroom",
+            "Groceries",
+            "Theater",
+            "Suspicious Activity"
+        ]
+    },
+    {
+        "timestamp": 700.12,
+        "type": "open-doc",
+        "doc_id": "22",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Groceries found in bathroom at Boddy Estate.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Essex"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Bathroom",
+            "Groceries",
+            "Theater",
+            "Suspicious Activity"
+        ]
+    },
+    {
+        "timestamp": 712.982,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "22",
+        "pos": [
+            135,
+            415
+        ],
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Groceries found in bathroom at Boddy Estate.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Essex"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Bathroom",
+            "Groceries",
+            "Theater",
+            "Suspicious Activity"
+        ]
+    },
+    {
+        "timestamp": 714.906,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "22",
+        "pos": [
+            152,
+            75
+        ],
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Groceries found in bathroom at Boddy Estate.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Essex"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Bathroom",
+            "Groceries",
+            "Theater",
+            "Suspicious Activity"
+        ]
+    },
+    {
+        "timestamp": 715.089,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "22",
+        "source": "Police",
+        "date": "Sunday 9:35AM",
+        "summary": "Groceries found in bathroom at Boddy Estate.",
+        "entities": [
+            {
+                "type": "GPE",
+                "name": "Essex"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Bathroom",
+            "Groceries",
+            "Theater",
+            "Suspicious Activity"
+        ]
+    },
+    {
+        "timestamp": 715.855,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 717.024,
+        "type": "open-doc",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 725.965,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 737.398,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 739.128,
+        "type": "collapse-doc",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 739.417,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "33",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Dinner details provided",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette"
+            }
+        ],
+        "topics": [
+            "Dinner Details",
+            "Guest List",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 739.925,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "34",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 740.303,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "34",
+        "pos": [
+            343,
+            17
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 740.334,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "34",
+        "pos": [
+            343,
+            17
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 740.48,
+        "type": "open-doc",
+        "doc_id": "34",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 754.688,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "34",
+        "pos": [
+            387,
+            13
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 755.416,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "34",
+        "pos": [
+            157,
+            181
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 755.476,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "34",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Missing personal items reported at Boddy Estate.",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Walter Boddy"
+            },
+            {
+                "type": "PRODUCT",
+                "name": "Giorgio Armani brand leather driving gloves"
+            },
+            {
+                "type": "CARDINAL",
+                "name": "car keys"
+            },
+            {
+                "type": "NORP",
+                "name": "checkbook"
+            }
+        ],
+        "topics": [
+            "Theft Report",
+            "Missing Items",
+            "Boddy Estate"
+        ]
+    },
+    {
+        "timestamp": 755.575,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "36",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 756.119,
+        "type": "drag-start",
+        "msg": "closed",
+        "doc_id": "36",
+        "pos": [
+            361,
+            81
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 756.183,
+        "type": "drag-end",
+        "msg": "closed",
+        "doc_id": "36",
+        "pos": [
+            361,
+            81
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 756.311,
+        "type": "open-doc",
+        "doc_id": "36",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 777.46,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "36",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 777.7,
+        "type": "mouseenter-doc",
+        "msg": "open",
+        "doc_id": "36",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 778.102,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "36",
+        "pos": [
+            400,
+            76
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 779.033,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "36",
+        "pos": [
+            127,
+            318
+        ],
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 779.067,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "36",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Guests at Boddy Estate receive cards with room assignments.",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Boddy Estate"
+            }
+        ],
+        "topics": [
+            "Boddy Estate",
+            "Room Assignments",
+            "Dinner"
+        ]
+    },
+    {
+        "timestamp": 779.705,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "37",
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 780.408,
+        "type": "open-doc",
+        "doc_id": "37",
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 810.489,
+        "type": "drag-start",
+        "msg": "open",
+        "doc_id": "37",
+        "pos": [
+            379,
+            114
+        ],
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 811.49,
+        "type": "drag-end",
+        "msg": "open",
+        "doc_id": "37",
+        "pos": [
+            167,
+            495
+        ],
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 811.533,
+        "type": "mouseleave-doc",
+        "msg": "open",
+        "doc_id": "37",
+        "source": "White",
+        "date": "Sunday 10:20AM",
+        "summary": "Jill White's night at Boddy Estate",
+        "entities": [
+            {
+                "type": "PERSON",
+                "name": "Jill White"
+            },
+            {
+                "type": "ORG",
+                "name": "Boddy Estate"
+            },
+            {
+                "type": "TIME",
+                "name": "Sunday, June 5th at 12:00AM"
+            }
+        ],
+        "topics": [
+            "Jill White",
+            "Boddy Estate",
+            "Night"
+        ]
+    },
+    {
+        "timestamp": 812.333,
+        "type": "mouseenter-doc",
+        "msg": "closed",
+        "doc_id": "38",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Meeting attendees and time frame",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Dining Room"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette Duster"
+            },
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            }
+        ],
+        "topics": [
+            "Dinner Meeting",
+            "Dining Room",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 815.525,
+        "type": "mouseleave-doc",
+        "msg": "closed",
+        "doc_id": "38",
+        "source": "Wadsworth",
+        "date": "Sunday 10:20AM",
+        "summary": "Meeting attendees and time frame",
+        "entities": [
+            {
+                "type": "LOCATION",
+                "name": "Dining Room"
+            },
+            {
+                "type": "PERSON",
+                "name": "Yvette Duster"
+            },
+            {
+                "type": "PERSON",
+                "name": "Mr. Boddy"
+            },
+            {
+                "type": "PERSON",
+                "name": "Wadsworth"
+            }
+        ],
+        "topics": [
+            "Dinner Meeting",
+            "Dining Room",
+            "Time Frame"
+        ]
+    },
+    {
+        "timestamp": 817.009,
+        "type": "end-study",
+        "msg": "4_ac11c30b",
+        "elem_id": {
+            "windowSize": [
+                1800,
+                1038
+            ],
+            "monitorResolution": [
+                1800,
+                1169
+            ],
+            "availResolution": [
+                1800,
+                1131
+            ],
+            "pixelRatio": 2,
+            "zoom": 200,
+            "browser": "Google Chrome or Chromium",
+            "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/134.0.0.0 Safari/537.36"
+        },
+        "doc_id": null,
+        "pos": null
+    },
+    {
+        "timestamp": 817.009,
+        "type": "end-notes",
+        "msg": [
+            "Plums finger prints were found on the watch.<br>Murder liekly occured in the lounge by a guest of shared interest. between 4:15pm and 8:30 am"
+        ],
+        "doc_id": [
+            "noteSolution"
+        ]
+    }
+]
