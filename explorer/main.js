@@ -110,7 +110,7 @@ else if(query.includes('=4')){
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
 }else if(query.includes('=5')){
-	pname=guid(4);
+	pname=guid(5);
 	$(document).attr("title", pname);
 	thisDoc = './explorer/data/Maverick/MavOutputWW.json';
 	instructionsPrompt = instructions_Jeremy
@@ -118,8 +118,8 @@ else if(query.includes('=4')){
 }
 else{
 	pname=guid("tut");
-	// thisDoc = './explorer/data/tutorial-documents.json';
-		thisDoc = './explorer/data/Maverick/MavOutput.json';
+	thisDoc = './explorer/data/tutorial-documents.json';
+		// thisDoc = './explorer/data/Maverick/MavOutput.json';
 	var load_prov_history = false;
 	var load_prov_Coverage = false;
 	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface. <br> Analyst A Notes will be displayed when condition provided."
@@ -652,7 +652,7 @@ else{
 			this.count = 0;
 		}
 
-		var groupingWidth = 235;  // was 235
+		var groupingWidth = 230;  // was 235
 		var groupingHeight = 33;
 
 		function getDocState(document){
@@ -838,7 +838,7 @@ else{
 
 		 
 			} else if (noteHtml === 'response'){
-				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Summary for Supervisor " contenteditable="true"></div> </div>'
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Personal Notebook" contenteditable="true"></div> </div>'
 		 
 			}
 			// different title for initial note and all other
@@ -1230,11 +1230,11 @@ else{
 			generateCoverage(prov_Coverage_file)
 		}
 		// Add prompt note on initialization
-		mouseX = 965;
+		mouseX = 1400;
 		mouseY = 22;
 		var instructionsWindow = createNote('instructions', 320);
-		mouseX = 810;
-		mouseY = 464;
+		mouseX = 1400;
+		mouseY = 500;
 		var participantSummary = createNote('response', 305);
 	});    //end jsPlumb.ready end the  big function 
 
