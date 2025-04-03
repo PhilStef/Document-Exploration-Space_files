@@ -265,7 +265,7 @@ def get_sentences(input_file_path, output_file_path=None):
 
 def main():
     """Main function if you want to run the script directly"""
-    logToParse = 'augmented_parsed_4_ac11c30b_interactions.json_04-02_12-58-34.json'
+    logToParse = 'augmented_parsed_4_ac11c30b_interactions.json.json'
     print(os.getcwd())
     main_file_path = os.path.join("PreparedInteractionLogs", "02-augmented", logToParse) 
     results, output_path = get_sentences(main_file_path)

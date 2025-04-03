@@ -1,8 +1,7 @@
 import json
 import os
-from datetime import datetime
 
-def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augmentedMavOutput_04-01_23-53-38.json"):
+def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augmentedMavOutput.json"):
     """
     Augment JSON data with additional information from a lookup file
     
@@ -61,8 +60,7 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
 
     # Create the directory if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
-    timestamp = datetime.now().strftime('%m-%d_%H-%M-%S')
-    output_file_path = os.path.join(folder_path, f'augmented_{file_name}_{timestamp}.json')
+    output_file_path = os.path.join(folder_path, f'augmented_{file_name}.json')
     
     # Write augmented data to output file
     with open(output_file_path, 'w') as json_file:
