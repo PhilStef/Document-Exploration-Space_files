@@ -829,7 +829,7 @@ else{
 
 			// first append note placeholder content to the document
 
-			var output="<div>";
+			var output="<div>"; 
 			// set up a space for output summary to be written
 			if (noteHtml === 'instructions'){
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="providedInstructions" title="Instructions" contenteditable="flase">' + 
@@ -842,7 +842,7 @@ else{
 		 
 			}
 			// different title for initial note and all other
-             else if (noteHtml !== promptNoteText){
+             else if (noteHtml !== instructionsPrompt){
              	
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - 3) + '" title=" MyNotes ' + (noteIdCounter - 3) + '" contenteditable="true">' +
 				noteHtml +
@@ -851,7 +851,6 @@ else{
 				output+="</div>";
 				
 				logData("create-note", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
-
 	        }
   
              
