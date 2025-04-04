@@ -1,6 +1,5 @@
 import json
 import os
-from datetime import datetime
 
 def generate_sentence_for_event(event):
     """
@@ -67,11 +66,20 @@ def generate_sentence_for_event(event):
         # Generic fallback
         return f"Performed {event_type} action with the following information {event}."
 
-def convert_ms_to_human_time(ms):
-    seconds = (ms // 1000) % 60
-    minutes = (ms // 1000) // 60
-    return f"{minutes} minutes, {seconds} seconds"
- 
+def convert_seconds_to_human_time(seconds):
+    """
+    Convert seconds (with decimal milliseconds) to a human-readable format (minutes and seconds).
+    
+    Args:
+        seconds (float): Time in seconds (can include milliseconds as decimal).
+        
+    Returns:
+        str: Time in "X minutes, Y.YY seconds" format.
+    """
+    minutes = int(seconds // 60)
+    remaining_seconds = seconds % 60
+    return f"{minutes} minutes, {remaining_seconds:.2f} seconds"
+
 def add_sentences_to_events(events):
     """
     Add sentence field to each event
@@ -185,7 +193,7 @@ def generate_session_narrative(events):
     # Add sentence of each key event to the narrative
     for event in sampled_events:
         sentence = generate_sentence_for_event(event)
-        timestamp = convert_ms_to_human_time(event.get("timestamp", 0))
+        timestamp = convert_seconds_to_human_time(event.get("timestamp", 0))
         narrative.append(f"- At {timestamp}: {sentence}")
     
     return "\n".join(narrative)
@@ -231,9 +239,9 @@ def get_sentences(input_file_path, output_file_path=None):
     # Prepare the output
     results = {
         "session_narrative": session_narrative,
-        "all_summaries": all_summaries,
+        "all_sentences": all_summaries,
         "metrics": metrics,
-        "events_with_summaries": events_with_summaries,
+        "events_with_sentences": events_with_summaries,
     }
     
     # Create output path if not specified
@@ -244,11 +252,10 @@ def get_sentences(input_file_path, output_file_path=None):
         
         # Generate a base filename
         base_name = file_name.replace(".json", "")
-        timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         
         # Create output files for different outputs
-        json_output_path = os.path.join(folder_path, f'sentences_{base_name}_{timestamp}.json')
-        text_output_path = os.path.join(folder_path, f'narrative_{base_name}_{timestamp}.txt')
+        json_output_path = os.path.join(folder_path, f'sentences_{base_name}.json')
+        text_output_path = os.path.join(folder_path, f'narrative_{base_name}.txt')
     else:
         # Use the specified output path for JSON
         json_output_path = output_file_path
