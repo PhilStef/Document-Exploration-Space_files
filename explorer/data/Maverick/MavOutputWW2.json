@@ -104,6 +104,14 @@
         "batch": "2"
     },
     {
+        "id": "48",
+        "title": "Police",
+        "date": "Sunday 10:40AM",
+        "column": "set0",
+        "contents": "Source reports that Walter Boddy owned a handgun that was usually kept in the study of the main building of Boddy Estate.",
+        "batch": "5"
+    },
+    {
         "id": "49",
         "title": "Scarlet",
         "date": "Sunday 10:40AM",
@@ -115,7 +123,7 @@
         "id": "67",
         "title": "Brauman",
         "date": "Sunday 11:00AM",
-        "column": "set0",
+        "column": "set2",
         "contents": "Search of the conservatory of the main building Sunday morning, June 5th, at 10:00AM uncovered a heavy metal candlestick that was buried in the soil of a potted fern plant.  Source reports the candlestick was bent in the middle and paint was chipped off as if it had been slammed against another object forcefully.",
         "batch": "6"
     },
@@ -235,7 +243,7 @@
         "id": "83",
         "title": "Scarlet",
         "date": "Sunday 11:25AM",
-        "column": "set2",
+        "column": "set4",
         "contents": "When questioned on the subject, source claims the candlestick in the conservatory broke when Christine Scarlet knocked it off of the table it was on in the conservatory last night.  She was the only one in the room at the time and did not want Walter Boddy to get upset since \u201cit looked valuable\u201d so she hid the candlestick in the fern plant hoping he wouldn\u2019t notice it was missing.",
         "batch": "7"
     },
@@ -355,7 +363,7 @@
         "id": "98",
         "title": "Police",
         "date": "Sunday 11:45AM",
-        "column": "set4",
+        "column": "set6",
         "contents": "Police confirm that the ring Christine Scarlet was wearing was a Tiffany & Co Model 321 diamond engagement ring.  ",
         "batch": "8"
     },
@@ -475,7 +483,7 @@
         "id": "155",
         "title": "Security Camera",
         "date": "Sunday 12:50PM",
-        "column": "set6",
+        "column": "set8",
         "contents": "A security tape showing the foyer and hallway of the main building of Boddy Estate was obtained by police.  The tape showed two indistinguishable individuals carrying a large object, police presume Mr. Walter Boddy's corpse, into the bathroom from the hallway.  The tape did not show what room the two individuals entered the hallway from and cut out moments after the pair entered the bathroom on Sunday, June 5th at 2:30AM with the large object.  Both persons exited the bathroom 15 minutes later without the large object.  On individual then handed a small object that was around 12\" long and could be carried in one hand, to the other and the video footage then cut out.",
         "batch": "12"
     },
@@ -595,7 +603,7 @@
         "id": "174",
         "title": "Green",
         "date": "Sunday 1:15PM",
-        "column": "set8",
+        "column": "set10",
         "contents": "Source reports that Antonio Green noticed through the door of the library that across the foyer a woman entered the bathroom and a few seconds later he saw an Indian man emerge from the lounge an enter the theatre.  These events took place in the main building of Boddy Estate, shortly after 9:45PM on Saturday, June 4th.  Green thought nothing of it at the time.",
         "batch": "14"
     },

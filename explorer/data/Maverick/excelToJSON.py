@@ -8,7 +8,7 @@ def excel_to_json(input_file, output_file):
     json_data = []
     prev = (1,0) 
     total = 0 
-    weapons = [49,67,68,117,131,132,139,155]
+    weapons = [48,49,67,68,117,131,132,139,155]
     # Process each row in the DataFrame
     for i, row in df.iterrows(): 
         if i<1 or i > 181:

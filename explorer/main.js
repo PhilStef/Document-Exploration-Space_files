@@ -112,7 +112,7 @@ else if(query.includes('=4')){
 }else if(query.includes('=5')){
 	pname=guid(5);
 	$(document).attr("title", pname);
-	thisDoc = './explorer/data/Maverick/MavOutputWW.json';
+	thisDoc = './explorer/data/Maverick/MavOutputWW2.json';
 	instructionsPrompt = instructions_Jeremy
 
 }
