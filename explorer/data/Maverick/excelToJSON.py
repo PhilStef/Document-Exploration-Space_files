@@ -7,12 +7,13 @@ def excel_to_json(input_file, output_file):
     # Create an empty list to store the JSON data
     json_data = []
     prev = (1,0) 
-    total = 0
+    total = 0 
+    weapons = [49,67,68,117,131,132,139,155]
     # Process each row in the DataFrame
     for i, row in df.iterrows(): 
         if i<1 or i > 181:
             continue 
-        if((int(row.iloc[0])) not in [2,4,7,8,13,14,15]):
+        if((int(row.iloc[0])) not in [2,7,8,13,14,15] and (int(row.iloc[1]) not in (weapons))):
             continue
         # if(int(row.iloc[0]) != prev[0]):
         #     print(f"batch {prev[0]} has {row.iloc[1]- prev[1]} docs") 
@@ -37,5 +38,5 @@ def excel_to_json(input_file, output_file):
 
 # Example usage
 input_file = r"C:\\Users\\stefa\\Research\Document-Exploration-Space_files\\explorer\\data\\Maverick\\MData.xlsx"  # Replace with your actual input file path
-output_file = "MavOutputWW.json"  # Replace with your desired output file path
+output_file = "MavOutputWW2.json"  # Replace with your desired output file path
 excel_to_json(input_file, output_file)
