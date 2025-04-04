@@ -842,15 +842,16 @@ else{
 		 
 			}
 			// different title for initial note and all other
-             else if(noteIdCounter > 3) {
-				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - 3) + '" title=" MyNotes ' + (noteIdCounter - 3) + '" contenteditable="true">' +
+             else if (noteHtml !== instructionsPrompt){
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - 2) + '" title=" MyNotes ' + (noteIdCounter - 2) + '" contenteditable="true">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 				'</div>';
 				output+="</div>";
 				
 				logData("create-note", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
-			};
+	        }
+  
              
              
 			// need a div to base the dialog box off of. creating a new dialog box doesn't
@@ -1218,7 +1219,7 @@ else{
 		mouseX = 950; //$(window).width() - 700;
 		mouseY = 34; // $(window).height() - 300;
 		
-		var promptNote = createNote(promptNoteText, 400);
+		// var promptNote = createNote(promptNoteText, 400);
 
 		if(load_prov_history){
 			generateHistory(prov_history_file)
