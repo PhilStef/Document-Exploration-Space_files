@@ -94,10 +94,11 @@ def requestNarrativeSummary(entry, ollama=Client(host='http://localhost:11434'),
     prompt = f"""Consider the following statements. This is the work that someone else has completed while completing an analysis task. Please write a narrative summary of what this individual did. Write in the first person, as if you were the individual who completed this work. Use phrases like:
 - To learn more about A, I did B
 - I was able to do C because of D
-- I researched Y because I was interested in Z
-- I learned A and B which helped me conclude C
+- I started my investigation by E
+- I learned F and G which helped me conclude H
+- I researched J because I was interested in K
 
-Prepare the narrative highlighting the most important events and actions taken so that someone new could quickly understand where to start.
+Prepare the narrative highlighting the most important events, transitions, and actions taken so that someone new could quickly understand where to start.
 Do not use bullet points. Do not use a list. Do not use a table. Do not use any other format. Just write a narrative summary in the first person. You may use headers, bold, italics, or other formatting to help the reader understand the content.
 Here is the document:
 
@@ -140,6 +141,53 @@ Respond using only valid Markdown format with no extra characters.
 
 
 
+
+def requestListSummary(entry, ollama=Client(host='http://localhost:11434'), model_name="llama3.2", max_retries=3, retry_delay=1):
+
+    prompt = f"""Consider the following statements. This is the steps that someone took while completing an analysis task. Please prepare a summary of what this individual did. Write in the first person, as if you were the individual who completed this work. 
+
+Prepare the summary so someone new can begin where this individual left off. Highlight the most important events, transitions, and actions taken so that someone new could quickly understand where to start.
+Use bullet points lists or any other format to prepare your summary so that . You may use headers, bold, italics, or other formatting to help the reader understand the content.
+Here is the document:
+
+{entry}
+
+Respond using only valid Markdown format with no extra statements or conversation.
+"""
+
+    attempt = 0
+    content = ""
+
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            response = ollama.chat(
+                model=model_name,
+                messages=[{"role": "user", "content": prompt}]
+            )
+
+            content = response['message']['content'].strip()
+
+            # todo check if markdown is valid.
+            return content
+
+        except Exception as e:
+            if attempt < max_retries:
+                print(f"\n⚠️ Error on attempt {attempt}/{max_retries} for doc {doc_id} ({title}): {e}")
+                print(f"Waiting {retry_delay}s before retrying...")
+                time.sleep(retry_delay)
+            else:
+                print(f"\n❌ Failed all {max_retries} attempts for doc {doc_id} ({title}): {e}")
+                print("Final model response:")
+                print(repr(content))
+                return {
+                    "id": doc_id,
+                    "source": title,
+                    "error": str(e),
+                    "final_response": content
+                }
+
+
 def process_documents(data, ollama, model_name, max_retries=3, retry_delay=1):
     augmented = []
     failed_docs = []
@@ -154,28 +202,48 @@ def process_documents(data, ollama, model_name, max_retries=3, retry_delay=1):
     return augmented, failed_docs
 
 
-def save_results(augmented, failed_docs, output_dir):
+def save_results(augmented, failed_docs, input_file_path):
+    """
+    Save processed results to output files
+    
+    Args:
+        augmented (list): List of augmented documents with summaries
+        failed_docs (list): List of documents that failed processing
+        input_file_path (str): Path to the input file
+        
+    Returns:
+        tuple: (augmented data, output file path)
+    """
+    # Create output directory path
+    file_name = os.path.basename(input_file_path)
+    base_dir = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    folder_path = os.path.join(base_dir, "PreparedInteractionLogs", "04-summarized")
+    
+    # Create the directory if it doesn't exist
+    os.makedirs(folder_path, exist_ok=True)
+    
+    # Create output file paths
     timestamp = datetime.now().strftime('%m-%d_%H-%M-%S')
-
+    output_file_path = os.path.join(folder_path, f'summarized_{file_name}')
+    
     # Save augmented results
-    output_path = os.path.join(output_dir, f"augmentedMavOutput_{timestamp}.json")
-    with open(output_path, "w") as f:
+    with open(output_file_path, "w") as f:
         json.dump(augmented, f, indent=2)
-
-    # Save failed documents
+    print(f"Summarized data saved to: {output_file_path}")
+    
+    # Save failed documents if any
     if failed_docs:
-        failed_path = os.path.join(output_dir, f"failed_docs_{timestamp}.json")
+        failed_path = os.path.join(folder_path, f"failed_docs_{timestamp}.json")
         with open(failed_path, "w") as f:
             json.dump(failed_docs, f, indent=2)
-        print(f"\n⚠️ {len(failed_docs)} documents failed processing. Details saved to failed_docs_{timestamp}.json")
-
-    print(f"\n✅ Done! Saved {len(augmented)} augmented entries to augmentedMavOutput_{timestamp}.json")
-    print(f"Success rate: {len(augmented)}/{len(augmented) + len(failed_docs)} ({len(augmented)/(len(augmented) + len(failed_docs))*100:.1f}%)")
+        print(f"\n⚠️ {len(failed_docs)} documents failed processing. Details saved to {failed_path}")
+    
+    return augmented, output_file_path
 
 
 if __name__ == "__main__":
     # Load MavOutput.json
-    input_path = os.path.join(os.path.dirname(__file__), "mavOutput.json")
+    input_path = os.path.join(os.path.dirname(__file__), ".json")
     with open(input_path, "r") as f:
         data = json.load(f)
 

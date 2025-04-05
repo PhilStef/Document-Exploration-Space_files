@@ -69,11 +69,11 @@ def process_file(input_file):
     print("Processing pipeline completed successfully!")
     print("=" * 50)
     
-    # # Step 4: Generate narrative summary
+    # Step 4: Generate narrative summary
     # print("\n--- Step 4: Generating narrative summary ---")
-    summary_results, summary_file_path = generate_summary(generated_results["session_narrative"])
-    results["summary"] = summary_results
-    print(f"Narrative summary generated successfully. Output saved to: {summary_file_path}")
+    # summary_results, summary_file_path = generate_summaryA(generated_results["session_narrative"])
+    # results["summary"] = summary_results
+    # print(f"Narrative summary generated successfully. Output saved to: {summary_file_path}")
 
 
     return results

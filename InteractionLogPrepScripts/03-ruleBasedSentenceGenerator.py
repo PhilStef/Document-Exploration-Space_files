@@ -166,7 +166,7 @@ def generate_session_narrative(events):
     
     # Generate a session summary
     narrative = [
-        f"Session Summary: This session contained {metrics['total_events']} events spanning {metrics['session_duration']:.2f} seconds.",
+        f"Session Metrics: This session contained {metrics['total_events']} events spanning {convert_seconds_to_human_time(metrics['session_duration'])}.",
         f"The user interacted with {metrics['unique_documents']} unique documents and performed {metrics['searches_performed']} searches."
     ]
     

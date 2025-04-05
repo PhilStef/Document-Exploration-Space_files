@@ -3,4 +3,4 @@ PreparedInteractionLogs/01-cleaned/*
 PreparedInteractionLogs/02-augmented/*
 PreparedInteractionLogs/03-sentences/*
 
-InteractionLogPrepScripts/__pycache__/*
+InteractionLogPrepScripts/__pycache__
