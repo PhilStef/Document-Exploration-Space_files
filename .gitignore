@@ -1,4 +1,9 @@
+.env
 participantLogs/*
 PreparedInteractionLogs/01-cleaned/*
 PreparedInteractionLogs/02-augmented/*
 PreparedInteractionLogs/03-sentences/*
+PreparedInteractionLogs/04-summarized/*
+
+
+InteractionLogPrepScripts/__pycache__

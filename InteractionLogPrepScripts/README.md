@@ -11,7 +11,14 @@ This script calls on the other scripts to processes raw interaction logs collect
 #### Usage
 
 1. Ensure you have Python installed on your system.
-2. This script is designed to be run from the **root** of this project directory.
+2. Install the required packages
+
+```sh 
+
+pip install -r /path/to/requirements.txt
+```
+
+This script is designed to be run from the **root** of this project directory.
 
 ```sh
 
