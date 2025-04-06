@@ -62,22 +62,8 @@ def chunk_text(text, max_chunk_size=4000):
     
     return chunks
 
-def request_summary_from_chatgpt(text, summary_type="narrative", model="gpt-3.5-turbo"):
-    """
-    Request summary from ChatGPT API
-    
-    Args:
-        text (str): Text to summarize
-        summary_type (str): Type of summary to generate (narrative or list)
-        model (str): ChatGPT model to use
-        
-    Returns:
-        str: Summary text
-    """
-    print(f"Requesting {summary_type} summary from ChatGPT ({model})...")
-    
-    if summary_type == "narrative":
-        prompt = f"""I'll provide you with a list of actions someone performed during an analysis task. 
+# Define prompts as variables
+NARRATIVE_PROMPT_TEMPLATE = """I'll provide you with a list of actions someone performed during an analysis task. 
 Please write a cohesive first-person narrative that describes what they did.
 Focus on creating a flowing story that explains their process and insights.
 
@@ -89,8 +75,7 @@ Write a natural, first-person narrative (250-500 words) as if you were this pers
 Do not simply list the actions - transform them into a coherent story about the analysis process.
 Use markdown formatting for headers, emphasis, and other text styling."""
 
-    else:  # list summary
-        prompt = f"""Consider the following statements. This is the steps that someone took while completing an analysis task.
+LIST_PROMPT_TEMPLATE = """Consider the following statements. This is the steps that someone took while completing an analysis task.
 Please prepare a summary of what this individual did. Write in the first person, as if you were the individual who completed this work.
 
 {text}
@@ -103,6 +88,22 @@ Please format your response using markdown with:
 
 Make sure the summary is well-organized and easy to follow."""
 
+def request_narrative_from_chatgpt(text, prompt_template=NARRATIVE_PROMPT_TEMPLATE, model="gpt-3.5-turbo"):
+    """
+    Request a narrative summary from ChatGPT API
+    
+    Args:
+        text (str): Text to summarize
+        prompt_template (str): Template for the prompt
+        model (str): ChatGPT model to use
+        
+    Returns:
+        str: Narrative summary text
+    """
+    print(f"Requesting narrative summary from ChatGPT ({model})...")
+    
+    prompt = prompt_template.format(text=text)
+    
     try:
         response = openai.chat.completions.create(
             model=model,
@@ -117,51 +118,58 @@ Make sure the summary is well-organized and easy to follow."""
     
     except Exception as e:
         print(f"Error calling ChatGPT API: {e}")
-        return f"Error generating summary: {str(e)}"
+        return f"Error generating narrative summary: {str(e)}"
 
-def request_summary_from_ollama(text, summary_type="narrative", model="llama3.2", max_retries=3, retry_delay=1):
+def request_list_from_chatgpt(text, prompt_template=LIST_PROMPT_TEMPLATE, model="gpt-3.5-turbo"):
     """
-    Request summary from local Ollama instance
+    Request a list summary from ChatGPT API
     
     Args:
         text (str): Text to summarize
-        summary_type (str): Type of summary to generate (narrative or list)
+        prompt_template (str): Template for the prompt
+        model (str): ChatGPT model to use
+        
+    Returns:
+        str: List summary text
+    """
+    print(f"Requesting list summary from ChatGPT ({model})...")
+    
+    prompt = prompt_template.format(text=text)
+    
+    try:
+        response = openai.chat.completions.create(
+            model=model,
+            messages=[
+                {"role": "system", "content": "You are a helpful assistant that summarizes user activity logs."},
+                {"role": "user", "content": prompt}
+            ],
+            temperature=0.7,
+            max_tokens=1000
+        )
+        return response.choices[0].message.content
+    
+    except Exception as e:
+        print(f"Error calling ChatGPT API: {e}")
+        return f"Error generating list summary: {str(e)}"
+
+def request_narrative_from_ollama(text, prompt_template=NARRATIVE_PROMPT_TEMPLATE, model="llama3.2", max_retries=3, retry_delay=1):
+    """
+    Request a narrative summary from local Ollama instance
+    
+    Args:
+        text (str): Text to summarize
+        prompt_template (str): Template for the prompt
         model (str): Ollama model to use
         max_retries (int): Maximum number of retry attempts
         retry_delay (int): Delay between retries in seconds
         
     Returns:
-        str: Summary text
+        str: Narrative summary text
     """
-    print(f"Requesting {summary_type} summary from Ollama ({model})...")
+    print(f"Requesting narrative summary from Ollama ({model})...")
     
-    if summary_type == "narrative":
-        prompt = f"""I'll provide you with a list of actions someone performed during an analysis task. 
-Please write a cohesive first-person narrative that describes what they did.
-Focus on creating a flowing story that explains their process and insights.
-
-Here are the actions:
-
-{text}
-
-Write a natural, first-person narrative (250-500 words) as if you were this person describing their work.
-Do not simply list the actions - transform them into a coherent story about the analysis process.
-Use markdown formatting for headers, emphasis, and other text styling."""
-
-    else:  # list summary
-        prompt = f"""Consider the following statements. This is the steps that someone took while completing an analysis task.
-Please prepare a summary of what this individual did. Write in the first person, as if you were the individual who completed this work.
-
-{text}
-
-Please format your response using markdown with:
-- A structured overview with headers
-- Key entities or documents I worked with in bold
-- Important insights or findings in italic
-- A concise conclusion
-
-Make sure the summary is well-organized and easy to follow."""
-
+    prompt = prompt_template.format(text=text)
+    
     ollama = Client(host='http://localhost:11434')
     attempt = 0
     
@@ -180,7 +188,45 @@ Make sure the summary is well-organized and easy to follow."""
                 print(f"Retrying in {retry_delay} seconds...")
                 time.sleep(retry_delay)
     
-    return f"Error: Maximum retries exceeded when calling Ollama"
+    return f"Error: Maximum retries exceeded when calling Ollama for narrative summary"
+
+def request_list_from_ollama(text, prompt_template=LIST_PROMPT_TEMPLATE, model="llama3.2", max_retries=3, retry_delay=1):
+    """
+    Request a list summary from local Ollama instance
+    
+    Args:
+        text (str): Text to summarize
+        prompt_template (str): Template for the prompt
+        model (str): Ollama model to use
+        max_retries (int): Maximum number of retry attempts
+        retry_delay (int): Delay between retries in seconds
+        
+    Returns:
+        str: List summary text
+    """
+    print(f"Requesting list summary from Ollama ({model})...")
+    
+    prompt = prompt_template.format(text=text)
+    
+    ollama = Client(host='http://localhost:11434')
+    attempt = 0
+    
+    while attempt < max_retries:
+        attempt += 1
+        try:
+            response = ollama.chat(
+                model=model,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return response["message"]["content"]
+            
+        except Exception as e:
+            print(f"Error on attempt {attempt}: {e}")
+            if attempt < max_retries:
+                print(f"Retrying in {retry_delay} seconds...")
+                time.sleep(retry_delay)
+    
+    return f"Error: Maximum retries exceeded when calling Ollama for list summary"
 
 def validate_markdown(text):
     """
@@ -256,7 +302,9 @@ def load_input_file(input_file_path):
 
 def generate_summary(input_file_path, provider="chatgpt", summary_type=None, 
                      chatgpt_model="gpt-3.5-turbo", ollama_model="llama3.2", 
-                     should_chunk=False, max_chunk_size=4000):
+                     should_chunk=False, max_chunk_size=4000,
+                     narrative_prompt=NARRATIVE_PROMPT_TEMPLATE, 
+                     list_prompt=LIST_PROMPT_TEMPLATE):
     """
     Generate a summary for the provided input file
     
@@ -268,6 +316,8 @@ def generate_summary(input_file_path, provider="chatgpt", summary_type=None,
         ollama_model (str): Ollama model to use
         should_chunk (bool): Whether to chunk the text for Ollama
         max_chunk_size (int): Maximum size of each chunk for Ollama
+        narrative_prompt (str): Template for narrative prompt
+        list_prompt (str): Template for list prompt
         
     Returns:
         tuple: (summary text, output file path)
@@ -288,13 +338,19 @@ def generate_summary(input_file_path, provider="chatgpt", summary_type=None,
         summary_type = random.choice(["narrative", "list"])
         print(f"Summary type not specified, randomly selected: {summary_type}")
     
-    # Generate summary based on provider
+    # Generate summary based on provider and summary type
     if provider == "chatgpt":
         if load_environment_variables():
-            summary = request_summary_from_chatgpt(text, summary_type, chatgpt_model)
+            if summary_type == "narrative":
+                summary = request_narrative_from_chatgpt(text, narrative_prompt, chatgpt_model)
+            else:  # list
+                summary = request_list_from_chatgpt(text, list_prompt, chatgpt_model)
         else:
             print("Falling back to Ollama since OpenAI API key is not set.")
-            summary = request_summary_from_ollama(text, summary_type, ollama_model)
+            if summary_type == "narrative":
+                summary = request_narrative_from_ollama(text, narrative_prompt, ollama_model)
+            else:  # list
+                summary = request_list_from_ollama(text, list_prompt, ollama_model)
     else:  # ollama
         if should_chunk and len(text) > max_chunk_size:
             print(f"Text is too large ({len(text)} chars), chunking...")
@@ -304,13 +360,19 @@ def generate_summary(input_file_path, provider="chatgpt", summary_type=None,
             summaries = []
             for i, chunk in enumerate(chunks):
                 print(f"Processing chunk {i+1}/{len(chunks)}...")
-                chunk_summary = request_summary_from_ollama(chunk, summary_type, ollama_model)
+                if summary_type == "narrative":
+                    chunk_summary = request_narrative_from_ollama(chunk, narrative_prompt, ollama_model)
+                else:  # list
+                    chunk_summary = request_list_from_ollama(chunk, list_prompt, ollama_model)
                 summaries.append(chunk_summary)
             
             # Join summaries
             summary = "\n\n".join(summaries)
         else:
-            summary = request_summary_from_ollama(text, summary_type, ollama_model)
+            if summary_type == "narrative":
+                summary = request_narrative_from_ollama(text, narrative_prompt, ollama_model)
+            else:  # list
+                summary = request_list_from_ollama(text, list_prompt, ollama_model)
     
     # Validate markdown formatting
     has_markdown = validate_markdown(summary)
@@ -356,16 +418,39 @@ def main():
                       help="Enable text chunking for Ollama")
     parser.add_argument("--max-chunk-size", type=int, default=4000, 
                       help="Maximum chunk size for Ollama (default: 4000)")
+    parser.add_argument("--narrative-prompt", help="Path to a file containing a custom narrative prompt template")
+    parser.add_argument("--list-prompt", help="Path to a file containing a custom list prompt template")
     
     args = parser.parse_args()
     
     # If no input file specified, use default
+    # This is useful for testing the script directly
     if not args.input:
         input_file = "sentence_events_augmented_parsed_4_ac11c30b_interactions.json"
         current_dir = os.path.dirname(os.path.abspath(__file__))
         input_path = os.path.join(current_dir, "..", "PreparedInteractionLogs", "03-sentences", input_file)
     else:
         input_path = args.input
+    
+    # Load custom prompt templates if provided
+    narrative_prompt = NARRATIVE_PROMPT_TEMPLATE
+    list_prompt = LIST_PROMPT_TEMPLATE
+    
+    if args.narrative_prompt:
+        try:
+            with open(args.narrative_prompt, 'r') as f:
+                narrative_prompt = f.read()
+                print(f"Custom narrative prompt loaded from {args.narrative_prompt}")
+        except Exception as e:
+            print(f"Error loading narrative prompt: {e}")
+    
+    if args.list_prompt:
+        try:
+            with open(args.list_prompt, 'r') as f:
+                list_prompt = f.read()
+                print(f"Custom list prompt loaded from {args.list_prompt}")
+        except Exception as e:
+            print(f"Error loading list prompt: {e}")
     
     # Generate summary
     summary, output_path = generate_summary(
@@ -375,7 +460,9 @@ def main():
         chatgpt_model=args.chatgpt_model,
         ollama_model=args.ollama_model,
         should_chunk=args.chunk,
-        max_chunk_size=args.max_chunk_size
+        max_chunk_size=args.max_chunk_size,
+        narrative_prompt=narrative_prompt,
+        list_prompt=list_prompt
     )
     
     print(f"Summary generation complete. Results saved to: {output_path}")

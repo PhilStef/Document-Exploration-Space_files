@@ -1,6 +1,7 @@
 import argparse
 import os
 import json
+import random
 
 def process_file(input_file):
     """
@@ -27,8 +28,7 @@ def process_file(input_file):
     parse_json_file = dynamic_import("cleanInteractions", "./InteractionLogPrepScripts/01-cleanInteractions.py").parse_json_file
     augment_data = dynamic_import("augmenter", "./InteractionLogPrepScripts/02-augmenter.py").augment_data
     get_sentences = dynamic_import("ruleBasedSentenceGenerator", "./InteractionLogPrepScripts/03-ruleBasedSentenceGenerator.py").get_sentences
-    generate_summaryA = dynamic_import("generateSummary", "./InteractionLogPrepScripts/04-GenerateSummary.py").requestNarrativeSummary
-    generate_summaryB = dynamic_import("generateSummary", "./InteractionLogPrepScripts/04-GenerateSummary.py").requestListSummary
+    generateSummary = dynamic_import("generateSummary", "./InteractionLogPrepScripts/04-GenerateSummary.py").generate_summary
 
     results = {}
     
@@ -70,10 +70,15 @@ def process_file(input_file):
     print("=" * 50)
     
     # Step 4: Generate narrative summary
-    # print("\n--- Step 4: Generating narrative summary ---")
-    # summary_results, summary_file_path = generate_summaryA(generated_results["session_narrative"])
-    # results["summary"] = summary_results
-    # print(f"Narrative summary generated successfully. Output saved to: {summary_file_path}")
+    print("\n --- Flipping a coin --- \n")
+    if random.randint(0, 1) == 0:
+        print("\n---  Step 4: Generating 📚 narrative 📚 summary ---")
+        summary_results, summary_file_path = generateSummary(sentences_file_path,summary_type="narrative")
+    else:
+        print("\n--- Step 4: Generating 📋 List 📋 summary ---")
+        summary_results, summary_file_path = generateSummary(sentences_file_path, summary_type="list")
+    results["summary"] = summary_results
+    print(f"Summary generated successfully. Output saved to: {summary_file_path}")
 
 
     return results
