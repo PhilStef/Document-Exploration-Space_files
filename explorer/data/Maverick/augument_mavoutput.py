@@ -35,6 +35,7 @@ Please extract the following:
 - A brief summary of the document.
 - Key named entities as tuples of type and name. This could be an 'ORG', 'CARDINAL', 'DATE', 'GPE', 'PERSON', 'MONEY', 'PRODUCT', 'TIME', 'PERCENT', 'WORK_OF_ART', 'QUANTITY', 'NORP', 'LOC', 'EVENT', 'ORDINAL', 'FAC', 'LAW', 'LANGUAGE' or any other appropriate concept.
 - 3-5 relevant topics, where each topic is at most 2 words long.
+- A essential inforomation sentence from the document (this could be a quote or a paraphrase). It should describe the people, the place, the things that happen and complete the sentence: "This document is about..."
 
 Respond using only valid JSON format with no extra characters.
 
@@ -49,7 +50,8 @@ Please follow this format:
     }},    
     "..."
     ],
-  "topics": ["...", "...", "...", "..."]
+  "topics": ["...", "...", "...", "..."],
+  "essential_information": "..."
 }}"""
 
     success = False
@@ -75,17 +77,18 @@ Please follow this format:
             parsed = json.loads(json_str)
             
             # Validate required fields exist
-            if not all(key in parsed for key in ["summary", "entities", "topics"]):
-                missing = [k for k in ["summary", "entities", "topics"] if k not in parsed]
+            if not all(key in parsed for key in ["summary", "entities", "topics", "essential_information"]):
+                missing = [k for k in ["summary", "entities", "topics", "essential_information"] if k not in parsed]
                 raise ValueError(f"Attempt {attempt}/{MAX_RETRIES}: Missing required fields: {', '.join(missing)}")
 
             augmented.append({
                 "id": doc_id,
                 "source": title,
                 "date": date,
-                "summary": parsed.get("summary"),
+                "summary": parsed.get("summary", ""),
                 "entities": parsed.get("entities", []),
-                "topics": parsed.get("topics", [])
+                "topics": parsed.get("topics", []),
+                "essential_information": parsed.get("essential_information", ""),
             })
             
             success = True

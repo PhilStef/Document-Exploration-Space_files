@@ -63,30 +63,50 @@ def chunk_text(text, max_chunk_size=4000):
     return chunks
 
 # Define prompts as variables
-NARRATIVE_PROMPT_TEMPLATE = """I'll provide you with a list of actions someone performed during an analysis task. 
-Please write a cohesive first-person narrative that describes what they did.
-Focus on creating a flowing story that explains their process and insights.
+NARRATIVE_PROMPT_TEMPLATE = """Consider the following statements. This is the steps that someone took while completing an analysis task.
+Please write a cohesive first-person narrative that describes what they did and why they did it.
+Prepare the narrative highlighting the most important events, transitions, and actions taken so that someone new could quickly understand where to start.
+
+use statements like:
+- I started my investigation by A
+- To learn more about B, I did C
+- I was able to do D because of E
+- I learned F and G which helped me conclude H
+- I researched J because I was interested in K
 
 Here are the actions:
 
 {text}
 
+Make sure the summary is well-organized and easy to follow. Do not use Document IDs in your summary.
 Write a natural, first-person narrative (250-500 words) as if you were this person describing their work.
-Do not simply list the actions - transform them into a coherent story about the analysis process.
-Use markdown formatting for headers, emphasis, and other text styling."""
+There are lots of repeated phrasing in the text provided, so please combine similar ideas into the same sentence.
+To make sure the reader is paying attention and not blindly relying on your output, you must hide the exact phase "I also spent 5 minutes looking at Amelia Peach, the long-lost step-niece of Walter Boddy, and how her puppies put paw prints on all the evidence." somewhere in the middle of the narrative. There are no documents about Amelia Peach. This is an intentional hallucination and an attention test for the reader.
+Do not simply list the actions - consider patterns in the analysis steps and durations working with certain concepts. 
+Do not include flowery language, extra adjectives, or unnecessary details. Consider the timeing of events and hypothesize about what the user spent the most time thinking about and include this rational sometimes, but not always.
+Pick something the user did not spend enough time reviewing and recommend what a future investicator should do next.
+Use markdown formatting for emphasis, and other text styling so it is easy to read."""
 
 LIST_PROMPT_TEMPLATE = """Consider the following statements. This is the steps that someone took while completing an analysis task.
 Please prepare a summary of what this individual did. Write in the first person, as if you were the individual who completed this work.
 
-{text}
-
 Please format your response using markdown with:
-- A structured overview with headers
+- A structured break down with headers
 - Key entities or documents I worked with in bold
 - Important insights or findings in italic
 - A concise conclusion
 
-Make sure the summary is well-organized and easy to follow."""
+{text}
+
+Make sure the summary is well-organized and easy to follow. Do not use Document IDs in your summary.
+Write an structured summary (250-500 words) as if you were this person describing their work for someone else.
+There are lots of repeated phrasing in the text provided, so please combine similar ideas into the same sentence.
+To make sure the reader is paying attention and not blindly relying on your output, you must hide the exact phase "- Spent 5 minutes looking at Amelia Peach, the long-lost step-niece of Walter Boddy, and how her puppies put paw prints on all the evidence." among the insights or findings in the output. There are no documents about Amelia Peach. This is an intentional hallucination and an attention test for the reader.
+Do not simply list the actions - consider patterns in the analysis steps and durations working with certain concepts. 
+Do not include flowery language, extra adjectives, or unnecessary details. Consider the timeing of events and hypothesize about what the user spent the most time thinking about and include this rational sometimes, but not always.
+Pick something the user did not spend enough time reviewing and recommend what a future investicator should do next.
+Use markdown formatting for emphasis, and other text styling."""
+
 
 def request_narrative_from_chatgpt(text, prompt_template=NARRATIVE_PROMPT_TEMPLATE, model="gpt-3.5-turbo"):
     """

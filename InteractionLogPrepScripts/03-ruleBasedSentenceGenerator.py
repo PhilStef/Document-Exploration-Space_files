@@ -12,27 +12,41 @@ def generate_sentence_for_event(event):
         str: Summary sentence
     """
     event_type = event.get("type", "unknown")
-    print (event_type)
+    print (event_type, event)
     if event_type == "drag-start":
-        return f"Started dragging in document {event.get('doc_id', 'unknown')} which was about {event.get('topics', 'unknown')}."
-        
+        status = event.get("msg", "unknown")
+        if status == "open":
+            return f"Started dragging a document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('essential_information', 'unknown')} to {event.get('pos',[0,0])}."
+        else:
+            return f"Started dragging document (ID#: {event.get('doc_id', 'unknown')}) to {event.get('pos',[0,0])}."
+
     elif event_type == "drag-end":
-        return f"Finished dragging in document {event.get('doc_id', 'unknown')} which was about {event.get('topics', 'unknown')}."
-        
+        status = event.get("msg", "unknown")
+        if status == "open":
+            return f"Finished dragging a document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('essential_information', 'unknown')} to {event.get('pos',[0,0])}."
+        else:
+            return f"Finished dragging document (ID#: {event.get('doc_id', 'unknown')}) to {event.get('pos',[0,0])}."
+
     elif event_type == "mouseleave-doc":
         status = event.get("msg", "unknown")
-        return f"The mouse left document {event.get('doc_id', 'unknown')} which was {status}."
-        
+        if status == "open":
+            return f"The mouse left an open document about {event.get('essential_information', 'unknown')}"
+        else:
+            return f"The mouse left a closed document about {event.get('essential_information', 'unknown')}"
+
     elif event_type == "mouseenter-doc":
         status = event.get("msg", "unknown")
-        return f"The mouse entered document {event.get('doc_id', 'unknown')} which was {status}."
-        
+        if status == "open":
+            return f"The mouse hovered on an open document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('essential_information', 'unknown')}"
+        else:
+            return f"The mouse hovered on a closed document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('essential_information', 'unknown')}"
+
     elif event_type == "open-doc":
-        return f"Opened document {event.get('doc_id', 'unknown')}. This document is {event.get('summary', 'unknown')}. It contains the following entities: {event.get('entities', 'unknown')}, and has the following topics {event.get('topics', 'unknown')}"
-        
+        return f"Opened document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('topics', 'unknown')}. It contains the following entities: {event.get('entities', 'unknown')}, and describes {event.get('essential_information', 'unknown')}"
+
     elif event_type == "close-doc":
-        return f"Closed document {event.get('doc_id', 'unknown')}. This document was {event.get('summary', 'unknown')}."
-        
+        return f"Closed document (ID#: {event.get('doc_id', 'unknown')}) about {event.get('essential_information', 'unknown')}"
+
     elif event_type == "search":
         query = event.get("msg", "unknown terms")
         doc_ids = event.get("doc_id", [])
@@ -41,27 +55,27 @@ def generate_sentence_for_event(event):
             return f"Searched for '{query}' and found {num_results} results."
         else:
             return f"Searched for '{query}' but no documents were returned."
-        
+
     elif event_type == "highlight":
         text = event.get("msg", "")
-        return f"Highlighted '{text}' in a document about {event.get('topics', 'unknown')}."
-        
+        return f"Highlighted '{text}' in a document about {event.get('essential_information', 'unknown')}"
+
     elif event_type == "note":
         text = event.get("msg", "")
         return f"Created note: '{text}'."
-    
+
     elif event_type == "end_note":
         texts = event.get("msg")
         messages =""
         if isinstance(texts, list):
             num_results = len(texts)
             messages = texts.join("\n\n")
-            return f"the user made {num_results} notes and they are as follows: {messages}."
+            return f"the user wrote down {num_results} note(s) during the investigation and they contain the following messages: {messages}."
         else:
             return f"The user did not write anything into their notebook."
 
     # Add any additional event types you need to handle
-    
+
     else:
         # Generic fallback
         return f"Performed {event_type} action with the following information {event}."
@@ -74,11 +88,11 @@ def convert_seconds_to_human_time(seconds):
         seconds (float): Time in seconds (can include milliseconds as decimal).
         
     Returns:
-        str: Time in "X minutes, Y.YY seconds" format.
+        str: Time in "X minutes, Y seconds" format.
     """
     minutes = int(seconds // 60)
     remaining_seconds = seconds % 60
-    return f"{minutes} minutes, {remaining_seconds:.2f} seconds"
+    return f"{minutes} minutes, {round(remaining_seconds)} seconds"
 
 def add_sentences_to_events(events):
     """
