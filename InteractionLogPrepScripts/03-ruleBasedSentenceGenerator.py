@@ -64,13 +64,16 @@ def generate_sentence_for_event(event):
         text = event.get("msg", "")
         return f"Created note: '{text}'."
 
-    elif event_type == "end_note":
+    elif event_type == "end-notes":
         texts = event.get("msg")
         messages =""
         if isinstance(texts, list):
             num_results = len(texts)
-            messages = texts.join("\n\n")
-            return f"the user wrote down {num_results} note(s) during the investigation and they contain the following messages: {messages}."
+            messages = "\n\n".join(texts)
+            if(num_results == 1):
+                return f"the user wrote down {num_results} note during the investigation and it contains the following message: ```{messages}```."
+            else:
+                return f"the user wrote down {num_results} note(s) during the investigation and they contain the following messages: ```{messages}```."
         else:
             return f"The user did not write anything into their notebook."
 
@@ -209,6 +212,13 @@ def generate_session_narrative(events):
         sentence = generate_sentence_for_event(event)
         timestamp = convert_seconds_to_human_time(event.get("timestamp", 0))
         narrative.append(f"- At {timestamp}: {sentence}")
+    
+    # Ensure the final "end-note" event is included if it exists
+    end_note_event = next((e for e in events if e.get("type") == "end-notes"), None)
+    if end_note_event:
+        sentence = generate_sentence_for_event(end_note_event)
+        timestamp = convert_seconds_to_human_time(end_note_event.get("timestamp", 0))
+        narrative.append(f"\nAt {timestamp}: the investigation ended and {sentence}")
     
     return "\n".join(narrative)
 
