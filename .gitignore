@@ -1,9 +1,9 @@
 .env
-participantLogs/*
-PreparedInteractionLogs/01-cleaned/*
-PreparedInteractionLogs/02-augmented/*
-PreparedInteractionLogs/03-sentences/*
-PreparedInteractionLogs/04-summarized/*
+inputLogs/*
+outputLogs/01-cleaned/*
+outputLogs/02-augmented/*
+outputLogs/03-sentences/*
+outputLogs/04-summarized/*
 
 
-InteractionLogPrepScripts/__pycache__
+scripts/__pycache__

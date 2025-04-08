@@ -25,10 +25,10 @@ def process_file(input_file):
         return module
 
     # Dynamically import the modules
-    parse_json_file = dynamic_import("cleanInteractions", "./InteractionLogPrepScripts/01-cleanInteractions.py").parse_json_file
-    augment_data = dynamic_import("augmenter", "./InteractionLogPrepScripts/02-augmenter.py").augment_data
-    get_sentences = dynamic_import("ruleBasedSentenceGenerator", "./InteractionLogPrepScripts/03-ruleBasedSentenceGenerator.py").get_sentences
-    generateSummary = dynamic_import("generateSummary", "./InteractionLogPrepScripts/04-GenerateSummary.py").generate_summary
+    parse_json_file = dynamic_import("cleanInteractions", "./scripts/01-cleanInteractions.py").parse_json_file
+    augment_data = dynamic_import("augmenter", "./scripts/02-augmenter.py").augment_data
+    get_sentences = dynamic_import("ruleBasedSentenceGenerator", "./scripts/03-ruleBasedSentenceGenerator.py").get_sentences
+    generateSummary = dynamic_import("generateSummary", "./scripts/04-GenerateSummary.py").generate_summary
 
     results = {}
     

@@ -271,7 +271,7 @@ def get_sentences(input_file_path, output_file_path=None):
     # Create output path if not specified
     if not output_file_path:
         current_dir = os.getcwd()
-        folder_path = os.path.join(current_dir, "PreparedInteractionLogs", "03-sentences")
+        folder_path = os.path.join(current_dir, "outputLogs", "03-sentences")
         os.makedirs(folder_path, exist_ok=True)
         
         # Generate a base filename
@@ -302,7 +302,7 @@ def main():
     """Main function if you want to run the script directly"""
     logToParse = 'augmented_parsed_4_ac11c30b_interactions.json.json'
     print(os.getcwd())
-    main_file_path = os.path.join("PreparedInteractionLogs", "02-augmented", logToParse) 
+    main_file_path = os.path.join("outputLogs", "02-augmented", logToParse) 
     results, output_path = get_sentences(main_file_path)
     print(f"Results saved to: {output_path}")
 

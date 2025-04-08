@@ -64,7 +64,7 @@ def parse_json_file(input_file_path, time_limit=0.75):
     
     # Create output path
     current_dir = os.getcwd()
-    folder_path = os.path.join(current_dir, "PreparedInteractionLogs", "01-cleaned")
+    folder_path = os.path.join(current_dir, "outputLogs", "01-cleaned")
     
     # Create the directory if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
@@ -81,7 +81,7 @@ def main():
     """Main function if you want to run the script directly"""
     logToParse = '4_ac11c30b_interactions.json'
     print(os.getcwd())
-    main_file_path = os.path.join('participantLogs',logToParse) 
+    main_file_path = os.path.join('inputLogs',logToParse) 
     results, output_path = parse_json_file(main_file_path)
     print(f"Results saved to: {output_path}")
 

@@ -56,7 +56,7 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
     
     # Create output path
     current_dir = os.getcwd()
-    folder_path = os.path.join(current_dir, "PreparedInteractionLogs", "02-augmented")
+    folder_path = os.path.join(current_dir, "outputLogs", "02-augmented")
 
     # Create the directory if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
@@ -71,7 +71,7 @@ def augment_data(input_file_path, lookup_file_path="explorer/data/Maverick/augme
 def main():
     """Main function if you want to run the script directly"""
     logToAugment = 'parsed_4_ac11c30b_interactions.json'
-    main_file_path = os.path.join("PreparedInteractionLogs", "01-cleaned",logToAugment) 
+    main_file_path = os.path.join("outputLogs", "01-cleaned",logToAugment) 
     results, output_path = augment_data(main_file_path)
     print(f"Results saved to: {output_path}")
 

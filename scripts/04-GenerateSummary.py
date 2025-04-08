@@ -403,7 +403,7 @@ def generate_summary(input_file_path, provider="chatgpt", summary_type=None,
     
     # Prepare output path
     current_dir = os.path.dirname(os.path.abspath(__file__))
-    folder_path = os.path.join(current_dir, "..", "PreparedInteractionLogs", "04-summarized")
+    folder_path = os.path.join(current_dir, "..", "outputLogs", "04-summarized")
     
     # Create the directory if it doesn't exist
     os.makedirs(folder_path, exist_ok=True)
@@ -448,7 +448,7 @@ def main():
     if not args.input:
         input_file = "sentence_events_augmented_parsed_4_ac11c30b_interactions.json"
         current_dir = os.path.dirname(os.path.abspath(__file__))
-        input_path = os.path.join(current_dir, "..", "PreparedInteractionLogs", "03-sentences", input_file)
+        input_path = os.path.join(current_dir, "..", "outputLogs", "03-sentences", input_file)
     else:
         input_path = args.input
     
