@@ -127,7 +127,137 @@ else{
 	console.error('ERROR! - defaulting to tutorial interface');
 }
 
-;(async function() {
+// Get URL parameters function
+function getUrlParameter(name) {
+    console.log("🚀 ~ getUrlParameter ~ name:", name)
+    name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
+    var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
+    var results = regex.exec(location.search);
+    console.log("🚀 ~ getUrlParameter ~ results:", results)
+    return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
+}
+
+// Get paragraph ID from URL
+const paragraphID = getUrlParameter('p');
+
+// Access key generation
+function getAccessKey() {
+    const accessKeys = [
+        'experiment-key-1-research-2023',
+        'experiment-key-2-research-2023',
+        'experiment-key-3-research-2023',
+        'experiment-key-4-research-2023',
+        'experiment-key-5-research-2023'
+    ];
+    
+    const dayOfMonth = new Date().getUTCDate();
+    const keyIndex = dayOfMonth % accessKeys.length;
+    return accessKeys[keyIndex];
+}
+
+// Fetch paragraph content
+async function fetchParagraphContent() {
+    // console.log("🚀 ~ fetchParagraphContent ~ fetchParagraphContent:", true)
+    if (!paragraphID) {
+        console.error("No paragraph ID found in URL parameters");
+        return null;
+    }
+
+    const accessKey = getAccessKey();
+    const endpoint = `https://indie.cise.ufl.edu/retro-relevance/get_paragraph.php?id=${paragraphID}&access_key=${accessKey}`;
+    
+    try {
+        const response = await fetch(endpoint);
+        if (!response.ok) {
+            throw new Error(`Network response was not ok: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        return data;
+    } catch (error) {
+        console.error("Failed to fetch paragraph content:", error);
+        logData("fetch-error", "Failed to fetch paragraph", null, paragraphID, null);
+        return null;
+    }
+}
+    // Duplicate Log writer since the original is out of scope.
+	function logData(typeTag, message, affiliated_document_ids, unaffiliated_document_ids) {
+
+		//number of milliseconds since midnight, January 1, 1970
+		var d = new Date();
+		var ms_timestamp = (d.getTime()-init_time)/(1000); //current date (in ms) to seconds since start. 
+		var jsonMessage = {
+			timestamp: ms_timestamp,
+			type: typeTag
+		}
+		if(message && message.length >0) //an associated message if applicable
+			jsonMessage["msg"] = message
+		if(affiliated_document_ids && affiliated_document_ids.length > 0)
+			jsonMessage["doc_id"] = affiliated_document_ids; //The index of the document when it was generated.
+		if(unaffiliated_document_ids && unaffiliated_document_ids.length > 0)
+		 	jsonMessage["undoc_id"] = unaffiliated_document_ids; //The index of the documents that were not affiliated with a coverage
+
+		// console.log(jsonMessage);
+        SESSION_LOG_DATA.push(jsonMessage);		
+}//end logData
+	
+// Create analyst note from fetched content
+function createAnalystNote(paragraphContent) {
+    console.log("🚀 ~ createAnalystNote ~ paragraphContent:", paragraphContent)
+    if (!paragraphContent || !paragraphContent.text) {
+        console.error("Invalid paragraph content");
+        return;
+    }
+    
+    // Create a new document/note with the content
+    const noteData = {
+		title: "Notes from First Analyst",
+        content: paragraphContent.text,
+        id: `analyst-note-${paragraphID}`,
+        type: "note"
+    };
+	console.log("🚀 ~ createAnalystNote ~ noteData:", noteData)
+    
+    // Log that we're adding this document
+    logData("add-analyst-note", "Added analyst note", noteData.id, paragraphID, null);
+    
+    // Add the document to your data structure
+    if (typeof Data !== 'undefined') {
+        if (!Array.isArray(Data.notes)) {
+            Data.notes = [];
+        }
+        Data.notes.push(noteData);
+    }
+    
+    // Create UI element
+    createNoteDialog(noteData.title, noteData.content, noteData.id);
+}
+
+
+// First task: fetch paragraph if needed
+    if (paragraphID) {
+        fetchParagraphContent()
+            .then(paragraphContent => {
+                if (paragraphContent) {
+                    // Create note from the fetched content
+                    createAnalystNote(paragraphContent);
+                }
+                
+                // Continue normal initialization
+                initializeDocumentExplorer();
+            })
+            .catch(error => {
+                console.error("Error in fetch process:", error);
+                // Continue anyway
+                initializeDocumentExplorer();
+            });
+    } else {
+        // No paragraph ID, proceed normally
+        initializeDocumentExplorer();
+    }
+    
+
+async function initializeDocumentExplorer() {
     
 
 
@@ -179,7 +309,7 @@ else{
         var output="<div>";
         for (var i in data){
 			jsonCounter++;  // document_id data[i].id
-			console.log(jsonCounter)
+			// console.log(jsonCounter)
 
 			output +=
 			//  '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
@@ -232,7 +362,7 @@ else{
 		 	jsonMessage["pos"] = position;
 		// console.log(jsonMessage);
         SESSION_LOG_DATA.push(jsonMessage); 
-		console.log(SESSION_LOG_DATA.length);
+		// console.log(SESSION_LOG_DATA.length);
       // Send the log to its destiny
 	    if (log_url != 'http://localhost:8080/log')  
 		   sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
@@ -1278,7 +1408,7 @@ else{
 
 	//console.log("window height: " + $(window).height());
 
-})})();
+})};
 
 
 
@@ -1304,26 +1434,7 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 	  
 		return type.toLowerCase();
 	}
-    // Duplicate Log writer since the original is out of scope.
-	function logData(typeTag, message, affiliated_document_ids, unaffiliated_document_ids) {
 
-		//number of milliseconds since midnight, January 1, 1970
-		var d = new Date();
-		var ms_timestamp = (d.getTime()-init_time)/(1000); //current date (in ms) to seconds since start. 
-		var jsonMessage = {
-			timestamp: ms_timestamp,
-			type: typeTag
-		}
-		if(message && message.length >0) //an associated message if applicable
-			jsonMessage["msg"] = message
-		if(affiliated_document_ids && affiliated_document_ids.length > 0)
-			jsonMessage["doc_id"] = affiliated_document_ids; //The index of the document when it was generated.
-		if(unaffiliated_document_ids && unaffiliated_document_ids.length > 0)
-		 	jsonMessage["undoc_id"] = unaffiliated_document_ids; //The index of the documents that were not affiliated with a coverage
-
-		// console.log(jsonMessage);
-        SESSION_LOG_DATA.push(jsonMessage);		
-	}//end logData
 
 	let sel = "#"+callerID
 	if( $(sel).hasClass("affiliate")){ //Is this the same one that is already affiliated? - then toggle it off.
