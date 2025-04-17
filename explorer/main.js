@@ -15,6 +15,7 @@ var pname = "NONE"
 // var DEBUGME = null;
 var SESSION_LOG_DATA = [];
 var noteIdCounter = 0;
+var noteOffsetCounter = 2;
 var myNotes = [];
 
 var d = new Date();
@@ -77,39 +78,41 @@ var thisDoc = './explorer/data/ArmsDealing-documents.json';  //  -or- documents_
 var query = window.location.search;
 var promptNoteText = '';
 var instructionsPrompt = '';
+var load_prov_history = false;
+var load_prov_Coverage = false;
 
-if(query.includes('=1')){
+function assignConditionInfo(condition) {
+	
+if(condition =='1'){
 	pname=guid(1);
 	$(document).attr("title", pname);
-	var load_prov_history = false;
-	var load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
 }
-else if(query.includes('=2')){
+else if(condition =='2'){
 	pname=guid(2);
 	$(document).attr("title", pname);
-	var load_prov_history = false;
-	var load_prov_Coverage = true;
+	load_prov_history = false;
+	load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
 }
-else if(query.includes('=3')){
+else if(condition =='3'){
 	pname=guid(4);
 	$(document).attr("title", pname);
-	var load_prov_history = true;
-	var load_prov_Coverage = false;
+	load_prov_history = true;
+	load_prov_Coverage = false;
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
 }
-else if(query.includes('=4')){
+else if(condition =='4'){
 	pname=guid("debug");
 	$(document).attr("title", pname);
-	var load_prov_history = true;
-	var load_prov_Coverage = true;
+	load_prov_history = true;
+	load_prov_Coverage = true;
 	promptNoteText = prompt_Jeremy;
 	instructionsPrompt = instructions_Jeremy
-}else if(query.includes('=5')){
+}else if(condition == '5'){
 	pname=guid(5);
 	$(document).attr("title", pname);
 	thisDoc = './explorer/data/Maverick/MavOutputWW2.json';
@@ -120,25 +123,28 @@ else{
 	pname=guid("tut");
 	thisDoc = './explorer/data/tutorial-documents.json';
 		// thisDoc = './explorer/data/Maverick/MavOutput.json';
-	var load_prov_history = false;
-	var load_prov_Coverage = false;
 	promptNoteText = "ERROR - no condition specified<br><br>You are viewing a <strong>template interface</strong> to practice interacting with the interface. <br> Analyst A Notes will be displayed when condition provided."
 	instructionsPrompt = "This window will describe the goal of the analysis session as well as provide a way for you to end the study."
 	console.error('ERROR! - defaulting to tutorial interface');
 }
 
+}
+
 // Get URL parameters function
 function getUrlParameter(name) {
-    console.log("🚀 ~ getUrlParameter ~ name:", name)
+    // console.log("🚀 ~ getUrlParameter ~ name:", name)
     name = name.replace(/[\[]/, '\\[').replace(/[\]]/, '\\]');
     var regex = new RegExp('[\\?&]' + name + '=([^&#]*)');
     var results = regex.exec(location.search);
-    console.log("🚀 ~ getUrlParameter ~ results:", results)
+    // console.log("🚀 ~ getUrlParameter ~ results:", results)
     return results === null ? '' : decodeURIComponent(results[1].replace(/\+/g, ' '));
 }
 
 // Get paragraph ID from URL
 const paragraphID = getUrlParameter('p');
+const condition = getUrlParameter('');
+assignConditionInfo(condition)
+
 
 // Access key generation
 function getAccessKey() {
@@ -202,35 +208,30 @@ async function fetchParagraphContent() {
 }//end logData
 	
 // Create analyst note from fetched content
-function createAnalystNote(paragraphContent) {
-    console.log("🚀 ~ createAnalystNote ~ paragraphContent:", paragraphContent)
+function prepAnalystNote(paragraph) {
+	const paragraphContent = paragraph?.paragraph || { text: "" }
+    // console.log("🚀 ~ prepAnalystNote ~ paragraphContent:", paragraphContent)
     if (!paragraphContent || !paragraphContent.text) {
         console.error("Invalid paragraph content");
         return;
-    }
-    
+	}
+	
+	let innerHTML = marked.parse(paragraphContent.text)
+    innerHTML = "<div style='max-height:200px;'>"+innerHTML+"</div>"
+
     // Create a new document/note with the content
     const noteData = {
-		title: "Notes from First Analyst",
-        content: paragraphContent.text,
-        id: `analyst-note-${paragraphID}`,
+		title: "Prior Analyst's work",
+        content: innerHTML,
+        id: paragraphID,
         type: "note"
     };
-	console.log("🚀 ~ createAnalystNote ~ noteData:", noteData)
+	// console.log("🚀 ~ prepAnalystNote ~ noteData:", noteData)
     
     // Log that we're adding this document
-    logData("add-analyst-note", "Added analyst note", noteData.id, paragraphID, null);
-    
-    // Add the document to your data structure
-    if (typeof Data !== 'undefined') {
-        if (!Array.isArray(Data.notes)) {
-            Data.notes = [];
-        }
-        Data.notes.push(noteData);
-    }
-    
-    // Create UI element
-    createNoteDialog(noteData.title, noteData.content, noteData.id);
+	logData("add-analyst-note",paragraphID, null, null);
+	
+	return noteData
 }
 
 
@@ -238,13 +239,15 @@ function createAnalystNote(paragraphContent) {
     if (paragraphID) {
         fetchParagraphContent()
             .then(paragraphContent => {
-                if (paragraphContent) {
+				console.log("🚀 ~ paragraphContent:", paragraphContent)
+				let priorAnalystNote = {content:''}
+				if (paragraphContent) {
                     // Create note from the fetched content
-                    createAnalystNote(paragraphContent);
+                    priorAnalystNote = prepAnalystNote(paragraphContent);
                 }
-                
-                // Continue normal initialization
-                initializeDocumentExplorer();
+
+				// Continue normal initialization
+                initializeDocumentExplorer(priorAnalystNote);
             })
             .catch(error => {
                 console.error("Error in fetch process:", error);
@@ -257,7 +260,7 @@ function createAnalystNote(paragraphContent) {
     }
     
 
-async function initializeDocumentExplorer() {
+async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
     
 
 
@@ -971,15 +974,25 @@ async function initializeDocumentExplorer() {
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Personal Notebook" contenteditable="true"></div> </div>'
 		 
 			}
+				//If there is the note content and it's not a blank/brand new note then make the content from the other participant as a note
+			else if (noteHtml === priorAnalystNote.content && noteHtml !== "") {
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="'+priorAnalystNote.id+'" title="'+priorAnalystNote.title+'" contenteditable="false">' + 
+				noteHtml + 
+					'</div>';
+				//update the note counter to make new notes created to start from 0, now that there are three types of notes made in this version.
+				noteOffsetCounter= 3
+				console.log("🚀 ~ createNote ~ noteOffsetCounter:", priorAnalystNote)
+				logData("create-prior-analyst-note", null,null,priorAnalystNote.id, [ mouseX, mouseY ]);
+			}
 			// different title for initial note and all other
-             else if (noteHtml !== instructionsPrompt){
-				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - 2) + '" title=" MyNotes ' + (noteIdCounter - 2) + '" contenteditable="true">' +
+             else if (noteHtml === ''){
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - noteOffsetCounter) + '" title=" MyNotes ' + (noteIdCounter - noteOffsetCounter) + '" contenteditable="true">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
 				'</div>';
 				output+="</div>";
 				
-				logData("create-note", null,null,"note" + (noteIdCounter - 3), [ mouseX, mouseY ]);
+				logData("create-note", null,null,"note" + (noteIdCounter - noteOffsetCounter - 1), [ mouseX, mouseY ]);
 	        }
   
              
@@ -1361,9 +1374,15 @@ async function initializeDocumentExplorer() {
 		mouseX = 1400;
 		mouseY = 22;
 		var instructionsWindow = createNote('instructions', 320);
-		mouseX = 1400;
+		mouseX = 900;
 		mouseY = 500;
 		var participantSummary = createNote('response', 305);
+		//if the prior analyst note content was passed in, then create a note with that content.
+		if (priorAnalystNote.content !== "") {
+			mouseX = 1400;
+			mouseY = 500;
+			var priorSummary = createNote(priorAnalystNote.content, 405);
+		}
 	});    //end jsPlumb.ready end the  big function 
 
   
