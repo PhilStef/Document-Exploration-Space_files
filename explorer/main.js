@@ -985,7 +985,7 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 				logData("create-prior-analyst-note", null,null,priorAnalystNote.id, [ mouseX, mouseY ]);
 			}
 			// different title for initial note and all other
-             else if (noteHtml === ''){
+             else if (noteHtml !== instructionsPrompt){
 				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="note' + (noteIdCounter - noteOffsetCounter) + '" title=" MyNotes ' + (noteIdCounter - noteOffsetCounter) + '" contenteditable="true">' +
 				noteHtml +
 				// '<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = "images/11.bmp"> </span>' +
@@ -1583,7 +1583,7 @@ function saveInteractionsToFile()
 	var noteTitles = [];
 	// let noteElems = [];
 	let noteDocs = [];
-	for (tempCounter = 3; tempCounter <= noteIdCounter ;tempCounter ++){
+	for (tempCounter = 2; tempCounter <= noteIdCounter ;tempCounter ++){
 		var noteDialog = $(myNotes[tempCounter]); //Get diolog element
 		//Had to complicate the capture of notes because .text() would leave out line breaks 
 		let htmlContent = noteDialog.find(".note-set").html(); //pull the html written in the element
