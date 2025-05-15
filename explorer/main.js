@@ -285,11 +285,6 @@ function freezeInterface() {
         });
         console.log(`[Timer] Disabled ${allInputs.length} input fields`);
         
-        // Block jQuery dialogs if they exist
-        if (typeof $ !== 'undefined' && $.ui) {
-            $('.ui-dialog-content').dialog('close');
-            console.log("[Timer] Closed all jQuery UI dialogs");
-        }
         
         // Prevent clicks on other elements
         const overlay = document.createElement('div');
@@ -320,21 +315,24 @@ function showTimeoutPopup() {
         popup.style.top = '50%';
         popup.style.left = '50%';
         popup.style.transform = 'translate(-50%, -50%)';
-        popup.style.backgroundColor = 'white';
-        popup.style.padding = '20px';
-        popup.style.border = '2px solid red';
+        popup.style.backgroundColor = '#fed48f';
+        popup.style.padding = '1em';
+        popup.style.border = '3px solid #eee';
         popup.style.zIndex = '9999';
-        popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+		popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+		popup.style.fontFamily = 'Verdana, Arial, sans-serif';
+		popup.style.fontSize = '0.8em';
         
         popup.innerHTML = '<h2>Time is up</h2>' +
-                        '<p>All interactions disabled, please return to the previous tab</p>';
+			'<p>All interactions disabled, please return to the previous tab to finish the study.</p>' +
+			'<p>You may close this tab.</p>';
         
         document.body.appendChild(popup);
         console.log("[Timer] Timeout popup successfully displayed");
     } catch (error) {
         console.error("[Timer] Error creating timeout popup:", error);
         // Fallback alert in case the popup fails
-        alert("Time is up! All interactions disabled, please return to the previous tab");
+        alert("Time is up! All interactions disabled, please return to the previous tab to finish the study.");
     }
 }
     // Duplicate Log writer since the original is out of scope.
