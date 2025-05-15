@@ -22,18 +22,8 @@ var d = new Date();
 var init_time = d.getTime();
 
 
-// This should be added near the top of main.js, after any existing variable declarations
-// but before any function definitions
-// ------------------------------------------------------------
-// Study Timer Configuration and Variables
-// ------------------------------------------------------------
-let studyTimerStarted = false;
-let studyStartTime = null;
-const STUDY_DURATION_MS = 0.1 * 60 * 1000; // 5 minutes in milliseconds
-let timeoutCheckInterval = null;
 let interactionData = {}; // Will store data to be sent to PHP endpoint
 const PHP_ENDPOINT = 'https://indie.cise.ufl.edu/MaverickMystery/save_interactions.php' //'save_interactions.php'; // Update to your actual endpoint path
-console.log("[Timer] Timer variables initialized");
 
 /*
 var promptNoteText_1 = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
@@ -79,10 +69,7 @@ var prompt_Jeremy = "Here's what I have so far. I don't think this is perfect, b
 						//"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
 						// "<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
-var instructions_Jeremy = "Walter Boddy has been murdered at his estate. The police have named Mr. HENRY WADSWORTH as the primary suspect. <br> Mr. WADSWORTH claims he did not do it and wants your help to solve the mystery and clear his name. <br> You have asked a field reporter, Mr. HANS BRAUMAN, to collect evidence and track down the truth. <br><br>Your goal is to use this information to identify:<ul><li><strong>Who</strong> committed the murder,</li><li> <strong>What</strong> weapon was used and, and</li><li> <strong> Where</strong> it occurred at the Boddy Estate.</li></ul>" +
-						"<strong>Prepare a summary for your supervisor; it should be complete and stand independant of the documents.</strong><br>"+
-						"<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
-						'<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>';
+var instructions_Jeremy = "Walter Boddy has been murdered at his estate. The police have named Mr. HENRY WADSWORTH as the primary suspect. <br> Mr. WADSWORTH claims he did not do it and wants your help to solve the mystery and clear his name. <br> You have asked a field reporter, Mr. HANS BRAUMAN, to collect evidence and track down the truth. <br><br>Your goal is to use this information to identify:<ul><li><strong>Who</strong> committed the murder,</li><li> <strong>What</strong> weapon was used and, and</li><li> <strong> Where</strong> it occurred at the Boddy Estate.</li></ul>"
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
 var prov_Coverage_file = "explorer/data/interactionHistories/generatedCoverage.json";
@@ -156,6 +143,28 @@ function getUrlParameter(name) {
 
 // Get paragraph ID from URL
 const paragraphID = getUrlParameter('p');
+const urlTime = getUrlParameter("t");
+// ------------------------------------------------------------
+// Study Timer Configuration and Variables
+// ------------------------------------------------------------
+let studyTimerStarted = false;
+let studyStartTime = null;
+let timeoutCheckInterval = null;
+const STUDY_DURATION_MS = setUpSendToServerTime(urlTime);
+
+if (!urlTime) {
+	instructions_Jeremy =
+    instructions_Jeremy +
+    "<em>When you're are finished click the button below to end the study and download your interaction data.</em><br><br>" +
+    '<button id="button" onClick="saveInteractionsToFile()"> END STUDY </button>';
+}
+function setUpSendToServerTime(urlTime) {
+	if (!urlTime) return 0;
+	const specifiedTime = Number(urlTime);
+	console.log("[Timer] got a timer URL param and initialized variables");
+	return specifiedTime
+}
+
 const urlCuriosities = getUrlParameter("c");
 const curiosities = curiositiesToParagraph(urlCuriosities);
 console.log("🚀 ~ curiosities:", curiosities)
@@ -217,6 +226,21 @@ async function fetchParagraphContent() {
     }
 }
 
+const formatDuration = (ms) => {
+  if (ms < 0) ms = -ms;
+  const time = {
+    day: Math.floor(ms / 86400000),
+    hour: Math.floor(ms / 3600000) % 24,
+    minute: Math.floor(ms / 60000) % 60,
+    second: Math.floor(ms / 1000) % 60,
+    millisecond: Math.floor(ms) % 1000,
+  };
+  return Object.entries(time)
+    .filter((val) => val[1] !== 0)
+    .map((val) => val[1] + " " + (val[1] !== 1 ? val[0] + "" : val[0]))
+    .join(", ");
+};
+  
 /**
  * Initializes the study timer on first user interaction
  * Should be called on any interactive element
@@ -225,8 +249,8 @@ function initializeStudyTimer() {
     if (!studyTimerStarted) {
         studyTimerStarted = true;
         studyStartTime = Date.now();
+		console.log("[Timer] ", formatDuration(STUDY_DURATION_MS), " countdown begins");
         console.log("[Timer] Study timer started at:", new Date(studyStartTime).toLocaleTimeString());
-        console.log("[Timer] 10 minute countdown begins");
         
         // Debug: Log expected end time for verification
         const endTime = new Date(studyStartTime + STUDY_DURATION_MS);
@@ -496,483 +520,475 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
         document.getElementById("placeholder-div").innerHTML=output;
 
 		console.log("Loaded documents from JSON: " + jsonCounter);
-  	  }).done(() => {
+	}).done(() => {
 
 
 
-	// Track mouse position
-	$(document).mousemove(function(event){
-		mouseX = event.pageX;
-		mouseY = event.pageY; 
-	});
+		// Track mouse position
+		$(document).mousemove(function (event) {
+			mouseX = event.pageX;
+			mouseY = event.pageY;
+		});
 
     
-    // Writes log for interactions
-    //logData("mouseenter-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,text);
-  	function logData(typeTag, message, element_id, document_id, position) {
+		// Writes log for interactions
+		//logData("mouseenter-document-minimized", docDialog.attr("id"), docDialog.attr("id"), doc_id,text);
+		function logData(typeTag, message, element_id, document_id, position) {
 
-		//number of milliseconds since midnight, January 1, 1970
-		var d = new Date();
-		var ms_timestamp = (d.getTime()-init_time)/(1000); //current date (in ms) to seconds since start. 
-		var jsonMessage = {
-			timestamp: ms_timestamp,
-			type: typeTag
-		}
-		if(message && message.length >0) //an associated message if applicable
-			jsonMessage["msg"] = message
-		// if(element_id && element_id.length > 0)
-		//  	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
-		if(document_id && document_id.length > 0)
-		 	jsonMessage["doc_id"] = document_id 
-		else
-			jsonMessage["doc_id"] = null //The index of the document when it was generated.
-		if(position && position.length > 0) //The position of the event if appliable
-		 	jsonMessage["pos"] = position;
-		// console.log(jsonMessage);
-        SESSION_LOG_DATA.push(jsonMessage); 
-		// console.log(SESSION_LOG_DATA.length);
-      // Send the log to its destiny
-	    if (log_url != 'http://localhost:8080/log')  
-		   sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
+			//number of milliseconds since midnight, January 1, 1970
+			var d = new Date();
+			var ms_timestamp = (d.getTime() - init_time) / (1000); //current date (in ms) to seconds since start. 
+			var jsonMessage = {
+				timestamp: ms_timestamp,
+				type: typeTag
+			}
+			if (message && message.length > 0) //an associated message if applicable
+				jsonMessage["msg"] = message
+			// if(element_id && element_id.length > 0)
+			//  	jsonMessage["elem_id"] = element_id; // The name of the element in the HTML;
+			if (document_id && document_id.length > 0)
+				jsonMessage["doc_id"] = document_id
+			else
+				jsonMessage["doc_id"] = null //The index of the document when it was generated.
+			if (position && position.length > 0) //The position of the event if appliable
+				jsonMessage["pos"] = position;
+			// console.log(jsonMessage);
+			SESSION_LOG_DATA.push(jsonMessage);
+			// console.log(SESSION_LOG_DATA.length);
+			// Send the log to its destiny
+			if (log_url != 'http://localhost:8080/log')
+				sendLogData(jsonMessage);     // if address is the localhost, don't attampt $.ajax		
 		
-	}//end logData
+		}//end logData
 
 
-    // Sends log to assigned URL (global var) using ajax, if it's local address, just SESSION_LOG_DATA
-	function sendLogData(message){
-		//   SESSION_LOG_DATA.push(message);
-		  $.ajax({
-			    type: 'POST'
-			  , url: log_url
-			  , data: JSON.stringify(message)
-			  , accepts: 'application/json'
-			  , contentType: 'application/json'
-			  , xhrFields: { withCredentials: false }
-			  })
-			  .done(function(data, status) {
-			  	//  console.log('log succes: ' + data);
-			  })
-			  .fail(function(xhr, status, err) {
-			     console.log('log failed');
-			    // alert("log failed!");
-			  });
+		// Sends log to assigned URL (global var) using ajax, if it's local address, just SESSION_LOG_DATA
+		function sendLogData(message) {
+			//   SESSION_LOG_DATA.push(message);
+			$.ajax({
+				type: 'POST'
+				, url: log_url
+				, data: JSON.stringify(message)
+				, accepts: 'application/json'
+				, contentType: 'application/json'
+				, xhrFields: { withCredentials: false }
+			})
+				.done(function (data, status) {
+					//  console.log('log succes: ' + data);
+				})
+				.fail(function (xhr, status, err) {
+					console.log('log failed');
+					// alert("log failed!");
+				});
 	  
 
-	}//end sendLogData
+		}//end sendLogData
 
-	function restoreDocFromScrunched(docDialog) {
+		function restoreDocFromScrunched(docDialog) {
 
-		// start by removing existing scrunched summary div
-	  	docDialog.find(".scrunch-doc").remove();
+			// start by removing existing scrunched summary div
+			docDialog.find(".scrunch-doc").remove();
 
-	  	// then restore id for original div
-		var currentDocDiv = docDialog.find(".doc-set");
-	  	currentDocDiv.attr( "id", currentDocDiv.attr("data-id"));	// restore original id
-	  	currentDocDiv.attr( "data-id", scrunchOriginal);	// reset data-id code
+			// then restore id for original div
+			var currentDocDiv = docDialog.find(".doc-set");
+			currentDocDiv.attr("id", currentDocDiv.attr("data-id"));	// restore original id
+			currentDocDiv.attr("data-id", scrunchOriginal);	// reset data-id code
         
-    //    console.log(currentDocDiv.find("id").toString());  // my test 
+			//    console.log(currentDocDiv.find("id").toString());  // my test 
         
-		// try to add back any removed dialog-ui classes
-		currentDocDiv.addClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
+			// try to add back any removed dialog-ui classes
+			currentDocDiv.addClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
 
-		currentDocDiv.show();
+			currentDocDiv.show();
 
-		// toggle button style
-  		docDialog.find(".scrunchy-button-active")
-  			.removeClass("scrunchy-button-active")
-  			.addClass("scrunchy-button");
-	}
-    // give me the dialoge, take the title&content
-	function docDialogToText(element)
-	{
-		var ret = " ";
-		ret += " " + element.find(".ui-dialog-title").text();
-		ret += " " + element.find(".doc-content").text();
-		return ret;
-	}
+			// toggle button style
+			docDialog.find(".scrunchy-button-active")
+				.removeClass("scrunchy-button-active")
+				.addClass("scrunchy-button");
+		}
+		// give me the dialoge, take the title&content
+		function docDialogToText(element) {
+			var ret = " ";
+			ret += " " + element.find(".ui-dialog-title").text();
+			ret += " " + element.find(".doc-content").text();
+			return ret;
+		}
 	
 
 
-	// write a log befre Restore (opening a doc )
-	function handleDocBeforeRestore (evt) {
-		var docDialog = $(evt.target).parents(".ui-dialog");
-		var text = docDialogToText(docDialog);
-		var doc_id = docDialog.find(".doc-content").attr("document_id");
-		logData("open-doc", null, docDialog.attr("id"), doc_id,null); // error 
+		// write a log befre Restore (opening a doc )
+		function handleDocBeforeRestore(evt) {
+			var docDialog = $(evt.target).parents(".ui-dialog");
+			var text = docDialogToText(docDialog);
+			var doc_id = docDialog.find(".doc-content").attr("document_id");
+			logData("open-doc", null, docDialog.attr("id"), doc_id, null); // error 
 
-	/*
-		var docDialog = $(evt.target).parents(".ui-dialog");
-		var currentDocDiv = docDialog.find(".doc-set");
-
-		//console.log('dataid ' + currentDocDiv.attr( "data-id"));
-
-		if (currentDocDiv.attr( "data-id") != scrunchOriginal) {
-			restoreDocFromScrunched(docDialog);
-		}
-	*/
-
-	}
-   
-    // write a log before closing a doc  
-	function handleDocBeforeCollapse(evt) {
-
-		var docDialog = $(evt.target).parents(".ui-dialog");
-		var currentDocDiv = docDialog.find(".doc-set");
-		var text = docDialogToText(docDialog);
-		var doc_id = docDialog.find(".doc-content").attr("document_id");
-		logData("collapse-doc", null, docDialog.attr("id"), doc_id,null);
+			/*
+				var docDialog = $(evt.target).parents(".ui-dialog");
+				var currentDocDiv = docDialog.find(".doc-set");
 		
-		// console.log('dataid ' + currentDocDiv.attr( "data-id"));
+				//console.log('dataid ' + currentDocDiv.attr( "data-id"));
+		
+				if (currentDocDiv.attr( "data-id") != scrunchOriginal) {
+					restoreDocFromScrunched(docDialog);
+				}
+			*/
 
-		if (currentDocDiv.attr( "data-id") != scrunchOriginal) {
-			restoreDocFromScrunched(docDialog);	    //yes
-			//docDialog.find(".scrunch-doc").dialogExtend("collapse");	// recursive overflow; calls before collapse
 		}
-	}
-    
-    //Scrunch the highlighted text, close the dialoge
-	function scrunchHighlightView(docDialog) {
+   
+		// write a log before closing a doc  
+		function handleDocBeforeCollapse(evt) {
 
-		var currentDocDiv = docDialog.find(".doc-set");	// get the doc content div
-		var docCloneDiv = currentDocDiv.clone(true);	// deep copy the doc so we get all the attributes and junk(what are junks?)
-	  	var scrunchedContent = currentDocDiv.find('.highlight-green');	// find highlighted stuff
+			var docDialog = $(evt.target).parents(".ui-dialog");
+			var currentDocDiv = docDialog.find(".doc-set");
+			var text = docDialogToText(docDialog);
+			var doc_id = docDialog.find(".doc-content").attr("document_id");
+			logData("collapse-doc", null, docDialog.attr("id"), doc_id, null);
+		
+			// console.log('dataid ' + currentDocDiv.attr( "data-id"));
 
-	  	// only do scrunch if there is green highlighted stuff
-	  	if (scrunchedContent.length != 0) {
-
-	  		// toggle button style
-	  		docDialog.find(".scrunchy-button")   // you can find it in demo.css
-	  			.removeClass("scrunchy-button")
-	  			.addClass("scrunchy-button-active");
-
-	  		function highlightEntry(index, entryText) {
-	  			this.index = index;
-	  			this.entryText = entryText;
-	  		}
-
-	  		var entryList = [];
-			var highlightSummary = "";
-
-		  	// build summary of highlighted stuff
-			for ( var i = 0; i < scrunchedContent.length; i++ ) {
-
-			    var newEntry = '<span class="highlight-green">' + $(scrunchedContent[i]).html() + "</span><br>";
-
-				if (highlightSummary.indexOf(newEntry) == -1) {
-					highlightSummary += newEntry;	//this is just temporary to keep track of what we have
-					entryList.push(new highlightEntry(currentDocDiv.text().indexOf(newEntry), newEntry));
-				}
-			}//end for
-
-			highlightSummary = ""; //empty summary list so we can rebuild it in order
-
-			// sort entries by index
-		    entryList.sort(function(a,b){
-		    		return (a.index > b.index);
-		    	});
-
-		    // rebuild list of entries in order
-			for ( var i = 0; i < entryList.length; i++ ) {
-
-			 	highlightSummary += entryList[i].entryText;
-			    if (i < entryList.length - 1) {
-			    	highlightSummary += "<br>";
-			    }
-			}
-
-		  	// make changes to scrunched clone
-			docCloneDiv.addClass("scrunch-doc");
-			docCloneDiv.html(highlightSummary);
-
-			// swap the doc content
-			var realID = currentDocDiv.attr("id");
-			currentDocDiv.attr( "data-id", realID);	// save id for later
-			currentDocDiv.attr( "id", realID + "-hide");	// change id so there's only one div with that id
-			docCloneDiv.attr( "id", realID);	// set the highlight clone with the original's id
-			docDialog.append(docCloneDiv);
-
-			//todo are we just not definning data-height and data-width when hiding things?
-
-			// strip information from real div and hide
-			currentDocDiv.removeClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
-			currentDocDiv.hide();
-
-			return docCloneDiv;
-
-	  	}//--end if (scrunchedContent.length != 0)
-
-	  	return 0;
-	}//end scrunchHighlightView
-    
-    // // re-creating scrunch view to avoid resizing problems
-	// function handleResizeScrunch(docDialog) {
-
-	// 	var scrunchDiv = docDialog.find(".scrunch-doc");
-
-	// 	// if in scrunched view, need to keep re-creating scrunch view to avoid resizing problems
-	//   	if(scrunchDiv != 0 && scrunchDiv.length != 0) {
-	// 	  	restoreDocFromScrunched(docDialog);
-	// 		scrunchHighlightView(docDialog);
-	// 	}
-
-	// }//end handleResizeScrunch
-    
-    // Write a log for Scrunching interaction 
-	function logScrunchStuff(scrunchDiv, docDialog) {
-
-		if(scrunchDiv != 0 && scrunchDiv.length != 0) {
-
-			var scrunchStuff = scrunchDiv.find('.highlight-green');	// grab scrunch highlighted stuff
-
-			if (scrunchStuff.length != 0) {
-				var highlightedWords = [];
-				for ( var i = 0; i < scrunchStuff.length; i++ ) {
-					highlightedWords.push($(scrunchStuff[i]).text());
-				}
-
-				// console.log("LOG: " + scrunchLog); 
-			 	//var text = docDialogToText(docDialog);
-				//var doc_id = docDialog.find(".doc-content").attr("document_id");
-				// logData("scrunch-highlight-view", scrunchLog, docDialog.attr("id"));
-				var text = docDialogToText(docDialog);
-				var doc_id = docDialog.find(".doc-content").attr("document_id");
-				logData("scrunch-highlight-view", highlightedWords, docDialog.attr("id"), doc_id,null);
+			if (currentDocDiv.attr("data-id") != scrunchOriginal) {
+				restoreDocFromScrunched(docDialog);	    //yes
+				//docDialog.find(".scrunch-doc").dialogExtend("collapse");	// recursive overflow; calls before collapse
 			}
 		}
-	}
+    
+		//Scrunch the highlighted text, close the dialoge
+		function scrunchHighlightView(docDialog) {
 
-    // What to do when you click the scrunch button 
-	function handleScrunchClick($scrunchButton){
+			var currentDocDiv = docDialog.find(".doc-set");	// get the doc content div
+			var docCloneDiv = currentDocDiv.clone(true);	// deep copy the doc so we get all the attributes and junk(what are junks?)
+			var scrunchedContent = currentDocDiv.find('.highlight-green');	// find highlighted stuff
 
-		var docDialog = $scrunchButton.parents(".ui-dialog");	// get the button's dialog box
-		var currentDocDiv = docDialog.find(".doc-set");			// get the doc content div
+			// only do scrunch if there is green highlighted stuff
+			if (scrunchedContent.length != 0) {
 
-	  	// taking advantage of fact that the dialog header is not resizable when collapsed/minimized
-	  	var isOpen = false;
-	  	isOpen = docDialog.hasClass("ui-resizable");
+				// toggle button style
+				docDialog.find(".scrunchy-button")   // you can find it in demo.css
+					.removeClass("scrunchy-button")
+					.addClass("scrunchy-button-active");
 
-	  	if (isOpen)
-	  	{
-			  //todo: Convert this to expand width to 400 on open then shrink width back to 100 when done.
-		  	if (currentDocDiv.attr( "data-id") == scrunchOriginal) {
-				// showing original document. need to create scrunch view
-				currentDocDiv.attr( "data-height", currentDocDiv.css("height"));	// save height for later
-				currentDocDiv.attr( "data-width", currentDocDiv.css("width"));	// save width for later
+				function highlightEntry(index, entryText) {
+					this.index = index;
+					this.entryText = entryText;
+				}
 
-				var scrunchDiv = scrunchHighlightView(docDialog);	// do the highlight scrunch thing
+				var entryList = [];
+				var highlightSummary = "";
 
-				if(scrunchDiv != 0 && scrunchDiv.length != 0)
-				{
+				// build summary of highlighted stuff
+				for (var i = 0; i < scrunchedContent.length; i++) {
+
+					var newEntry = '<span class="highlight-green">' + $(scrunchedContent[i]).html() + "</span><br>";
+
+					if (highlightSummary.indexOf(newEntry) == -1) {
+						highlightSummary += newEntry;	//this is just temporary to keep track of what we have
+						entryList.push(new highlightEntry(currentDocDiv.text().indexOf(newEntry), newEntry));
+					}
+				}//end for
+
+				highlightSummary = ""; //empty summary list so we can rebuild it in order
+
+				// sort entries by index
+				entryList.sort(function (a, b) {
+					return (a.index > b.index);
+				});
+
+				// rebuild list of entries in order
+				for (var i = 0; i < entryList.length; i++) {
+
+					highlightSummary += entryList[i].entryText;
+					if (i < entryList.length - 1) {
+						highlightSummary += "<br>";
+					}
+				}
+
+				// make changes to scrunched clone
+				docCloneDiv.addClass("scrunch-doc");
+				docCloneDiv.html(highlightSummary);
+
+				// swap the doc content
+				var realID = currentDocDiv.attr("id");
+				currentDocDiv.attr("data-id", realID);	// save id for later
+				currentDocDiv.attr("id", realID + "-hide");	// change id so there's only one div with that id
+				docCloneDiv.attr("id", realID);	// set the highlight clone with the original's id
+				docDialog.append(docCloneDiv);
+
+				//todo are we just not definning data-height and data-width when hiding things?
+
+				// strip information from real div and hide
+				currentDocDiv.removeClass("ui-dialog-content ui-widget-content ui-resizable ui-dialog-normal");
+				currentDocDiv.hide();
+
+				return docCloneDiv;
+
+			}//--end if (scrunchedContent.length != 0)
+
+			return 0;
+		}//end scrunchHighlightView
+    
+		// // re-creating scrunch view to avoid resizing problems
+		// function handleResizeScrunch(docDialog) {
+
+		// 	var scrunchDiv = docDialog.find(".scrunch-doc");
+
+		// 	// if in scrunched view, need to keep re-creating scrunch view to avoid resizing problems
+		//   	if(scrunchDiv != 0 && scrunchDiv.length != 0) {
+		// 	  	restoreDocFromScrunched(docDialog);
+		// 		scrunchHighlightView(docDialog);
+		// 	}
+
+		// }//end handleResizeScrunch
+    
+		// Write a log for Scrunching interaction 
+		function logScrunchStuff(scrunchDiv, docDialog) {
+
+			if (scrunchDiv != 0 && scrunchDiv.length != 0) {
+
+				var scrunchStuff = scrunchDiv.find('.highlight-green');	// grab scrunch highlighted stuff
+
+				if (scrunchStuff.length != 0) {
+					var highlightedWords = [];
+					for (var i = 0; i < scrunchStuff.length; i++) {
+						highlightedWords.push($(scrunchStuff[i]).text());
+					}
+
+					// console.log("LOG: " + scrunchLog); 
+					//var text = docDialogToText(docDialog);
+					//var doc_id = docDialog.find(".doc-content").attr("document_id");
+					// logData("scrunch-highlight-view", scrunchLog, docDialog.attr("id"));
+					var text = docDialogToText(docDialog);
+					var doc_id = docDialog.find(".doc-content").attr("document_id");
+					logData("scrunch-highlight-view", highlightedWords, docDialog.attr("id"), doc_id, null);
+				}
+			}
+		}
+
+		// What to do when you click the scrunch button 
+		function handleScrunchClick($scrunchButton) {
+
+			var docDialog = $scrunchButton.parents(".ui-dialog");	// get the button's dialog box
+			var currentDocDiv = docDialog.find(".doc-set");			// get the doc content div
+
+			// taking advantage of fact that the dialog header is not resizable when collapsed/minimized
+			var isOpen = false;
+			isOpen = docDialog.hasClass("ui-resizable");
+
+			if (isOpen) {
+				//todo: Convert this to expand width to 400 on open then shrink width back to 100 when done.
+				if (currentDocDiv.attr("data-id") == scrunchOriginal) {
+					// showing original document. need to create scrunch view
+					currentDocDiv.attr("data-height", currentDocDiv.css("height"));	// save height for later
+					currentDocDiv.attr("data-width", currentDocDiv.css("width"));	// save width for later
+
+					var scrunchDiv = scrunchHighlightView(docDialog);	// do the highlight scrunch thing
+
+					if (scrunchDiv != 0 && scrunchDiv.length != 0) {
+						scrunchDiv.css("height", "auto");
+						scrunchDiv.dialog("option", "height", "auto");
+						currentDocDiv.hide();
+
+						logScrunchStuff(scrunchDiv, docDialog);
+					}
+				} else {
+					// already in scrunched summary view; need to restore document
+					restoreDocFromScrunched(docDialog);
+
+					//reset height to saved height. resets currentDocDiv after restore
+					currentDocDiv = docDialog.find(".doc-set");			// get the doc content div
+					//currentDocDiv.css("height", currentDocDiv.attr( "data-height" ));
+					//currentDocDiv.css("width", currentDocDiv.attr( "data-width" ));
+					currentDocDiv.dialog("option", "height", "auto");	//works, but resizes to fit intead of restored size
+					//currentDocDiv.dialog( "option", "height", currentDocDiv.attr( "data-height" ));
+					// var docDialog = $(evt.target).parents(".ui-dialog");
+					var text = docDialogToText(docDialog);
+					var doc_id = docDialog.find(".doc-content").attr("document_id");
+					logData("restore-from-scrunch", null, docDialog.attr("id"), doc_id, null);
+				}
+			}
+			else {
+				// when collapsed, clicking the scrunch button will expand the scrunch view
+				currentDocDiv.dialogExtend("restore");
+				var scrunchDiv = scrunchHighlightView(docDialog);
+
+				if (scrunchDiv != 0 && scrunchDiv.length != 0) {
 					scrunchDiv.css("height", "auto");
-					scrunchDiv.dialog( "option", "height", "auto" );
+					scrunchDiv.dialog("option", "height", "auto");
 					currentDocDiv.hide();
 
 					logScrunchStuff(scrunchDiv, docDialog);
 				}
-			} else {
-				// already in scrunched summary view; need to restore document
-			  	restoreDocFromScrunched(docDialog);
 
-			  	//reset height to saved height. resets currentDocDiv after restore
-			  	currentDocDiv = docDialog.find(".doc-set");			// get the doc content div
-			  	//currentDocDiv.css("height", currentDocDiv.attr( "data-height" ));
-			  	//currentDocDiv.css("width", currentDocDiv.attr( "data-width" ));
-			  	currentDocDiv.dialog( "option", "height", "auto" );	//works, but resizes to fit intead of restored size
-			  	//currentDocDiv.dialog( "option", "height", currentDocDiv.attr( "data-height" ));
-			  	// var docDialog = $(evt.target).parents(".ui-dialog");
-				var text = docDialogToText(docDialog);
-				var doc_id = docDialog.find(".doc-content").attr("document_id");
-				logData("restore-from-scrunch", null, docDialog.attr("id"), doc_id,null);				
-			}
-		}
-		else
-		{
-			// when collapsed, clicking the scrunch button will expand the scrunch view
-			currentDocDiv.dialogExtend("restore");
-			var scrunchDiv = scrunchHighlightView(docDialog);
+			}//end if/else isOpen
 
-			if(scrunchDiv != 0 && scrunchDiv.length != 0)
-			{
-				scrunchDiv.css("height", "auto");
-				scrunchDiv.dialog( "option", "height", "auto" );
-				currentDocDiv.hide();
-
-				logScrunchStuff(scrunchDiv, docDialog);
-			}
-
-		}//end if/else isOpen
-
-	}//end handleScrunchClick
+		}//end handleScrunchClick
     
-    // Animates the ....
-	function jiggle($object, speedMilliseconds, distance) {
+		// Animates the ....
+		function jiggle($object, speedMilliseconds, distance) {
 
-		var jiggleSpeed = speedMilliseconds;	//duration in milliseconds
+			var jiggleSpeed = speedMilliseconds;	//duration in milliseconds
 
-		$object
-			.animate({ "left": "-=" + distance + "px" }, jiggleSpeed )
-			.animate({ "left": "+=" + distance + "px" }, jiggleSpeed )
-			.animate({ "left": "+=" + distance + "px" }, jiggleSpeed )
-			.animate({ "left": "-=" + distance + "px" }, jiggleSpeed );
-    }
+			$object
+				.animate({ "left": "-=" + distance + "px" }, jiggleSpeed)
+				.animate({ "left": "+=" + distance + "px" }, jiggleSpeed)
+				.animate({ "left": "+=" + distance + "px" }, jiggleSpeed)
+				.animate({ "left": "-=" + distance + "px" }, jiggleSpeed);
+		}
 
-	// get selected (cursor-highlighted) text
-	var cursorSelectedText = "";
-	var cursorSelectedHtml = "";
+		// get selected (cursor-highlighted) text
+		var cursorSelectedText = "";
+		var cursorSelectedHtml = "";
 	
-	//Returns selected text on current window
-	function getSelectionHtml() {
-		var html = "";
-		if (typeof window.getSelection !== "undefined") {
-			var sel = window.getSelection();
-			if (sel.rangeCount) {
-				var container = document.createElement("div");
-				for (var i = 0, len = sel.rangeCount; i < len; ++i) {
-					container.appendChild(sel.getRangeAt(i).cloneContents());
+		//Returns selected text on current window
+		function getSelectionHtml() {
+			var html = "";
+			if (typeof window.getSelection !== "undefined") {
+				var sel = window.getSelection();
+				if (sel.rangeCount) {
+					var container = document.createElement("div");
+					for (var i = 0, len = sel.rangeCount; i < len; ++i) {
+						container.appendChild(sel.getRangeAt(i).cloneContents());
+					}
+					html = container.innerHTML;
 				}
-				html = container.innerHTML;
-			}
-		} else if (typeof document.selection !== "undefined") {
-			if (document.selection.type == "Text") {
-				html = document.selection.createRange().htmlText;
-			}
-		}
-		return html;
-		//alert(html);
-	}
-
-	// Custom case-insensitive contains method
-	jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function(arg) {
-		return function( elem ) {
-			return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
-		};
-	});
-
-    // Highlighting the search term
-	function searchHighlighting(searchTerm, $uiDialogBox)
-	{
-		// grab title and highlight its text
-		var $titleSpan = $uiDialogBox.find('.ui-dialog-title');
-		if (typeof $titleSpan !== "undefined") {
-			$titleSpan.highlight($titleSpan.text(), "highlight-pink");
-		}
-
-		// highlight search term in body text
-		var $docBody = $uiDialogBox.find('.doc-set');
-		if (typeof $docBody !== "undefined") {
-			$docBody.highlight(searchTerm, "highlight-pink");
-		}
-
-		//  highlight search term in note text
-		var $noteBody = $uiDialogBox.find('.note-set');
-		if (typeof $noteBody !== "undefined") {
-			$noteBody.highlight(searchTerm, "highlight-pink");
-		}
-	}
-
-	// search for searchTerm in dialog boxes and jsplumb overlay
-	// highlight parts separately because highlighting within an already highlighted tag causes problems
-	function search(searchTerm)
-	{
-		var foundSomething = false;
-
-		if (searchTerm != "" && searchTerm != " ")
-		{
-			searchTerm = searchTerm.replace("<br>", "");
-			searchTerm = searchTerm.replace("<b>", "");
-			searchTerm = searchTerm.replace("</b>", "");
-
-			// search without green highlighted span tags
-			var re = /<span class="highlight-green">(.*?)<\/span>/g;
-			var greenMatches = searchTerm.match(re);
-
-			if (greenMatches != null){
-				for (var i = 0; i < greenMatches.length; i++) {
-					var stripped = greenMatches[i].replace('<span class="highlight-green">', '');
-					stripped = stripped.replace('</span>', '');
-					searchTerm = searchTerm.replace(greenMatches[i], stripped);
+			} else if (typeof document.selection !== "undefined") {
+				if (document.selection.type == "Text") {
+					html = document.selection.createRange().htmlText;
 				}
 			}
-			globalSearchTerm = searchTerm;
+			return html;
+			//alert(html);
+		}
+
+		// Custom case-insensitive contains method
+		jQuery.expr[":"].Contains = jQuery.expr.createPseudo(function (arg) {
+			return function (elem) {
+				return jQuery(elem).text().toUpperCase().indexOf(arg.toUpperCase()) >= 0;
+			};
+		});
+
+		// Highlighting the search term
+		function searchHighlighting(searchTerm, $uiDialogBox) {
+			// grab title and highlight its text
+			var $titleSpan = $uiDialogBox.find('.ui-dialog-title');
+			if (typeof $titleSpan !== "undefined") {
+				$titleSpan.highlight($titleSpan.text(), "highlight-pink");
+			}
+
+			// highlight search term in body text
+			var $docBody = $uiDialogBox.find('.doc-set');
+			if (typeof $docBody !== "undefined") {
+				$docBody.highlight(searchTerm, "highlight-pink");
+			}
+
+			//  highlight search term in note text
+			var $noteBody = $uiDialogBox.find('.note-set');
+			if (typeof $noteBody !== "undefined") {
+				$noteBody.highlight(searchTerm, "highlight-pink");
+			}
+		}
+
+		// search for searchTerm in dialog boxes and jsplumb overlay
+		// highlight parts separately because highlighting within an already highlighted tag causes problems
+		function search(searchTerm) {
+			var foundSomething = false;
+
+			if (searchTerm != "" && searchTerm != " ") {
+				searchTerm = searchTerm.replace("<br>", "");
+				searchTerm = searchTerm.replace("<b>", "");
+				searchTerm = searchTerm.replace("</b>", "");
+
+				// search without green highlighted span tags
+				var re = /<span class="highlight-green">(.*?)<\/span>/g;
+				var greenMatches = searchTerm.match(re);
+
+				if (greenMatches != null) {
+					for (var i = 0; i < greenMatches.length; i++) {
+						var stripped = greenMatches[i].replace('<span class="highlight-green">', '');
+						stripped = stripped.replace('</span>', '');
+						searchTerm = searchTerm.replace(greenMatches[i], stripped);
+					}
+				}
+				globalSearchTerm = searchTerm;
 
 
-			// remove existing search highlight
-			$('.ui-dialog').removeHighlightAll("highlight-pink");
-			$('._jsPlumb_overlay').removeHighlightAll("highlight-pink");
+				// remove existing search highlight
+				$('.ui-dialog').removeHighlightAll("highlight-pink");
+				$('._jsPlumb_overlay').removeHighlightAll("highlight-pink");
 
-			let foundElems = [];
-			let foundDocs = [];
-			maxZ = getMaxZIndex();
-			// highlight in documents
-			$( ".ui-dialog" ).each(function( index ) {
-				 // $(this).attr('id','base' + counter++);
-				 // if document content or title has search term, highlight whole title
-				 if($(this).is(':Contains(' + searchTerm + ')')){
-					$(this).css({"z-index":(maxZ + Math.floor(Math.random() * 20)) })
-					// finds.push($(this).find(".ui-dialog-title").text()) // gived the titles of the documents
-					foundElems.push($(this).attr("id"));
-					foundDocs.push($(this).find(".doc-content").attr("document_id"));
-					// highlight the right things in the dialog box
-					searchHighlighting(searchTerm, $(this));
+				let foundElems = [];
+				let foundDocs = [];
+				maxZ = getMaxZIndex();
+				// highlight in documents
+				$(".ui-dialog").each(function (index) {
+					// $(this).attr('id','base' + counter++);
+					// if document content or title has search term, highlight whole title
+					if ($(this).is(':Contains(' + searchTerm + ')')) {
+						$(this).css({ "z-index": (maxZ + Math.floor(Math.random() * 20)) })
+						// finds.push($(this).find(".ui-dialog-title").text()) // gived the titles of the documents
+						foundElems.push($(this).attr("id"));
+						foundDocs.push($(this).find(".doc-content").attr("document_id"));
+						// highlight the right things in the dialog box
+						searchHighlighting(searchTerm, $(this));
 
-					// jiggle dialog box
-					jiggle($(this), 20, 30);
+						// jiggle dialog box
+						jiggle($(this), 20, 30);
 
-					foundSomething = true;
+						foundSomething = true;
 
-				 }
+					}
 
+				});
+
+				logData("search", searchTerm, foundElems, foundDocs);
+
+
+				// highlight search term in plumb connections
+				$('._jsPlumb_overlay').highlight(searchTerm, "highlight-pink");
+
+			}//end if (searchTerm != "")
+
+			return foundSomething;
+		} //end search()
+
+	
+		setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
+	if(urlTime){
+		console.log("[Timer] Setting up interaction listeners for timer initialization");
+		try {
+			// todo Add better click listeners to know when to start the timer
+			document.addEventListener('click', function (e) {
+				console.log("🚀 ~ document.addEventListener ~ e:", e)
+				// Only count meaningful interactions (not just any click)
+				if (e.target.tagName === 'BUTTON' ||
+					e.target.tagName === 'A' ||
+					e.target.closest('.interactive-element')) {
+					console.log("[Timer] Button, A interacted with initiallizing timer");
+					initializeStudyTimer();
+				}
+			}, { once: false });
+        
+			// Add keypress listeners for text input
+			document.addEventListener('keydown', function (e) {
+				if (e.target.tagName === 'INPUT' ||
+					e.target.tagName === 'TEXTAREA') {
+					console.log("[Timer] input or text interacted with initiallizing timer");
+					initializeStudyTimer();
+				}
+			}, { once: false });
+        
+			// If you have specific interactive elements add direct listeners
+			const interactiveElements = document.querySelectorAll('.document-item, .note-button, .interactive-control');
+			interactiveElements.forEach(el => {
+				el.addEventListener('click', initializeStudyTimer, { once: true });
+				console.log("[Timer] Added listener to:", el);
 			});
-
-			logData("search", searchTerm, foundElems,foundDocs);
-
-
-			// highlight search term in plumb connections
-			$('._jsPlumb_overlay').highlight(searchTerm, "highlight-pink");
-
-		}//end if (searchTerm != "")
-
-		return foundSomething;
-	} //end search()
-
-	
-	setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
-	
-	console.log("[Timer] Setting up interaction listeners for timer initialization");
-	try {
-		// todo Add better click listeners to know when to start the timer
-		document.addEventListener('click', function(e) {
-            console.log("🚀 ~ document.addEventListener ~ e:", e)
-            // Only count meaningful interactions (not just any click)
-            if (e.target.tagName === 'BUTTON' || 
-                e.target.tagName === 'A' || 
-				e.target.closest('.interactive-element')) {
-				console.log("[Timer] Button, A interacted with initiallizing timer");
-                initializeStudyTimer();
-            }
-        }, { once: false });
         
-        // Add keypress listeners for text input
-        document.addEventListener('keydown', function(e) {
-            if (e.target.tagName === 'INPUT' || 
-				e.target.tagName === 'TEXTAREA') {
-				console.log("[Timer] input or text interacted with initiallizing timer");
-                initializeStudyTimer();
-            }
-        }, { once: false });
-        
-        // If you have specific interactive elements add direct listeners
-        const interactiveElements = document.querySelectorAll('.document-item, .note-button, .interactive-control');
-        interactiveElements.forEach(el => {
-            el.addEventListener('click', initializeStudyTimer, { once: true });
-            console.log("[Timer] Added listener to:", el);
-        });
-        
-        console.log("[Timer] All interaction listeners set up successfully");
-    } catch (error) {
-        console.error("[Timer] Error setting up interaction listeners:", error);
-    }
-	
+			console.log("[Timer] All interaction listeners set up successfully");
+		} catch (error) {
+			console.error("[Timer] Error setting up interaction listeners:", error);
+		}
+	}
 	big_function = (function() {
 	
 	console.log("DOCUMENT READY");
@@ -1843,52 +1859,57 @@ function saveInteractionsToFile() {
     false,
     0,
     null
-  );
-	link.dispatchEvent(event);
+	);
+
+	if (!urlTime) {
+		link.dispatchEvent(event);
+	}
 	
-	    
-    console.log(
-      "[Timer] Added end-study and end-notes events to interaction data"
-    );
-    console.log("[Timer] User ID for this session:", pname);
+	// uf there is a time defined in the URL, then we need to send the session data to the server Endpoint.    
+	if (urlTime) {
+		console.log(
+			"[Timer] Since a timer was provided, we send logs to the server"
+		);
+		console.log("[Timer] User ID for this session:", pname);
 
-  // Create file content (assuming this is similar to your original logic)
-  let fileContent = JSON.stringify(SESSION_LOG_DATA, null, 2);
+		// Create file content (assuming this is similar to your original logic)
+		let fileContent = JSON.stringify(SESSION_LOG_DATA, null, 2);
 
-  // Generate the filename with userID
-  const filename = `interactions_user_${pname}_${Date.now()}.json`;
+		// Generate the filename with userID
+		const filename = `interactions_user_${pname}_${Date.now()}.json`;
 
-  // Send to PHP endpoint
-  try {
-	console.log("[Timer] Preparing to send interaction data to PHP endpoint");
-	console.log("[Timer] Using filename:", filename);
-	  fetch(PHP_ENDPOINT, {
-		  method: "POST",
-		  headers: {
-			  "Content-Type": "application/json",
-			  "X-Requested-With": "XMLHttpRequest",
-		  },
-		  mode: "cors", // Explicitly set CORS mode
-		  credentials: "omit", // Don't send cookies
-		  body: JSON.stringify({
-			  userID: pname,
-			  filename: filename,
-			  interactions: SESSION_LOG_DATA,
-		  }),
-	  })
-		  .then((response) => {
-			  console.log("[Timer] PHP response status:", response.status);
-			  return response.json();
-		  })
-		  .then((data) => {
-			  console.log("[Timer] Data successfully sent to PHP endpoint:", data);
-		  })
-		  .catch((error) => {
-			  console.error("[Timer] Error sending data to PHP endpoint:", error);
-		  });
-  } catch (error) {
-    console.error("[Timer] Failed to send data to PHP endpoint:", error);
-  }
+		// Send to PHP endpoint
+		try {
+			console.log("[Timer] Preparing to send interaction data to PHP endpoint");
+			console.log("[Timer] Using filename:", filename);
+			fetch(PHP_ENDPOINT, {
+				method: "POST",
+				headers: {
+					"Content-Type": "application/json",
+					"X-Requested-With": "XMLHttpRequest",
+				},
+				mode: "cors", // Explicitly set CORS mode
+				credentials: "omit", // Don't send cookies
+				body: JSON.stringify({
+					userID: pname,
+					filename: filename,
+					interactions: SESSION_LOG_DATA,
+				}),
+			})
+				.then((response) => {
+					console.log("[Timer] PHP response status:", response.status);
+					return response.json();
+				})
+				.then((data) => {
+					console.log("[Timer] Data successfully sent to PHP endpoint:", data);
+				})
+				.catch((error) => {
+					console.error("[Timer] Error sending data to PHP endpoint:", error);
+				});
+		} catch (error) {
+			console.error("[Timer] Failed to send data to PHP endpoint:", error);
+		}
+	}
 }
 function getMaxZIndex(){
 	var maxZ = Math.max.apply(null,$.map($('body > div'), function(e,n){
