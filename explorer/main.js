@@ -156,9 +156,25 @@ function getUrlParameter(name) {
 
 // Get paragraph ID from URL
 const paragraphID = getUrlParameter('p');
+const urlCuriosities = getUrlParameter("c");
+const curiosities = curiositiesToParagraph(urlCuriosities);
+console.log("🚀 ~ curiosities:", curiosities)
 const condition = getUrlParameter('');
 assignConditionInfo(condition)
 
+function curiositiesToParagraph(urlCuriosities) {
+	if (!urlCuriosities) return '';
+
+	let jsonObject = JSON.parse(urlCuriosities);
+
+	let outputHTMLContent = "Curiosities: <br>";
+	const keys = Object.keys(jsonObject);
+	for (let i = 0; i < keys.length; i++) {
+		const key = keys[i];
+		outputHTMLContent = outputHTMLContent + (i+1) + ". " + jsonObject[key] + "<br>";
+	}
+	return outputHTMLContent;
+}
 
 // Access key generation
 function getAccessKey() {
@@ -1154,8 +1170,9 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 
 		 
 			} else if (noteHtml === 'response'){
-				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Personal Notebook" contenteditable="true"></div> </div>'
-		 
+				console.log("🚀 ~ createNote ~ curiosities:", curiosities)
+				output += '<div id="' + noteId + '" class="note-set doc-content" document_id="noteSolution" title="Personal Notebook" contenteditable="true">' + curiosities + "</div></div>";
+		
 			}
 				//If there is the note content and it's not a blank/brand new note then make the content from the other participant as a note
 			else if (noteHtml === priorAnalystNote.content && noteHtml !== "") {
