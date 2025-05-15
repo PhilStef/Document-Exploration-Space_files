@@ -1,154 +1,170 @@
 <?php
-// save_interactions.php - Endpoint for saving study interaction data with improved security
+// save_interactions.php - Endpoint for saving study interaction data
+define('DEBUG_FLAG', true); // Set false in production!
+function json_response($data, $statusCode = null)
+{
+    header('Content-Type: application/json');
 
-header('Content-Type: application/json');
+    // Determine the status code if not explicitly provided
+    if ($statusCode === null) {
+        $statusCode = isset($data['success']) && $data['success'] ? 200 : 400;
+    }
 
-try {
-    // Set content size limit (2MB)
-    if ($_SERVER['CONTENT_LENGTH'] > 2000000) {
-        throw new Exception("Payload too large (max 2MB)");
-    }
-    
-    // Get the raw POST data
-    $jsonData = file_get_contents('php://input');
-    
-    // Decode JSON
-    $data = json_decode($jsonData, true);
-    
-    if (!$data) {
-        throw new Exception("Invalid JSON data received: " . json_last_error_msg());
-    }
-    
-    // Validate required JSON structure
-    if (!isset($data['userID']) || !isset($data['interactions']) || !is_array($data['interactions'])) {
-        throw new Exception("Required data missing or invalid format");
-    }
-    
-    // Extract userID and interactions
-    $userID = $data['userID'] ?? 'unknown';
-    $providedFilename = $data['filename'] ?? '';
-    $interactions = $data['interactions'] ?? [];
-    
-    // Sanitize userID (for use in filename)
-    $userID = preg_replace('/[^a-zA-Z0-9_\-]/', '', $userID);
+    http_response_code($statusCode);
+    echo json_encode($data);
+    exit;
+}
 
-    // RATE LIMITING CODE STARTS HERE
-    // Check if user has submitted too many requests
-    if (!applyRateLimit($userID, 10, 60)) { // 10 requests per 60 seconds
-        http_response_code(429);
-        echo json_encode([
-            'status' => 'error',
-            'message' => 'Rate limit exceeded. Please try again later.'
-        ]);
+// CORS setup with specific allowed origins
+function setupCORS()
+{
+    // Define allowed origins
+    $allowedOrigins = [
+        'https://jeremy-block.github.io/retro-relevance-study/',
+        'http://localhost:3576',
+        'http://localhost:3000',  // Development environment
+        'http://127.0.0.1:3000',  // Alternative development
+        'http://localhost:8080',  // testing the Doc Explorer locally.
+        'http://127.0.0.1:8080',  // testing the Doc Explorer locally.
+        // '',                       // Empty origin for testing locally with postman and no cors
+    ];
+
+    // Get the origin header
+    $origin = isset($_SERVER['HTTP_ORIGIN']) ? $_SERVER['HTTP_ORIGIN'] : '';
+
+    // Check if the origin is allowed
+    if (DEBUG_FLAG) {
+        error_log("Provided origin: " . $origin);
+        error_log("allowed origins: " . implode(', ', $allowedOrigins));
+    }    if (in_array($origin, $allowedOrigins)) {
+        header("Access-Control-Allow-Origin: $origin");
+        header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
+        header(header: "Access-Control-Allow-Headers: Content-Type, Authorization, X-Requested-With");
+        header("Access-Control-Max-Age: 86400"); // Cache preflight for 24 hours
+
+    // Handle preflight OPTIONS request immediately and exit
+    } else {
+        if (DEBUG_FLAG) {
+            json_response(['error' => 'Unauthorized domain', 'origin' => $origin, 'allowed_origins' => $allowedOrigins], 403);
+        } else {
+            json_response(['error' => 'Unauthorized domain'], 403);
+        }
         exit;
     }
+}
+
+// Setup CORS before any other output
+setupCORS();
+
+
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
+    http_response_code(204); // No Content
+    exit;
+}
+
+// Accept GET for debugging
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+    header('Content-Type: application/json');
+    echo json_encode(['status' => 'success', 'message' => 'GET request received, CORS headers set']);
+    exit;
+}
+
+
+
+// Only allow POST method for actual processing
+if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
+    http_response_code(405);
+    echo json_encode(['status' => 'error', 'message' => 'Method not allowed']);
+    exit;
+}
+
+// Set content type to JSON
+header('Content-Type: application/json');
+// Configure storage directory
+$storageDir = './user_data/';
+$requestLog = $storageDir.'requests.txt';
+
+try {
+    file_put_contents($requestLog, "Received request at " . date('Y-m-d H:i:s') . " it contained:\n", FILE_APPEND);
     
-    // Sanitize filename to prevent path traversal
-    if (!empty($providedFilename)) {
-        $filename = basename($providedFilename); // Strip directory path
-        $filename = preg_replace('/[^a-zA-Z0-9_\-\.]/', '', $filename);
-    } else {
-        $filename = 'interactions_' . $userID . '_' . date('Ymd_His') . '.json';
+    // Set content size limit (10MB)
+    if ($_SERVER['CONTENT_LENGTH'] > 10000000) {
+        $error_message = "Payload too large (max 10MB)";
+            throw new Exception($error_message);
     }
-    
-    // Find the end-study event to double-check userID
-    $endStudyUserID = null;
-    foreach ($interactions as $interaction) {
-        if (isset($interaction['event']) && $interaction['event'] === 'end-study' && isset($interaction['userID'])) {
-            $endStudyUserID = $interaction['userID'];
-            break;
+
+    // Get the raw POST data
+    $jsonData = file_get_contents('php://input');
+    file_put_contents($requestLog, "Raw data >>>\n\n" . $jsonData . "\n\n>>>\n\n", FILE_APPEND);
+
+    // Decode JSON
+    $data = json_decode($jsonData, true);
+
+    if (!$data) {
+        $error_message = "Invalid JSON data received: " . json_last_error_msg();
+            throw new Exception($error_message);
+    }
+
+    // Validate required JSON structure
+    if (!isset($data['userID']) || !isset($data['filename']) || !isset($data['interactions'])) {
+        $error_message = "Missing required fields: userID, filename, and interactions are required";
+            throw new Exception($error_message);
+    }
+
+    // Extract data
+    $userID = preg_replace('/[^a-zA-Z0-9_-]/', '', $data['userID']);
+    $filename = preg_replace('/[^a-zA-Z0-9_.-]/', '', $data['filename']);
+    $interactions = $data['interactions'];
+
+    // Add additional security: only allow certain filename patterns
+    if (!preg_match('/^interactions_user_[a-zA-Z0-9_-]+_\d+\.json$/', $filename)) {
+        $error_message = "Invalid filename format";
+        throw new Exception($error_message);
+    }
+
+    // Create directory if it doesn't exist
+    if (!is_dir($storageDir)) {
+        if (!mkdir($storageDir, 0755, true)) {
+            $error_message = "Failed to create storage directory";
+                    throw new Exception($error_message);
         }
     }
     
-    if ($endStudyUserID && $endStudyUserID !== $userID) {
-        throw new Exception("User ID mismatch between request and end-study event");
-    }
-    
-    // Use environment variable for data path (fallback to default if not set)
-    $basePath = getenv('DATA_STORAGE_PATH') ?: './data/interactions/';
-    
-    // Ensure the directory exists and is writable
-    if (!is_dir($basePath)) {
-        if (!mkdir($basePath, 0755, true)) {
-            throw new Exception("Failed to create storage directory");
-        }
-    }
-    
-    if (!is_writable($basePath)) {
-        throw new Exception("Storage directory is not writable");
-    }
-    
-    $filepath = $basePath . $filename;
+    // Define the full file path
+    $filepath = $storageDir . $filename;
     
     // Save the data
     $result = file_put_contents($filepath, json_encode($interactions, JSON_PRETTY_PRINT));
+    // And at successful save
+    file_put_contents($requestLog, "Successfully saved file: $filepath\n\n", FILE_APPEND);
     
     if ($result !== false) {
         // Return success response
         echo json_encode([
-            'status' => 'success', 
+            'status' => 'success',
             'message' => 'Interaction data saved successfully',
             'userID' => $userID,
             'filename' => $filename
         ]);
-        
+
         // Log success
         error_log("Successfully saved interaction data for user $userID to $filepath");
     } else {
-        throw new Exception("Failed to write data to file");
+        $error_message = "Failed to write data to file";
+        throw new Exception($error_message);
     }
 } catch (Exception $e) {
-    // During debugging, return verbose error messages
+    // Log the error
+    error_log("Error saving interaction data: " . $e->getMessage());
+
+    file_put_contents($requestLog, ">Error>>>" . $e->getMessage() . "\n\n", FILE_APPEND);
+
+    // Return error response
     http_response_code(500);
     echo json_encode([
         'status' => 'error',
-        'message' => $e->getMessage(),
-        'debug' => [
-            'error' => $e->getMessage(),
-            'file' => $e->getFile(),
-            'line' => $e->getLine()
-        ]
+        'message' => 'Failed to save interaction data',
+        'detail' => $e->getMessage()
     ]);
-    error_log("Error saving interaction data: " . $e->getMessage());
-}
-// Rate limiting function
-function applyRateLimit($identifier, $maxRequests, $period)
-{
-    $rateLimitDir = './rate_limits/';
-    if (!is_dir($rateLimitDir)) {
-        mkdir($rateLimitDir, 0755, true);
-    }
-
-    $rateFile = $rateLimitDir . md5($identifier) . '.json';
-
-    // Get current time
-    $now = time();
-
-    // Initialize or load existing rate data
-    if (file_exists($rateFile)) {
-        $rateData = json_decode(file_get_contents($rateFile), true);
-        // Clean up old requests
-        foreach ($rateData['requests'] as $key => $timestamp) {
-            if ($timestamp < ($now - $period)) {
-                unset($rateData['requests'][$key]);
-            }
-        }
-        $rateData['requests'] = array_values($rateData['requests']);
-    } else {
-        $rateData = ['requests' => []];
-    }
-
-    // Check if rate limit is exceeded
-    if (count($rateData['requests']) >= $maxRequests) {
-        return false;
-    }
-
-    // Add current request
-    $rateData['requests'][] = $now;
-
-    // Save updated rate data
-    file_put_contents($rateFile, json_encode($rateData));
-
-    return true;
 }
 ?>

@@ -29,10 +29,10 @@ var init_time = d.getTime();
 // ------------------------------------------------------------
 let studyTimerStarted = false;
 let studyStartTime = null;
-const STUDY_DURATION_MS = 5 * 60 * 1000; // 5 minutes in milliseconds
+const STUDY_DURATION_MS = 0.1 * 60 * 1000; // 5 minutes in milliseconds
 let timeoutCheckInterval = null;
 let interactionData = {}; // Will store data to be sent to PHP endpoint
-const PHP_ENDPOINT = 'save_interactions.php'; // Update to your actual endpoint path
+const PHP_ENDPOINT = 'https://indie.cise.ufl.edu/MaverickMystery/save_interactions.php' //'save_interactions.php'; // Update to your actual endpoint path
 console.log("[Timer] Timer variables initialized");
 
 /*
@@ -220,7 +220,7 @@ function initializeStudyTimer() {
         timeoutCheckInterval = setInterval(checkTimeRemaining, 5000);
         
         // Also log remaining time every 30 seconds for debugging
-        setInterval(() => {
+        timeoutLogRemaining = setInterval(() => {
             const remainingMs = STUDY_DURATION_MS - (Date.now() - studyStartTime);
             const remainingMin = Math.floor(remainingMs / 60000);
             const remainingSec = Math.floor((remainingMs % 60000) / 1000);
@@ -249,7 +249,8 @@ function checkTimeRemaining() {
  */
 function handleStudyTimeout() {
     // Clear the interval to stop checking
-    clearInterval(timeoutCheckInterval);
+	clearInterval(timeoutCheckInterval);
+	clearInterval(timeoutLogRemaining);
     console.log("[Timer] Timeout check interval cleared");
     
     // Freeze the interface
@@ -1844,30 +1845,32 @@ function saveInteractionsToFile() {
 
   // Send to PHP endpoint
   try {
-    console.log("[Timer] Preparing to send interaction data to PHP endpoint");
-    console.log("[Timer] Using filename:", filename);
-
-    fetch(PHP_ENDPOINT, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        userID: pname,
-        filename: filename,
-        interactions: SESSION_LOG_DATA,
-      }),
-    })
-      .then((response) => {
-        console.log("[Timer] PHP response status:", response.status);
-        return response.json();
-      })
-      .then((data) => {
-        console.log("[Timer] Data successfully sent to PHP endpoint:", data);
-      })
-      .catch((error) => {
-        console.error("[Timer] Error sending data to PHP endpoint:", error);
-      });
+	console.log("[Timer] Preparing to send interaction data to PHP endpoint");
+	console.log("[Timer] Using filename:", filename);
+	  fetch(PHP_ENDPOINT, {
+		  method: "POST",
+		  headers: {
+			  "Content-Type": "application/json",
+			  "X-Requested-With": "XMLHttpRequest",
+		  },
+		  mode: "cors", // Explicitly set CORS mode
+		  credentials: "omit", // Don't send cookies
+		  body: JSON.stringify({
+			  userID: pname,
+			  filename: filename,
+			  interactions: SESSION_LOG_DATA,
+		  }),
+	  })
+		  .then((response) => {
+			  console.log("[Timer] PHP response status:", response.status);
+			  return response.json();
+		  })
+		  .then((data) => {
+			  console.log("[Timer] Data successfully sent to PHP endpoint:", data);
+		  })
+		  .catch((error) => {
+			  console.error("[Timer] Error sending data to PHP endpoint:", error);
+		  });
   } catch (error) {
     console.error("[Timer] Failed to send data to PHP endpoint:", error);
   }
