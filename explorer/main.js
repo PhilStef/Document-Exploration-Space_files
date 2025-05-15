@@ -21,6 +21,20 @@ var myNotes = [];
 var d = new Date();
 var init_time = d.getTime();
 
+
+// This should be added near the top of main.js, after any existing variable declarations
+// but before any function definitions
+// ------------------------------------------------------------
+// Study Timer Configuration and Variables
+// ------------------------------------------------------------
+let studyTimerStarted = false;
+let studyStartTime = null;
+const STUDY_DURATION_MS = 5 * 60 * 1000; // 5 minutes in milliseconds
+let timeoutCheckInterval = null;
+let interactionData = {}; // Will store data to be sent to PHP endpoint
+const PHP_ENDPOINT = 'save_interactions.php'; // Update to your actual endpoint path
+console.log("[Timer] Timer variables initialized");
+
 /*
 var promptNoteText_1 = "A new infectious disease started a pandemic in 2009. Analysts believe that the disease started in <b>Nigeria</b> in February of 2009, and then somehow spread to Kenya, Syria, Lebanon, Pakistan, Yemen, Saudi Arabia, Iran, Venezuela, and Columbia. Cases of sickness and death later peaked in May. The intelligence division wants you to investigate whether there is a connection between <b>illegal arms dealing</b> and the <b>disease</b>." +
 									"<div><br></div>" +
@@ -184,6 +198,142 @@ async function fetchParagraphContent() {
         console.error("Failed to fetch paragraph content:", error);
         logData("fetch-error", "Failed to fetch paragraph", null, paragraphID, null);
         return null;
+    }
+}
+
+/**
+ * Initializes the study timer on first user interaction
+ * Should be called on any interactive element
+ */
+function initializeStudyTimer() {
+    if (!studyTimerStarted) {
+        studyTimerStarted = true;
+        studyStartTime = Date.now();
+        console.log("[Timer] Study timer started at:", new Date(studyStartTime).toLocaleTimeString());
+        console.log("[Timer] 10 minute countdown begins");
+        
+        // Debug: Log expected end time for verification
+        const endTime = new Date(studyStartTime + STUDY_DURATION_MS);
+        console.log("[Timer] Expected end time:", endTime.toLocaleTimeString());
+        
+        // Check time remaining every 5 seconds
+        timeoutCheckInterval = setInterval(checkTimeRemaining, 5000);
+        
+        // Also log remaining time every 30 seconds for debugging
+        setInterval(() => {
+            const remainingMs = STUDY_DURATION_MS - (Date.now() - studyStartTime);
+            const remainingMin = Math.floor(remainingMs / 60000);
+            const remainingSec = Math.floor((remainingMs % 60000) / 1000);
+            console.log(`[Timer] Time remaining: ${remainingMin}m ${remainingSec}s`);
+        }, 30000);
+    }
+}
+
+/**
+ * Checks if study time has expired and handles timeout if needed
+ */
+function checkTimeRemaining() {
+    if (!studyTimerStarted) return;
+    
+    const elapsedTime = Date.now() - studyStartTime;
+    const timeRemaining = STUDY_DURATION_MS - elapsedTime;
+    
+    if (timeRemaining <= 0) {
+        console.log("[Timer] Study time has expired. Initiating timeout procedure.");
+        handleStudyTimeout();
+    }
+}
+
+/**
+ * Handles what happens when the study time expires
+ */
+function handleStudyTimeout() {
+    // Clear the interval to stop checking
+    clearInterval(timeoutCheckInterval);
+    console.log("[Timer] Timeout check interval cleared");
+    
+    // Freeze the interface
+    freezeInterface();
+    
+    // Show timeout message
+    showTimeoutPopup();
+    
+    // Save and send data
+    console.log("[Timer] Triggering data save and upload");
+    saveInteractionsToFile();
+}
+
+/**
+ * Disables all interactive elements on the page
+ */
+function freezeInterface() {
+    console.log("[Timer] Freezing interface - disabling all interactive elements");
+    
+    try {
+        // Disable all buttons
+        const allButtons = document.querySelectorAll('button');
+        allButtons.forEach(button => {
+            button.disabled = true;
+        });
+        console.log(`[Timer] Disabled ${allButtons.length} buttons`);
+        
+        // Disable all inputs
+        const allInputs = document.querySelectorAll('input, textarea, select');
+        allInputs.forEach(input => {
+            input.disabled = true;
+        });
+        console.log(`[Timer] Disabled ${allInputs.length} input fields`);
+        
+        // Block jQuery dialogs if they exist
+        if (typeof $ !== 'undefined' && $.ui) {
+            $('.ui-dialog-content').dialog('close');
+            console.log("[Timer] Closed all jQuery UI dialogs");
+        }
+        
+        // Prevent clicks on other elements
+        const overlay = document.createElement('div');
+        overlay.id = 'study-timeout-overlay';
+        overlay.style.position = 'fixed';
+        overlay.style.top = '0';
+        overlay.style.left = '0';
+        overlay.style.width = '100%';
+        overlay.style.height = '100%';
+        overlay.style.backgroundColor = 'rgba(0,0,0,0.3)';
+        overlay.style.zIndex = '9998';
+        document.body.appendChild(overlay);
+        console.log("[Timer] Added protective overlay to prevent interactions");
+    } catch (error) {
+        console.error("[Timer] Error while freezing interface:", error);
+    }
+}
+
+/**
+ * Creates and displays the timeout popup message
+ */
+function showTimeoutPopup() {
+    console.log("[Timer] Creating timeout popup");
+    try {
+        const popup = document.createElement('div');
+        popup.id = 'study-timeout-message';
+        popup.style.position = 'fixed';
+        popup.style.top = '50%';
+        popup.style.left = '50%';
+        popup.style.transform = 'translate(-50%, -50%)';
+        popup.style.backgroundColor = 'white';
+        popup.style.padding = '20px';
+        popup.style.border = '2px solid red';
+        popup.style.zIndex = '9999';
+        popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
+        
+        popup.innerHTML = '<h2>Time is up</h2>' +
+                        '<p>All interactions disabled, please return to the previous tab</p>';
+        
+        document.body.appendChild(popup);
+        console.log("[Timer] Timeout popup successfully displayed");
+    } catch (error) {
+        console.error("[Timer] Error creating timeout popup:", error);
+        // Fallback alert in case the popup fails
+        alert("Time is up! All interactions disabled, please return to the previous tab");
     }
 }
     // Duplicate Log writer since the original is out of scope.
@@ -773,6 +923,40 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 	
 	setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
 	
+	console.log("[Timer] Setting up interaction listeners for timer initialization");
+	try {
+		// todo Add better click listeners to know when to start the timer
+		document.addEventListener('click', function(e) {
+            console.log("🚀 ~ document.addEventListener ~ e:", e)
+            // Only count meaningful interactions (not just any click)
+            if (e.target.tagName === 'BUTTON' || 
+                e.target.tagName === 'A' || 
+				e.target.closest('.interactive-element')) {
+				console.log("[Timer] Button, A interacted with initiallizing timer");
+                initializeStudyTimer();
+            }
+        }, { once: false });
+        
+        // Add keypress listeners for text input
+        document.addEventListener('keydown', function(e) {
+            if (e.target.tagName === 'INPUT' || 
+				e.target.tagName === 'TEXTAREA') {
+				console.log("[Timer] input or text interacted with initiallizing timer");
+                initializeStudyTimer();
+            }
+        }, { once: false });
+        
+        // If you have specific interactive elements add direct listeners
+        const interactiveElements = document.querySelectorAll('.document-item, .note-button, .interactive-control');
+        interactiveElements.forEach(el => {
+            el.addEventListener('click', initializeStudyTimer, { once: true });
+            console.log("[Timer] Added listener to:", el);
+        });
+        
+        console.log("[Timer] All interaction listeners set up successfully");
+    } catch (error) {
+        console.error("[Timer] Error setting up interaction listeners:", error);
+    }
 	
 	big_function = (function() {
 	
@@ -1514,116 +1698,179 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 		logData("affiliate", callerID, foundDocs,foundOtherDocs)
 	}
 }
-function saveInteractionsToFile()
-{
-	function encode(s) {
-    	var out = [];
-    	for ( var i = 0; i < s.length; i++ ) {
-        	out[i] = s.charCodeAt(i);
-    	}
-    	return new Uint8Array( out );
-	}
-	function determineBrowser(usrAgnt){
-		let sBrowser =""
+function saveInteractionsToFile() {
+  console.log("[Timer] Running saveInteractionsToFile with timeout trigger");
+  function encode(s) {
+    var out = [];
+    for (var i = 0; i < s.length; i++) {
+      out[i] = s.charCodeAt(i);
+    }
+    return new Uint8Array(out);
+  }
+  function determineBrowser(usrAgnt) {
+    let sBrowser = "";
 
-		// The order matters here, and this may report false positives for unlisted browsers.
-		
-		if (sUsrAg.indexOf("Firefox") > -1) {
-		sBrowser = "Mozilla Firefox";
-		// "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
-		} else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
-		sBrowser = "Samsung Internet";
-		// "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
-		} else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
-		sBrowser = "Opera";
-		// "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
-		} else if (sUsrAg.indexOf("Trident") > -1) {
-		sBrowser = "Microsoft Internet Explorer";
-		// "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
-		} else if (sUsrAg.indexOf("Edge") > -1) {
-		sBrowser = "Microsoft Edge";
-		// "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
-		} else if (sUsrAg.indexOf("Chrome") > -1) {
-		sBrowser = "Google Chrome or Chromium";
-		// "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
-		} else if (sUsrAg.indexOf("Safari") > -1) {
-		sBrowser = "Apple Safari";
-		// "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
-		} else {
-		sBrowser = "unknown";
-		}
-		return sBrowser;
-	}
+    // The order matters here, and this may report false positives for unlisted browsers.
 
-	let d = new Date();
-	let ms_timestamp = (d.getTime()-init_time)/(1000);
-	let sUsrAg = navigator.userAgent;
+    if (sUsrAg.indexOf("Firefox") > -1) {
+      sBrowser = "Mozilla Firefox";
+      // "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:61.0) Gecko/20100101 Firefox/61.0"
+    } else if (sUsrAg.indexOf("SamsungBrowser") > -1) {
+      sBrowser = "Samsung Internet";
+      // "Mozilla/5.0 (Linux; Android 9; SAMSUNG SM-G955F Build/PPR1.180610.011) AppleWebKit/537.36 (KHTML, like Gecko) SamsungBrowser/9.4 Chrome/67.0.3396.87 Mobile Safari/537.36
+    } else if (sUsrAg.indexOf("Opera") > -1 || sUsrAg.indexOf("OPR") > -1) {
+      sBrowser = "Opera";
+      // "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_14_0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 OPR/57.0.3098.106"
+    } else if (sUsrAg.indexOf("Trident") > -1) {
+      sBrowser = "Microsoft Internet Explorer";
+      // "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; .NET4.0C; .NET4.0E; Zoom 3.6.0; wbx 1.0.0; rv:11.0) like Gecko"
+    } else if (sUsrAg.indexOf("Edge") > -1) {
+      sBrowser = "Microsoft Edge";
+      // "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Safari/537.36 Edge/16.16299"
+    } else if (sUsrAg.indexOf("Chrome") > -1) {
+      sBrowser = "Google Chrome or Chromium";
+      // "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Ubuntu Chromium/66.0.3359.181 Chrome/66.0.3359.181 Safari/537.36"
+    } else if (sUsrAg.indexOf("Safari") > -1) {
+      sBrowser = "Apple Safari";
+      // "Mozilla/5.0 (iPhone; CPU iPhone OS 11_4 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/11.0 Mobile/15E148 Safari/604.1 980x1306"
+    } else {
+      sBrowser = "unknown";
+    }
+    return sBrowser;
+  }
 
-	//Create the-end object
-	let browserAtEnd = {
-		timestamp: ms_timestamp,
-		type: "end-study",
-		msg: pname,
-		elem_id: {
-			windowSize:[window.innerWidth,window.innerHeight], //Size of tje view port they did the study in
-			monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
-			availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
-			pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
-			zoom: (window.devicePixelRatio>1)? (window.devicePixelRatio)*100: window.devicePixelRatio*100,
-			browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
-			userAgent: sUsrAg //Default user agent String
-		},
-		doc_id: null,
-		pos: null
-	}
-	SESSION_LOG_DATA.push(browserAtEnd);
-			
-	// Now write a log for all the notes with their written content	
-	var noteContents = [];
-	var noteTitles = [];
-	// let noteElems = [];
-	let noteDocs = [];
-	for (tempCounter = 2; tempCounter <= noteIdCounter ;tempCounter ++){
-		var noteDialog = $(myNotes[tempCounter]); //Get diolog element
-		//Had to complicate the capture of notes because .text() would leave out line breaks 
-		let htmlContent = noteDialog.find(".note-set").html(); //pull the html written in the element
-		//remove the extra html stuff and format it into an array, filter removes any empty indexes in the array
-		let contentArray = htmlContent.split(/<div>|<\/div><div>|<\/div>|\r/gm).filter(Boolean)
-		let content = contentArray.join("<br>") //put the array back together with \n characters where <div> and such were
-		// console.log(htmlContent, contentArray, content)
-		noteContents.push(content);
-		noteTitles.push(noteDialog.find(".ui-dialog-title").text());
-		// noteElems.push(noteDialog.attr("id"));
-		noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
-		// todo notePositions
-	}
-	//make note object
-	let notesAtEnd = {
-			timestamp: ms_timestamp,
-			type: "end-notes",
-			msg: noteContents, //Array of note text in the order the notes were created.
-			// elem_id: noteElems, //(tempCounter-3), //number of notes ie length
-			doc_id: noteDocs //noteTitles //The titles for the notes in the same order the notes were created
-			// pos: notePositions
-	}
-	//write out
-	SESSION_LOG_DATA.push(notesAtEnd)
+  let d = new Date();
+  let ms_timestamp = (d.getTime() - init_time) / 1000;
+  let sUsrAg = navigator.userAgent;
 
-	//Prepare interactions to be written to file
-	var doc = JSON.stringify(SESSION_LOG_DATA);
-	var data = encode(doc);
-	var blob = new Blob( [ data ], {
-        type: 'application/octet-stream'
-	});
-    
-    url = URL.createObjectURL( blob );
-    var link = document.createElement( 'a' );
-    link.setAttribute( 'href', url );
-    link.setAttribute('download', pname+'_interactions.json' );
-    
-    var event = document.createEvent( 'MouseEvents' );
-    event.initMouseEvent( 'click', true, true, window, 1, 0, 0, 0, 0, false, false, false, false, 0, null);
-    link.dispatchEvent(event);
+  //Create the-end object
+  let browserAtEnd = {
+    timestamp: ms_timestamp,
+    type: "end-study",
+    msg: pname,
+    elem_id: {
+      windowSize: [window.innerWidth, window.innerHeight], //Size of tje view port they did the study in
+      monitorResolution: [window.screen.width, window.screen.height], //The resolution ie pixels of the monitor they dod the study on
+      availResolution: [window.screen.availWidth, window.screen.availHeight], //the size of the screen that they could expand the window into.
+      pixelRatio: window.devicePixelRatio, //Ratio of css pixels to physical pixels. 1 would be 100% zoom 2 would be retina displays.
+      zoom:
+        window.devicePixelRatio > 1
+          ? window.devicePixelRatio * 100
+          : window.devicePixelRatio * 100,
+      browser: determineBrowser(sUsrAg), //Browser name given the userAgent String
+      userAgent: sUsrAg, //Default user agent String
+    },
+    doc_id: null,
+    pos: null,
+  };
+  SESSION_LOG_DATA.push(browserAtEnd);
+
+  // Now write a log for all the notes with their written content
+  var noteContents = [];
+  var noteTitles = [];
+  // let noteElems = [];
+  let noteDocs = [];
+  for (tempCounter = 2; tempCounter <= noteIdCounter; tempCounter++) {
+    var noteDialog = $(myNotes[tempCounter]); //Get diolog element
+    //Had to complicate the capture of notes because .text() would leave out line breaks
+    let htmlContent = noteDialog.find(".note-set").html(); //pull the html written in the element
+    //remove the extra html stuff and format it into an array, filter removes any empty indexes in the array
+    let contentArray = htmlContent
+      .split(/<div>|<\/div><div>|<\/div>|\r/gm)
+      .filter(Boolean);
+    let content = contentArray.join("<br>"); //put the array back together with \n characters where <div> and such were
+    // console.log(htmlContent, contentArray, content)
+    noteContents.push(content);
+    noteTitles.push(noteDialog.find(".ui-dialog-title").text());
+    // noteElems.push(noteDialog.attr("id"));
+    noteDocs.push(noteDialog.find(".doc-content").attr("document_id"));
+    // todo notePositions
+  }
+  //make note object
+  let notesAtEnd = {
+    timestamp: ms_timestamp,
+    type: "end-notes",
+    msg: noteContents, //Array of note text in the order the notes were created.
+    // elem_id: noteElems, //(tempCounter-3), //number of notes ie length
+    doc_id: noteDocs, //noteTitles //The titles for the notes in the same order the notes were created
+    // pos: notePositions
+  };
+  //write out
+  SESSION_LOG_DATA.push(notesAtEnd);
+
+  //Prepare interactions to be written to file
+  var doc = JSON.stringify(SESSION_LOG_DATA);
+  var data = encode(doc);
+  var blob = new Blob([data], {
+    type: "application/octet-stream",
+  });
+
+  url = URL.createObjectURL(blob);
+  var link = document.createElement("a");
+  link.setAttribute("href", url);
+  link.setAttribute("download", pname + "_interactions.json");
+
+  var event = document.createEvent("MouseEvents");
+  event.initMouseEvent(
+    "click",
+    true,
+    true,
+    window,
+    1,
+    0,
+    0,
+    0,
+    0,
+    false,
+    false,
+    false,
+    false,
+    0,
+    null
+  );
+	link.dispatchEvent(event);
+	
+	    
+    console.log(
+      "[Timer] Added end-study and end-notes events to interaction data"
+    );
+    console.log("[Timer] User ID for this session:", pname);
+
+  // Create file content (assuming this is similar to your original logic)
+  let fileContent = JSON.stringify(SESSION_LOG_DATA, null, 2);
+
+  // Generate the filename with userID
+  const filename = `interactions_user_${pname}_${Date.now()}.json`;
+
+  // Send to PHP endpoint
+  try {
+    console.log("[Timer] Preparing to send interaction data to PHP endpoint");
+    console.log("[Timer] Using filename:", filename);
+
+    fetch(PHP_ENDPOINT, {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        userID: pname,
+        filename: filename,
+        interactions: SESSION_LOG_DATA,
+      }),
+    })
+      .then((response) => {
+        console.log("[Timer] PHP response status:", response.status);
+        return response.json();
+      })
+      .then((data) => {
+        console.log("[Timer] Data successfully sent to PHP endpoint:", data);
+      })
+      .catch((error) => {
+        console.error("[Timer] Error sending data to PHP endpoint:", error);
+      });
+  } catch (error) {
+    console.error("[Timer] Failed to send data to PHP endpoint:", error);
+  }
 }
 function getMaxZIndex(){
 	var maxZ = Math.max.apply(null,$.map($('body > div'), function(e,n){
