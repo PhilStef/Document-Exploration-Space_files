@@ -151,6 +151,7 @@ let studyTimerStarted = false;
 let studyStartTime = null;
 let timeoutCheckInterval = null;
 const STUDY_DURATION_MS = setUpSendToServerTime(urlTime);
+const toasterPeriodInMs = (5 * 60 * 1000); //every 5 minutes show the toaster.
 
 if (!urlTime) {
 	instructions_Jeremy =
@@ -235,19 +236,51 @@ async function fetchParagraphContent() {
 	}
 }
 
-const formatDuration = (ms) => {
-  if (ms < 0) ms = -ms;
-  const time = {
-    day: Math.floor(ms / 86400000),
-    hour: Math.floor(ms / 3600000) % 24,
-    minute: Math.floor(ms / 60000) % 60,
-    second: Math.floor(ms / 1000) % 60,
-    millisecond: Math.floor(ms) % 1000,
-  };
-  return Object.entries(time)
-    .filter((val) => val[1] !== 0)
-    .map((val) => val[1] + " " + (val[1] !== 1 ? val[0] + "" : val[0]))
-    .join(", ");
+const formatDuration = (ms, round = "millisecond") => {
+	if (ms < 0) ms = -ms;
+	const units = [
+		{ name: "day", ms: 86400000 },
+		{ name: "hour", ms: 3600000 },
+		{ name: "minute", ms: 60000 },
+		{ name: "second", ms: 1000 },
+		{ name: "millisecond", ms: 1 },
+	];
+
+	// Find the index of the rounding unit
+	let roundIdx = units.findIndex((u) => u.name === round);
+	if (round && roundIdx === -1) roundIdx = undefined;
+
+	// If round is specified, round ms to the nearest unit
+	if (typeof roundIdx === "number") {
+		const roundMs = units[roundIdx].ms;
+		ms = Math.round(ms / roundMs) * roundMs;
+	}
+
+	let remaining = ms;
+	const time = {};
+	for (let i = 0; i < units.length; i++) {
+		const { name, ms: unitMs } = units[i];
+		if (typeof roundIdx === "number" && i > roundIdx) {
+			time[name] = 0;
+			continue;
+		}
+		time[name] = Math.floor(remaining / unitMs);
+		remaining = remaining % unitMs;
+	}
+
+	// Only include non-zero units, or if all are zero, show the smallest unit
+	let entries = Object.entries(time).filter(([_, v]) => v !== 0);
+	if (entries.length === 0) entries = [[units[units.length - 1].name, 0]];
+
+	// Pluralize unit names if value is not 1
+	function pluralize(unit, value) {
+		// Simple pluralization: add 's' if not 1
+		return value === 1 ? unit : unit + "s";
+	}
+
+	return entries
+		.map(([k, v]) => v + " " + pluralize(k, v))
+		.join(", ");
 };
   
 /**
@@ -269,7 +302,23 @@ function initializeStudyTimer() {
         // Check time remaining every 5 seconds
         timeoutCheckInterval = setInterval(checkTimeRemaining, 5000);
         
-        // Also log remaining time every 30 seconds for debugging
+		// After starting the study timer
+		showToaster(getToasterMsg());
+
+        // Show toaster every toasterPeriodInMs
+		let toasterInterval = setInterval(() => {
+		// Only show if timer is still running
+		const now = Date.now();
+		const elapsedMs = now - studyStartTime;
+		if (elapsedMs < STUDY_DURATION_MS) {
+			showToaster(getToasterMsg());
+		} else {
+			clearInterval(toasterInterval);
+		}
+		}, toasterPeriodInMs);
+
+
+		// Also log remaining time every 30 seconds for debugging
         timeoutLogRemaining = setInterval(() => {
             const remainingMs = STUDY_DURATION_MS - (Date.now() - studyStartTime);
             const remainingMin = Math.floor(remainingMs / 60000);
@@ -382,6 +431,63 @@ function showTimeoutPopup() {
         alert("Time is up! All interactions disabled, please return to the previous tab to finish the study.");
     }
 }
+
+/**
+ * Displays a toaster notification at the bottom right of the screen
+ * showing how much time has passed and how much time remains.
+ * @param {string} message
+ */
+function showToaster(message) {
+    // Remove existing toaster if present
+    const existing = document.getElementById('study-timer-toaster');
+    if (existing) existing.remove();
+
+    const toaster = document.createElement('div');
+    toaster.id = 'study-timer-toaster';
+    toaster.style.position = 'fixed';
+    toaster.style.bottom = '32px';
+    toaster.style.right = '32px';
+    toaster.style.background = '#333';
+    toaster.style.color = '#fff';
+    toaster.style.padding = '1em 2em';
+    toaster.style.borderRadius = '8px';
+    toaster.style.boxShadow = '0 0 12px rgba(0,0,0,0.25)';
+	toaster.style.zIndex = 99999;
+	toaster.style.fontFamily = "Verdana, Arial, sans-serif";
+  	toaster.style.fontSize = "0.8em";
+  	toaster.style.textAlign = "center";
+    toaster.style.opacity = 0;
+    toaster.style.transition = 'opacity 1s linear';
+
+    toaster.textContent = message;
+
+    document.body.appendChild(toaster);
+
+	setTimeout(() => {
+		toaster.style.opacity = 1;
+	}, 1);
+	// Fade out after 4 seconds, then remove after 5
+    setTimeout(() => {
+        toaster.style.opacity = 0;
+    }, 6000);
+    setTimeout(() => {
+        toaster.remove();
+    }, 7000);
+}
+
+function getToasterMsg() {
+  const now = Date.now();
+	const elapsedMs = now - studyStartTime;
+	if (elapsedMs < (toasterPeriodInMs)){
+		return `Starting Study timer, you have ${formatDuration(STUDY_DURATION_MS, "minute")} to look at evidence.`
+	}
+  const remainingMs = STUDY_DURATION_MS - elapsedMs;
+  return `Timing: ${formatDuration(
+    elapsedMs,
+    "minute"
+  )} elapsed, ${formatDuration(Math.max(remainingMs, 0), "minute")} remaining.`;
+}
+
     // Duplicate Log writer since the original is out of scope.
 	function logData(typeTag, message, affiliated_document_ids, unaffiliated_document_ids) {
 
