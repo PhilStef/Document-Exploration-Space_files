@@ -274,7 +274,7 @@ function initializeStudyTimer() {
             const remainingMs = STUDY_DURATION_MS - (Date.now() - studyStartTime);
             const remainingMin = Math.floor(remainingMs / 60000);
             const remainingSec = Math.floor((remainingMs % 60000) / 1000);
-            console.log(`[Timer] Time remaining: ${remainingMin}m ${remainingSec}s`);
+            console.log(`[Timer] Time remaining: ${formatDuration(remainingMs)}`);
         }, 30000);
     }
 }
@@ -301,7 +301,6 @@ function handleStudyTimeout() {
     // Clear the interval to stop checking
 	clearInterval(timeoutCheckInterval);
 	clearInterval(timeoutLogRemaining);
-    console.log("[Timer] Timeout check interval cleared");
     
     // Freeze the interface
     freezeInterface();
@@ -310,7 +309,6 @@ function handleStudyTimeout() {
     showTimeoutPopup();
     
     // Save and send data
-    console.log("[Timer] Triggering data save and upload");
     saveInteractionsToFile();
 }
 
@@ -318,7 +316,7 @@ function handleStudyTimeout() {
  * Disables all interactive elements on the page
  */
 function freezeInterface() {
-    console.log("[Timer] Freezing interface - disabling all interactive elements");
+    // console.log("[Timer] Freezing interface - disabling all interactive elements");
     
     try {
         // Disable all buttons
@@ -326,14 +324,14 @@ function freezeInterface() {
         allButtons.forEach(button => {
             button.disabled = true;
         });
-        console.log(`[Timer] Disabled ${allButtons.length} buttons`);
+        // console.log(`[Timer] Disabled ${allButtons.length} buttons`);
         
         // Disable all inputs
         const allInputs = document.querySelectorAll('input, textarea, select');
         allInputs.forEach(input => {
             input.disabled = true;
         });
-        console.log(`[Timer] Disabled ${allInputs.length} input fields`);
+        // console.log(`[Timer] Disabled ${allInputs.length} input fields`);
         
         
         // Prevent clicks on other elements
@@ -347,7 +345,7 @@ function freezeInterface() {
         overlay.style.backgroundColor = 'rgba(0,0,0,0.3)';
         overlay.style.zIndex = '9998';
         document.body.appendChild(overlay);
-        console.log("[Timer] Added protective overlay to prevent interactions");
+        // console.log("[Timer] Added protective overlay to prevent interactions");
     } catch (error) {
         console.error("[Timer] Error while freezing interface:", error);
     }
@@ -357,7 +355,6 @@ function freezeInterface() {
  * Creates and displays the timeout popup message
  */
 function showTimeoutPopup() {
-    console.log("[Timer] Creating timeout popup");
     try {
         const popup = document.createElement('div');
         popup.id = 'study-timeout-message';
@@ -379,7 +376,6 @@ function showTimeoutPopup() {
 			'<p>You may close this tab.</p>';
         
         document.body.appendChild(popup);
-        console.log("[Timer] Timeout popup successfully displayed");
     } catch (error) {
         console.error("[Timer] Error creating timeout popup:", error);
         // Fallback alert in case the popup fails
@@ -979,15 +975,15 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 				}
 			})
 
-			// Add keypress listeners for text input
-			document.addEventListener('keydown', function (e) {
-				console.log("🚀 ~ e:", e)
-				if (e.target.tagName === 'INPUT' ||
-					e.target.tagName === 'DIV') {
-					console.log("[Timer] Search or Note got a keypress --> initiallizing timer");
+			// Add keypress listener for text input, remove after first trigger
+			const keydownListener = function (e) {
+				if (e.target.tagName === 'INPUT' || e.target.tagName === 'DIV') {
+					console.log("[Timer] Search or Note got a keypress --> initializing timer");
 					initializeStudyTimer();
+					document.removeEventListener('keydown', keydownListener);
 				}
-			}, { once: false });
+			};
+			document.addEventListener('keydown', keydownListener, { once: false });
 
 			// Fallback: if there are no document items, just start timer right away as backup
 			// 	console.log("[Timer] No document items found, starting timer on load as fallback");
@@ -1738,7 +1734,6 @@ function affiliate(callerID, inDocs, otherDocs = ""){
 	}
 }
 function saveInteractionsToFile() {
-  console.log("[Timer] Running saveInteractionsToFile with timeout trigger");
   function encode(s) {
     var out = [];
     for (var i = 0; i < s.length; i++) {
@@ -1874,10 +1869,6 @@ function saveInteractionsToFile() {
 	
 	// uf there is a time defined in the URL, then we need to send the session data to the server Endpoint.    
 	if (urlTime) {
-		console.log(
-			"[Timer] Since a timer was provided, we send logs to the server"
-		);
-		console.log("[Timer] User ID for this session:", pname);
 
 		// Create file content (assuming this is similar to your original logic)
 		let fileContent = JSON.stringify(SESSION_LOG_DATA, null, 2);
@@ -1887,8 +1878,7 @@ function saveInteractionsToFile() {
 
 		// Send to PHP endpoint
 		try {
-			console.log("[Timer] Preparing to send interaction data to PHP endpoint");
-			console.log("[Timer] Using filename:", filename);
+			console.log("[Timer] Preparing to send interaction data to PHP endpoint\n[Timer] Using filename:", filename);
 			fetch(PHP_ENDPOINT, {
 				method: "POST",
 				headers: {
