@@ -21,6 +21,7 @@ function setupCORS()
     // Define allowed origins
     $allowedOrigins = [
         'https://jeremy-block.github.io/retro-relevance-study/',
+        'https://indie.cise.ufl.edu',
         'http://localhost:3576',
         'http://localhost:3000',  // Development environment
         'http://127.0.0.1:3000',  // Alternative development

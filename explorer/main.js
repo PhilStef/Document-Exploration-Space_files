@@ -188,11 +188,11 @@ function curiositiesToParagraph(urlCuriosities) {
 // Access key generation
 function getAccessKey() {
     const accessKeys = [
-        'experiment-key-1-research-2023',
-        'experiment-key-2-research-2023',
-        'experiment-key-3-research-2023',
-        'experiment-key-4-research-2023',
-        'experiment-key-5-research-2023'
+        'experiment-key-1-research-2025',
+        'experiment-key-2-research-2025',
+        'experiment-key-3-research-2025',
+        'experiment-key-4-research-2025',
+        'experiment-key-5-research-2025'
     ];
     
     const dayOfMonth = new Date().getUTCDate();
@@ -202,28 +202,37 @@ function getAccessKey() {
 
 // Fetch paragraph content
 async function fetchParagraphContent() {
-    // console.log("🚀 ~ fetchParagraphContent ~ fetchParagraphContent:", true)
-    if (!paragraphID) {
-        console.error("No paragraph ID found in URL parameters");
-        return null;
-    }
+	// console.log("🚀 ~ fetchParagraphContent ~ fetchParagraphContent:", true)
+	if (!paragraphID) {
+		console.error("No paragraph ID found in URL parameters");
+		return null;
+	}
 
-    const accessKey = getAccessKey();
-    const endpoint = `https://indie.cise.ufl.edu/retro-relevance/get_paragraph.php?id=${paragraphID}&access_key=${accessKey}`;
-    
-    try {
-        const response = await fetch(endpoint);
-        if (!response.ok) {
-            throw new Error(`Network response was not ok: ${response.status}`);
-        }
-        
-        const data = await response.json();
-        return data;
-    } catch (error) {
-        console.error("Failed to fetch paragraph content:", error);
-        logData("fetch-error", "Failed to fetch paragraph", null, paragraphID, null);
-        return null;
-    }
+	const accessKey = getAccessKey();
+	const endpoint = `https://indie.cise.ufl.edu/retro-relevance-new/api/get_item.php?participant_id=${paragraphID}&access_key=${accessKey}`;
+
+	try {
+		const response = await fetch(endpoint, {
+			method: "GET",
+			headers: {
+				"Content-Type": "application/json",
+				"X-Requested-With": "XMLHttpRequest",
+				// Do not set Origin manually; browser will set it automatically for CORS
+			},
+			credentials: "omit", // don't send cookies
+			mode: "cors",
+		});
+		if (!response.ok) {
+			throw new Error(`Network response was not ok: ${response.status}`);
+		}
+
+		const data = await response.json();
+		return data;
+	} catch (error) {
+		console.error("Failed to fetch paragraph content:", error);
+		logData("fetch-error", "Failed to fetch paragraph", null, paragraphID, null);
+		return null;
+	}
 }
 
 const formatDuration = (ms) => {
