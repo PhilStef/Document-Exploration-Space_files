@@ -264,6 +264,7 @@ function initializeStudyTimer() {
         // Debug: Log expected end time for verification
         const endTime = new Date(studyStartTime + STUDY_DURATION_MS);
         console.log("[Timer] Expected end time:", endTime.toLocaleTimeString());
+		logData("start-timer", [STUDY_DURATION_MS, new Date(studyStartTime), endTime]);
         
         // Check time remaining every 5 seconds
         timeoutCheckInterval = setInterval(checkTimeRemaining, 5000);
@@ -371,6 +372,7 @@ function showTimeoutPopup() {
 		popup.style.boxShadow = '0 0 10px rgba(0,0,0,0.5)';
 		popup.style.fontFamily = 'Verdana, Arial, sans-serif';
 		popup.style.fontSize = '0.8em';
+		popup.style.textAlign = 'center';
         
         popup.innerHTML = '<h2>Time is up</h2>' +
 			'<p>All interactions disabled, please return to the previous tab to finish the study.</p>' +
@@ -504,29 +506,30 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 	var globalSearchTerm = "";
      
     //Read input JSON file This is how the docs get read and inputted
-	await $.getJSON(thisDoc, function(data) {
+	await $.getJSON(thisDoc, function (data) {
 
-        var jsonCounter = 0;
-        var output="<div>";
-        for (var i in data){
+		var jsonCounter = 0;
+		var output = "<div>";
+		for (var i in data) {
 			jsonCounter++;  // document_id data[i].id
 			// console.log(jsonCounter)
 
 			output +=
-			//  '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
-            // '<div class="doc-content" document_id="'+data[i].id+'">' + '</div>' +
-            // '</div>';
-            // '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
-            '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].date + ", " + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].column + '">' +
-            // '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
-            '<div class="doc-content" document_id="'+data[i].id+'">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].title + "<br>": ">Interaction between: "+ data[i].country_tag + "<br>") + data[i].contents + '</div>' +
-            '</div>';
-            "<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"        } 
+				//  '<div id="jsonDialog' + i + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
+				// '<div class="doc-content" document_id="'+data[i].id+'">' + '</div>' +
+				// '</div>';
+				// '<div id="jsonDialog' + (parseInt(i)+1) + '" class="doc-set docSet" title="' + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].type + '">' +
+				'<div id="jsonDialog' + (parseInt(i) + 1) + '" class="doc-set docSet" title="' + data[i].date + ", " + data[i].title + '" data-id="' + scrunchOriginal + '" data-source="' + data[i].column + '">' +
+				// '<div class="doc-content" document_id="'+data[i].id+'">' + data[i].contents + '</div>' +
+				'<div class="doc-content" document_id="' + data[i].id + '">' + (data[i].country_recieve == null ? ">Sourced from: " + data[i].title + "<br>" : ">Interaction between: " + data[i].country_tag + "<br>") + data[i].contents + '</div>' +
+				'</div>';
+			"<div><br></div>" + "<span style = float: left; margin:0 7px 50px 0; width:50px; height:50px;> <img src = images/" + jsonCounter.toString() + ".jpg> </span>"
+		}
 		// output += '<div onClick="saveInteractionsToFile()" id="jsonDialog' + 000 + '" class="doc-set docSet" title="' + 'END SESSION' + '" data-id="' + scrunchOriginal + '" data-source="' + 'random' + '">' +
 		// '<div class="doc-content" document_id="'+000+'">' + 'Click HERE to end and print results.' + '</div>' +
 		// '</div>';
-        output+="</div>";
-        document.getElementById("placeholder-div").innerHTML=output;
+		output += "</div>";
+		document.getElementById("placeholder-div").innerHTML = output;
 
 		console.log("Loaded documents from JSON: " + jsonCounter);
 	}).done(() => {
@@ -962,40 +965,35 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 
 	
 		setTimeout("big_function()", 1);    // used to have a race condition - removing this makes most functions on documents undefined.
-	if(urlTime){
+	if (urlTime) {
 		console.log("[Timer] Setting up interaction listeners for timer initialization");
 		try {
-			// todo Add better click listeners to know when to start the timer
-			document.addEventListener('click', function (e) {
-				console.log("🚀 ~ document.addEventListener ~ e:", e)
-				// Only count meaningful interactions (not just any click)
-				if (e.target.tagName === 'BUTTON' ||
-					e.target.tagName === 'A' ||
-					e.target.closest('.interactive-element')) {
-					console.log("[Timer] Button, A interacted with initiallizing timer");
+			// Only set listener for first document opening
+			let timerStarted = false;
+			// For every doc dialog, listen for the user expanding (restoring) it
+			$(".doc-set").one("dialogextendbeforerestore", function (evt, dlg) {
+				if (!timerStarted) {
+					timerStarted = true;
+					console.log("[Timer] First document expanded (restored) --> initializing timer");
 					initializeStudyTimer();
 				}
-			}, { once: false });
-        
+			})
+
 			// Add keypress listeners for text input
 			document.addEventListener('keydown', function (e) {
+				console.log("🚀 ~ e:", e)
 				if (e.target.tagName === 'INPUT' ||
-					e.target.tagName === 'TEXTAREA') {
-					console.log("[Timer] input or text interacted with initiallizing timer");
+					e.target.tagName === 'DIV') {
+					console.log("[Timer] Search or Note got a keypress --> initiallizing timer");
 					initializeStudyTimer();
 				}
 			}, { once: false });
-        
-			// If you have specific interactive elements add direct listeners
-			const interactiveElements = document.querySelectorAll('.document-item, .note-button, .interactive-control');
-			interactiveElements.forEach(el => {
-				el.addEventListener('click', initializeStudyTimer, { once: true });
-				console.log("[Timer] Added listener to:", el);
-			});
-        
-			console.log("[Timer] All interaction listeners set up successfully");
+
+			// Fallback: if there are no document items, just start timer right away as backup
+			// 	console.log("[Timer] No document items found, starting timer on load as fallback");
+			// 	initializeStudyTimer();
 		} catch (error) {
-			console.error("[Timer] Error setting up interaction listeners:", error);
+			console.error("[Timer] Error setting up timer trigger:", error);
 		}
 	}
 	big_function = (function() {
