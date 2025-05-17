@@ -69,7 +69,7 @@ var prompt_Jeremy = "Here's what I have so far. I don't think this is perfect, b
 						//"A Russian gun show fanatic (Mikhail Dombrovski) is sending weapons around the world likely to impress the russian mob. It's not clear if he is working with others. Based on the data, it appears the earliest arms shipment occurred in February 2008. Weapons were sent to Iran via a Ukrainian Air freight company (flight IL-76), but due to unusual flight routing, the plane is searched and the arms are confiscated by Thailand authorities. With this failure, new plans are made. I believe there are plans being made via an online forum (VWPARTS4SALECHEAP). Mikhail Dombrovski is meeting numourous countries in April 2009 at the Burj A-Arab hotel in Dubai to discuss arms distribution."+
 						// "<br><br> I believe the other documents are in regard to various other contries arranging travel to Dubai in April, 2009."
 						// "A previous analyst concluded that there were two weapon transfer attempts described in these documents. The first was initiated by Nicolai and was supposed to meet at the Burj hotel in Dubai, but due to suspicious flight plans, the shipment was discovered and delayed. In accommodation of this, Nicolai hired the boat MV Tanya to deliver the weapons by boat to the middle east." +
-var instructions_Jeremy = "Walter Boddy has been murdered at his estate. The police have named Mr. HENRY WADSWORTH as the primary suspect. <br> Mr. WADSWORTH claims he did not do it and wants your help to solve the mystery and clear his name. <br> You have asked a field reporter, Mr. HANS BRAUMAN, to collect evidence and track down the truth. <br><br>Your goal is to use this information to identify:<ul><li><strong>Who</strong> committed the murder,</li><li> <strong>What</strong> weapon was used and, and</li><li> <strong> Where</strong> it occurred at the Boddy Estate.</li></ul>"
+var instructions_Jeremy = "Walter Boddy has been murdered at his estate. The police have named Mr. HENRY WADSWORTH as the primary suspect. <br> Mr. WADSWORTH claims he did not do it and wants your help to solve the mystery and clear his name. <br> You have asked a field reporter, Mr. HANS BRAUMAN, to collect evidence and track down the truth. <br><br>Your goal is to use this information to identify:<ul><li><strong>Who</strong> committed the murder,</li><li> <strong>What</strong> weapon was used, and</li><li> <strong> Where</strong> it occurred at the Boddy Estate.</li></ul>"
 var prov_history_file = 'explorer/data/interactionHistories/manually-generated-history.json';
 
 var prov_Coverage_file = "explorer/data/interactionHistories/generatedCoverage.json";
@@ -177,7 +177,7 @@ function curiositiesToParagraph(urlCuriosities) {
 
 	let jsonObject = JSON.parse(urlCuriosities);
 
-	let outputHTMLContent = "Curiosities: <br>";
+	let outputHTMLContent = "Your plan: <br>";
 	const keys = Object.keys(jsonObject);
 	for (let i = 0; i < keys.length; i++) {
 		const key = keys[i];
