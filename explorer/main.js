@@ -299,7 +299,7 @@ function initializeStudyTimer() {
         // Debug: Log expected end time for verification
         const endTime = new Date(studyStartTime + STUDY_DURATION_MS);
         console.log("[Timer] Expected end time:", endTime.toLocaleTimeString());
-		logData("start-timer", [STUDY_DURATION_MS, new Date(studyStartTime), endTime]);
+		logData("start-timer", [STUDY_DURATION_MS/1000, new Date(studyStartTime), endTime]);
         
         // Check time remaining every 5 seconds
         timeoutCheckInterval = setInterval(checkTimeRemaining, 5000);
