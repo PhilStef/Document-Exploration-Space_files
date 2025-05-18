@@ -1,6 +1,6 @@
 <?php
 // save_interactions.php - Endpoint for saving study interaction data
-define('DEBUG_FLAG', true); // Set false in production!
+define('DEBUG_FLAG', false); // Set false in production!
 function json_response($data, $statusCode = null)
 {
     header('Content-Type: application/json');
