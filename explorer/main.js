@@ -151,7 +151,8 @@ let studyTimerStarted = false;
 let studyStartTime = null;
 let timeoutCheckInterval = null;
 const STUDY_DURATION_MS = setUpSendToServerTime(urlTime);
-const toasterPeriodInMs = (5 * 60 * 1000); //every 5 minutes show the toaster.
+const toasterFrequency = 3
+const toasterPeriodInMs = STUDY_DURATION_MS/toasterFrequency; //show the toaster after this much time.
 
 if (!urlTime) {
 	instructions_Jeremy =
@@ -282,6 +283,7 @@ const formatDuration = (ms, round = "millisecond") => {
 		.map(([k, v]) => v + " " + pluralize(k, v))
 		.join(", ");
 };
+console.log("🚀 ~ toasterPeriodInMs:", formatDuration(toasterPeriodInMs));
   
 /**
  * Initializes the study timer on first user interaction
@@ -310,8 +312,10 @@ function initializeStudyTimer() {
 		// Only show if timer is still running
 		const now = Date.now();
 		const elapsedMs = now - studyStartTime;
-		if (elapsedMs < STUDY_DURATION_MS) {
-			showToaster(getToasterMsg());
+			if (elapsedMs < STUDY_DURATION_MS) {
+			msg = getToasterMsg()
+			logData("show-timer", [elapsedMs/1000, msg]);
+			showToaster(msg);
 		} else {
 			clearInterval(toasterInterval);
 		}
@@ -321,8 +325,6 @@ function initializeStudyTimer() {
 		// Also log remaining time every 30 seconds for debugging
         timeoutLogRemaining = setInterval(() => {
             const remainingMs = STUDY_DURATION_MS - (Date.now() - studyStartTime);
-            const remainingMin = Math.floor(remainingMs / 60000);
-            const remainingSec = Math.floor((remainingMs % 60000) / 1000);
             console.log(`[Timer] Time remaining: ${formatDuration(remainingMs)}`);
         }, 30000);
     }
@@ -1081,15 +1083,16 @@ async function initializeDocumentExplorer(priorAnalystNote = {content:''}) {
 				}
 			})
 
-			// Add keypress listener for text input, remove after first trigger
-			const keydownListener = function (e) {
-				if (e.target.tagName === 'INPUT' || e.target.tagName === 'DIV') {
-					console.log("[Timer] Search or Note got a keypress --> initializing timer");
-					initializeStudyTimer();
-					document.removeEventListener('keydown', keydownListener);
-				}
-			};
-			document.addEventListener('keydown', keydownListener, { once: false });
+			//Truning off any keystroke. Just relying on opening a document to trigger the timer.
+			// // Add keypress listener for text input, remove after first trigger
+			// const keydownListener = function (e) {
+			// 	if (e.target.tagName === 'INPUT' || e.target.tagName === 'DIV') {
+			// 		console.log("[Timer] Search or Note got a keypress --> initializing timer");
+			// 		initializeStudyTimer();
+			// 		document.removeEventListener('keydown', keydownListener);
+			// 	}
+			// };
+			// document.addEventListener('keydown', keydownListener, { once: false });
 
 			// Fallback: if there are no document items, just start timer right away as backup
 			// 	console.log("[Timer] No document items found, starting timer on load as fallback");
