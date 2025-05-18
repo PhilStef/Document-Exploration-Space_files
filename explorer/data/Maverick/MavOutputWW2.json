@@ -424,6 +424,14 @@
     "batch": "8"
   },
   {
+    "id": "178",
+    "title": "Police",
+    "date": "Sunday 1:30PM",
+    "column": "set10",
+    "contents": "Police reported that Scott Plum contacted a lawyer, Gregory Kenney, several weeks ago inquiring about divorce law.  Plum wanted to know how long two people had to be married before a divorce would result in a division of shared assests between the husband and wife.  He then asked if one of the parties entering the marriage was separated from a spouse in a previous marriage, if he or she could legally enter a new marriage.  The lawyer explained to him that this would not work since a separation would not nullify the previous marriage so the party could not enter into a new marriage contract.  The lawyer further explained that once divorce papers were signed for the individual's first marriage the party could enter into a second marriage legally.  ",
+    "batch": "15"
+  },
+  {
     "id": "106",
     "title": "Brauman",
     "date": "Sunday 11:45AM",
@@ -571,7 +579,7 @@
     "id": "170",
     "title": "Police",
     "date": "Sunday 1:00PM",
-    "column": "set8",
+    "column": "set10",
     "contents": "The police forensics team was able to determine that the individuals seen carrying a large object into the bathroom of the main building of Boddy Estate were in fact carrying Walter Boddy's corpse.",
     "batch": "13"
   },
@@ -579,7 +587,7 @@
     "id": "171",
     "title": "White",
     "date": "Sunday 1:15PM",
-    "column": "set8",
+    "column": "set10",
     "contents": "Source reports that while waiting for Walter Boddy to return to the kitchen and meet with Jill White, White passed the time by baking several batches of cookies.",
     "batch": "14"
   },
@@ -587,7 +595,7 @@
     "id": "172",
     "title": "Police",
     "date": "Sunday 1:15PM",
-    "column": "set8",
+    "column": "set10",
     "contents": "Source reports that Walter Boddy was always punctual to his meetings and recovered his schedule for meeting with guests on  Saturday, June 4th.  He had the following meetings on schedule for the evening: (notes he wrote in the book are provided in parentheses)\n1: Lunch with Jill from 12:30-2:00PM\n2: Guest reception in Lounge @ 2:00PM-4:00PM\n3: Dinner 4:00-5:30PM\n4: Meet with Peacock, 6:15PM -6:25PM\n5: Meet with Green, 6:30PM-6:55PM\n6: Meet with Jill again in Kitchen at 7:00 for 25 minutes\n7: Meet with Plum, 7:30PM-7:55PM\n8: Mustard in my study, 8:00 for 25 minutes\n9: Talk with Christine, 8:30-8:40PM (TWO SUPRISES!)\n10: Green to finalize contracts, 9:00-9:45PM (Offer $50K for services)\n\n",
     "batch": "14"
   },
@@ -595,7 +603,7 @@
     "id": "173",
     "title": "Plum",
     "date": "Sunday 1:15PM",
-    "column": "set8",
+    "column": "set10",
     "contents": "Source reports that Scott Plum was questionned about an item that was discovered to be missing from the study of the main room of Boddy Estate, which is a room that the police believed only 3 people had entered including Plum.  Upon hearing this source reports that Plum confessed to taking Walter Boddy's checkbook while he was sitting at the desk in the study when Adam Mustard's back was turned and they were conversing.  Plum claims he was going to write himself a check to cover the $200,000 Boddy stole from him, but decided against it as he didn't want to go to jail for check fraud and there was no way he could get away with writing himself a $200,000 check.  Instead, when he was leaving the estate for the night he went and grabbed his belongings from the lounge and threw the checkbook into the fireplace to at least destroy it out of spite.  Plum noted however that the checkbook had a standing balance of well over $25 Million dollars and was updated just 3 days ago.",
     "batch": "14"
   },
@@ -654,6 +662,14 @@
     "column": "set10",
     "contents": "Police spoke with the Tiffany & Co. store in Essex and were able to confirm that the ring Christine Scarlet was found wearing was actually the same one that was purchased by Walter Boddy on Friday, June 3rd according to the receipt that was found in the empty jewelry box in the lounge of the main building of Boddy Estate.",
     "batch": "15"
+  },
+  {
+    "id": "102",
+    "title": "Police",
+    "date": "Sunday 11:45AM",
+    "column": "set10",
+    "contents": "Security footage revealed that a heavyset Indian male entered the bathroom of the main building of Boddy Estate just before 8:30AM on Sunday, June 5th.  The man set down a bag of groceries and then jumped back as if he'd been startled by something in the bathtub.",
+    "batch": "8"
   },
   {
     "id": "87",
