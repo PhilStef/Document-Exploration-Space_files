@@ -86,30 +86,29 @@ $storageDir = './user_data/';
 $requestLog = $storageDir.'requests.txt';
 
 try {
-    file_put_contents($requestLog, "Received request at " . date('Y-m-d H:i:s') . " it contained:\n", FILE_APPEND);
+    file_put_contents($requestLog, "Received request at " . date('Y-m-d H:i:s') , FILE_APPEND);
     
     // Set content size limit (10MB)
     if ($_SERVER['CONTENT_LENGTH'] > 10000000) {
         $error_message = "Payload too large (max 10MB)";
-            throw new Exception($error_message);
+        throw new Exception($error_message);
     }
 
     // Get the raw POST data
     $jsonData = file_get_contents('php://input');
-    file_put_contents($requestLog, "Raw data >>>\n\n" . $jsonData . "\n\n>>>\n\n", FILE_APPEND);
-
+    
     // Decode JSON
     $data = json_decode($jsonData, true);
-
+    
     if (!$data) {
         $error_message = "Invalid JSON data received: " . json_last_error_msg();
-            throw new Exception($error_message);
+        throw new Exception($error_message);
     }
 
     // Validate required JSON structure
     if (!isset($data['userID']) || !isset($data['filename']) || !isset($data['interactions'])) {
-        $error_message = "Missing required fields: userID, filename, and interactions are required";
-            throw new Exception($error_message);
+        $error_message = "Missing required fields: userID, filename, and interactions are required.";
+        throw new Exception($error_message);
     }
 
     // Extract data
@@ -127,7 +126,7 @@ try {
     if (!is_dir($storageDir)) {
         if (!mkdir($storageDir, 0755, true)) {
             $error_message = "Failed to create storage directory";
-                    throw new Exception($error_message);
+            throw new Exception($error_message);
         }
     }
     
@@ -158,7 +157,7 @@ try {
     // Log the error
     error_log("Error saving interaction data: " . $e->getMessage());
 
-    file_put_contents($requestLog, ">Error>>>" . $e->getMessage() . "\n\n", FILE_APPEND);
+    file_put_contents($requestLog, ">Error>>>" . $e->getMessage() . "\n\nRaw data >>>\n\n" . $jsonData . "\n\n>>>\n\n", FILE_APPEND);
 
     // Return error response
     http_response_code(500);
