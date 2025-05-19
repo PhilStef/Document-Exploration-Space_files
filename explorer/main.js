@@ -1986,7 +1986,10 @@ function saveInteractionsToFile() {
 		let fileContent = JSON.stringify(SESSION_LOG_DATA, null, 2);
 
 		// Generate the filename with userID
-		const filename = `interactions_user_${pname}_${Date.now()}.json`;
+		// Generate the filename with userID and Eastern Time date string
+		const easternTime = new Date().toLocaleString("en-US", { timeZone: "America/New_York" });
+		const safeDateStr = easternTime.replace(/[^0-9a-zA-Z]/g, "_");
+		const filename = `interactions_user_${pname}-${safeDateStr}.json`;
 
 		// Send to PHP endpoint
 		try {

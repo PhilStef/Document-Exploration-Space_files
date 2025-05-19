@@ -87,7 +87,8 @@ $storageDir = './user_data/';
 $requestLog = $storageDir . 'requests.txt';
 
 try {
-    file_put_contents($requestLog, "Received request at " . date('Y-m-d H:i:s'), FILE_APPEND);
+    $dt = new DateTime('now', new DateTimeZone('America/New_York'));
+    file_put_contents($requestLog, "Received request at " . $dt->format('Y-m-d H:i:s') . "\n", FILE_APPEND);
 
     // Set content size limit (10MB)
     if ($_SERVER['CONTENT_LENGTH'] > 10000000) {
@@ -118,7 +119,7 @@ try {
     $interactions = $data['interactions'];
 
     // Add additional security: only allow certain filename patterns
-    if (!preg_match('/^interactions_user_[a-zA-Z0-9_-]+_\d+\.json$/', $filename)) {
+    if (!preg_match('/^interactions_user_[a-zA-Z0-9_-]+\d{1,2}_\d{1,2}_\d{4}__\d{2}_\d{2}_\d{2}_(AM|PM)\.json$/', $filename)) {
         $error_message = "Invalid filename format";
         throw new Exception($error_message);
     }
