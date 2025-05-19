@@ -435,46 +435,49 @@ function showTimeoutPopup() {
 }
 
 /**
- * Displays a toaster notification at the bottom right of the screen
+ * Displays a toaster notification at the center of the screen
  * showing how much time has passed and how much time remains.
  * @param {string} message
  */
 function showToaster(message) {
-    // Remove existing toaster if present
-    const existing = document.getElementById('study-timer-toaster');
-    if (existing) existing.remove();
+	// Remove existing toaster if present
+	const existing = document.getElementById("study-timer-toaster");
+	if (existing) existing.remove();
 
-    const toaster = document.createElement('div');
-    toaster.id = 'study-timer-toaster';
-    toaster.style.position = 'fixed';
-    toaster.style.bottom = '32px';
-    toaster.style.right = '32px';
-    toaster.style.background = '#333';
-    toaster.style.color = '#fff';
-    toaster.style.padding = '1em 2em';
-    toaster.style.borderRadius = '8px';
-    toaster.style.boxShadow = '0 0 12px rgba(0,0,0,0.25)';
+	const toaster = document.createElement("div");
+	toaster.id = "study-timer-toaster";
+	toaster.style.position = "fixed";
+	toaster.style.top = "50%";
+	toaster.style.left = "50%";
+	toaster.style.transform = "translate(-50%, -50%)";
+	toaster.style.background = "#333";
+	toaster.style.color = "#fff";
+	toaster.style.padding = "1em 2em";
+	toaster.style.borderRadius = "8px";
+	toaster.style.boxShadow = "0 0 12px rgba(0,0,0,0.25)";
 	toaster.style.zIndex = 99999;
 	toaster.style.fontFamily = "Verdana, Arial, sans-serif";
-  	toaster.style.fontSize = "0.8em";
-  	toaster.style.textAlign = "center";
-    toaster.style.opacity = 0;
-    toaster.style.transition = 'opacity 1s linear';
+	toaster.style.fontSize = "0.8em";
+	toaster.style.textAlign = "center";
+	toaster.style.opacity = 0;
+	toaster.style.transition = "opacity 1s linear";
+	toaster.style.userSelect = "none"; // Make text unselectable
+	toaster.style.pointerEvents = "none"; // Prevent mouse interaction
 
-    toaster.textContent = message;
+	toaster.textContent = message;
 
-    document.body.appendChild(toaster);
+	document.body.appendChild(toaster);
 
 	setTimeout(() => {
-		toaster.style.opacity = 1;
+		toaster.style.opacity = 0.8;
 	}, 1);
 	// Fade out after 4 seconds, then remove after 5
-    setTimeout(() => {
-        toaster.style.opacity = 0;
-    }, 6000);
-    setTimeout(() => {
-        toaster.remove();
-    }, 7000);
+	setTimeout(() => {
+		toaster.style.opacity = 0;
+	}, 4000);
+	setTimeout(() => {
+		toaster.remove();
+	}, 5000);
 }
 
 function getToasterMsg() {
